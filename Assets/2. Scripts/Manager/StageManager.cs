@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Jongmin
 {
-    public class SceneManager : Singleton<SceneManager>
+    public class StageManager : Singleton<StageManager>
     {
         // ...
     }
