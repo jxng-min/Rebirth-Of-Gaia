@@ -8,10 +8,10 @@ namespace Jongmin
         private AudioSource m_effect_source;
 
         public AudioClip[] m_bgm_clips;
-        public AudioClip[] m_bgm_clip_names;
+        public string[] m_bgm_clip_names;
 
         public AudioClip[] m_effect_clips;
-        public AudioClip[] m_effect_clip_names;
+        public string[] m_effect_clip_names;
 
         private void Start()
         {
