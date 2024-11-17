@@ -50,7 +50,7 @@ namespace Jongmin
             if(m_events.TryGetValue(event_type, out this_event))
             {
                 this_event.Invoke();
-                Debug.Log($"{event_type.ToString()}이(가) 성공적으로 실행 되었습니다.");
+                Debug.Log($"{event_type.ToString()}이(가) 성공적으로 실행되었습니다.");
             }
         }
     }

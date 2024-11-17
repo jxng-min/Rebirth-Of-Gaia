@@ -605,7 +605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1074997030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +622,7 @@ MonoBehaviour:
   m_npc_img: {fileID: 1101485743}
   m_player_img: {fileID: 1334635363}
   m_text: {fileID: 38823084}
+  m_end_cursor: {fileID: 0}
 --- !u!4 &1074997031
 Transform:
   m_ObjectHideFlags: 0
@@ -882,7 +883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1773517161
 MonoBehaviour:
   m_ObjectHideFlags: 0

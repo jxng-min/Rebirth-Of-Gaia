@@ -15,8 +15,8 @@ namespace Jongmin
 
         private void Start()
         {
-            m_bgm_source = GetComponent<AudioSource>();
-            m_effect_source = GetComponent<AudioSource>();
+            m_bgm_source = gameObject.AddComponent<AudioSource>();
+            m_effect_source = gameObject.AddComponent<AudioSource>();
 
             Initialize();
         }
@@ -61,7 +61,7 @@ namespace Jongmin
         {
             switch(bgm_name)
             {
-            case "":
+            case "Title":
                 m_bgm_source.PlayOneShot(m_bgm_clips[0]);
                 break;
             

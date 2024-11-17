@@ -5,11 +5,12 @@ namespace Jongmin
 {
     public class SceneCtrl : MonoBehaviour
     {
-        public static void ReplaceScene(string scene_name)
+        public string m_scene_name;
+        public void ReplaceScene()
         {
-            Debug.Log(scene_name + "으로 씬을 전환합니다.");
+            Debug.Log(m_scene_name + "으로 씬을 전환합니다.");
             
-            SceneManager.LoadScene(scene_name);
+            SceneManager.LoadScene(m_scene_name);
         }
     }
 }

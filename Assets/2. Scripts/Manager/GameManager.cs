@@ -11,6 +11,8 @@ public class GameManager : Singleton<GameManager>
         {
             GameEventBus.Subscribe(GameEventType.NONE, None);
             GameEventBus.Publish(GameEventType.NONE);
+
+            SoundManager.Instance.PlayeBGM("Title");
         }
 
         public void ExitGame()
