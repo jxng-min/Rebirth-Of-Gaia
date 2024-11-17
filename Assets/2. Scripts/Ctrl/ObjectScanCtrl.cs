@@ -50,18 +50,20 @@ namespace Jongmin
         private void SelectInteractBehavior()
         {
             if(GameManager.Instance.m_game_status == "Playing"
-                                                && m_scan_object != null
-                                                && /*대화 시작 트리거*/)
+                                                && m_scan_object != null)
+                                                // 트리거 추가
             {
+                Debug.Log($"{m_scan_object.name}과 대화를 시작합니다.");
+
                 TalkManager talk_manager = FindFirstObjectByType<TalkManager>();
-                // TalkManager를 이용하여 대화를 시작하는 코드
+                talk_manager.InteractionWithObject(m_scan_object);
             }
 
             if(GameManager.Instance.m_game_status == "Playing"
-                                                && !m_player_ctrl.m_is_jump
-                                                && /*점프 시작 트리거*/)
+                                                && !m_player_ctrl.m_is_jump)
+                                                // 트리거 추가
             {
-                // m_player_ctrl에서 점프 상태를 호출하는 코드
+                Debug.Log("플레이어가 점프를 합니다.");
             }
         }
 

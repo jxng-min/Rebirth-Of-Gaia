@@ -1,6 +1,4 @@
-using UnityEngine;
-
-class ObjectData
+public class ObjectData
 {
     public int m_id;
     public bool m_is_npc;

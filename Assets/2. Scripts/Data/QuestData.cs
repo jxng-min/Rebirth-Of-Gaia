@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class QuestData
 {
     string m_quest_name;
