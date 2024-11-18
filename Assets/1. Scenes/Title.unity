@@ -1005,6 +1005,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b00fb22baff2664e868621ebe66a5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_portals:
+  - Portal_M1_Out
+  - Portal_M2_In
+  - Portal_M2_Out
+  - Portal_M3_In
+  m_player_positions:
+  - {x: 12, y: 0, z: 0}
+  - {x: -12, y: 0, z: 0}
+  - {x: 12, y: 0, z: 0}
+  - {x: -12, y: 0, z: 0}
+  m_wait_time: 2
 --- !u!4 &1674962039
 Transform:
   m_ObjectHideFlags: 0

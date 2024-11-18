@@ -9,7 +9,9 @@ namespace Junyoung
         public Rigidbody2D m_rigidbody; 
 
         public Vector2 m_move_vec = Vector2.zero;
+
         public bool m_is_jump = false;
+        public bool m_is_tunneling = false;
 
         private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state; // 각 상태들의 선언
         private PlayerStateContext m_player_state_context;                                          //상태를 변경할 인터페이스 선언
@@ -65,6 +67,23 @@ namespace Junyoung
         public void ClearPlayer()
         {
             m_player_state_context.Transition(m_clear_state);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            if(collider.CompareTag("PORTAL"))
+            {
+                m_is_tunneling = true;
+                StageManager.Instance.InteractWithPortal(collider.name);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collider)
+        {
+            if(collider.CompareTag("PORTAL"))
+            {
+                m_is_tunneling = false;
+            }           
         }
     }
 }
