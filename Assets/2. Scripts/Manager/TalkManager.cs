@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using Jongmin;
+using UnityEditor;
 using UnityEngine;
 
 public class TalkManager : MonoBehaviour
@@ -11,23 +14,23 @@ public class TalkManager : MonoBehaviour
     public TalkUIManager m_talk_ui_manager;
 
     public Sprite[] m_portrait_arr;
-    public string m_json_talk_data;
-    public string m_json_quest_data;
 
     public GameObject m_scan_object;
     public bool m_is_action;
     public int m_talk_idx;
 
+    private string m_save_path;
+
     private void Start()
     {
-        m_talk_data = new Dictionary<ObjectData, string[]>();
+        m_save_path = Application.persistentDataPath + "/Data";
+ 
         m_portrait_data = new Dictionary<ObjectData, Sprite>();
-        m_quest_data = new Dictionary<ObjectData, string[]>();
 
         GeneratePortrait();
 
-        BringQuestLineDataFromJson();
         BringTalkLineDataFromJson();
+        BringQuestLineDataFromJson();
     } 
     
     // 대화 중 초상화 UI를 생성하기 위한 메소드
@@ -39,13 +42,69 @@ public class TalkManager : MonoBehaviour
     // JSON 파일에서 NPC 정보와 대사를 불러오는 메소드
     public void BringTalkLineDataFromJson()
     {
-        m_talk_data = JsonUtility.FromJson<Dictionary<ObjectData, string[]>>(m_json_talk_data);
+        string json_path = m_save_path + "/TalkData.json";
+
+        if(!System.IO.File.Exists(json_path))
+        {
+            Debug.Log($"{m_save_path}에 일치하는 TalkData.json이 없습니다.");
+            return;
+        }
+
+        string json_string = System.IO.File.ReadAllText(json_path);
+        TalkDataWrapper talk_data_wrapper = JsonUtility.FromJson<TalkDataWrapper>(json_string);
+
+        if(talk_data_wrapper == null || talk_data_wrapper.m_talk_datas == null)
+        {
+            Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 실패하였습니다.");
+            return;
+        }
+        else
+        {
+            Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 성공하였습니다.");
+        }
+
+        m_talk_data = new Dictionary<ObjectData, string[]>();
+        foreach(var data in talk_data_wrapper.m_talk_datas)
+        {
+            if(data.m_object_data == null)
+                continue;
+
+            m_talk_data[data.m_object_data] = data.m_talk_data;
+        }
     }
    
     // JSON 파일에서 NPC 정보와 퀘스트 대사를 불러오는 메소드
     public void BringQuestLineDataFromJson() 
     {
-        m_quest_data = JsonUtility.FromJson<Dictionary<ObjectData, string[]>>(m_json_quest_data);
+        string json_path = m_save_path + "/QuestData.json";
+
+        if(!System.IO.File.Exists(json_path))
+        {
+            Debug.Log($"{m_save_path}에 일치하는 QuestData.json이 없습니다.");
+            return;
+        }
+
+        string json_string = System.IO.File.ReadAllText(json_path);
+        QuestDataWrapper quest_data_wrapper = JsonUtility.FromJson<QuestDataWrapper>(json_string);
+
+        if(quest_data_wrapper == null || quest_data_wrapper.m_quest_datas == null)
+        {
+            Debug.Log($"{m_save_path}/QuestData.json에서 퀘스트 정보를 불러오는 데 실패하였습니다.");
+            return;
+        }
+        else
+        {
+            Debug.Log($"{m_save_path}/QuestData.json에서 퀘스트 정보를 불러오는 데 성공하였습니다.");
+        }
+
+        m_talk_data = new Dictionary<ObjectData, string[]>();
+        foreach(var data in quest_data_wrapper.m_quest_datas)
+        {
+            if(data.m_object_data == null)
+                continue;
+
+            m_talk_data[data.m_object_data] = data.m_talk_data;
+        }
     }
 
     // id와 일치하는 NPC의 대사를 리턴하는 메소드

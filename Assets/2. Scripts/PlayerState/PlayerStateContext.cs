@@ -2,34 +2,31 @@ using UnityEngine;
 
 namespace Junyoung
 {
-    //PlayerCtrl¿¡¼­ ÀÌ Å¬·¡½ºÀÇ °´Ã¼¸¦ »ç¿ëÇØ¼­ ÇÃ·¹ÀÌ¾îÀÇ »óÅÂ¸¦ °ü¸®ÇÑ´Ù
-    public class PlayerStateContext : MonoBehaviour
+    // PlayerCtrlì—ì„œ ì´ í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ì‚¬ìš©í•´ì„œ í”Œë ˆì´ì–´ì˜ ìƒíƒœë¥¼ ê´€ë¦¬
+    public class PlayerStateContext
     {
-        //ÇÁ·ÎÆÛÆ¼, get,setÀ¸·Î ¸â¹ö¸¦ ÀĞ°í ¾µ ¶§ Á¶°ÇÀ» ºÎ¿©ÇÏ´Â ±â´É get,set¿¡ Á¶°ÇÀ» ÀûÁö ¾ÊÀ¸¸é ÀÏ´Ü º¯¼ö¿Í °°Àº ¿ªÇÒÀ» ÇÔ, Ä¸½¶È­¸¦ ÅëÇÑ Á¢±Ù Á¦¾î
-        //(³ªÁß¿¡ Á¶°ÇÀ» Ãß°¡ °¡´ÉÇÏ±â ¶§¹®¿¡ ÇÁ·ÎÆÛÆ¼·Î ÀÛ¼º, À¯È¿¼º °Ë»ç³ª, ³ªÁß¿¡ ³»ºÎ ·ÎÁ÷À» Ãß°¡ÇÏ°Å³ª ÇÏ´Â È®Àå¼ºÀÌ ÁÁÀ½)
-        //PlayerStateContext °´Ã¼°¡ °ü¸®ÇÏ°í ÀÖ´Â ÇÃ·¹ÀÌ¾îÀÇ »óÅÂ¸¦ ÀúÀåÇÔ(IPlayerState´Â »óÅÂ¸¦ Ãß»óÈ­ÇÑ ÀÎÅÍÆäÀÌ½º´Ï±î IPlayerState¸¦ ±¸ÇöÇÑ Å¬·¡½ºµéÀ» ÀúÀå °¡´É)
-        public IPlayerState CurrentState
-        { 
-          get; 
-          set; 
-        }
+         private readonly PlayerCtrl m_player_ctrl;
 
-        private readonly PlayerCtrl m_player_ctrl;
+        //í”„ë¡œí¼í‹°, get,setìœ¼ë¡œ ë©¤ë²„ë¥¼ ì½ê³  ì“¸ ë•Œ ì¡°ê±´ì„ ë¶€ì—¬í•˜ëŠ” ê¸°ëŠ¥ get,setì— ì¡°ê±´ì„ ì ì§€ ì•Šìœ¼ë©´ ì¼ë‹¨ ë³€ìˆ˜ì™€ ê°™ì€ ì—­í• ì„ í•¨, ìº¡ìŠí™”ë¥¼ í†µí•œ ì ‘ê·¼ ì œì–´
+        //(ë‚˜ì¤‘ì— ì¡°ê±´ì„ ì¶”ê°€ ê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì— í”„ë¡œí¼í‹°ë¡œ ì‘ì„±, ìœ íš¨ì„± ê²€ì‚¬ë‚˜, ë‚˜ì¤‘ì— ë‚´ë¶€ ë¡œì§ì„ ì¶”ê°€í•˜ê±°ë‚˜ í•˜ëŠ” í™•ì¥ì„±ì´ ì¢‹ìŒ)
+        //PlayerStateContext ê°ì²´ê°€ ê´€ë¦¬í•˜ê³  ìˆëŠ” í”Œë ˆì´ì–´ì˜ ìƒíƒœë¥¼ ì €ì¥í•¨(IPlayerStateëŠ” ìƒíƒœë¥¼ ì¶”ìƒí™”í•œ ì¸í„°í˜ì´ìŠ¤ë‹ˆê¹Œ IPlayerStateë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤ë“¤ì„ ì €ì¥ ê°€ëŠ¥)
+        public IPlayerState CurrentState { get; set; }
 
-        //»ı¼ºÀÚ, PlayerStateContext °´Ã¼°¡ »ı¼ºµÉ ¶§ È£ÃâµÅ¼­ PlayerCtrlÅ¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ m_player_ctrl ÇÊµå¿¡ ÇÒ´ç
-        //-> ÀÌ Å¬·¡½º¿¡¼­ PlayerCtrl °´Ã¼¸¦ ³»ºÎÀûÀ¸·Î ÂüÁ¶ ÇÒ ¼ö ÀÖ°Ô µÊ
-        public PlayerStateContext(PlayerCtrl player_controller) //context¸¦ »ı¼ºÇÏ´Â playerCtrlÀÇ °´Ã¼¸¦ ÀĞ±â Àü¿ëÀ¸·Î ºÒ·¯¿È 
+        //ìƒì„±ì, PlayerStateContext ê°ì²´ê°€ ìƒì„±ë  ë•Œ í˜¸ì¶œë¼ì„œ PlayerCtrlì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ m_player_ctrl í•„ë“œì— í• ë‹¹
+        //-> ì´ í´ë˜ìŠ¤ì—ì„œ PlayerCtrl ê°ì²´ë¥¼ ë‚´ë¶€ì ìœ¼ë¡œ ì°¸ì¡° í•  ìˆ˜ ìˆê²Œ ë¨
+        public PlayerStateContext(PlayerCtrl player_controller)
         {
             m_player_ctrl = player_controller;
         }
 
-        //ÀÌ µÎ ¸Ş¼­µå¸¦ ÅëÇØ PlayerCtrl¿¡¼­ »óÅÂ¸¦ º¯°æÇÔ
-        public void Transition() // ÇöÀç »óÅÂ¿¡ µû¶ó m_player_ctrlÀÇ µ¿ÀÛÀ» ¼öÇ×ÇÏ°Ô ÇÔ
+        // í˜„ì¬ ìƒíƒœì— ë”°ë¼ m_player_ctrl ë™ì‘ì„ ìˆ˜í–‰ì‹œí‚¤ëŠ” ë©”ì†Œë“œ 
+        public void Transition()
         {
             CurrentState.Handle(m_player_ctrl);
         }
 
-        public void Transition(IPlayerState state) //»óÅÂ¸¦ º¯°æÇÏ°í º¯°æµÈ »óÅÂ¿¡ ¸Â´Â µ¿ÀÛÀ» ¼öÇà½ÃÅ´
+        // ìƒíƒœë¥¼ ë³€ê²½í•˜ê³  ë³€ê²½ëœ ìƒíƒœì— ë§ëŠ” ë™ì‘ì„ ìˆ˜í–‰ì‹œí‚¤ëŠ” ë©”ì†Œë“œ
+        public void Transition(IPlayerState state)
         {
             CurrentState = state;
             CurrentState.Handle(m_player_ctrl);

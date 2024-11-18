@@ -12,7 +12,7 @@ public class PlayerData
         
         m_talk_id = 0;
         m_talk_action_id = 0;
-        m_quest_id = 0;
+        m_quest_id = 1000;
         m_quest_action_id = 0;
     }
 }

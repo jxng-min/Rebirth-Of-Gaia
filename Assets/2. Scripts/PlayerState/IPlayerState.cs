@@ -1,14 +1,11 @@
 using UnityEngine;
 
-
 namespace Junyoung
 {
-    //ÇÃ·¹ÀÌ¾îÀÇ ¿©·¯°¡Áö »óÅÂÀÇ ±â¹İÀÌ µÇ´Â ÀÎÅÍÆäÀÌ½º
-    public class IPlayerState : MonoBehaviour
+    // í”Œë ˆì´ì–´ ìƒíƒœë¥¼ ì¶”ìƒí™”í•˜ëŠ” í´ë˜ìŠ¤
+    public interface IPlayerState
     {
-        void Handle(PlayerCtrl ctrl)
+        public void Handle(PlayerCtrl ctrl);
     }
-
-
 }
 
