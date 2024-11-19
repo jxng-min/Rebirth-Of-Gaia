@@ -53,7 +53,7 @@ namespace Jongmin
             {
                 Debug.Log($"{m_scan_object.name}과 대화를 시작합니다.");
 
-                TalkManager talk_manager = FindFirstObjectByType<TalkManager>();
+                TalkManager talk_manager = FindAnyObjectByType<TalkManager>();
                 talk_manager.InteractionWithObject(m_scan_object);
             }
 
