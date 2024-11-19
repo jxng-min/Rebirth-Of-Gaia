@@ -1,4 +1,6 @@
+using Junyoung;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Jongmin
 {
@@ -17,7 +19,6 @@ namespace Jongmin
         private void Update()
         {
             SetPlayerMoveDirection();
-            SelectInteractBehavior();
         }
 
         private void FixedUpdate()
@@ -40,16 +41,12 @@ namespace Jongmin
                     m_player_direction_vector = Vector3.left;
                 }
             }
-            else
-            {
-                m_player_direction_vector = Vector3.zero;
-            }
         }
 
         // 상호작용 행동을 결정하는 메소드
-        private void SelectInteractBehavior()
+        public void SelectInteractBehavior(Button button)
         {
-            if(Input.GetKeyDown(KeyCode.R)
+            if(button.name == "Talk Button"
                                         && GameManager.Instance.m_game_status == "Playing"
                                         && m_scan_object != null)
                                                 
@@ -60,11 +57,12 @@ namespace Jongmin
                 talk_manager.InteractionWithObject(m_scan_object);
             }
 
-            if(Input.GetKeyDown(KeyCode.Space)
+            if(button.name == "Jump Button"
                                             && GameManager.Instance.m_game_status == "Playing"
                                             && !m_player_ctrl.m_is_jump)
             {
                 Debug.Log("플레이어가 점프를 합니다.");
+                GetComponent<PlayerCtrl>().PlayerJump();
             }
         }
 
