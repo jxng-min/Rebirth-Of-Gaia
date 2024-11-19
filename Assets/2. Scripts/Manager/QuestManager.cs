@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public int m_quest_id;
+    public int m_quest_id; //ì‹¤í–‰í•˜ëŠ” í€˜ìŠ¤íŠ¸ ë²ˆí˜¸
     public int m_quest_action_idx;
+    public GameObject[] m_quest_object;
     private Dictionary<int, Taekyung.QuestData> m_quest_list;
     public string m_json_quest_list;
     private string m_save_path;
@@ -25,7 +26,7 @@ public class QuestManager : MonoBehaviour
 
         if (!System.IO.File.Exists(json_path))
         {
-            Debug.Log($"{m_save_path}¿¡ ÀÏÄ¡ÇÏ´Â QuestList.jsonÀÌ ¾ø½À´Ï´Ù.");
+            Debug.Log($"{m_save_path}ì— ì¼ì¹˜í•˜ëŠ” QuestList.jsonì´ ì—†ìŠµë‹ˆë‹¤.");
             return;
         }
 
@@ -34,12 +35,12 @@ public class QuestManager : MonoBehaviour
 
         if (quest_data_wrapper == null || quest_data_wrapper.m_quest_lists == null)
         {
-            Debug.Log($"{m_save_path}/QuestList.json¿¡¼­ Äù½ºÆ® Á¤º¸¸¦ ºÒ·¯¿À´Â µ¥ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+            Debug.Log($"{m_save_path}/QuestList.jsonì—ì„œ í€˜ìŠ¤íŠ¸ ì •ë³´ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” ë° ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
             return;
         }
         else
         {
-            Debug.Log($"{m_save_path}/QuestList.json¿¡¼­ Äù½ºÆ® Á¤º¸¸¦ ºÒ·¯¿À´Â µ¥ ¼º°øÇÏ¿´½À´Ï´Ù.");
+            Debug.Log($"{m_save_path}/QuestList.jsonì—ì„œ í€˜ìŠ¤íŠ¸ ì •ë³´ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” ë° ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
         }
 
         m_quest_list = new Dictionary<int, Taekyung.QuestData>();
@@ -52,19 +53,38 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    public int GetQuestLineIndex(int npc_id)
+    // í•´ë‹¹ í€˜ìŠ¤íŠ¸ ì œëª© ë° npc ì „ë‹¬
+    public Taekyung.QuestData GetQuestData(int quest_id)
     {
-        return m_quest_id;
+        if (m_quest_list[quest_id] == null)
+        {
+            Debug.Log($"í• ë‹¹ëœ í€˜ìŠ¤íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤.");
+        }
+        else
+        {
+            Debug.Log($"í• ë‹¹ëœ í€˜ìŠ¤íŠ¸ê°€ ìˆìŠµë‹ˆë‹¤.");
+        }
+        return m_quest_list[quest_id];
     }
 
-    public string CheckQuesk(int id)
+    public bool CheckQuesk(int id)
     {
-        return null;
+        if (id == m_quest_id)
+            return true;
+        else
+            return false;
     }
 
-    private void SetNextQuest()
-    {
 
+    // í€˜ìŠ¤íŠ¸ ë‚´ìš©ì— ë”°ë¼ ì˜¤ë¸Œì íŠ¸ í™œì„±í™”/ë¹„í™œì„±í™”
+    public void ControlObject(int quest_id)
+    {
+        switch(quest_id)
+        {
+            case 0:
+                m_quest_object[0].SetActive(true);
+                break;
+        }
     }
     
     private void ControlQuestReward()
