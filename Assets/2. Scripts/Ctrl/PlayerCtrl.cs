@@ -119,9 +119,15 @@ namespace Junyoung
             break;
 
             case Character.GOV:
+                m_player_skills[0] = new GovSkill1();
+                m_player_skills[1] = new GovSkill2();
+                m_player_skills[2] = new GovSkill3();
             break;
 
             case Character.ENVA:
+                m_player_skills[0] = new EnvaSkill1();
+                m_player_skills[1] = new EnvaSkill2();
+                m_player_skills[2] = new EnvaSkill3();
             break;
             }
         }
