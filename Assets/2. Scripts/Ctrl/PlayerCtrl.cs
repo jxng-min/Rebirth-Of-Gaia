@@ -1,4 +1,5 @@
 using Jongmin;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,6 +18,8 @@ namespace Junyoung
 
         private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state; // 각 상태들의 선언
         private PlayerStateContext m_player_state_context;                                          //상태를 변경할 인터페이스 선언
+
+        private Skill[] m_player_skills = new Skill[3]; 
 
         private void OnEnable()
         {
@@ -44,6 +47,8 @@ namespace Junyoung
 
             m_player_state_context.Transition(m_stop_state);                // 플레이어의 초기 상태를 정지 상태로 설정
 
+            SetPlayerSkill();
+
             MoveSpeed = 4.0f;
             JumpPower = 5.0f;
         }
@@ -69,7 +74,6 @@ namespace Junyoung
             {
                 m_player_state_context.Transition(m_jump_state);
             }
-            
         }
 
         public void DeadPlayer()
@@ -103,11 +107,40 @@ namespace Junyoung
             PlayerStop();
         }
 
+        // 캐릭터마다 스킬 전략을 설정하는 메소드
+        private void SetPlayerSkill()
+        {
+            switch(GameManager.Instance.CharacterType)
+            {
+            case Character.SOCIA:
+                m_player_skills[0] = new SociaSkill1();
+                m_player_skills[1] = new SociaSkill2();
+                m_player_skills[2] = new SociaSkill3();
+            break;
 
+            case Character.GOV:
+            break;
+
+            case Character.ENVA:
+            break;
+            }
+        }
+
+        public void Skill1()
+        {
+            m_player_skills[0].Effect();
+        }
+
+        public void Skill2()
+        {
+            m_player_skills[1].Effect();
+        }
+
+        public void Skill3()
+        {
+            m_player_skills[2].Effect();
+        }
     }
-
-
-
 }
 
 
