@@ -630,7 +630,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1059172615}
         m_TargetAssemblyTypeName: Jongmin.SceneCtrl, Assembly-CSharp
-        m_MethodName: ReplaceScene
+        m_MethodName: TitleReplaceScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ecfc7e1b263c5c4c929fa7044312d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_scene_name: Game
+  m_scene_name: PlayerSelect
 --- !u!1 &1305451855
 GameObject:
   m_ObjectHideFlags: 0

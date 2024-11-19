@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerData
 {
-    
+    public Character m_character_type;
     public playerStatus m_player_status;
 
     public int m_talk_idx;
@@ -14,6 +14,7 @@ public class PlayerData
 
     public void SetPlayerData()
     {
+        m_character_type = new Character();
         m_player_status = new playerStatus();
         m_talk_idx = 0;
         m_talk_id = 0;
@@ -25,6 +26,6 @@ public class PlayerData
     public void ReceiveTalkId(int id)
     {
         m_talk_id = id;
-        UnityEngine.Debug.Log($"¹ÞÀºµ¥ÀÌÅÍ: {m_talk_id}");
+        UnityEngine.Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: {m_talk_id}");
     }
 }

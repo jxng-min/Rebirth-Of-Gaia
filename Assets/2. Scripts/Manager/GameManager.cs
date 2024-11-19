@@ -6,6 +6,7 @@ namespace Jongmin
 public class GameManager : Singleton<GameManager>
 {
         public string m_game_status;
+        public Character CharacterType{ get; set; }
 
         private void Start()
         {
