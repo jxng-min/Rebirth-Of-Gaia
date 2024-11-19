@@ -14,9 +14,9 @@ namespace Junyoung
 
         public Vector2 m_move_vec = Vector2.zero;
         public bool m_is_jump = false;
-        public bool m_is_grunded = false;
+     
 
-        private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state; // 각 상태들의 선언
+        private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state, m_down_state; // 각 상태들의 선언
         private PlayerStateContext m_player_state_context;                                          //상태를 변경할 인터페이스 선언
 
         private Skill[] m_player_skills = new Skill[3]; 
@@ -44,13 +44,14 @@ namespace Junyoung
             m_jump_state = gameObject.AddComponent<PlayerJumpState>();
             m_dead_state = gameObject.AddComponent<PlayerDeadState>();
             m_clear_state = gameObject.AddComponent<PlayerClearState>();
+            m_down_state = gameObject.AddComponent<PlayerDownState>();
 
             m_player_state_context.Transition(m_stop_state);                // 플레이어의 초기 상태를 정지 상태로 설정
 
             SetPlayerSkill();
 
             MoveSpeed = 4.0f;
-            JumpPower = 5.0f;
+            JumpPower = 15.0f;
         }
 
         private void FixedUpdate()
@@ -68,12 +69,24 @@ namespace Junyoung
             m_player_state_context.Transition(m_move_state);
         }
 
+        public void PlayerDown()
+        {
+            if(GameManager.Instance.m_game_status == "Playing")
+            {
+                m_player_state_context.Transition(m_down_state);
+            }
+        }
+
         public void PlayerJump()
         {
-            if(!m_is_jump)
+            if(!m_is_jump && GameManager.Instance.m_game_status == "Playing")
             {
                 m_player_state_context.Transition(m_jump_state);
+<<<<<<< HEAD
+            }          
+=======
             }
+>>>>>>> main
         }
 
         public void DeadPlayer()
@@ -89,15 +102,23 @@ namespace Junyoung
         // 플레이어를 좌측 이동시키는 메소드
         public void PlayerMoveLeftBtnDown() 
         {
-            m_move_vec = Vector2.left;
-            PlayerMove();
+            if(GameManager.Instance.m_game_status == "Playing")
+            {
+                m_move_vec = Vector2.left;
+                PlayerMove();
+            }
+
         }
 
         // 플레이어를 우측 이동시키는 메소드
         public void PlayerMoveRightBtnDown()
         {
-            m_move_vec = Vector2.right;
-            PlayerMove();
+            if (GameManager.Instance.m_game_status == "Playing")
+            {
+                m_move_vec = Vector2.right;
+                PlayerMove();
+            }
+
         }
 
         // 플레이어가 이동 버튼에서 손을 떼었을 때 호출되는 메소드
