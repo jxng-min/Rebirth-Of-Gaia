@@ -81,12 +81,8 @@ namespace Junyoung
         {
             if(!m_is_jump && GameManager.Instance.m_game_status == "Playing")
             {
-                m_player_state_context.Transition(m_jump_state);
-<<<<<<< HEAD
-            }          
-=======
+                m_player_state_context.Transition(m_jump_state);       
             }
->>>>>>> main
         }
 
         public void DeadPlayer()
