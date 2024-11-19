@@ -8,7 +8,6 @@ namespace Junyoung
     {
         public Rigidbody2D m_rigidbody;
 
-        // PlayerMoveState에서 이동 속도와 방향을 일기만 할 수 있게 프로퍼티 작성
         public float MoveSpeed { get; private set; }
         public float JumpPower { get; private set; }
 
