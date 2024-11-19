@@ -2915,7 +2915,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605394244}
   m_CullTransparentMesh: 1
->>>>>>> feature/TalkNPC
 --- !u!1 &1773517160
 GameObject:
   m_ObjectHideFlags: 0
