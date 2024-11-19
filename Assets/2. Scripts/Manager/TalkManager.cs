@@ -12,12 +12,12 @@ public class TalkManager : MonoBehaviour
     private Dictionary<ObjectData, string[]> m_quest_data;
 
     public TalkUIManager m_talk_ui_manager;
+    public PlayerData m_player_data;
 
     public Sprite[] m_portrait_arr;
 
     public GameObject m_scan_object;
     public bool m_is_action;
-    public int m_talk_idx;
 
     private string m_save_path;
 
@@ -152,7 +152,9 @@ public class TalkManager : MonoBehaviour
             m_scan_object = scan_object;
 
             ObjectData object_data = m_scan_object.GetComponent<ObjectData>();
-            Talk(object_data.m_id, object_data.m_is_npc);
+            m_player_data.m_talk_id = object_data.m_id;
+
+            Talk(m_player_data.m_talk_id, object_data.m_is_npc);
         }
 
         m_talk_ui_manager.SetTalkUIActive(m_is_action);
@@ -161,12 +163,12 @@ public class TalkManager : MonoBehaviour
     // 대화를 진행하는 메소드
     private void Talk(int id, bool is_npc)
     {
-        string talk_data = GetTalkData(id, m_talk_idx);
+        string talk_data = GetTalkData(id, m_player_data.m_talk_idx);
 
         if(talk_data == null)
         {
             m_is_action = false;
-            m_talk_idx = 0;
+            m_player_data.m_talk_idx = 0;
 
             return;
         }
@@ -183,6 +185,6 @@ public class TalkManager : MonoBehaviour
         m_talk_ui_manager.UpdateTalkUI(text, portrait, is_npc, is_player);
 
         m_is_action = true;
-        m_talk_idx++;
+        m_player_data.m_talk_idx++;
     }
 }
