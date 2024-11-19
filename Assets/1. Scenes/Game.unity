@@ -1411,6 +1411,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429924655}
   m_CullTransparentMesh: 1
+--- !u!1 &480532078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480532079}
+  - component: {fileID: 480532080}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480532079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480532078}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1228860650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &480532080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480532078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ca5b8d67107184f99a3c597b54336d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_quest_id: 0
+  m_quest_action_idx: 0
+  m_quest_object: []
+  m_json_quest_list: 
 --- !u!1 &483308630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,8 +2081,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 856, y: 406}
+  m_AnchoredPosition: {x: 0, y: -7.45}
+  m_SizeDelta: {x: 856, y: 448.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &836705938
 MonoBehaviour:
@@ -2841,6 +2889,7 @@ Transform:
   - {fileID: 1773517162}
   - {fileID: 1074997031}
   - {fileID: 1181585561}
+  - {fileID: 480532079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1233626101
@@ -3894,6 +3943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_talk_ui_manager: {fileID: 1074997030}
+  m_quest_manager: {fileID: 480532080}
   m_portrait_arr:
   - {fileID: -1960016052, guid: 72a547ab1dc0dab4e9b4e5ef4ecdf5d3, type: 3}
   - {fileID: 1831767887, guid: 72a547ab1dc0dab4e9b4e5ef4ecdf5d3, type: 3}
@@ -3906,7 +3956,6 @@ MonoBehaviour:
   - {fileID: -983398053, guid: 72a547ab1dc0dab4e9b4e5ef4ecdf5d3, type: 3}
   m_scan_object: {fileID: 0}
   m_is_action: 0
-  m_talk_idx: 0
 --- !u!4 &1773517162
 Transform:
   m_ObjectHideFlags: 0

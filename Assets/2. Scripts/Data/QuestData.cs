@@ -1,17 +1,20 @@
-public class QuestData
+namespace Taekyung
 {
-    string m_quest_name;
-    int[] m_npc_id;
-    
-    QuestData(string name, int[] npc)
+    public class QuestData
     {
-        m_quest_name = name;
-        m_npc_id = npc;
-    }
+        public string m_quest_name;
+        public int m_npc_id;
 
-    void SetQuestData(string name, int[] npc)
-    {
-        this.m_quest_name = name;
-        this.m_npc_id = npc;
+        QuestData(string name, int npc)
+        {
+            m_quest_name = name;
+            m_npc_id = npc;
+        }
+
+        void SetQuestData(string name, int npc)
+        {
+            this.m_quest_name = name;
+            this.m_npc_id = npc;
+        }
     }
 }
