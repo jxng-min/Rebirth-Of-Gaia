@@ -93,21 +93,31 @@ namespace Jongmin
         // 플레이어가 점프를 할 수 있는지 땅과의 거리를 확인하는 메소드
         private void MakeRayToJump()
         {
-            RaycastHit2D ray_hit = Physics2D.Raycast(
+            Vector3 left_down_dir = new Vector3(-1,-1,0).normalized; //좌측 하단으로 정규화된 방향
+            Vector3 right_down_dir = new Vector3(1, -1, 0).normalized; //우측 하단으로 정규화된 방향
+
+            RaycastHit2D left_ray_hit = Physics2D.Raycast(
                                                         m_player_ctrl.m_rigidbody.position,
-                                                        Vector2.down,
+                                                        left_down_dir,
                                                         1.0f,
                                                         LayerMask.GetMask("GROUND")
                                                     );
-            
-            if(ray_hit.collider)
+            RaycastHit2D right_ray_hit = Physics2D.Raycast(
+                                            m_player_ctrl.m_rigidbody.position,
+                                            right_down_dir,
+                                            1.0f,
+                                            LayerMask.GetMask("GROUND")
+                                        );
+            if (left_ray_hit.collider || right_ray_hit.collider)
             {
-                Debug.DrawRay(m_player_ctrl.m_rigidbody.position, Vector2.down * 1.0f, new Color(0, 1, 0));
+                Debug.DrawRay(m_player_ctrl.m_rigidbody.position, left_down_dir * 1.0f, new Color(0, 1, 0));
+                Debug.DrawRay(m_player_ctrl.m_rigidbody.position, right_down_dir * 1.0f, new Color(0, 1, 0));
                 m_player_ctrl.m_is_jump = false;
             }
             else
             {
-                Debug.DrawRay(m_player_ctrl.m_rigidbody.position, Vector2.down * 1.0f, new Color(1, 0, 0));
+                Debug.DrawRay(m_player_ctrl.m_rigidbody.position, left_down_dir * 1.0f, new Color(1, 0, 0));
+                Debug.DrawRay(m_player_ctrl.m_rigidbody.position, right_down_dir * 1.0f, new Color(1, 0, 0));
                 m_player_ctrl.m_is_jump = true;
             }
         }

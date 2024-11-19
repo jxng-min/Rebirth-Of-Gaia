@@ -65,7 +65,11 @@ namespace Junyoung
 
         public void PlayerJump()
         {
-            m_player_state_context.Transition(m_jump_state);
+            if(!m_is_jump)
+            {
+                m_player_state_context.Transition(m_jump_state);
+            }
+            
         }
 
         public void DeadPlayer()
