@@ -8,17 +8,12 @@ namespace Junyoung
     {
         public Rigidbody2D m_rigidbody;
 
-        private float m_walk_speed = 4.0f;
-        private float m_jump_power = 5.0f;
-        private int m_dir = 0;
         // PlayerMoveState에서 이동 속도와 방향을 일기만 할 수 있게 프로퍼티 작성
-        public float WalkSpeedP { get { return m_walk_speed; } private set { m_walk_speed = value; } }
-        public float JumpPowerP { get { return m_jump_power; } private set { m_jump_power = value; } }
-        public int DirP { get { return m_dir; } private set { m_dir = value; } }
+        public float MoveSpeed { get; private set; }
+        public float JumpPower { get; private set; }
 
         public Vector2 m_move_vec = Vector2.zero;
         public bool m_is_jump = false;
-
         public bool m_is_grunded = false;
 
         private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state; // 각 상태들의 선언
@@ -33,7 +28,6 @@ namespace Junyoung
         {
             GameEventBus.Unsubscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
         }
-
 
         private void Start()
         {
@@ -50,31 +44,29 @@ namespace Junyoung
             m_clear_state = gameObject.AddComponent<PlayerClearState>();
 
             m_player_state_context.Transition(m_stop_state);                // 플레이어의 초기 상태를 정지 상태로 설정
+
+            MoveSpeed = 4.0f;
+            JumpPower = 5.0f;
         }
 
-        public void PlayerMoveLeftBtnDown() // 좌측 이동 버튼 클릭으로 플레이어를 이동시킴
+        private void FixedUpdate()
         {
-            m_dir = -1;
-            m_player_state_context.Transition(m_move_state);
+            m_rigidbody.linearVelocity = new Vector2(m_move_vec.x * MoveSpeed, m_rigidbody.linearVelocity.y);
         }
 
-        public void PlayerMoveRightBtnDown()// 우측 이동 버튼 클릭으로 플레이어를 이동시킴
+        public void PlayerStop()
         {
-            m_dir = 1;
-            m_player_state_context.Transition(m_move_state);
-        }
-
-        public void PlayerMoveBtnUP() // 플레이어가 버튼에서 손을 땠을 때 움직임을 정지 시킴
-        {
-            m_dir = 0;
             m_player_state_context.Transition(m_stop_state);
+        }
+
+        public void PlayerMove()
+        {
+            m_player_state_context.Transition(m_move_state);
         }
 
         public void PlayerJump()
         {
-           
             m_player_state_context.Transition(m_jump_state);
-            
         }
 
         public void DeadPlayer()
@@ -85,6 +77,27 @@ namespace Junyoung
         public void ClearPlayer()
         {
             m_player_state_context.Transition(m_clear_state);
+        }
+
+        // 플레이어를 좌측 이동시키는 메소드
+        public void PlayerMoveLeftBtnDown() 
+        {
+            m_move_vec = Vector2.left;
+            PlayerMove();
+        }
+
+        // 플레이어를 우측 이동시키는 메소드
+        public void PlayerMoveRightBtnDown()
+        {
+            m_move_vec = Vector2.right;
+            PlayerMove();
+        }
+
+        // 플레이어가 이동 버튼에서 손을 떼었을 때 호출되는 메소드
+        public void PlayerMoveBtnUP()
+        {
+            m_move_vec = Vector2.zero;
+            PlayerStop();
         }
 
 
