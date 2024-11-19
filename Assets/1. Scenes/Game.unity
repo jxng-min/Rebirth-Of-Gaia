@@ -4124,7 +4124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1515321421}
         m_TargetAssemblyTypeName: Junyoung.PlayerCtrl, Assembly-CSharp
-        m_MethodName: PlayerJump
+        m_MethodName: PlayerDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
