@@ -13,7 +13,7 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;            
             }
 
-            Debug.Log("내려감");
+            Debug.Log("플레이어가 GROUND 플랫폼에서 내려갑니다.");
             GetComponent<PlatformScanCtrl>().StartDisableCollision();
         }
     }

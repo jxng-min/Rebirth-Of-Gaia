@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Adventurer-Brawl.sln"
+    "dotnet.defaultSolution": "Reverse-Of-Gaia.sln"
 }

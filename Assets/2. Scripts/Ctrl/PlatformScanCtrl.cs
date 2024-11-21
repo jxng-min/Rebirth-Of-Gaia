@@ -15,8 +15,8 @@ namespace Junyoung
             m_player_ctrl = GetComponent<PlayerCtrl>();
         }
 
-
-        private void OnCollisionEnter2D(Collision2D collision) // 플랫폼을 감지하는 매서드
+        // 플레이어가 뛰어내릴 플랫폼을 감지하는 메소드
+        private void OnCollisionEnter2D(Collision2D collision) 
         {
             if (collision.gameObject.CompareTag("PLATFORM"))
             {
@@ -25,7 +25,8 @@ namespace Junyoung
             
         }
 
-        private void OnCollisionExit2D(Collision2D collision) // 플랫폼의 콜리더에서 벗어났을 때 작동하는 매서드
+        // 플랫폼의 콜라이더에서 벗어났을 때 작동하는 메소드
+        private void OnCollisionExit2D(Collision2D collision)
         {
             m_current_platform = null;
         }
@@ -33,22 +34,24 @@ namespace Junyoung
 
         private IEnumerator DisableCollision()
         {
-            BoxCollider2D platform_collider = m_current_platform.GetComponent<BoxCollider2D>();
+            if(m_current_platform == null)
+            {
+                Debug.Log("공중에서는 뛰어 내릴 수 없습니다.");
+            }
+            else
+            {
+                BoxCollider2D platform_collider = m_current_platform.GetComponent<BoxCollider2D>();
 
-            Physics2D.IgnoreCollision(m_player_collider, platform_collider);
-            yield return new WaitForSeconds(0.25f);
-            Physics2D.IgnoreCollision(m_player_collider, platform_collider,false);
-
+                Physics2D.IgnoreCollision(m_player_collider, platform_collider);
+                yield return new WaitForSeconds(0.25f);
+                Physics2D.IgnoreCollision(m_player_collider, platform_collider,false);
+            }
         }
 
         public void StartDisableCollision()
         {
             StartCoroutine(DisableCollision());
         }
-        
-
     }
-
-
 }
 
