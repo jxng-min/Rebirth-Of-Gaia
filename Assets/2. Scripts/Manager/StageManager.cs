@@ -7,14 +7,17 @@ namespace Junyoung
 
     public class StageManager : MonoBehaviour
     {
-        public CameraMoveCtrl m_camera_move_ctrl;
+        [SerializeField]
+        private CameraMoveCtrl m_camera_move_ctrl;    
         public GameObject m_player;
-        private List<StageData> m_stages_data; // 스테이지 데이터 리스트
-        public int m_current_stage_index { get; private set; } = 0;
+        private List<StageData> m_stages_data; // 스테이지 데이터 리스트\
+        public int m_current_stage_index = 0;
 
 
         void Start()
         {
+            m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
+            m_player = GameObject.Find("Player");
             LoadStagesData("StageData.json");
             LoadStage(m_current_stage_index);
         }
@@ -31,7 +34,15 @@ namespace Junyoung
 
             string jsonData = File.ReadAllText(filePath); // 파일 내용 읽기
             StageDataWrapper wrapper = JsonUtility.FromJson<StageDataWrapper>(jsonData); // JSON 파싱
-            m_stages_data = new List<StageData>(wrapper.stages); // 리스트로 변환
+            if (wrapper == null || wrapper.StageData == null) // 이 경우 wrapper.stages가 null이 됨
+            {
+                Debug.LogError("JSON 파싱 실패, 데이터가 유효하지 않음");
+                return;
+            }
+            m_stages_data = new List<StageData>(wrapper.StageData); // 리스트로 변환
+
+
+            Debug.Log(jsonData);  // JSON 문자열을 출력하여 값이 제대로 들어갔는지 확인
 
             Debug.Log("스테이지 데이터 로드 성공");
         }
@@ -58,9 +69,23 @@ namespace Junyoung
 
             Debug.Log($"스테이지 {stageIndex + 1} 로드");
         }
+
+        public void LoadNextStage()
+        {
+            
+            if (m_current_stage_index+ 1 < m_stages_data.Count)
+            {
+                m_current_stage_index++;
+                LoadStage(m_current_stage_index);
+            }
+            else
+            {
+                Debug.Log("스테이지가 더 존재하지 않음");
+            }
+        }
         void Update()
         {
-
+            
         }
     }
 }

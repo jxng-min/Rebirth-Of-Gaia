@@ -14,7 +14,8 @@ namespace Junyoung
     [System.Serializable]
     public class StageDataWrapper
     {
-        public StageData[] stages; // JSON 배열을 담기 위한 Wrapper 클래스
+        public StageData[] StageData; // JSON 배열을 담기 위한 Wrapper 클래스
+        //Json이 배열을 지원하지 않으니까 
     }
 }
 
