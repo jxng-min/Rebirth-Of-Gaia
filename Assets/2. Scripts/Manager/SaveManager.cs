@@ -9,7 +9,7 @@ namespace Jongmin
 {
     public class SaveManager : MonoBehaviour
     {
-        private PlayerData m_now_player = new PlayerData();
+        public PlayerData m_now_player;
         private string m_save_path;
 
         private void Start()
@@ -24,7 +24,20 @@ namespace Jongmin
             }
             else
             {
-                m_now_player.m_character_type = GameManager.Instance.CharacterType;
+                switch(GameManager.Instance.CharacterType)
+                {
+                case Character.SOCIA:
+                    m_now_player = new PlayerData(GameManager.Instance.CharacterType, new PlayerStatus(10f, 8f, 12f));
+                break;
+
+                case Character.GOV:
+                    m_now_player = new PlayerData(GameManager.Instance.CharacterType, new PlayerStatus(7f, 15f, 8f));
+                break;
+
+                case Character.ENVA:
+                    m_now_player = new PlayerData(GameManager.Instance.CharacterType, new PlayerStatus(12f, 10f, 10f));
+                break;
+                }
                 SaveData();
             }
         }
@@ -43,13 +56,6 @@ namespace Jongmin
             m_now_player = JsonUtility.FromJson<PlayerData>(data);
 
             Debug.Log($"{m_save_path} 경로에서 플레이어 데이터를 불러오는 데 성공하였습니다.");
-        }
-
-        public void DataClear()
-        {
-            m_now_player = new PlayerData();
-
-            Debug.Log($"플레이어 데이터를 초기화하는 데 성공하였습니다.");
         }
     }
 }
