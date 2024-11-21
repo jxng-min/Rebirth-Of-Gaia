@@ -1,0 +1,45 @@
+[
+    {
+        "cameraLimitCenter": { "x": 2.5f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": -9.6f, "y": -3.7 }
+    },
+    {
+        "cameraLimitCenter": { "x": 30f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 23.5f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 60f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 53.3f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 90f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 82f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 120f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 112f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 150f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 140f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 180f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 171f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 210f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 202f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 240f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 235f, "y": -3.7 }
+    },    {
+        "cameraLimitCenter": { "x": 270f, "y": 2.5f },
+        "cameraLimitSize": { "x": 28, "y": 17 },
+        "playerStartPosition": { "x": 270f, "y": -3.7 }
+    }
+
+]
