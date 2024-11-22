@@ -1,5 +1,7 @@
+using Jongmin;
 using System.Collections.Generic;
 using System.IO;
+using Taekyung;
 using UnityEngine;
 
 namespace Junyoung
@@ -13,6 +15,8 @@ namespace Junyoung
         private List<StageData> m_stages_data; // 스테이지 데이터 리스트\
         public int m_current_stage_index = 0;
 
+        public PlayerData m_player_data;
+        public TalkManager m_talk_manager;
 
         void Start()
         {
@@ -76,6 +80,10 @@ namespace Junyoung
             if (m_current_stage_index+ 1 < m_stages_data.Count)
             {
                 m_current_stage_index++;
+
+                m_player_data.m_stage_id = m_current_stage_index;
+                m_talk_manager.ChangeTalkScene();
+
                 LoadStage(m_current_stage_index);
             }
             else
