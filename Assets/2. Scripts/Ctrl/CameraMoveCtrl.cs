@@ -27,7 +27,7 @@ namespace Junyoung
 
         private void Update()
         {
-            m_player_transform = GameObject.Find("Player").transform;
+            m_player_transform = GameObject.FindGameObjectWithTag("Player").transform;
         }
     
         private void LateUpdate()
