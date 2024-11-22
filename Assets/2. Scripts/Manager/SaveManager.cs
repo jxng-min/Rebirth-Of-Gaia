@@ -28,18 +28,21 @@ namespace Jongmin
                 {
                 case Character.SOCIA:
                     m_now_player = new PlayerData(Character.SOCIA, new PlayerStatus(10f, 8f, 12f));
-                break;
+                    break;
 
                 case Character.GOV:
                     m_now_player = new PlayerData(Character.GOV, new PlayerStatus(7f, 15f, 8f));
-                break;
+                    break;
 
                 case Character.ENVA:
                     m_now_player = new PlayerData(Character.ENVA, new PlayerStatus(12f, 10f, 10f));
-                break;
+                    break;
                 }
+
                 SaveData();
             }
+
+            gameObject.GetComponent<PlayerSelector>().InstantiatePlayer();
         }
 
         public void SaveData()
@@ -56,7 +59,7 @@ namespace Jongmin
             m_now_player = JsonUtility.FromJson<PlayerData>(data);
 
             GameManager.Instance.CharacterType = m_now_player.m_character_type;
-            Debug.Log($"{GameManager.Instance.CharacterType}이 생성되어야 합니다.");
+
             Debug.Log($"{m_save_path} 경로에서 플레이어 데이터를 불러오는 데 성공하였습니다.");
         }
     }

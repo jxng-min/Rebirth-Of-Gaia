@@ -8,8 +8,8 @@ namespace Jongmin
         public override void SetPlayerSkill()
         {
             m_player_skills[0] = new SociaSkill1();
-            m_player_skills[0] = new SociaSkill2();
-            m_player_skills[0] = new SociaSkill3();
+            m_player_skills[1] = new SociaSkill2();
+            m_player_skills[2] = new SociaSkill3();
         }
     }
 }
