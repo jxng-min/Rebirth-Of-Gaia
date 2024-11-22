@@ -11,12 +11,12 @@ public class TalkUIManager : MonoBehaviour
     public Text m_text;
     public GameObject m_end_cursor; 
 
-    public void UpdateTalkUI(string text, Sprite portrait, bool is_npc, bool is_player)
+    public void UpdateTalkUI(string text, Sprite portrait, bool is_player)
     {
         m_text.text = text;
         
         UpdatePlayerPortrait(is_player, portrait);
-        UpdateNpcPortrait(is_npc, portrait, is_player);
+        UpdateNpcPortrait(portrait, is_player);
     }
 
     // 대화 UI에서 플레이어 초상화의 투명도를 조절하는 메소드
@@ -34,9 +34,9 @@ public class TalkUIManager : MonoBehaviour
     }
 
     // 대화 UI에서 NPC 초상화의 투명도를 조절하는 메소드
-    private void UpdateNpcPortrait(bool is_npc, Sprite portrait, bool is_player)
+    private void UpdateNpcPortrait(Sprite portrait, bool is_player)
     {
-        if (is_npc && portrait != null)
+        if (portrait != null)
         {
             m_npc_img.sprite = portrait;
             m_npc_img.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
