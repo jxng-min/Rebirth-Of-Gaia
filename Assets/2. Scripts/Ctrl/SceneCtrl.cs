@@ -16,7 +16,7 @@ namespace Jongmin
 
         public void TitleReplaceScene()
         {
-            if(File.Exists(Application.persistentDataPath + "/PlayerData.txt"))
+            if(File.Exists(Application.persistentDataPath + "/PlayerData.json"))
             {
                 Debug.Log("이미 캐릭터를 생성한 기록이 있습니다.");
                 SceneManager.LoadScene("Game");
