@@ -82,10 +82,11 @@ namespace Junyoung
             
             if (m_current_stage_index+ 1 < m_stages_data.Count)
             {
-                m_current_stage_index++;
 
                 m_player_data.m_stage_id = m_current_stage_index;
                 m_talk_manager.ChangeTalkScene();
+
+                m_current_stage_index++;
 
                 LoadStage(m_current_stage_index);
             }

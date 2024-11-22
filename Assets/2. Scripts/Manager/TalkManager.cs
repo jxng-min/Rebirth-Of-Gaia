@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using Jongmin;
+using Junyoung;
 using UnityEditor;
 using UnityEngine;
 
@@ -21,11 +22,13 @@ namespace Taekyung
         public bool m_is_action;
 
         private string m_save_path;
+        private StageManager m_stage_manager;
 
         private void Start()
         {
             m_save_path = Application.persistentDataPath + "/Data";
             m_portrait_data = new Dictionary<string, Sprite>();
+            m_stage_manager = GameObject.FindAnyObjectByType<StageManager>();
 
             GeneratePortrait();
             BringTalkLineDataFromJson();
@@ -105,8 +108,7 @@ namespace Taekyung
         // 상호작용 메소드
         public void ChangeTalkScene()
         {
-            Talk(m_player_data.m_stage_id);
-            Debug.Log($"{m_player_data.m_stage_id}");
+            Talk(m_stage_manager.m_player_data.m_stage_id);
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
         }
 
@@ -115,20 +117,20 @@ namespace Taekyung
         {
             // Set Talk Data
             string talk_data;
-            switch (m_player_data.m_stage_state)
+            switch (m_stage_manager.m_player_data.m_stage_state)
             {
                 case 0: // 스테이지 시작 상태
-                    if(m_player_data.m_require_mob == 0) // 0 값은 추후 스테이지별 요구 몹처치량으로 변경
+                    if(m_stage_manager.m_player_data.m_require_mob == 0) // 0 값은 추후 스테이지별 요구 몹처치량으로 변경
                     {
-                        talk_data = GetTalkData(stage_id + "_quest", m_player_data.m_talk_idx);
+                        talk_data = GetTalkData(stage_id + "_quest", m_stage_manager.m_player_data.m_talk_idx);
                     }
                     else
                     {
-                        talk_data = GetTalkData(stage_id + "_start", m_player_data.m_talk_idx);
+                        talk_data = GetTalkData(stage_id + "_start", m_stage_manager.m_player_data.m_talk_idx);
                     }
                     break;
                 case 1: // 스테이지 종료 상태
-                    talk_data = GetTalkData(stage_id + "_end", m_player_data.m_talk_idx);
+                    talk_data = GetTalkData(stage_id + "_end", m_stage_manager.m_player_data.m_talk_idx);
                     break;
                 default:
                     Debug.Log("스테이지 상태 불러오기 실패");
@@ -141,12 +143,17 @@ namespace Taekyung
             {
                 m_is_action = false;
 
-                m_player_data.m_talk_idx = 0;
+                m_stage_manager.m_player_data.m_talk_idx = 0;
 
                 return;
             }
+
             // : 이후 숫자에 따른 초상화 선택 및 대사 선택
-            string[] split_data = talk_data.Split(':');
+            string[] split_data = talk_data.Split(';');
+            for(int i = 0; i < split_data.Length; i++)
+            {
+                Debug.Log(split_data[i]);
+            }
             string text = split_data[0];
             int portrait_index = split_data.Length > 1 ? int.Parse(split_data[1]) : 0;
 
@@ -162,14 +169,13 @@ namespace Taekyung
             }
 
             // 초상화 가져오기
-            Sprite portrait = GetPortrait(m_player_data.m_stage_id, portrait_index);
-
-
+            Sprite portrait = GetPortrait(m_stage_manager.m_player_data.m_stage_id, portrait_index);
+            
             // ui 변경
             m_talk_ui_manager.UpdateTalkUI(text, portrait, is_player);
 
             m_is_action = true;
-            m_player_data.m_talk_idx++;
+            m_stage_manager.m_player_data.m_talk_idx++;
         }
     }
 }
