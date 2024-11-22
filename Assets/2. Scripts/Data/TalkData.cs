@@ -27,4 +27,17 @@ namespace Jongmin
     {
         public QuestData[] m_quest_datas;
     }
+
+    [System.Serializable]
+    public class QuestList
+    {
+        public int m_quest_id;
+        public Taekyung.QuestData m_quest_list;
+    }
+
+    [System.Serializable]
+    public class QuestListWrapper
+    {
+        public QuestList[] m_quest_lists;
+    }
 }
