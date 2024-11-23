@@ -3,9 +3,9 @@ namespace Jongmin
     [System.Serializable]
     public class PlayerStatus
     {
-        public float m_attack_power;
-        public float m_magic_power;
-        public float m_social_influence;
+        public float m_strength;
+        public float m_intellect;
+        public float m_sociality;
 
         public int m_ap_enforce;
         public int m_mp_enforce;
@@ -18,9 +18,9 @@ namespace Jongmin
 
         public PlayerStatus(float attack_power, float magic_power, float social_influence)
         {
-            m_attack_power = attack_power;
-            m_magic_power = magic_power;
-            m_social_influence = social_influence;
+            m_strength = attack_power;
+            m_intellect = magic_power;
+            m_sociality = social_influence;
 
             m_ap_enforce = 0;
             m_mp_enforce = 0;
