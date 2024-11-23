@@ -1,8 +1,9 @@
-using UnityEngine;
-
-public enum Character
+namespace Jongmin
 {
-    SOCIA = 0,
-    GOV = 1,
-    ENVA = 2,
+    public enum Character
+    {
+        SOCIA = 0,
+        GOV = 1,
+        ENVA = 2,
+    }
 }

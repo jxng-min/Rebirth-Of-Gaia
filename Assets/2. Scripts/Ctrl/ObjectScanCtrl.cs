@@ -9,7 +9,6 @@ namespace Jongmin
         private Junyoung.PlayerCtrl m_player_ctrl;
         private Vector3 m_player_direction_vector;
         private GameObject m_scan_object;
-        public TypingEffectCtrl m_typing_effect;
 
         private void Start()
         {
@@ -89,8 +88,8 @@ namespace Jongmin
         // 플레이어가 점프를 할 수 있는지 땅과의 거리를 확인하는 메소드
         private void MakeRayToJump()
         {
-            Vector3 left_down_dir = new Vector3(-1,-1,0).normalized; //좌측 하단으로 정규화된 방향
-            Vector3 right_down_dir = new Vector3(1, -1, 0).normalized; //우측 하단으로 정규화된 방향
+            Vector3 left_down_dir = new Vector3(-1,-1,0).normalized;
+            Vector3 right_down_dir = new Vector3(1, -1, 0).normalized;
 
             RaycastHit2D left_ray_hit = Physics2D.Raycast(
                                                         m_player_ctrl.m_rigidbody.position,
