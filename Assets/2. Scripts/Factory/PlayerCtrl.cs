@@ -35,7 +35,7 @@ namespace Junyoung
             GameEventBus.Unsubscribe(GameEventType.FINISH, GameManager.Instance.Finish);
         }
 
-        private void Awake()
+        private void Start()
         {
             GameEventBus.Publish(GameEventType.PLAYING);
 
@@ -49,19 +49,15 @@ namespace Junyoung
             m_down_state = gameObject.AddComponent<PlayerDownState>();
 
             m_player_state_context.Transition(m_stop_state);
-        }
 
-        private void Start()
-        {
             m_rigidbody = GetComponent<Rigidbody2D>();
+            gameObject.AddComponent<ObjectScanCtrl>();
+            gameObject.AddComponent<PlatformScanCtrl>();
 
             SetPlayerSkill();
 
             MoveSpeed = 4.0f;
             JumpPower = 15.0f;
-
-            gameObject.AddComponent<ObjectScanCtrl>();
-            gameObject.AddComponent<PlatformScanCtrl>();
         }
 
         private void FixedUpdate()
