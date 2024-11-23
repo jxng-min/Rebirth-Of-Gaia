@@ -33,9 +33,6 @@ namespace Jongmin
 
             // Mathf.Lerp를 이용한 수정이 좀 필요할 수도 있음
             m_exp_bar.value =  current_exp / max_exp;
-
-            // 오버헤드가 클 가능성이 높음
-            m_save_manager.SaveData();
         }
 
         // 레벨 업을 위한 메소드

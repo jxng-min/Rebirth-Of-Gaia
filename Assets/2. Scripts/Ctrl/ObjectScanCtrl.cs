@@ -67,11 +67,11 @@ namespace Jongmin
         private void MakeRayToCheckObject()
         {
             RaycastHit2D ray_hit = Physics2D.Raycast(
-                                                    m_player_ctrl.m_rigidbody.position,
-                                                    m_player_direction_vector,
-                                                    1.0f,
-                                                    LayerMask.GetMask("OBJECT")
-                                                );
+                                                        m_player_ctrl.m_rigidbody.position,
+                                                        m_player_direction_vector,
+                                                        1.0f,
+                                                        LayerMask.GetMask("OBJECT")
+                                                    );
 
             if (ray_hit.collider)
             {
@@ -92,17 +92,18 @@ namespace Jongmin
             Vector3 right_down_dir = new Vector3(1, -1, 0).normalized;
 
             RaycastHit2D left_ray_hit = Physics2D.Raycast(
-                                                        m_player_ctrl.m_rigidbody.position,
-                                                        left_down_dir,
-                                                        1.0f,
-                                                        LayerMask.GetMask("GROUND")
-                                                    );
+                                                            m_player_ctrl.m_rigidbody.position,
+                                                            left_down_dir,
+                                                            1.0f,
+                                                            LayerMask.GetMask("GROUND")
+                                                         );
             RaycastHit2D right_ray_hit = Physics2D.Raycast(
-                                            m_player_ctrl.m_rigidbody.position,
-                                            right_down_dir,
-                                            1.0f,
-                                            LayerMask.GetMask("GROUND")
-                                        );
+                                                            m_player_ctrl.m_rigidbody.position,
+                                                            right_down_dir,
+                                                            1.0f,
+                                                            LayerMask.GetMask("GROUND")
+                                                          );
+
             if (left_ray_hit.collider || right_ray_hit.collider)
             {
                 Debug.DrawRay(m_player_ctrl.m_rigidbody.position, left_down_dir * 1.0f, new Color(0, 1, 0));
