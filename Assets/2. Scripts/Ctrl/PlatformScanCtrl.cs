@@ -22,7 +22,6 @@ namespace Junyoung
             {
                 m_current_platform = collision.gameObject;
             }
-            
         }
 
         // 플랫폼의 콜라이더에서 벗어났을 때 작동하는 메소드
@@ -31,7 +30,7 @@ namespace Junyoung
             m_current_platform = null;
         }
 
-
+        // 플랫폼에서 뛰어내리는 이뉴머레이터
         private IEnumerator DisableCollision()
         {
             if(m_current_platform == null)

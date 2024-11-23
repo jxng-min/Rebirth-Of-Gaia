@@ -33,6 +33,7 @@ namespace Jongmin
             }
         }
 
+        // 선택된 버튼을 강조하는 메소드
         private void HighlightButton(Button selected_button)
         {
             if(m_current_button != null)
@@ -46,6 +47,7 @@ namespace Jongmin
             m_current_button.GetComponentInChildren<TMP_Text>().color = new Color(0f, 0f, 0f, 1.0f);
         }
 
+        // 선택된 버튼에 따라 캐릭터 타입을 선택하는 메소드
         private void CharacterSelect(Button selected_button)
         {
             switch(selected_button.name)
@@ -67,6 +69,7 @@ namespace Jongmin
             }
         }
 
+        // 인터페이스 역할을 하는 메소드
         public void OnButtonClick(Button selected_button)
         {
             HighlightButton(selected_button);

@@ -1,16 +1,18 @@
-using Jongmin;
 using Junyoung;
 using System;
 using UnityEngine;
 
-public class PlayerSelector : MonoBehaviour
+namespace Jongmin
 {
-    public GameObject[] m_char_prefabs;
-    public GameObject player;
-
-    public void InstantiatePlayer()
+    public class PlayerSelector : MonoBehaviour
     {
-        player = Instantiate(m_char_prefabs[Convert.ToInt32(GameManager.Instance.CharacterType)]);
-        Debug.Log($"캐릭터 코드가 {Convert.ToInt32(GameManager.Instance.CharacterType)}이므로 {GameManager.Instance.CharacterType}을 생성합니다.");
+        public GameObject[] m_char_prefabs;
+        public GameObject player;
+
+        public void InstantiatePlayer()
+        {
+            player = Instantiate(m_char_prefabs[Convert.ToInt32(GameManager.Instance.CharacterType)]);
+            Debug.Log($"캐릭터 코드가 {Convert.ToInt32(GameManager.Instance.CharacterType)}이므로 {GameManager.Instance.CharacterType}을 생성합니다.");
+        }
     }
 }
