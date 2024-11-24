@@ -1,0 +1,12 @@
+# ninja log v5
+288	1211	7541516617999715	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	ec92f7a8dbf50615
+111	1896	7541516624676666	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	52bfc4b993dc8273
+51	1976	7541516625512096	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	eac33f19790308c5
+79	1981	7541516625416777	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8704f66d8b343a5b
+245	2029	7541516626015334	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	fd1a4fd3d3c2bbc2
+191	2111	7541516627038595	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a0091512bae8618d
+1	2157	7541516627549053	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	2b18883932f065dc
+1251	2174	7541516627629227	C:/Users/User/Documents/GitHub/Adventurer-Brawl/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/sce5191e/obj/arm64-v8a/libswappywrapper.so	b6d1cbf14adc74b2
+146	2352	7541516629512027	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	78910b520855c3d3
+24	2482	7541516630802313	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	432ff75b9299c47e
+2483	2765	7541516633604837	C:/Users/User/Documents/GitHub/Adventurer-Brawl/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/sce5191e/obj/arm64-v8a/libgame.so	48bb7c2e58769a76
