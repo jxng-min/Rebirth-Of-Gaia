@@ -7,8 +7,11 @@ namespace Jongmin
     public class StatCtrl : MonoBehaviour
     {
         public GameObject m_stat_panel;
-        public Button[] m_upgrade_buttons = new Button[3];
+
+        public Button[] m_upgrade_buttons;
+        
         public TMP_Text m_token_count_text;
+        public TMP_Text[] m_description_texts;
 
         private SaveManager m_save_manager;
 
@@ -18,6 +21,10 @@ namespace Jongmin
             {
                 m_save_manager = FindAnyObjectByType<SaveManager>();
             }
+
+            UpdateStrengthText();
+            UpdateIntellectText();
+            UpdateSocialityText();
         }
 
         private void Update()
@@ -72,6 +79,7 @@ namespace Jongmin
             m_save_manager.m_now_player.m_player_status.m_ap_enforce++;
 
             m_save_manager.m_now_player.m_player_status.m_strength += 2;
+            UpdateStrengthText();
         }
 
         // 마력을 업그레이드하는 버튼에 적용되는 메소드
@@ -87,7 +95,9 @@ namespace Jongmin
 
             m_save_manager.m_now_player.m_player_status.m_stat_token--;
             m_save_manager.m_now_player.m_player_status.m_mp_enforce++;
+
             m_save_manager.m_now_player.m_player_status.m_intellect += 2;
+            UpdateIntellectText();
         }
 
         // 사회력을 업그레이드하는 버튼에 적용되는 메소드
@@ -103,6 +113,24 @@ namespace Jongmin
 
             m_save_manager.m_now_player.m_player_status.m_stat_token--;
             m_save_manager.m_now_player.m_player_status.m_si_enforce++;
+
+            m_save_manager.m_now_player.m_player_status.m_sociality += 1;
+            UpdateSocialityText();
+        }
+
+        private void UpdateStrengthText()
+        {
+            m_description_texts[0].text = $"Increase Strength + 2.\nYour Strength: {m_save_manager.m_now_player.m_player_status.m_strength}";
+        }
+
+        private void UpdateIntellectText()
+        {
+            m_description_texts[1].text = $"Increase Intellect + 2.\nYour Intellect: {m_save_manager.m_now_player.m_player_status.m_intellect}";
+        }
+
+        private void UpdateSocialityText()
+        {
+            m_description_texts[2].text = $"Increase Sociality + 2.\nYour Sociality: {m_save_manager.m_now_player.m_player_status.m_sociality}";
         }
 
         public void DeactivateUI()
