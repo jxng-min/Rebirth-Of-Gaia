@@ -9,8 +9,10 @@ namespace Jongmin
         public PlayerStatus m_player_status;
         public int m_stage_id;
         public int m_stage_state;
+        public int m_max_clear_stage;
         public int m_require_mob;
         public int m_talk_idx;
+        
 
         public PlayerData(Character char_type, PlayerStatus player_status)
         {
@@ -20,6 +22,7 @@ namespace Jongmin
             m_stage_state = 0;
             m_require_mob = 0;
             m_talk_idx = 0;
+            m_max_clear_stage = 0;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Junyoung
         public GameObject m_player;
         public List<StageData> m_stages_data;
         public int m_current_stage_index = 0;
+        public GameObject m_stage_select_UI;
 
         public PlayerData m_player_data;
         public TalkManager m_talk_manager;
@@ -23,6 +24,7 @@ namespace Junyoung
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
 
             m_player = GameObject.FindGameObjectWithTag("Player");
+            m_stage_select_UI = GameObject.Find("Stage Select Panel");
 
             LoadStagesData("StageData.json");
             LoadStage(m_current_stage_index);
@@ -75,25 +77,14 @@ namespace Junyoung
             m_camera_move_ctrl.m_camera_limit_size = stageData.m_camera_limit_size;
 
             Debug.Log($"스테이지 {stage_index + 1} 로드");
+        
         }
-
-        public void LoadNextStage()
+        
+        public void StageSelectPanelOnoff()
         {
-            
-            if (m_current_stage_index+ 1 < m_stages_data.Count)
-            {
-
-                m_player_data.m_stage_id = m_current_stage_index;
-                m_talk_manager.ChangeTalkScene();
-
-                m_current_stage_index++;
-
-                LoadStage(m_current_stage_index);
-            }
-            else
-            {
-                Debug.Log("스테이지가 더 존재하지 않음");
-            }
+            bool isActive = m_stage_select_UI.activeSelf;
+            m_stage_select_UI.SetActive( !isActive );
         }
+
     }
 }
