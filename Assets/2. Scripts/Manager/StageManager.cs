@@ -3,29 +3,34 @@ using System.Collections.Generic;
 using System.IO;
 using Taekyung;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Junyoung
 {
 
     public class StageManager : MonoBehaviour
     {
-        [SerializeField]
-        private CameraMoveCtrl m_camera_move_ctrl;    
-        public GameObject m_player;
-        public List<StageData> m_stages_data;
         public int m_current_stage_index = 0;
-        public GameObject m_stage_select_UI;
 
+        public List<StageData> m_stages_data;
+        public Button[] m_select_buttons;
+
+        public GameObject m_player;
+        public GameObject m_stage_select_UI;
+        
         public PlayerData m_player_data;
         public TalkManager m_talk_manager;
+        private SaveManager m_save_manager;
+        private CameraMoveCtrl m_camera_move_ctrl;
 
         void Start()
         {
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
 
-            m_player = GameObject.FindGameObjectWithTag("Player");
-            m_stage_select_UI = GameObject.Find("Stage Select Panel");
-
+            m_player = GameObject.FindGameObjectWithTag("Player");           
+            m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
+            //m_select_buttons = m_stage_select_UI.GetComponentsInChildren<Button>();
+            
             LoadStagesData("StageData.json");
             LoadStage(m_current_stage_index);
         }
@@ -76,15 +81,42 @@ namespace Junyoung
             m_camera_move_ctrl.m_camera_limit_center = stageData.m_camera_limit_center;
             m_camera_move_ctrl.m_camera_limit_size = stageData.m_camera_limit_size;
 
-            Debug.Log($"스테이지 {stage_index + 1} 로드");
-        
+            Debug.Log($"스테이지 {stage_index} 로드");
+
+
+            m_save_manager.m_now_player.m_stage_id = stage_index;
+
+
+            Debug.Log($"m_stage_id : {m_save_manager.m_now_player.m_stage_id}");
+
+
         }
         
         public void StageSelectPanelOnoff()
         {
             bool isActive = m_stage_select_UI.activeSelf;
+            if ( !isActive )
+                Debug.Log($"스테이지 선택창 활성화");
+            else
+                Debug.Log($"스테이지 선택창 비활성화");
             m_stage_select_UI.SetActive( !isActive );
+            
         }
 
+        public void SelectButtonInteract() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
+        {
+            m_select_buttons[m_save_manager.m_now_player.m_max_clear_stage].interactable = true;
+            Debug.Log($"스테이지 {m_save_manager.m_now_player.m_max_clear_stage} 버튼 활성화");
+        }
+
+        public void SelectButtonReset() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
+        {
+            for(int i=1; i<=9; i++)
+            {
+                m_select_buttons[i].interactable = false;
+            }
+            
+            Debug.Log($"스테이지 선택 버튼 비활성화");
+        }
     }
 }
