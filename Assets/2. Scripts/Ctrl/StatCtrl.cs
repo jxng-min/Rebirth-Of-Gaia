@@ -115,6 +115,8 @@ namespace Jongmin
             m_save_manager.m_now_player.m_player_status.m_si_enforce++;
 
             m_save_manager.m_now_player.m_player_status.m_sociality += 1;
+            m_save_manager.m_now_player.m_player_status.m_strength += (m_save_manager.m_now_player.m_player_status.m_strength * 0.02f);
+            m_save_manager.m_now_player.m_player_status.m_intellect += (m_save_manager.m_now_player.m_player_status.m_intellect * 0.02f);
             UpdateSocialityText();
         }
 
