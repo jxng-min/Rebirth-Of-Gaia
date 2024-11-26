@@ -7,11 +7,19 @@ namespace Jongmin
         private AudioSource m_bgm_source;
         private AudioSource m_effect_source;
 
-        public AudioClip[] m_bgm_clips;
-        public string[] m_bgm_clip_names;
+        [Header("Background Sounds")]
+        [SerializeField]
+        private AudioClip[] m_bgm_clips;
 
-        public AudioClip[] m_effect_clips;
-        public string[] m_effect_clip_names;
+        [SerializeField]
+        private string[] m_bgm_clip_names;
+
+        [Header("Effect Sounds")]
+        [SerializeField]
+        private AudioClip[] m_effect_clips;
+
+        [SerializeField]
+        private string[] m_effect_clip_names;
 
         private void Start()
         {

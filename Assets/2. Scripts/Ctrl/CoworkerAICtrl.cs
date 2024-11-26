@@ -6,21 +6,34 @@ using Junyoung;
 public class CoworkerAICtrl : MonoBehaviour
 {
     [Header("Pathfinding")]
-    public Transform m_target;
-    public float m_activate_distance = 50f;
-    public float m_path_update_seconds =0.5f;
+    [SerializeField]
+    private Transform m_target;
+
+    [SerializeField]
+    private float m_activate_distance = 50f;
+
+    [SerializeField]
+    private float m_path_update_seconds =0.5f;
 
     [Header("Physics")]
-    public float m_speed = 100f;
-    public float m_next_waypoint_distance = 3f;
-    public float m_jump_node_height_requirement = 0.8f;
-    public float m_jump_modifier = 0.3f;
-    public float m_jump_check_offset = 0.1f;
+    [SerializeField]
+    private float m_speed = 100f;
 
-    [Header("Custom Behavior")]
-    public bool m_follow_enabled = true;
-    public bool m_jump_enabled = true;
-    public bool m_direction_look_enabled = true;
+    [SerializeField]
+    private float m_next_waypoint_distance = 3f;
+
+    [SerializeField]
+    private float m_jump_node_height_requirement = 0.8f;
+
+    [SerializeField]
+    private float m_jump_modifier = 0.3f;
+
+    [SerializeField]
+    private float m_jump_check_offset = 0.1f;
+
+    private bool m_follow_enabled = true;
+    private bool m_jump_enabled = true;
+    private bool m_direction_look_enabled = true;
 
     private Path m_path;
     private int m_current_waypoint = 0;

@@ -16,11 +16,11 @@ namespace Jongmin
         public int m_current_exp;
 
 
-        public PlayerStatus(float attack_power, float magic_power, float social_influence)
+        public PlayerStatus(CharacterStatus character_status)
         {
-            m_strength = attack_power;
-            m_intellect = magic_power;
-            m_sociality = social_influence;
+            m_strength = character_status.Strength;
+            m_intellect = character_status.Intellect;
+            m_sociality = character_status.Sociality;
 
             m_ap_enforce = 0;
             m_mp_enforce = 0;

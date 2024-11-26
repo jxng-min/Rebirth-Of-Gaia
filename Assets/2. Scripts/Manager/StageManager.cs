@@ -94,10 +94,10 @@ namespace Junyoung
             Debug.Log($"스테이지 {stage_index} 로드");
 
 
-            m_save_manager.m_now_player.m_stage_id = stage_index;
+            m_save_manager.Player.m_stage_id = stage_index;
 
 
-            Debug.Log($"m_stage_id : {m_save_manager.m_now_player.m_stage_id}");
+            Debug.Log($"m_stage_id : {m_save_manager.Player.m_stage_id}");
 
 
         }
@@ -115,8 +115,8 @@ namespace Junyoung
 
         public void SelectButtonInteract() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
         {
-            m_select_buttons[m_save_manager.m_now_player.m_max_clear_stage].interactable = true;
-            Debug.Log($"스테이지 {m_save_manager.m_now_player.m_max_clear_stage} 버튼 활성화");
+            m_select_buttons[m_save_manager.Player.m_max_clear_stage].interactable = true;
+            Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage} 버튼 활성화");
         }
 
         public void SelectButtonReset() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
