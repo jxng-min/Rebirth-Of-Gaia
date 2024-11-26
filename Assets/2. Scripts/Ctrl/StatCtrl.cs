@@ -6,22 +6,25 @@ namespace Jongmin
 {
     public class StatCtrl : MonoBehaviour
     {
-        public GameObject m_stat_panel;
-
-        public Button[] m_upgrade_buttons;
-        
-        public TMP_Text m_token_count_text;
-        public TMP_Text[] m_description_texts;
-
+        [Header("SaveManager")]
+        [SerializeField]
         private SaveManager m_save_manager;
+
+        [Header("Stat UI")]
+        [SerializeField]
+        private GameObject m_stat_panel;
+
+        [SerializeField]
+        private Button[] m_upgrade_buttons;
+        
+        [SerializeField]
+        private TMP_Text m_token_count_text;
+        
+        [SerializeField]
+        private TMP_Text[] m_description_texts;
 
         private void OnEnable()
         {
-            if(m_save_manager == null)
-            {
-                m_save_manager = FindAnyObjectByType<SaveManager>();
-            }
-
             UpdateStrengthText();
             UpdateIntellectText();
             UpdateSocialityText();

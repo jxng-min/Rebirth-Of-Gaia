@@ -1,3 +1,4 @@
+using UnityEditor.Search;
 using UnityEngine;
 
 namespace Junyoung
@@ -7,16 +8,32 @@ namespace Junyoung
         private Transform m_player_transform;
         private float m_camera_move_speed = 1.0f;
 
-        public Vector2 m_camera_limit_center;
-        public Vector2 m_camera_limit_size;
+        [Header("Camera Setting")]
+        [SerializeField]
+        private Vector2 m_camera_limit_center;
+
+        public Vector2 CameraLimitCenter 
+        { 
+            get { return m_camera_limit_center; }
+            set { m_camera_limit_center = value; }    
+        }
+        
+        [SerializeField]
+        private Vector2 m_camera_limit_size;
+
+        public Vector2 CameraLimitSize 
+        { 
+            get { return m_camera_limit_size; }
+            set { m_camera_limit_size = value; }    
+        }
 
         private float m_camera_height;
         private float m_camera_width;
 
         void Start()
         {
-            m_camera_height = Camera.main.orthographicSize;                     // 카메라가 화면의 보이는 절반 높이 값
-            m_camera_width = m_camera_height * Screen.width / Screen.height;    // 카메라 너비 설정
+            m_camera_height = Camera.main.orthographicSize;
+            m_camera_width = m_camera_height * Screen.width / Screen.height;
         }
 
         private void OnDrawGizmos()
@@ -32,7 +49,6 @@ namespace Junyoung
     
         private void LateUpdate()
         {
-            // 선형보간으로 카메라와 플레이어 사이의 벡터값이 프레임과 일정하게 차이나게끔 하여 천천히 따라오는 효과를 만듬
             transform.position = Vector3.Lerp(transform.position,m_player_transform.position, Time.deltaTime*m_camera_move_speed); 
 
             float lx = m_camera_limit_size.x * 0.5f - m_camera_width;

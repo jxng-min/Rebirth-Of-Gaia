@@ -5,21 +5,28 @@ namespace Jongmin
 {
     public class AbilityCtrl : MonoBehaviour
     {
+        [Header("SaveManager")]
+        [SerializeField]
         private SaveManager m_save_manager;
 
-        public GameObject m_ability_panel;
-        public TMP_Text m_character_name;
-        public TMP_Text m_strength_state;
-        public TMP_Text m_intellect_state;
-        public TMP_Text m_sociality_state;
+        [Header("Ability UI")]
+        [SerializeField]
+        private GameObject m_ability_panel;
+
+        [SerializeField]
+        private TMP_Text m_character_name;
+
+        [SerializeField]
+        private TMP_Text m_strength_state;
+        
+        [SerializeField]
+        private TMP_Text m_intellect_state;
+
+        [SerializeField]
+        private TMP_Text m_sociality_state;
 
         private void OnEnable()
         {
-            if(m_save_manager == null)
-            {
-                m_save_manager = FindAnyObjectByType<SaveManager>();
-            }
-            
             ShowAllAbility();
         }
 

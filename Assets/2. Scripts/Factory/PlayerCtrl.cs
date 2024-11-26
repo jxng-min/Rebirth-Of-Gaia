@@ -1,23 +1,34 @@
 using Jongmin;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 namespace Junyoung
 {
     public abstract class PlayerCtrl : MonoBehaviour
     {
-        public Rigidbody2D m_rigidbody;
+        [Header("Physics")]
+        private Rigidbody2D m_rigidbody;
 
         public float MoveSpeed { get; private set; }
         public float JumpPower { get; private set; }
 
-        public Vector2 m_move_vec = Vector2.zero;
-        public bool m_is_jump = false;
+        private Vector2 m_move_vec = Vector2.zero;
+
+        public Vector2 MoveVector
+        {
+            get { return m_move_vec; }
+            set { m_move_vec = value; }
+        }
      
+        [Header("State")]
 
         private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state, m_down_state;
         private PlayerStateContext m_player_state_context;
 
-        public Skill[] m_player_skills = new Skill[3]; 
+        public bool IsJump { get; set; }
+
+        [Header("Skill")]
+        public Skill[] m_player_skills = new Skill[3];
 
         private void OnEnable()
         {
@@ -77,7 +88,7 @@ namespace Junyoung
 
         public void PlayerDown()
         {
-            if(GameManager.Instance.m_game_status == "Playing")
+            if(GameManager.Instance.GameStatus == "Playing")
             {
                 m_player_state_context.Transition(m_down_state);
             }
@@ -85,7 +96,7 @@ namespace Junyoung
 
         public void PlayerJump()
         {
-            if(!m_is_jump && GameManager.Instance.m_game_status == "Playing")
+            if(!IsJump && GameManager.Instance.GameStatus == "Playing")
             {
                 m_player_state_context.Transition(m_jump_state);       
             }

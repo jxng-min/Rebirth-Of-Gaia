@@ -13,7 +13,7 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;                            
             }
 
-            m_player_ctrl.m_rigidbody.linearVelocity = Vector2.up * m_player_ctrl.JumpPower;
+            m_player_ctrl.GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * m_player_ctrl.JumpPower;
         }
     }
 }

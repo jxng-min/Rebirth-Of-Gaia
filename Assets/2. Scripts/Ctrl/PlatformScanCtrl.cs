@@ -5,7 +5,7 @@ namespace Junyoung
 {
     public class PlatformScanCtrl : MonoBehaviour
     {
-        [SerializeField] private GameObject m_current_platform;
+        private GameObject m_current_platform;
         private BoxCollider2D m_player_collider;
         private PlayerCtrl m_player_ctrl;
 

@@ -1,11 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Jongmin
 {
     public class TypingEffectCtrl : MonoBehaviour
     {
-        public TalkUIManager m_talk_manager;
+        private TalkUIManager m_talk_manager;
 
         private int m_cps;
 
@@ -14,9 +15,12 @@ namespace Jongmin
 
         private int m_current_idx;
         private float m_interval;
+
+        public UnityAction<bool> EndCursor;
         
         private void Start()
         {
+            m_talk_manager = GetComponent<TalkUIManager>();
             m_current_text = GetComponent<TMP_Text>();
         }
 
@@ -31,7 +35,7 @@ namespace Jongmin
         // 텍스트 출력을 시작하는 메소드
         private void TypingEffectStart()
         {
-            m_talk_manager.m_end_cursor.SetActive(false);
+            EndCursor(false);
 
             m_current_text.text = "";
             m_current_idx = 0;
@@ -57,7 +61,7 @@ namespace Jongmin
         // 텍스트 출력이 마무리되면 호출되는 메소드
         private void TypingEffectEnd()
         {
-            m_talk_manager.m_end_cursor.SetActive(true);
+            EndCursor(true);
         }
     }
 }

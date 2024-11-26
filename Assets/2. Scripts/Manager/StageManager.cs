@@ -10,17 +10,26 @@ namespace Junyoung
 
     public class StageManager : MonoBehaviour
     {
-        public int m_current_stage_index = 0;
+        private int m_current_stage_index = 0;
 
-        public List<StageData> m_stages_data;
-        public Button[] m_select_buttons;
-
-        public GameObject m_player;
-        public GameObject m_stage_select_UI;
+        private List<StageData> m_stages_data;
         
-        public PlayerData m_player_data;
-        public TalkManager m_talk_manager;
+        [Header("Stage UI")]
+        [SerializeField]
+        private Button[] m_select_buttons;
+
+        [SerializeField]
+        private GameObject m_stage_select_UI;
+        
+        private GameObject m_player;
+
+        [Header("Managers")]
+        [SerializeField]
+        private TalkManager m_talk_manager;
+
+        [SerializeField]
         private SaveManager m_save_manager;
+
         private CameraMoveCtrl m_camera_move_ctrl;
 
         void Start()
@@ -29,15 +38,14 @@ namespace Junyoung
 
             m_player = GameObject.FindGameObjectWithTag("Player");           
             m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
-            //m_select_buttons = m_stage_select_UI.GetComponentsInChildren<Button>();
             
             LoadStagesData("StageData.json");
             LoadStage(m_current_stage_index);
         }
 
-        private void LoadStagesData(string fileName)
+        private void LoadStagesData(string file_name)
         {
-            string file_path = Path.Combine(Application.streamingAssetsPath, fileName);
+            string file_path = Path.Combine(Application.streamingAssetsPath, file_name);
 
             if (!File.Exists(file_path))
             {
@@ -45,8 +53,10 @@ namespace Junyoung
                 return;
             }
 
-            string jsonData = File.ReadAllText(file_path);
-            StageDataWrapper wrapper = JsonUtility.FromJson<StageDataWrapper>(jsonData);
+            string json_data = File.ReadAllText(file_path);
+
+            StageDataWrapper wrapper = JsonUtility.FromJson<StageDataWrapper>(json_data);
+
             if (wrapper == null || wrapper.StageData == null)
             {
                 Debug.LogError("JSON 파싱 실패, 데이터가 유효하지 않음");
@@ -55,7 +65,7 @@ namespace Junyoung
             m_stages_data = new List<StageData>(wrapper.StageData);
 
 
-            Debug.Log(jsonData);
+            Debug.Log(json_data);
 
             Debug.Log("스테이지 데이터 로드 성공");
         }
@@ -72,14 +82,14 @@ namespace Junyoung
 
             // 플레이어 위치 설정
             m_player.transform.position = new Vector3(
-                stageData.m_player_start_position.x,
-                stageData.m_player_start_position.y,
-                m_player.transform.position.z
-            );
+                                                        stageData.m_player_start_position.x,
+                                                        stageData.m_player_start_position.y,
+                                                        m_player.transform.position.z
+                                                     );
 
             // 카메라 제한 설정
-            m_camera_move_ctrl.m_camera_limit_center = stageData.m_camera_limit_center;
-            m_camera_move_ctrl.m_camera_limit_size = stageData.m_camera_limit_size;
+            m_camera_move_ctrl.CameraLimitCenter = stageData.m_camera_limit_center;
+            m_camera_move_ctrl.CameraLimitSize = stageData.m_camera_limit_size;
 
             Debug.Log($"스테이지 {stage_index} 로드");
 
@@ -111,7 +121,7 @@ namespace Junyoung
 
         public void SelectButtonReset() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
         {
-            for(int i=1; i<=9; i++)
+            for(int i = 1; i <= 9; i++)
             {
                 m_select_buttons[i].interactable = false;
             }
