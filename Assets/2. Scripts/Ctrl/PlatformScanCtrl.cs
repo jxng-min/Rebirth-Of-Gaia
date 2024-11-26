@@ -42,7 +42,7 @@ namespace Junyoung
                 BoxCollider2D platform_collider = m_current_platform.GetComponent<BoxCollider2D>();
 
                 Physics2D.IgnoreCollision(m_player_collider, platform_collider);
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(1.0f);
                 Physics2D.IgnoreCollision(m_player_collider, platform_collider,false);
             }
         }
