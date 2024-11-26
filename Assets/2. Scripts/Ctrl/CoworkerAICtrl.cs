@@ -6,24 +6,23 @@ using Junyoung;
 public class CoworkerAICtrl : MonoBehaviour
 {
     [Header("Pathfinding")]
-    [SerializeField]
     private Transform m_target;
 
     [SerializeField]
-    private float m_activate_distance = 50f;
+    private float m_activate_distance = 10f;
 
     [SerializeField]
-    private float m_path_update_seconds =0.5f;
+    private float m_path_update_seconds = 0.5f;
 
     [Header("Physics")]
     [SerializeField]
-    private float m_speed = 100f;
+    private float m_speed = 150f;
 
     [SerializeField]
-    private float m_next_waypoint_distance = 3f;
+    private float m_next_waypoint_distance = 0.2f;
 
     [SerializeField]
-    private float m_jump_node_height_requirement = 0.8f;
+    private float m_jump_node_height_requirement = 0.3f;
 
     [SerializeField]
     private float m_jump_modifier = 0.3f;
@@ -52,9 +51,19 @@ public class CoworkerAICtrl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(m_follow_enabled && TargetInDistance())
+        if (m_follow_enabled && TargetInDistance())
         {
             PathFollow();
+        }
+
+        if (TargetReached())
+        {
+            m_follow_enabled = false;
+            m_rigidbody.linearVelocity = Vector2.zero;
+        }
+        else
+        {
+            m_follow_enabled = true;
         }
     }
 
@@ -66,52 +75,47 @@ public class CoworkerAICtrl : MonoBehaviour
         }
     }
 
+    private bool TargetReached()
+    {
+        float target_distance = 0.1f;
+
+        return Vector2.Distance(transform.position, m_target.position) <= target_distance;
+    }
+
     private void PathFollow()
     {
-        if(m_path == null)
+        if (m_path == null || m_current_waypoint >= m_path.vectorPath.Count)
         {
             return;
         }
 
-        // 경로의 끝에 도달한 경우에 대한 처리
-        if(m_current_waypoint >= m_path.vectorPath.Count)
-        {
-            m_current_waypoint = 0;
-            return;
-        }
+        m_is_grounded = Physics2D.Raycast(
+                                            transform.position, 
+                                            Vector3.down, 
+                                            GetComponent<Collider2D>().bounds.extents.y + m_jump_check_offset
+                                         );
 
-        m_is_grounded = Physics2D.Raycast(transform.position, Vector3.down, GetComponent<Collider2D>().bounds.extents.y + m_jump_check_offset);
-
-        // 방향을 계산하는 로직
         Vector2 direction = ((Vector2)m_path.vectorPath[m_current_waypoint] - m_rigidbody.position).normalized;
-        Vector2 force = direction * m_speed * Time.deltaTime;
 
-        // 점프 로직
-        if(m_jump_enabled && m_is_grounded)
+        if (m_jump_enabled && m_is_grounded && direction.y > m_jump_node_height_requirement)
         {
-            if(direction.y > m_jump_node_height_requirement)
-            {
-                m_rigidbody.AddForce(Vector2.up * m_speed * m_jump_modifier);
-            }
+            m_rigidbody.AddForce(Vector2.up * m_speed * m_jump_modifier, ForceMode2D.Impulse);
         }
 
-        // 이동 로직
-        m_rigidbody.AddForce(force);
+        m_rigidbody.linearVelocity = new Vector2(direction.x * m_speed * Time.fixedDeltaTime, m_rigidbody.linearVelocity.y);
 
-        // 다음 경로 설정 로직
-        float distance = Vector2.Distance(m_rigidbody.position, m_path.vectorPath[m_current_waypoint]);
-        if(distance < m_next_waypoint_distance)
+        if (Vector2.Distance(m_rigidbody.position, m_path.vectorPath[m_current_waypoint]) < m_next_waypoint_distance)
         {
             m_current_waypoint++;
         }
 
-        if(m_direction_look_enabled)
+        if (m_direction_look_enabled)
         {
-            if(m_rigidbody.linearVelocity.x > 0.05f)
+            if((direction.x < 0f))
             {
                 GetComponent<SpriteRenderer>().flipX = true;
             }
-            else if(m_rigidbody.linearVelocity.x < -0.05f)
+            else if((direction.x > 0f))
             {
                 GetComponent<SpriteRenderer>().flipX = false;
             }
