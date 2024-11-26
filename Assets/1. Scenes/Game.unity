@@ -11859,7 +11859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABIIeyXe5N0dgIAADEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFy2jAQ/RVG58LYYELorXUI6SEJE9rJxRdhrbEGWfJIcoBk+PeuZBm7lAvy2327b5/W/iJcmhpyq/Rac/asGJDvI+LO5NuoDz7Bie6V3PJP6HLeObOlS6I+541arhCPHc2oCqzm+Q+5Fy45QrCRvFC6WrE9pMpYg3BBhQEMaWUdWyL0NSIn/BsvHeWMp+nCnT7xtIxGFzzmIC3oPjWaRNN5FCd3s3geOGPEFskSf7P5MrBbciNzQasamJukr5HMJh13Gk1inypxzpAVTWausRKCmyCT2HPtbUhpbRocEhMYpzi21xZ7Rgl8X1pXdEh/LQoDNrii6fmBa/SvrUt+qtbUippDq++DisZ1iqf3Xldb9Pm/+LiVXWhVPXV948j1sCXPD2/0nFNjB64P4YeBdG/TkYoD3Ql4L0G+qLVWjWQYtLpx1MbA9KF/vI6WlpAferyVegM29eDugundFbsZLn76Uyp4tfPeJy2wFco77jcDNN7OLxTs98aEEog6FX8M/Kb74YKFwCPXxmIoTCmdvJ1qtEslK++Zm6axqdISPBxE1yCpsOcNlrG3V3gTG7S9iTxS9yqF5iHWvSE3FA/3+VF0E9qo4/WyTKmOz2DK18YKLqEX7QIv6FOqpGw3bOhJR9s2uqD5gLZvOPt3tciyKOB+eUenCZuxfMHG8wiSu4QuikUeU5jNid89LnFOKjat0GAP3prsi0vcs+4LM1prWvttZ5oe1/yzUgPLuSzUNtcA8rWtcBUOGpvgm8lWjKNBW7CWS3/f5CsjQuUHYNm1UOYnXZ2spllfJSM1/1DWIRlJ/SclIw6+7vJGwweHo2veFbuQy19QSwMEFAAACAgAAEgh7NZ4U6NtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJlWlqqhaVZopFJinFKsnmKrqlBqomZSaJ5mnmyYWKqsalSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEgh7Jd7k3R2AgAAMQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEgh7NZ4U6NtAAAAeAAAAAkAJAAAAAAAAAAAAAAAwwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB7AwAAAAA=
+    dataString: UEsDBBQAAAgIAABIIewDYsSEeQIAADMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFy2jAQ/RVG58LYDgTcW+sQ0kMSJrSTiy/CWmMNQvJIcoBk+PeuZBm7lAvy2327b5/W/iJcmhoKq/RKc/asGJDvI+LO5NuoDz7Bie6U3PBP6HLeObOVS6I+541arhCPHc2oA1jNix9yJ1xyhGAjean0Ycl2kCljDcIlFQYwpJV1bInQ14ic8G+cOsoZT8ncnT7xlEajCx4LkBZ0nxpNomQWTWfxfLEInDFi82maRrNF4LbURhaCHmpgbo6+QpJMZoGZTtIIf7FPlzhpyIwmd661EoKbIJTYc+2NyGhtGhwTExinOLhXF3tGBXxXWddjSH8tSwM2+KLp+YFrdLCtS36q1tYDNftW4wcVjesUJwuvqy36/F983MoutTo8dX3jyPWwFS/2b/RcUGMHvg/hh4F0b9WRij3dCnivQL6olVaNZBi0unHUxkDy0D9eR8sqKPY93kq9AZt6cHvB+O6S3QwXP/0pE/yw9d5PW2AjlHfc7wZovJ1fKNhvjgklEHUq/hj4TXfDFQuBR66NxVCYUjp5W9Vol0qW3jM3TWMzpSV4OIiuQVJhz2ssY2+v8CY2aHsTeaTuZQrNQ6x7R24oHu7zo+gmtFbH62WZSh2fwVSvjRVcQi/aBV7Qp0xJ2W7Y0JOOtml0SYsBbddw9u9qkbQsYZHe02TK7lgxZ+NZBNP7KZ2X8yKmcDcjfve4xDmpWLdCgz14a7IvLnHPum/MaKVp7bedaXpc8c+DGljOZak2hQaQr22Fq3DQ2ATfTLZkHA3agLVc+vsmXzkRqtgDy6+Fcj/p8mQ1zfsqOan5h7IOyUnmPyo5cfB1l9caPjgcXfOu2IVc/gJQSwMEFAAACAgAAEgh7NZ4U6NtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJlWlqqhaVZopFJinFKsnmKrqlBqomZSaJ5mnmyYWKqsalSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEgh7ANixIR5AgAAMwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEgh7NZ4U6NtAAAAeAAAAAkAJAAAAAAAAAAAAAAAxgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB+AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -12249,8 +12249,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074997031}
-  - component: {fileID: 1074997030}
   - component: {fileID: 1074997032}
+  - component: {fileID: 1074997033}
   m_Layer: 0
   m_Name: Talk UI Manager
   m_TagString: Untagged
@@ -12258,23 +12258,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1074997030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074997029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b77ba4c89af12248ad72ec457742001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_talk_ui: {fileID: 836705936}
-  m_npc_img: {fileID: 1101485743}
-  m_player_img: {fileID: 1334635363}
-  m_text: {fileID: 38823084}
-  m_end_cursor: {fileID: 408189874}
 --- !u!4 &1074997031
 Transform:
   m_ObjectHideFlags: 0
@@ -12302,6 +12285,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4efa42409e5b6514c8e8c9265fc0c8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1074997033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074997029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b77ba4c89af12248ad72ec457742001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_talk_ui: {fileID: 836705936}
+  m_npc_img: {fileID: 1101485743}
+  m_player_img: {fileID: 1334635363}
+  m_text: {fileID: 38823084}
+  m_end_cursor: {fileID: 408189874}
 --- !u!1 &1078478943
 GameObject:
   m_ObjectHideFlags: 0
@@ -16405,13 +16405,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299bff85a6069fa48954b113be88d56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: {fileID: 0}
   m_activate_distance: 100
   m_path_update_seconds: 0.5
-  m_speed: 500
+  m_speed: 150
   m_next_waypoint_distance: 3
-  m_jump_node_height_requirement: 0.8
-  m_jump_modifier: 0.1
+  m_jump_node_height_requirement: 0.3
+  m_jump_modifier: 0.005
   m_jump_check_offset: 0.1
 --- !u!61 &1505185788
 BoxCollider2D:
@@ -16550,7 +16549,7 @@ Transform:
   m_GameObject: {fileID: 1505185786}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.16, y: 0, z: 0}
+  m_LocalPosition: {x: 10.16, y: -1.83, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17305,8 +17304,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1574673810}
   - component: {fileID: 1574673813}
-  - component: {fileID: 1574673812}
   - component: {fileID: 1574673811}
+  - component: {fileID: 1574673814}
   m_Layer: 7
   m_Name: Ground (7)
   m_TagString: PLATFORM
@@ -17323,8 +17322,8 @@ Transform:
   m_GameObject: {fileID: 1574673809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.295029, y: -2.8, z: 10.032986}
-  m_LocalScale: {x: 7, y: 1, z: 1}
+  m_LocalPosition: {x: -20.325, y: -2.73, z: 10.032986}
+  m_LocalScale: {x: 7.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 897555808}
@@ -17348,52 +17347,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!61 &1574673812
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574673809}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &1574673813
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17449,6 +17402,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1574673814
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574673809}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1583043364
 GameObject:
   m_ObjectHideFlags: 0
@@ -20449,7 +20448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3679ec4f83131499940ad67f707c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_talk_ui_manager: {fileID: 1074997030}
+  m_talk_ui_manager: {fileID: 1074997033}
   m_portrait_arr:
   - {fileID: -1994874850, guid: ef69a74d88a7a1541a263eb8d78dcdaa, type: 3}
   - {fileID: 722584537, guid: ef69a74d88a7a1541a263eb8d78dcdaa, type: 3}
