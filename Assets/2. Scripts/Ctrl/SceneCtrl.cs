@@ -6,7 +6,8 @@ namespace Jongmin
 {
     public class SceneCtrl : MonoBehaviour
     {
-        public string m_scene_name;
+        [SerializeField]
+        private string m_scene_name;
 
         // m_scene_name 씬으로 이동하는 메소드
         public void ReplaceScene()

@@ -5,7 +5,7 @@ namespace Jongmin
 {
 public class GameManager : Singleton<GameManager>
 {
-        public string m_game_status;
+        public string GameStatus { get; private set; }
         public Character CharacterType{ get; set; }
 
         private void Start()
@@ -27,32 +27,32 @@ public class GameManager : Singleton<GameManager>
 
         public void None()
         {
-            m_game_status = "None";
+            GameStatus = "None";
         }
 
         public void Loading()
         {
-            m_game_status = "Loading";
+            GameStatus = "Loading";
         }
 
         public void Playing()
         {
-            m_game_status = "Playing";
+            GameStatus = "Playing";
         }
 
         public void Setting()
         {
-            m_game_status = "Setting";
+            GameStatus = "Setting";
         }
 
         public void Dead()
         {
-            m_game_status = "Dead";
+            GameStatus = "Dead";
         }
 
         public void Finish()
         {
-            m_game_status = "Finish";
+            GameStatus = "Finish";
         }
     }
 }

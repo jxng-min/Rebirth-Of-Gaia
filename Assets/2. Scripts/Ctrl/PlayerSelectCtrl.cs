@@ -6,8 +6,13 @@ namespace Jongmin
 {
     public class PlayerSelectCtrl : MonoBehaviour
     {
-        public Button[] m_player_select_buttons;
+        [Header("Player Select UI")]
+        [SerializeField]
+        private Button[] m_player_select_buttons;
+
         private Button m_current_button;
+        
+        [SerializeField]
         public Button m_play_button;
 
         private void Start()

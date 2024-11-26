@@ -1,3 +1,4 @@
+using Jongmin;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,26 @@ using UnityEngine.UI;
 
 public class TalkUIManager : MonoBehaviour
 {
-    public GameObject m_talk_ui;
-    public Image m_npc_img;
-    public Image m_player_img;
-    public Text m_text;
-    public GameObject m_end_cursor; 
+    [Header("Talk UI")]
+    [SerializeField]
+    private GameObject m_talk_ui;
+    
+    [SerializeField]
+    private Image m_npc_img;
+    
+    [SerializeField]
+    private Image m_player_img;
+    
+    [SerializeField]
+    private Text m_text;
+    
+    [SerializeField]
+    private GameObject m_end_cursor;
+
+    private void Start()
+    {
+        gameObject.GetComponent<TypingEffectCtrl>().EndCursor += SetEndCursor;
+    }
 
     public void UpdateTalkUI(string text, Sprite portrait, bool is_player)
     {
@@ -56,5 +72,10 @@ public class TalkUIManager : MonoBehaviour
     public void SetTalkUIActive(bool is_active)
     {
         m_talk_ui.SetActive(is_active);
+    }
+
+    private void SetEndCursor(bool state)
+    {
+        m_end_cursor.SetActive(state);
     }
 }

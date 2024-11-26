@@ -42,7 +42,7 @@ namespace Jongmin
                 SaveData();
             }
 
-            gameObject.GetComponent<PlayerSelector>().InstantiatePlayer();
+            gameObject.GetComponent<PlayerFactory>().InstantiatePlayer();
         }
 
         public void SaveData()

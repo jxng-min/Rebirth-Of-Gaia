@@ -6,13 +6,15 @@ namespace Jongmin
 {
     public class ExpCtrl : MonoBehaviour
     {
+        [Header("SaveManager")]
+        [SerializeField]
         private SaveManager m_save_manager;
+        
         private Slider m_exp_bar;
         private TMP_Text m_level_text;
 
         private void Start()
         {
-            m_save_manager = FindAnyObjectByType<SaveManager>();
             m_exp_bar = GetComponentInChildren<Slider>();
             m_level_text = GetComponentInChildren<TMP_Text>();
         
@@ -21,8 +23,8 @@ namespace Jongmin
 
         public void FixedUpdate()
         {
-            //UpdateExp();
-            //LevelUp();
+            UpdateExp();
+            LevelUp();
         }
 
         // EXP 바를 주기적으로 갱신하는 메소드
