@@ -4,13 +4,24 @@ using UnityEngine;
 using System.IO;
 using JetBrains.Annotations;
 using System;
+using UnityEditor.U2D.Animation;
 
 namespace Jongmin
 {
     public class SaveManager : MonoBehaviour
     {
-        public PlayerData m_now_player;
+        private PlayerData m_now_player;
+
+        public PlayerData Player
+        {
+            get { return m_now_player; }
+        }
+        
         private string m_save_path;
+
+        [Header("Charcater Default Status")]
+        [SerializeField]
+        private List<CharacterStatus> m_character_statuses;
 
         private void Start()
         {
@@ -27,15 +38,15 @@ namespace Jongmin
                 switch(GameManager.Instance.CharacterType)
                 {
                 case Character.SOCIA:
-                    m_now_player = new PlayerData(Character.SOCIA, new PlayerStatus(10f, 8f, 12f));
+                    m_now_player = new PlayerData(GameManager.Instance.CharacterType, m_character_statuses[Convert.ToInt32(Character.SOCIA)]);
                     break;
 
                 case Character.GOV:
-                    m_now_player = new PlayerData(Character.GOV, new PlayerStatus(7f, 15f, 8f));
+                    m_now_player = new PlayerData(GameManager.Instance.CharacterType, m_character_statuses[Convert.ToInt32(Character.GOV)]);
                     break;
 
                 case Character.ENVA:
-                    m_now_player = new PlayerData(Character.ENVA, new PlayerStatus(12f, 10f, 10f));
+                    m_now_player = new PlayerData(GameManager.Instance.CharacterType, m_character_statuses[Convert.ToInt32(Character.ENVA)]);
                     break;
                 }
 

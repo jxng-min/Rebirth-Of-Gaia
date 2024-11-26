@@ -14,10 +14,10 @@ namespace Jongmin
         public int m_talk_idx;
         
 
-        public PlayerData(Character char_type, PlayerStatus player_status)
+        public PlayerData(Character char_type, CharacterStatus character_status)
         {
             m_character_type = char_type;
-            m_player_status = player_status;
+            m_player_status = new PlayerStatus(character_status);
             m_stage_id = 0;
             m_stage_state = 0;
             m_require_mob = 0;

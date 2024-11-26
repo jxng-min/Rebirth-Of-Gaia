@@ -12737,23 +12737,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf95f64c21763444a94aabc25c43865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_now_player:
-    m_character_type: 0
-    m_player_status:
-      m_strength: 0
-      m_intellect: 0
-      m_sociality: 0
-      m_ap_enforce: 0
-      m_mp_enforce: 0
-      m_si_enforce: 0
-      m_stat_token: 0
-      m_current_level: 0
-      m_current_exp: 0
-    m_stage_id: 0
-    m_stage_state: 0
-    m_max_clear_stage: 0
-    m_require_mob: 0
-    m_talk_idx: 0
+  m_character_statuses:
+  - {fileID: 11400000, guid: e76cc1c5384f81045a2869e583b6b631, type: 2}
+  - {fileID: 11400000, guid: bb53dfef5fae2274a85826cb3196e2eb, type: 2}
+  - {fileID: 11400000, guid: 75f968f2006c3b14ab24199f3cad7ded, type: 2}
 --- !u!4 &1181585561
 Transform:
   m_ObjectHideFlags: 0

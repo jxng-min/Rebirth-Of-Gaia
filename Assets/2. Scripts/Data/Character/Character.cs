@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Jongmin
 {
     public enum Character
