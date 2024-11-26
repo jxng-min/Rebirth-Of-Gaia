@@ -679,6 +679,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 84832417}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &84832418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,6 +1435,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 119240853}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2324,6 +2348,81 @@ Transform:
   - {fileID: 1592324385}
   m_Father: {fileID: 816363572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &215702919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215702920}
+  - component: {fileID: 215702922}
+  - component: {fileID: 215702921}
+  m_Layer: 5
+  m_Name: Stage Select  Check UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &215702920
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215702919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1495430055}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 11.51, y: 13.57}
+  m_SizeDelta: {x: 476.98, y: 230.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &215702921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215702919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &215702922
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215702919}
+  m_CullTransparentMesh: 1
 --- !u!1 &218497471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,6 +3022,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 261935090}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13779,6 +13890,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1250300654}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1250300655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15081,6 +15204,7 @@ MonoBehaviour:
   - {fileID: 2095502191}
   - {fileID: 1647503061}
   m_stage_select_UI: {fileID: 1495430054}
+  m_player_icon: {fileID: 2122849198}
   m_talk_manager: {fileID: 1773517161}
   m_save_manager: {fileID: 0}
 --- !u!1 &1445376439
@@ -15623,6 +15747,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1483244960}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1483244961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15678,7 +15814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1495430055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15701,6 +15837,8 @@ RectTransform:
   - {fileID: 119240852}
   - {fileID: 2095502190}
   - {fileID: 1647503060}
+  - {fileID: 2122849198}
+  - {fileID: 215702920}
   m_Father: {fileID: 1896109887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -15787,9 +15925,6 @@ MonoBehaviour:
   m_jump_node_height_requirement: 0.8
   m_jump_modifier: 0.1
   m_jump_check_offset: 0.1
-  m_follow_enabled: 1
-  m_jump_enabled: 1
-  m_direction_look_enabled: 1
 --- !u!61 &1505185788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16442,6 +16577,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1543888245}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -17957,6 +18104,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1647503061}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1647503062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18970,8 +19129,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: LoadStage
-        m_Mode: 3
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18982,11 +19141,23 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: StageSelectPanelOnoff
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1687063559}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23261,6 +23432,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2074498784}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2074498785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23406,6 +23589,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1410502930}
+        m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
+        m_MethodName: ClickedButtonPosiotion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2095502191}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2095502192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23443,6 +23638,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095502189}
+  m_CullTransparentMesh: 1
+--- !u!1 &2122849197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122849198}
+  - component: {fileID: 2122849200}
+  - component: {fileID: 2122849199}
+  m_Layer: 5
+  m_Name: PlayerIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2122849198
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122849197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1495430055}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2122849199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122849197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1066371451, guid: 896c1780b6bd0b64a95cb101e8b94352, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2122849200
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122849197}
   m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

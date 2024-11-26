@@ -16,12 +16,19 @@ namespace Junyoung
         
         [Header("Stage UI")]
         [SerializeField]
-        private Button[] m_select_buttons;
+        private Button[] m_select_buttons; //인스펙터에서 연결
 
         [SerializeField]
-        private GameObject m_stage_select_UI;
-        
+        private GameObject m_stage_select_UI;//인스펙터에서 연결
+
+        [SerializeField]
+        private RectTransform m_player_icon;//인스펙터에서 연결
+
         private GameObject m_player;
+
+        private float m_icon_move_speed = 5f;
+        private Vector2 m_button_position;
+
 
         [Header("Managers")]
         [SerializeField]
@@ -41,6 +48,11 @@ namespace Junyoung
             
             LoadStagesData("StageData.json");
             LoadStage(m_current_stage_index);
+        }
+
+        private void FixedUpdate()
+        {
+            m_player_icon.anchoredPosition = Vector2.MoveTowards(m_player_icon.anchoredPosition, m_button_position, m_icon_move_speed);
         }
 
         private void LoadStagesData(string file_name)
@@ -128,5 +140,20 @@ namespace Junyoung
             
             Debug.Log($"스테이지 선택 버튼 비활성화");
         }
+
+
+        public void ClickedButtonPosiotion(Button clickedButton) // 메서드가 호출되면 매개변수에 들어온 Button의 RectTransform값을 전달(매개변수는 인스펙터 창에서 버튼 자신을 넣어줌)
+        {
+            RectTransform clicked_position = clickedButton.GetComponent<RectTransform>();
+            if(clicked_position != null)
+            {
+                m_button_position = clicked_position.anchoredPosition;
+                Debug.Log($"버튼이 클릭됨 아이콘이 해당 위치로 이동");
+            }
+
+
+        }
+
+
     }
 }
