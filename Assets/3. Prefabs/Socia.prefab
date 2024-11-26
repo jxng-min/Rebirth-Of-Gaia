@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9162997116917318748}
   - component: {fileID: 6498734430650331655}
   - component: {fileID: 6850957868048804280}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Socia
   m_TagString: Player
   m_Icon: {fileID: 0}
