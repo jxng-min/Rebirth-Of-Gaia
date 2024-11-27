@@ -11,13 +11,16 @@ namespace Junyoung
 
     public class StageManager : MonoBehaviour
     {
-        //private int m_current_stage_index = 0;
+        
 
         private List<StageData> m_stages_data;
         
         [Header("Stage UI")]
         [SerializeField]
         private Button[] m_select_buttons; //인스펙터에서 연결
+
+        [SerializeField]
+        private RectTransform[] m_select_buttons_pos_list;
 
         [SerializeField]
         private GameObject m_stage_select_UI;//인스펙터에서 연결
@@ -35,10 +38,17 @@ namespace Junyoung
 
         private GameObject m_player;
 
+
+        [SerializeField] private int m_Arrival_button_index=0;
+        [SerializeField] private int m_now_button_index = 0;
+        private List<int> m_path_list = new List<int>();
+        private int m_current_path_index = 0;
         private bool m_is_icon_Arrival=false;
+        private bool m_is_icon_moving = false;
         private float m_icon_move_speed = 5f;
-        private Vector2 m_button_position;
+       
         
+       
 
 
         [Header("Managers")]
@@ -55,28 +65,39 @@ namespace Junyoung
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
 
             m_player = GameObject.FindGameObjectWithTag("Player");           
-            m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
-
-            m_button_position = m_player_icon.anchoredPosition;
-
-            
-
+            m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();           
             LoadStagesData("StageData.json");
-            //LoadStage(m_current_stage_index);
+            
         }
 
         private void FixedUpdate()
         {
+            if (!m_is_icon_moving || m_path_list.Count == 0) return;
+
+            int target_index = m_path_list[m_current_path_index]; // 만들어진 경로 리스트를 path_index값을 따라서 하나씩 이동
+            Vector2 target_pos = m_select_buttons_pos_list[target_index].anchoredPosition;
+            
+            target_pos = new Vector2(target_pos.x, target_pos.y+ 70); // 아이콘이 버튼을 가리지 않도록 70만큼 offset
+          
+
+
+
             //아이콘이 클릭한 버튼 위치로 이동
-            m_player_icon.anchoredPosition = Vector2.MoveTowards(m_player_icon.anchoredPosition, m_button_position, m_icon_move_speed);
+            m_player_icon.anchoredPosition = Vector2.MoveTowards(m_player_icon.anchoredPosition, target_pos, m_icon_move_speed);
 
             //아이콘이 버튼 위치에 도착했는지 체크
-            if (m_player_icon.anchoredPosition == m_button_position)
+            if (m_player_icon.anchoredPosition == target_pos)
             {
-                if(!m_is_icon_Arrival) // false일때만 true로 바꾸고 한번 호출하기 때문에 같은 위치에 있더라도 계속 호출하지 않음
+                if(m_current_path_index<9) // 스테이지 인덱스의 최대 값은 9
+                    m_current_path_index++;
+
+                if (!m_is_icon_Arrival && m_current_path_index >= m_Arrival_button_index) // false일때만 true로 바꾸고 한번 호출하기 때문에 같은 위치에 있더라도 계속 호출하지 않음
                 {
                     m_is_icon_Arrival= true;
+                    m_is_icon_moving = false;
                     m_stage_select_ckeck_UI.SetActive(true);
+                    m_now_button_index = m_Arrival_button_index;
+                    Debug.Log($"아이콘이 버튼 {m_now_button_index}에 도달");
                 }
             }
                 
@@ -199,20 +220,30 @@ namespace Junyoung
         }
 
 
-        public void ClickedButtonPosiotion(Button clickedButton) // 메서드가 호출되면 매개변수에 들어온 Button의 RectTransform값을 전달(매개변수는 인스펙터 창에서 버튼 자신을 넣어줌)
+        public void ClickedButtonPosiotion(int button_index) //클릭된 버튼의 index값을 불러와서 지금 위치와 가려는 위치를 비교하여 정방향/역방향 경로를 리스트에 추가
         {
-            RectTransform clicked_position = clickedButton.GetComponent<RectTransform>();
-            if(clicked_position != null)
+            m_path_list.Clear();
+            m_current_path_index = 0; 
+
+            if (m_now_button_index < button_index) // 지금 위치보다 클릭한 버튼이 뒤면 정방향
             {
-                Vector2 offset_position = clicked_position.anchoredPosition;
-                offset_position.y += 70f;
-                m_button_position = offset_position;
-                Debug.Log($"버튼이 클릭됨 아이콘이 버튼 위치 y값 + 70 위치로 이동");
+                for (int i = m_now_button_index + 1; i <= button_index; i++)
+                {
+                    m_path_list.Add(i);
+                }
             }
-
-
+            else if (m_now_button_index > button_index) // 역방향
+            {
+                for (int i = m_now_button_index - 1; i >= button_index; i--)
+                {
+                    m_path_list.Add(i);
+                }
+            }
+            else
+                m_path_list.Add(m_now_button_index); // 같은 버튼을 클릭한 경우 현재 위치 index를 넘겨줘서 그자리에 있도록
+            m_Arrival_button_index = button_index;
+            m_is_icon_moving = true;
+            Debug.Log($"아이콘이 버튼 {m_now_button_index}에서 버튼 {m_Arrival_button_index}까지 이동 시작");
         }
-
-
     }
 }
