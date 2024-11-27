@@ -22,7 +22,8 @@ namespace Junyoung
 
         public void Clear()
         {
-            m_save_manager.Player.m_max_clear_stage++;
+            if(m_save_manager.Player.m_max_clear_stage<9)
+                m_save_manager.Player.m_max_clear_stage++;
             m_save_manager.SaveData();
             m_stage_manager.SelectButtonInteract();
             Debug.Log($"스테이지 클리어. m_max_clear_stage를 {m_save_manager.Player.m_max_clear_stage}로 변경");
