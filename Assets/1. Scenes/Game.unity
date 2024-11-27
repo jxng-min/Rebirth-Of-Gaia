@@ -805,7 +805,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1554,7 +1554,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3265,7 +3265,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14390,7 +14390,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16250,7 +16250,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17072,7 +17072,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18715,7 +18715,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19750,7 +19750,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24019,7 +24019,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24164,7 +24164,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1410502930}
         m_TargetAssemblyTypeName: Junyoung.StageManager, Assembly-CSharp
-        m_MethodName: ClickedButtonPosiotion
+        m_MethodName: ClickedButtonIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
