@@ -1,4 +1,6 @@
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 namespace Pathfinding.Legacy {
 	[CustomEditor(typeof(LegacyAIPath))]

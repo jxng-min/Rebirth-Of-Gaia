@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using Jongmin;
 using Junyoung;
-using UnityEditor;
 using UnityEngine;
 
 namespace Taekyung

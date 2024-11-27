@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using JetBrains.Annotations;
 using System;
-using UnityEditor.U2D.Animation;
 
 namespace Jongmin
 {

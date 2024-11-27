@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 namespace Pathfinding {
 	/// <summary>Simple GUI utility functions</summary>
