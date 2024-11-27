@@ -67,7 +67,7 @@ namespace Junyoung
             SetPlayerSkill();
 
             MoveSpeed = 4.0f;
-            JumpPower = 17.0f;
+            JumpPower = 15.0f;
         }
 
         private void FixedUpdate()

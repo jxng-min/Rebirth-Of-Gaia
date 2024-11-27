@@ -48,16 +48,15 @@ namespace Junyoung
     
         private void LateUpdate()
         {
-            transform.position = Vector3.Lerp(transform.position,m_player_transform.position, Time.deltaTime*m_camera_move_speed); 
+            transform.position = Vector3.Lerp(transform.position, m_player_transform.position, Time.deltaTime * m_camera_move_speed);
 
             float lx = m_camera_limit_size.x * 0.5f - m_camera_width;
             float clampX = Mathf.Clamp(transform.position.x , -lx + m_camera_limit_center.x , lx + m_camera_limit_center.x);
 
             float ly = m_camera_limit_size.y * 0.5f - m_camera_height;
-            float clampY = Mathf.Clamp(transform.position.y, -lx + m_camera_limit_center.y, lx + m_camera_limit_center.y);
+            float clampY = Mathf.Clamp(transform.position.y, -ly + m_camera_limit_center.y, ly + m_camera_limit_center.y);
 
             transform.position = new Vector3(clampX, clampY, -10f);
-
         }
     }
 }
