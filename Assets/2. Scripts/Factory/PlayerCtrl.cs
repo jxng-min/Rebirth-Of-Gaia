@@ -5,6 +5,10 @@ namespace Junyoung
 {
     public abstract class PlayerCtrl : MonoBehaviour
     {
+        [Header("Joystick")]
+        [SerializeField]
+        private JoyStickValue m_value;
+
         [Header("Physics")]
         private Rigidbody2D m_rigidbody;
 
@@ -72,7 +76,21 @@ namespace Junyoung
 
         private void FixedUpdate()
         {
-            m_rigidbody.linearVelocity = new Vector2(m_move_vec.x * MoveSpeed, m_rigidbody.linearVelocity.y);
+            float joystick_value = 0f;
+
+            if(m_value.m_joy_touch.x < 0f)
+            {
+                joystick_value = -1f;
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if(m_value.m_joy_touch.x > 0f)
+            {
+                joystick_value = 1f;
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+            SetPlayerMoveState();
+            m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
         }
 
         public void PlayerStop()
@@ -109,6 +127,21 @@ namespace Junyoung
         public void ClearPlayer()
         {
             m_player_state_context.Transition(m_clear_state);
+        }
+
+        private void SetPlayerMoveState()
+        {
+            if(GameManager.Instance.GameStatus == "Playing")
+            {
+                if(m_value.m_joy_touch == Vector2.zero)
+                {
+                    PlayerStop();
+                }
+                else
+                {
+                    PlayerMove();
+                }
+            }
         }
 
         public abstract void SetPlayerSkill();

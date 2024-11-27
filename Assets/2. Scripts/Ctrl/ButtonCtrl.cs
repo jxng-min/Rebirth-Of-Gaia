@@ -7,27 +7,11 @@ namespace Jongmin
     {
         private PlayerCtrl m_player_ctrl;
 
-        void Update()
+        private void Update()
         {
             if (m_player_ctrl == null)
-                m_player_ctrl = FindAnyObjectByType<PlayerCtrl>();
-        }
-
-        public void LeftArrowClick()
-        {
-            if(GameManager.Instance.GameStatus == "Playing")
             {
-                m_player_ctrl.MoveVector = Vector2.left;
-                m_player_ctrl.PlayerMove();
-            }
-        }
-
-        public void RightArrowClick()
-        {
-            if(GameManager.Instance.GameStatus == "Playing")
-            {
-                m_player_ctrl.MoveVector = Vector2.right;
-                m_player_ctrl.PlayerMove();
+                m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
             }
         }
 
