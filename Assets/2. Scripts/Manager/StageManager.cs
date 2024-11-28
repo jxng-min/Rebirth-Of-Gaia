@@ -35,6 +35,7 @@ namespace Junyoung
         private RectTransform m_player_icon;//인스펙터에서 연결
 
         private int m_stage_index;
+        public int m_max_stage { get; private set; } = 9;
 
         private GameObject m_player;
 
@@ -43,7 +44,6 @@ namespace Junyoung
         [SerializeField] private int m_now_button_index = 0;
         private List<int> m_path_list = new List<int>();
         private int m_current_path_index = 0;
-        private bool m_is_icon_Arrival=false;
         private bool m_is_icon_moving = false;
         private float m_icon_move_speed = 5f;
        
@@ -94,36 +94,26 @@ namespace Junyoung
 
             Vector2 target_pos = m_select_buttons_pos_list[target_index].anchoredPosition;
             
-            target_pos = new Vector2(target_pos.x, target_pos.y+ 70); // 아이콘이 버튼을 가리지 않도록 70만큼 offset
+            target_pos += new Vector2(0,70); // 아이콘이 버튼을 가리지 않도록 70만큼 offset
          
             //아이콘이 클릭한 버튼 위치로 이동
             m_player_icon.anchoredPosition = Vector2.MoveTowards(m_player_icon.anchoredPosition, target_pos, m_icon_move_speed);
 
             //아이콘이 버튼 위치에 도착했는지 체크
-            if (m_player_icon.anchoredPosition == target_pos)
+            if (Vector2.Distance(m_player_icon.anchoredPosition, target_pos) < 0.1f) // 부동 소수점 오류 때문에 ==로 단순 비교는 오류가 발생 할 수 있음
             {
+                //중간 경로 이동
                 if(m_current_path_index< m_path_list.Count-1) // 버튼에 도착한 이후에도 index++하면 index범위 오류가 발생함
                     m_current_path_index++;
-
-                if (!m_is_icon_Arrival)// false일때만 true로 바꾸고 한번 호출하기 때문에 같은 위치에 있더라도 계속 호출하지 않음
-                {
-                    m_is_icon_Arrival = true;
+                else //최종 도착
+                {               
                     m_is_icon_moving = false;
 
-                    if (m_current_path_index == m_Arrival_button_index) 
-                    {
-                        m_stage_select_ckeck_UI.SetActive(true);                     
-                    }
+                    m_stage_select_ckeck_UI.SetActive(true);
+
                     Debug.Log($"아이콘이 버튼 {m_now_button_index}에 도달");
                 }
-
-
-            }
-                
-            else
-                m_is_icon_Arrival = false;
-
-
+            }                
         }
 
         private void LoadStagesData(string file_name)
@@ -185,11 +175,15 @@ namespace Junyoung
 
         }
         
-        public void StageSelectPanelOnoff()
+        public void StageSelectPanelOnoff() // 스테이지 선택 UI를 활성화/비활성화 함
         {
             bool isActive = m_stage_select_UI.activeSelf;
             if ( !isActive )
+            {
+                SelectButtonInteract();
                 Debug.Log($"스테이지 선택창 활성화");
+            }
+                
             else
                 Debug.Log($"스테이지 선택창 비활성화");
             m_stage_select_UI.SetActive( !isActive );
@@ -200,15 +194,14 @@ namespace Junyoung
 
         }
 
-        public void StageSelect(int stage_index)
+        public void StageSelect(int stage_index)// 버튼 클릭으로 버튼에 해당하는 스테이지 index를 받아옴
         {           
-            m_stage_index = stage_index;
-            m_is_icon_Arrival = false; // 버튼을 두번 째 누를경우 false로 바꿔야 UI를 활성화 가능
+            m_stage_index = stage_index;            
             m_ui_text.text = $"Do you want to go to Stage {m_stage_index+1} ?";
 
         }
 
-        public void StageSelectYes() 
+        public void StageSelectYes() //m_stage_index에 맞게 스테이지를 불러옴
         {
             Debug.Log($"스테이지 선택 예 클릭");
             LoadStage(m_stage_index);
@@ -216,7 +209,7 @@ namespace Junyoung
             StageSelectPanelOnoff();
         }
 
-        public void StageSelectNo()
+        public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감
         {
             Debug.Log($"스테이지 선택 아니오 클릭");
             m_stage_select_ckeck_UI.SetActive(false);
@@ -224,11 +217,17 @@ namespace Junyoung
 
         public void SelectButtonInteract() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
         {
-            m_select_buttons[m_save_manager.Player.m_max_clear_stage].interactable = true;
-            Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage} 버튼 활성화");
+            if (m_save_manager.Player.m_max_clear_stage == m_max_stage) return;
+
+            for(int i =0; i<= m_save_manager.Player.m_max_clear_stage +1; i++)
+            {
+                Debug.Log($"스테이지 {i}버튼 활성화");
+                m_select_buttons[i].interactable = true;
+            }
+            //Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage +1} 까지 버튼 활성화");
         }
 
-        public void SelectButtonReset() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
+        public void SelectButtonReset() //활성화된 버튼들을 전부 비활성화
         {
             for(int i = 1; i <= 9; i++)
             {
@@ -272,7 +271,6 @@ namespace Junyoung
                 Debug.Log("같은 버튼 클릭: m_now_button_index 추가");
                 m_path_list.Add(m_now_button_index); // 같은 버튼을 클릭한 경우 현재 위치 index를 넘겨줘서 그자리에 있도록
             }
-            m_Arrival_button_index = button_index;
             m_is_icon_moving = true;
 
             m_now_button_index = button_index; // 경로는 만들어졌으니 now_button_index 를 목표 버튼의 index로 초기화
