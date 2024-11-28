@@ -2,10 +2,15 @@ using UnityEngine;
 using Pathfinding;
 using Unity.VisualScripting;
 using Junyoung;
+using System.Collections.Generic;
 
 public class CoworkerAICtrl : MonoBehaviour
 {
     [Header("Pathfinding")]
+    [SerializeField]
+    private List<GameObject> m_enemies;
+    
+    [SerializeField]
     private Transform m_target;
 
     [SerializeField]
@@ -44,26 +49,73 @@ public class CoworkerAICtrl : MonoBehaviour
     {
         m_seeker = GetComponent<Seeker>();
         m_rigidbody = GetComponent<Rigidbody2D>();
-        m_target = FindAnyObjectByType<PlayerCtrl>().GetComponent<Transform>();
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        for(int i = 0; i < enemies.Length; i++)
+        {
+            m_enemies.Add(enemies[i]);
+        }
+
+        FindMinDistanceEnemy();
 
         InvokeRepeating("UpdatePath", 0f, m_path_update_seconds);
     }
 
+    private void Update()
+    {
+        if(m_target == null)
+        {
+            if(m_enemies.Count <= 0)
+            {
+                Debug.Log("모든 적을 처치했기 때문에 동작을 멈춥니다.");
+                return;
+            }
+            else
+            {
+                Debug.Log("타겟이 없기 때문에 타겟을 찾는 중입니다.");
+                
+                FindMinDistanceEnemy();
+            }
+        }        
+    }
+
     private void FixedUpdate()
     {
-        if (m_follow_enabled && TargetInDistance())
+        if(m_target != null)
         {
-            PathFollow();
+            if (TargetReached())
+            {
+                int delete_target_index = 0;
+
+                Debug.Log($"{m_target.name} 타겟 추적에 성공하였습니다.");
+                for(int i = 0; i < m_enemies.Count; i++)
+                {
+                    Debug.Log($"m_enemies[i]의 이름: {m_enemies[i].name}");
+                    if(m_target.name == m_enemies[i].name)
+                    {
+                        delete_target_index = i;
+                    }
+                }
+
+                Debug.Log($"{m_target.name}을 공격하여 파괴합니다.");
+                m_target = null;
+                m_enemies.RemoveAt(delete_target_index);
+
+                m_follow_enabled = false;
+                m_rigidbody.linearVelocity = Vector2.zero;
+            }
+            else
+            {
+                m_follow_enabled = true;
+            }
         }
 
-        if (TargetReached())
+        if(m_target != null)
         {
-            m_follow_enabled = false;
-            m_rigidbody.linearVelocity = Vector2.zero;
-        }
-        else
-        {
-            m_follow_enabled = true;
+            if (m_follow_enabled && TargetInDistance())
+            {
+                PathFollow();
+            }
         }
     }
 
@@ -77,7 +129,9 @@ public class CoworkerAICtrl : MonoBehaviour
 
     private bool TargetReached()
     {
-        float target_distance = 0.1f;
+        float target_distance = 0.8f;
+
+        Debug.Log($"{Vector2.Distance(transform.position, m_target.position)}, {target_distance}");
 
         return Vector2.Distance(transform.position, m_target.position) <= target_distance;
     }
@@ -131,5 +185,22 @@ public class CoworkerAICtrl : MonoBehaviour
     {
         m_path = p;
         m_current_waypoint = 0;
+    }
+
+    private void FindMinDistanceEnemy()
+    {
+        float min_distance = m_activate_distance;
+        int index = 0;
+
+        for(int i = 0; i < m_enemies.Count; i++)
+        {
+            if(Vector2.Distance(transform.position, m_enemies[i].transform.position) < min_distance)
+            {
+                min_distance = Vector2.Distance(transform.position, m_enemies[i].transform.position);
+                index = i;
+            }
+        }
+
+        m_target = m_enemies[index].GetComponent<Transform>();       
     }
 }
