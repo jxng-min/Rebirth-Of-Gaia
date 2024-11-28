@@ -217,14 +217,16 @@ namespace Junyoung
 
         public void SelectButtonInteract() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
         {
-            if (m_save_manager.Player.m_max_clear_stage == m_max_stage) return;
-
-            for(int i =0; i<= m_save_manager.Player.m_max_clear_stage +1; i++)
+            for(int i =1; i<= m_save_manager.Player.m_max_clear_stage +1; i++)
             {
-                Debug.Log($"스테이지 {i}버튼 활성화");
+                if(i > m_max_stage)
+                {
+                    Debug.Log($"더 활성화할 버튼이 없음");
+                    return;
+                }
                 m_select_buttons[i].interactable = true;
             }
-            //Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage +1} 까지 버튼 활성화");
+            Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage +1} 까지 버튼 활성화");
         }
 
         public void SelectButtonReset() //활성화된 버튼들을 전부 비활성화
