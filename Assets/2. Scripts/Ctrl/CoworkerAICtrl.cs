@@ -32,8 +32,6 @@ public class CoworkerAICtrl : MonoBehaviour
     [SerializeField]
     private float m_jump_node_height_requirement = 0.3f;
     [SerializeField]
-    private float m_jump_modifier = 0.3f;
-    [SerializeField]
     private float m_jump_check_offset = 0.1f;
 
     private bool m_follow_enabled = true;
@@ -167,7 +165,9 @@ public class CoworkerAICtrl : MonoBehaviour
 
         if (m_jump_enabled && m_is_grounded && direction.y > m_jump_node_height_requirement)
         {
-            m_rigidbody.AddForce(Vector2.up * m_speed * m_jump_modifier, ForceMode2D.Impulse);
+            Debug.Log("동료가 점프합니다.");
+            m_is_grounded = false;
+            m_rigidbody.AddForce(Vector2.up * 1.5f, ForceMode2D.Impulse);
         }
 
         m_rigidbody.linearVelocity = new Vector2(direction.x * m_speed * Time.fixedDeltaTime, m_rigidbody.linearVelocity.y);
