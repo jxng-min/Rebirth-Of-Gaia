@@ -9,29 +9,30 @@ public class CoworkerAICtrl : MonoBehaviour
     [Header("Pathfinding")]
     [SerializeField]
     private List<GameObject> m_enemies;
-    
     [SerializeField]
     private Transform m_target;
-
     [SerializeField]
     private float m_activate_distance = 10f;
-
     [SerializeField]
     private float m_path_update_seconds = 0.5f;
+
+    [Header("Position Check")]
+    [SerializeField]
+    private float m_stuck_check_interval = 1f;
+    [SerializeField]
+    private float m_stuck_threshold = 0.1f;
+    private Vector2 m_last_position;
+    private float m_position_check_timer = 0f;
 
     [Header("Physics")]
     [SerializeField]
     private float m_speed = 150f;
-
     [SerializeField]
     private float m_next_waypoint_distance = 0.2f;
-
     [SerializeField]
     private float m_jump_node_height_requirement = 0.3f;
-
     [SerializeField]
     private float m_jump_modifier = 0.3f;
-
     [SerializeField]
     private float m_jump_check_offset = 0.1f;
 
@@ -58,14 +59,15 @@ public class CoworkerAICtrl : MonoBehaviour
 
         FindMinDistanceEnemy();
 
+        m_last_position = transform.position;
         InvokeRepeating("UpdatePath", 0f, m_path_update_seconds);
     }
 
     private void Update()
     {
-        if(m_target == null)
+        if (m_target == null)
         {
-            if(m_enemies.Count <= 0)
+            if (m_enemies.Count <= 0)
             {
                 Debug.Log("모든 적을 처치했기 때문에 동작을 멈춥니다.");
                 return;
@@ -73,10 +75,24 @@ public class CoworkerAICtrl : MonoBehaviour
             else
             {
                 Debug.Log("타겟이 없기 때문에 타겟을 찾는 중입니다.");
-                
                 FindMinDistanceEnemy();
             }
-        }        
+        }
+
+        m_position_check_timer += Time.deltaTime;
+        if (m_position_check_timer >= m_stuck_check_interval)
+        {
+            float distance_moved = Vector2.Distance(transform.position, m_last_position);
+
+            if (distance_moved < m_stuck_threshold)
+            {
+                Debug.Log("캐릭터가 길이 막혀서 이동하지 못하고 있습니다. 경로를 재탐색합니다.");
+                ResetPathfinding();
+            }
+
+            m_last_position = transform.position;
+            m_position_check_timer = 0f;
+        }
     }
 
     private void FixedUpdate()
@@ -130,8 +146,6 @@ public class CoworkerAICtrl : MonoBehaviour
     private bool TargetReached()
     {
         float target_distance = 0.8f;
-
-        Debug.Log($"{Vector2.Distance(transform.position, m_target.position)}, {target_distance}");
 
         return Vector2.Distance(transform.position, m_target.position) <= target_distance;
     }
@@ -202,5 +216,10 @@ public class CoworkerAICtrl : MonoBehaviour
         }
 
         m_target = m_enemies[index].GetComponent<Transform>();       
+    }
+
+    private void ResetPathfinding()
+    {
+        m_target = m_enemies[Random.Range(0, m_enemies.Count)].GetComponent<Transform>();
     }
 }
