@@ -15320,7 +15320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABIIewXzmG5YwIAAB0FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzg1j8xFCb61DSA9JmNJOLr4o0hprkCWPPgIkw3/vSraxS6cnxHtvd9+uVv4kQtkamNNmbQR/0hzI1xEJZ/Jl1JOPcKQ7rbbiAzrNq+CuDCIaNT+pExrxNIRZXYEzgn1TOxnECYJeiUKbasV3kGnrLMIFlRaQMtqFaIXQ54gc8edmGUJOeJoswukDT8tkdMYjA+XA9NJO2MkalVdM0qoGHiz34mk6nszbgHQynketwo5aWTJOI8+0lMK2log71bHljNbWY0Mo4IJii9FHOp4iUILYlS4YHoa/FIUF17oz9HQvDM6qyUu+62aAFbX7xuI7lR6itbvorEn69A9/k0a6MLp67OqmSajhSsH2P+mJUesGEx7C9wPrcVIHKvf0TcJrCepZr432iiPpjA+h3sLkvv97aS0rge17vLF6Bfr6//cUejjH7o+ZFNVbnP6sAbZSx4nHLQCD9/MDDccdsW0KRIOL3xZ+0d1wmVriQRjrkGq7VMHem/YmSMkqzix0412mjYIIt6ZrUFS60wbTuOsrvOIGZa+YBxqeTVu85brXcBUS4V6fJFfURh8ul2VLfXgCW754J4WC3nQgnnFOmVaq2bDhTLqwrTcFZYOwnRf879Uiy6KAu+Utncz4lLMFv5knMLud0UWxYCmF6ZzE3RMK+6Ry0xhtx4O3pvrkCves+5qM1obWcdu5oYe1+Kj0YORCFXrLDIB6aTJcjIPBIvg2+YoLHNAWnBMq3jf5zInUbA88vyTKY6erozM077PkpBbv2gUkJ1n8fOQkwJdd3hh4F3AIxbtkZ3L+A1BLAwQUAAAICAAASCHs1nhTo20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kmVaWqqFpVmikUmKcUqyeYquqUGqiZlJonmaebJhYqqxqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAASCHsF85huWMCAAAdBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAASCHs1nhTo20AAAB4AAAACQAkAAAAAAAAAAAAAACwAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGgDAAAAAA==
+    dataString: UEsDBBQAAAgIAABIIeygXdcfYQIAABoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzk3GECeE3lpCSA9JmNBOLr4o1hprkCWPPgIkw3/vrmxjh065IL99u/veau1PJrWrIffGLq0Uj0YA+z5idGbfRn3wAfZ8Y/RafkDHeZXCl0TikfPCvTSIjynNmQq8lfkPvVFEThAMWhbGVguxgblx3iFccOUAQ9Z4ytYIfY7YHv8uZpRywNNkSqcPPM2S0RGPOWgPtqd2xI7WsILOFa9qECS5J18ll2nLH6eXaUK/m5ig0VbLTS5vqY9RSrpWFfOHOrp+4QfyLCRHh1EGGS5BbkpPaoeJz0XhwLfSLD/cSYuDaiqyn6aZXsXdttH3zlWgHuPJbVTUFH38J34xjuHCmuqh6ztOqIcvZb5FhTl3fjDeIXz3VXjQO662/E3Bawn6ySytCVpg0NtAqcHB5K5/PFmbl5Bve7yRegaG+v+XRB6O0f1+rmT1FqeeNsBamTjruAJg8V5+oeC4IK4tgSip+OPgN98MN6kN3EvrPIZal5rkvZlgicoWcWbkJvi5sRoi3IquQXPlDyss48+v8Cw2aHsWuef0zrTN21j3KpylRLjnJ8lZaGV2p8typdk9giufg1dSQy+aAk84p7nRutmw4Uy6tHWwBc8HaZsgxdfVYrOigNvZDZ+k4krkU3FxnUB6k/JpMc3HHK6uWdw9qdEnV6tGaDsevDXdF9e4Z92nZLS0vI7bLizfLeVHZQYjl7ow69wC6Oemwkk4WGyC76RYCIkDWoP3Usf7Zp8ZUybfgshOhbLodLH3lmd9lYzV8t14QjI2j9+OjBF82uWVhXcJO2reFTuy419QSwMEFAAACAgAAEgh7NZ4U6NtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJlWlqqhaVZopFJinFKsnmKrqlBqomZSaJ5mnmyYWKqsalSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEgh7KBd1x9hAgAAGgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEgh7NZ4U6NtAAAAeAAAAAkAJAAAAAAAAAAAAAAArgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABmAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -15371,7 +15371,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.1875, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1571796684}
@@ -21660,7 +21660,7 @@ MonoBehaviour:
   m_speed: 150
   m_next_waypoint_distance: 3
   m_jump_node_height_requirement: 0.3
-  m_jump_modifier: 0.005
+  m_jump_modifier: 0.007
   m_jump_check_offset: 0.1
 --- !u!61 &1505185788
 BoxCollider2D:
@@ -21723,7 +21723,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 6200000, guid: a2813e13a2a01ba46a82fd5856174354, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -21799,7 +21799,7 @@ Transform:
   m_GameObject: {fileID: 1505185786}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.38, y: -1.04, z: 0}
+  m_LocalPosition: {x: -11.86, y: -4.7, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
