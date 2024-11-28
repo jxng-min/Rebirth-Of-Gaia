@@ -23,8 +23,8 @@ namespace Jongmin
 
         public void FixedUpdate()
         {
-            UpdateExp();
-            LevelUp();
+            //UpdateExp();
+            //LevelUp();
         }
 
         // EXP 바를 주기적으로 갱신하는 메소드
