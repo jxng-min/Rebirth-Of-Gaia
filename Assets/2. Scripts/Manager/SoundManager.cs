@@ -78,6 +78,17 @@ namespace Jongmin
                 break;
             }
         }
+
+        public float BgmVolume
+        {
+            get => m_bgm_source.volume;
+            set => m_bgm_source.volume = Mathf.Clamp01(value);
+        }
+        public float EffectVolume
+        {
+            get => m_effect_source.volume;
+            set => m_effect_source.volume = Mathf.Clamp01(value);
+        }
     }
 }
 
