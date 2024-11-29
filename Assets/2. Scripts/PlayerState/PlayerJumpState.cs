@@ -14,6 +14,7 @@ namespace Junyoung
             }
 
             m_player_ctrl.GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * m_player_ctrl.JumpPower;
+            Debug.Log($"플레이어 JumpState");
         }
     }
 }
