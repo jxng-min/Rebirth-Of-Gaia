@@ -76,21 +76,24 @@ namespace Junyoung
 
         private void FixedUpdate()
         {
-            float joystick_value = 0f;
-
-            if(m_value.m_joy_touch.x < 0f)
+            if(GameManager.Instance.GameStatus == "Playing")
             {
-                joystick_value = -1f;
-                GetComponent<SpriteRenderer>().flipX = true;
-            }
-            else if(m_value.m_joy_touch.x > 0f)
-            {
-                joystick_value = 1f;
-                GetComponent<SpriteRenderer>().flipX = false;
-            }
+                float joystick_value = 0f;
 
-            SetPlayerMoveState();
-            m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
+                if(m_value.m_joy_touch.x < 0f)
+                {
+                    joystick_value = -1f;
+                    GetComponent<SpriteRenderer>().flipX = true;
+                }
+                else if(m_value.m_joy_touch.x > 0f)
+                {
+                    joystick_value = 1f;
+                    GetComponent<SpriteRenderer>().flipX = false;
+                }
+
+                SetPlayerMoveState();
+                m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
+            }
         }
 
         public void PlayerStop()

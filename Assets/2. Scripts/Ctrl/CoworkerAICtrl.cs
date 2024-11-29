@@ -3,6 +3,7 @@ using Pathfinding;
 using Unity.VisualScripting;
 using Junyoung;
 using System.Collections.Generic;
+using Jongmin;
 
 public class CoworkerAICtrl : MonoBehaviour
 {
@@ -63,72 +64,78 @@ public class CoworkerAICtrl : MonoBehaviour
 
     private void Update()
     {
-        if (m_target == null)
+        if(GameManager.Instance.GameStatus == "Playing")
         {
-            if (m_enemies.Count <= 0)
+            if (m_target == null)
             {
-                Debug.Log("모든 적을 처치했기 때문에 동작을 멈춥니다.");
-                return;
-            }
-            else
-            {
-                Debug.Log("타겟이 없기 때문에 타겟을 찾는 중입니다.");
-                FindMinDistanceEnemy();
-            }
-        }
-
-        m_position_check_timer += Time.deltaTime;
-        if (m_position_check_timer >= m_stuck_check_interval)
-        {
-            float distance_moved = Vector2.Distance(transform.position, m_last_position);
-
-            if (distance_moved < m_stuck_threshold)
-            {
-                Debug.Log("캐릭터가 길이 막혀서 이동하지 못하고 있습니다. 경로를 재탐색합니다.");
-                ResetPathfinding();
+                if (m_enemies.Count <= 0)
+                {
+                    Debug.Log("모든 적을 처치했기 때문에 동작을 멈춥니다.");
+                    return;
+                }
+                else
+                {
+                    Debug.Log("타겟이 없기 때문에 타겟을 찾는 중입니다.");
+                    FindMinDistanceEnemy();
+                }
             }
 
-            m_last_position = transform.position;
-            m_position_check_timer = 0f;
+            m_position_check_timer += Time.deltaTime;
+            if (m_position_check_timer >= m_stuck_check_interval)
+            {
+                float distance_moved = Vector2.Distance(transform.position, m_last_position);
+
+                if (distance_moved < m_stuck_threshold)
+                {
+                    Debug.Log("캐릭터가 길이 막혀서 이동하지 못하고 있습니다. 경로를 재탐색합니다.");
+                    ResetPathfinding();
+                }
+
+                m_last_position = transform.position;
+                m_position_check_timer = 0f;
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if(m_target != null)
+        if(GameManager.Instance.GameStatus == "Playing")
         {
-            if (TargetReached())
+            if(m_target != null)
             {
-                int delete_target_index = 0;
-
-                Debug.Log($"{m_target.name} 타겟 추적에 성공하였습니다.");
-                for(int i = 0; i < m_enemies.Count; i++)
+                if (TargetReached())
                 {
-                    Debug.Log($"m_enemies[i]의 이름: {m_enemies[i].name}");
-                    if(m_target.name == m_enemies[i].name)
+                    int delete_target_index = 0;
+
+                    Debug.Log($"{m_target.name} 타겟 추적에 성공하였습니다.");
+                    for(int i = 0; i < m_enemies.Count; i++)
                     {
-                        delete_target_index = i;
+                        Debug.Log($"m_enemies[i]의 이름: {m_enemies[i].name}");
+                        if(m_target.name == m_enemies[i].name)
+                        {
+                            delete_target_index = i;
+                        }
                     }
+
+                    Debug.Log($"{m_target.name}을 공격하여 파괴합니다.");
+                    m_target = null;
+                    m_enemies.RemoveAt(delete_target_index);
+
+                    m_follow_enabled = false;
+                    m_rigidbody.linearVelocity = Vector2.zero;
                 }
-
-                Debug.Log($"{m_target.name}을 공격하여 파괴합니다.");
-                m_target = null;
-                m_enemies.RemoveAt(delete_target_index);
-
-                m_follow_enabled = false;
-                m_rigidbody.linearVelocity = Vector2.zero;
+                else
+                {
+                    m_follow_enabled = true;
+                }
             }
-            else
-            {
-                m_follow_enabled = true;
-            }
-        }
 
-        if(m_target != null)
-        {
-            if (m_follow_enabled && TargetInDistance())
+            if(m_target != null)
             {
-                PathFollow();
+                if (m_follow_enabled && TargetInDistance())
+                {
+                    PathFollow();
+                }
             }
         }
     }
