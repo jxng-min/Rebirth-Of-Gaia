@@ -63,11 +63,13 @@ namespace Jongmin
 
         public void DeactivateUI()
         {
+            GameEventBus.Publish(GameEventType.PLAYING);
             m_ability_panel.SetActive(false);
         }
 
         public void ActivateUI()
         {
+            GameEventBus.Publish(GameEventType.SETTING);
             m_ability_panel.SetActive(true);
         }
     }

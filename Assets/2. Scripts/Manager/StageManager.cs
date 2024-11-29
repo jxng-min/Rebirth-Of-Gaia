@@ -40,8 +40,8 @@ namespace Junyoung
         private GameObject m_player;
 
 
-        [SerializeField] private int m_Arrival_button_index=0;
-        [SerializeField] private int m_now_button_index = 0;
+        [SerializeField] 
+        private int m_now_button_index = 0;
         private List<int> m_path_list = new List<int>();
         private int m_current_path_index = 0;
         private bool m_is_icon_moving = false;

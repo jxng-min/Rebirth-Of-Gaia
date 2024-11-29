@@ -1,35 +1,50 @@
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SlotData:MonoBehaviour
+public class SlotData : MonoBehaviour
 {
-    public ItemData m_item; // 획득한 아이템
-    public int m_item_count; // 획득한 아이템의 개수
-    public UnityEngine.UI.Image m_item_image; // 아이템 이미지
+    [Header("Item Data")]
+    private ItemData m_item;
+    public ItemData Item
+    {
+        get { return m_item; }
+    }
 
+    private int m_item_count;
+    public int ItemCount
+    {
+        get { return m_item_count; }
+    }
+
+    private Image m_item_image;
+    public Image ItemImage
+    {
+        get { return m_item_image; }
+    }
+
+    [Header("Slot UI")]
     [SerializeField]
     private Text m_text_count;
     [SerializeField]
     private GameObject m_text_image;
 
-    // 이미지 투명도 조절
+    // 이미지의 투명도를 조절하는 메소드
     private void SetAlpha(float alpha)
     {
-        Color color = m_item_image.color;
+        var color = m_item_image.color;
+
         color.a = alpha;
         m_item_image.color = color;
     }
 
-    // 아이템 획득
+    // 아이템 획득을 처리하는 메소드
     public void AddItem(ItemData item, int count = 1)
     {
         m_item = item;
         m_item_count = count;
-        m_item_image.sprite = item.m_item_image;
+        m_item_image.sprite = item.ItemImage;
 
-        if(m_item.m_item_type != ItemData.ItemType.Equipment)
+        if(m_item.ItemType != ItemType.Equipment)
         {
             m_text_image.SetActive(true);
             m_text_count.text = m_item_count.ToString();
@@ -43,7 +58,7 @@ public class SlotData:MonoBehaviour
         SetAlpha(1);
     }
 
-    // 아이템 개수 조정
+    // 아이템 개수를 조정하는 메소드
     public void SetSlotCount(int count)
     {
         m_item_count += count;
@@ -55,7 +70,7 @@ public class SlotData:MonoBehaviour
         }
     }
 
-    // 슬롯 초기화
+    // 슬롯을 초기화하는 메소드
     private void ClearSlot()
     {
         m_item = null;
