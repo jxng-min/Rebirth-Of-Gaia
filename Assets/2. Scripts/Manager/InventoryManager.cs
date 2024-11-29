@@ -1,10 +1,8 @@
+using Jongmin;
 using UnityEngine;
 
-public class InventoryManager:MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
-    // 인벤토리작업중인지 여부
-    public static bool m_inventory_activated = false;
-
     [SerializeField]
     private GameObject m_slot_grid;
     private SlotData[] m_slots;
@@ -16,13 +14,13 @@ public class InventoryManager:MonoBehaviour
 
     public void AcquireItem(ItemData item, int count = 1)
     {
-        if(item.m_item_type != ItemData.ItemType.Equipment)
+        if(item.ItemType != ItemType.Equipment)
         {
             for(int i = 0; i < m_slots.Length; i++)
             {
-                if(m_slots[i].m_item != null)
+                if(m_slots[i].Item != null)
                 {
-                    if(m_slots[i].m_item.m_item_name == item.m_item_name)
+                    if(m_slots[i].Item.ItemName == item.ItemName)
                     {
                         m_slots[i].SetSlotCount(count);
                         return;
@@ -30,13 +28,24 @@ public class InventoryManager:MonoBehaviour
                 }
             }
         }
+
         for(int i = 0; i < m_slots.Length; i++)
         {
-            if(m_slots[i].m_item == null)
+            if(m_slots[i].Item == null)
             {
                 m_slots[i].AddItem(item, count);
                 return;
             }
         }
+    }
+
+    public void OpenInventory()
+    {
+        GameEventBus.Publish(GameEventType.SETTING);
+    }
+
+    public void CloseInventory()
+    {
+        GameEventBus.Publish(GameEventType.PLAYING);
     }
 }
