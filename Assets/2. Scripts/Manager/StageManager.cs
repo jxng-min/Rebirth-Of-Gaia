@@ -165,9 +165,12 @@ namespace Junyoung
             m_camera_move_ctrl.CameraLimitSize = stageData.m_camera_limit_size;
 
             Debug.Log($"스테이지 {stage_index} 로드");
-
+            
 
             m_save_manager.Player.m_stage_id = stage_index;
+            
+            m_save_manager.Player.m_stage_state = 0;
+            m_talk_manager.ChangeTalkScene();
 
 
             Debug.Log($"m_stage_id : {m_save_manager.Player.m_stage_id}");

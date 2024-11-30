@@ -4137,7 +4137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 4.7}
+  m_AnchoredPosition: {x: 0, y: 4.699997}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234748457
@@ -11216,6 +11216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_stage_manager: {fileID: 1410502930}
   m_save_manager: {fileID: 1181585560}
+  m_talk_manager: {fileID: 1773517161}
 --- !u!1 &634814445
 GameObject:
   m_ObjectHideFlags: 0
@@ -32792,7 +32793,6 @@ RectTransform:
   - {fileID: 1539659340}
   - {fileID: 1955881626}
   - {fileID: 521983597}
-  - {fileID: 836705937}
   - {fileID: 1466460990}
   - {fileID: 709419512}
   - {fileID: 426949232}
@@ -32800,6 +32800,7 @@ RectTransform:
   - {fileID: 392227617}
   - {fileID: 782123534}
   - {fileID: 1096601229}
+  - {fileID: 836705937}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

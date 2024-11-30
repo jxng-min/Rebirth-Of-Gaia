@@ -1,4 +1,5 @@
 using Jongmin;
+using Taekyung;
 using UnityEngine;
 
 namespace Junyoung
@@ -12,6 +13,8 @@ namespace Junyoung
         [Header("SaveManager")]
         [SerializeField]
         private SaveManager m_save_manager;   
+        [SerializeField]
+        private TalkManager m_talk_manager;
 
         public void ResetClearStage()
         {            
@@ -25,6 +28,9 @@ namespace Junyoung
             if(m_save_manager.Player.m_max_clear_stage< m_stage_manager.m_max_stage)
             {
                 m_save_manager.Player.m_max_clear_stage++;
+                
+                m_save_manager.Player.m_stage_state = 1;
+                m_talk_manager.ChangeTalkScene();
             }                
             else
             {
