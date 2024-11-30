@@ -9,14 +9,13 @@ public class SlotData : MonoBehaviour
     {
         get { return m_item; }
     }
-
     private int m_item_count;
     public int ItemCount
     {
         get { return m_item_count; }
     }
 
-    private Image m_item_image;
+    public Image m_item_image;
     public Image ItemImage
     {
         get { return m_item_image; }
