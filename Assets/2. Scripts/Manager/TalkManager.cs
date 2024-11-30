@@ -31,6 +31,7 @@ namespace Taekyung
         {
             m_save_path = Application.persistentDataPath + "/Data";
             m_portrait_data = new Dictionary<string, Sprite>();
+            Debug.Log($"Persistent Data Path: {Application.persistentDataPath}");
 
             GeneratePortrait();
             BringTalkLineDataFromJson();
@@ -119,27 +120,7 @@ namespace Taekyung
         {
             // Set Talk Data
             string talk_data;
-            switch (m_save_manager.Player.m_stage_state)
-            {
-                case 0: // 스테이지 시작 상태
-                    if(m_save_manager.Player.m_require_mob == 0) // 0 값은 추후 스테이지별 요구 몹처치량으로 변경
-                    {
-                        talk_data = GetTalkData(stage_id + "_quest", m_save_manager.Player.m_talk_idx);
-                    }
-                    else
-                    {
-                        talk_data = GetTalkData(stage_id + "_start", m_save_manager.Player.m_talk_idx);
-                    }
-                    break;
-                case 1: // 스테이지 종료 상태
-                    talk_data = GetTalkData(stage_id + "_end", m_save_manager.Player.m_talk_idx);
-                    break;
-                default:
-                    Debug.Log("스테이지 상태 불러오기 실패");
-                    talk_data = null;
-                    break;
-            }
-
+            talk_data = GetTalkData(stage_id + "_" + m_save_manager.Player.m_stage_state, m_save_manager.Player.m_talk_idx);
             // End Talk 
             if (talk_data == null)
             {
