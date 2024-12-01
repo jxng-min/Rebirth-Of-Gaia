@@ -26,7 +26,4 @@ namespace Junyoung
             CurrentState.Handle(m_player_ctrl);
         }
     }
-
 }
-
-

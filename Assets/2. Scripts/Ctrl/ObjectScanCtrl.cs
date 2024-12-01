@@ -88,33 +88,33 @@ namespace Jongmin
         // 플레이어가 점프를 할 수 있는지 땅과의 거리를 확인하는 메소드
         private void MakeRayToJump()
         {
-            Vector3 left_down_dir = new Vector3(-1,-1,0).normalized;
-            Vector3 right_down_dir = new Vector3(1, -1, 0).normalized;
+            Vector3 left_down_dir = new Vector3(-1, -2, 0).normalized;
+            Vector3 right_down_dir = new Vector3(1, -2, 0).normalized;
 
             RaycastHit2D left_ray_hit = Physics2D.Raycast(
-                                                            m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.down,
+                                                            m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.up,
                                                             left_down_dir,
-                                                            1.0f,
+                                                            1.414f,
                                                             LayerMask.GetMask("GROUND")
                                                          );
             RaycastHit2D right_ray_hit = Physics2D.Raycast(
-                                                            m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.down,
+                                                            m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.up,
                                                             right_down_dir,
-                                                            1.0f,
+                                                            1.414f,
                                                             LayerMask.GetMask("GROUND")
                                                           );
 
             if (left_ray_hit.collider || right_ray_hit.collider)
             {
-                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.down, left_down_dir * 1.0f, new Color(0, 1, 0));
-                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.down, right_down_dir * 1.0f, new Color(0, 1, 0));
-                m_player_ctrl.IsJump = false;
+                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.up, left_down_dir * 1.0f, new Color(0, 1, 0));
+                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.up, right_down_dir * 1.0f, new Color(0, 1, 0));
+                m_player_ctrl.IsGrounded = true;
             }
             else
             {
-                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.down, left_down_dir * 1.0f, new Color(1, 0, 0));
-                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.down, right_down_dir * 1.0f, new Color(1, 0, 0));
-                m_player_ctrl.IsJump = true;
+                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.up, left_down_dir * 1.0f, new Color(1, 0, 0));
+                Debug.DrawRay(m_player_ctrl.GetComponent<Rigidbody2D>().position + Vector2.up, right_down_dir * 1.0f, new Color(1, 0, 0));
+                m_player_ctrl.IsGrounded = false;
             }
         }
     }

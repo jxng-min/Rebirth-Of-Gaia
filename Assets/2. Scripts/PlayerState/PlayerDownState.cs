@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Junyoung
@@ -13,10 +14,19 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;            
             }
 
-            Debug.Log("플레이어 Down State : 플레이어가 GROUND 플랫폼에서 내려갑니다.");
-            GetComponent<PlatformScanCtrl>().StartDisableCollision();
+            if(GetComponent<PlatformScanCtrl>().CurrentPlatform)
+            {
+                m_player_ctrl.IsDown = true;
+                GetComponent<Animator>().SetTrigger("Down");
+                GetComponent<PlatformScanCtrl>().StartDisableCollision();
+                StartCoroutine(Downing());
+            }
+        }
+
+        private IEnumerator Downing()
+        {
+            yield return new WaitForSeconds(1f);
+            m_player_ctrl.IsDown = false;
         }
     }
 }
-
-

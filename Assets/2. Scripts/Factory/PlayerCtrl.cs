@@ -1,4 +1,5 @@
 using Jongmin;
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 
 namespace Junyoung
@@ -25,10 +26,15 @@ namespace Junyoung
      
         [Header("State")]
 
-        private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state, m_down_state;
+        private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state, m_down_state, m_fall_state;
         private PlayerStateContext m_player_state_context;
 
+        public bool IsGrounded { get; set; }
         public bool IsJump { get; set; }
+        public bool IsDown { get; set; }
+        public bool IsFall { get; set; }
+
+        private float m_last_height;
 
         [Header("Skill")]
         public Skill[] m_player_skills = new Skill[3];
@@ -61,6 +67,7 @@ namespace Junyoung
             m_dead_state = gameObject.AddComponent<PlayerDeadState>();
             m_clear_state = gameObject.AddComponent<PlayerClearState>();
             m_down_state = gameObject.AddComponent<PlayerDownState>();
+            m_fall_state = gameObject.AddComponent<PlayerFallState>();
 
             m_player_state_context.Transition(m_stop_state);
 
@@ -72,6 +79,25 @@ namespace Junyoung
 
             MoveSpeed = 4.0f;
             JumpPower = 15.0f;
+        }
+
+        private void Update()
+        {
+            if((!IsDown && !IsJump))
+            {
+                float current_height = m_rigidbody.linearVelocity.y;
+                if(!IsFall)
+                {
+                    if(m_last_height - current_height > 0.2f)
+                    {
+                        Debug.Log("떨어지는 상태 호출됨");
+                        PlayerFall();
+                    }
+
+                    m_last_height = current_height;
+                }
+                m_last_height = current_height = m_rigidbody.linearVelocity.y;
+            }
         }
 
         private void FixedUpdate()
@@ -108,7 +134,7 @@ namespace Junyoung
 
         public void PlayerDown()
         {
-            if(GameManager.Instance.GameStatus == "Playing")
+            if(!IsDown && GameManager.Instance.GameStatus == "Playing")
             {
                 m_player_state_context.Transition(m_down_state);
             }
@@ -116,10 +142,15 @@ namespace Junyoung
 
         public void PlayerJump()
         {
-            if(!IsJump && GameManager.Instance.GameStatus == "Playing")
+            if(!IsJump && IsGrounded && GameManager.Instance.GameStatus == "Playing")
             {
                 m_player_state_context.Transition(m_jump_state);       
             }
+        }
+
+        public void PlayerFall()
+        {
+            m_player_state_context.Transition(m_fall_state);
         }
 
         public void DeadPlayer()
