@@ -6,6 +6,11 @@ namespace Junyoung
     public class PlatformScanCtrl : MonoBehaviour
     {
         private GameObject m_current_platform;
+        public bool CurrentPlatform
+        {
+            get { return m_current_platform != null;}
+        }
+        
         private BoxCollider2D m_player_collider;
         private PlayerCtrl m_player_ctrl;
 
@@ -42,7 +47,7 @@ namespace Junyoung
                 BoxCollider2D platform_collider = m_current_platform.GetComponent<BoxCollider2D>();
 
                 Physics2D.IgnoreCollision(m_player_collider, platform_collider);
-                yield return new WaitForSeconds(1.0f);
+                yield return new WaitForSeconds(0.5f);
                 Physics2D.IgnoreCollision(m_player_collider, platform_collider,false);
             }
         }

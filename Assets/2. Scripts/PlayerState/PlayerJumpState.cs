@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Junyoung
@@ -13,8 +14,16 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;                            
             }
 
-            m_player_ctrl.GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * m_player_ctrl.JumpPower;
-            Debug.Log($"플레이어 JumpState");
+            m_player_ctrl.IsJump = true;
+            GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * m_player_ctrl.JumpPower;
+            GetComponent<Animator>().SetTrigger("Jump");
+            StartCoroutine(Jumping());
         }
+
+        private IEnumerator Jumping()
+        {
+            yield return new WaitForSeconds(1.25f);
+            m_player_ctrl.IsJump = false;
+        } 
     }
 }

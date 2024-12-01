@@ -13,7 +13,7 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;
             }
 
-            Debug.Log($"플레이어 StopState");
+            GetComponent<Animator>().SetBool("IsMove", false);
         }
     }
 }

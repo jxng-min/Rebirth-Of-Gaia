@@ -31,6 +31,8 @@ public class JoyStickCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         RectTransformUtility.ScreenPointToLocalPointInRectangle(m_rect, eventData.position, eventData.pressEventCamera, out localPoint);
         m_touch = localPoint / m_width_half;
 
+        m_touch.y = 0;
+
         if(m_touch.magnitude > 1)
             m_touch = m_touch.normalized;
         m_value.m_joy_touch = m_touch;
