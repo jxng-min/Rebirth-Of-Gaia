@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77223548000b49f458cfd457b6cc0c6b, type: 3}
   m_Name: Enva Status
   m_EditorClassIdentifier: 
-  m_character_name: 
+  m_character_name: Enva
   m_strength: 7
   m_intellect: 15
   m_sociality: 8
