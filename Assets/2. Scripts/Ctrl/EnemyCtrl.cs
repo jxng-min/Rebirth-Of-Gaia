@@ -8,6 +8,9 @@ namespace Junyoung
     {
         // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+        [SerializeField]
+        public EnemyStatus m_enemy_status;
+
         private IEnemyState m_move_state, m_get_damage_state, m_stop_state, m_dead_state;
         private EnemyStateContext m_enemy_state_context;
 
