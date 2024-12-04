@@ -1,34 +1,54 @@
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace Jongmin
 {
     public class SceneCtrl : MonoBehaviour
     {
-        [SerializeField]
-        private string m_scene_name;
+        private static string m_scene_name;
 
-        // m_scene_name 씬으로 이동하는 메소드
-        public void ReplaceScene()
+        [SerializeField]
+        private Image m_progress_bar;
+
+        private void Start()
         {
-            Debug.Log(m_scene_name + "으로 씬을 전환합니다.");
-            
-            SceneManager.LoadScene(m_scene_name);
+            StartCoroutine(LoadSceneProcess());
         }
 
-        // Title에서 PlayerSelect와 Game 중 이동할 곳을 결정하는 메소드
-        public void TitleReplaceScene()
+        public static void ReplaceScene(string scene_name)
         {
-            if(File.Exists(Application.persistentDataPath + "/PlayerData.json"))
+            m_scene_name = scene_name;
+            SceneManager.LoadScene("Loading");
+        }
+
+        private IEnumerator LoadSceneProcess()
+        {
+            AsyncOperation op = SceneManager.LoadSceneAsync(m_scene_name);
+            op.allowSceneActivation = false;
+
+            float timer = 0f;
+            while(!op.isDone)
             {
-                Debug.Log("이미 캐릭터를 생성한 기록이 있습니다.");
-                SceneManager.LoadScene("Game");
-            }
-            else
-            {
-                Debug.Log("캐릭터를 생성한 기록이 없습니다.");
-                SceneManager.LoadScene("PlayerSelect");
+                yield return null;
+
+                if(op.progress < 0.9f)
+                {
+                    m_progress_bar.fillAmount = op.progress;
+                }
+                else
+                {
+                    timer += Time.unscaledDeltaTime;
+                    m_progress_bar.fillAmount = Mathf.Lerp(0.9f, 1f, timer);
+                    
+                    if(m_progress_bar.fillAmount >= 1f)
+                    {
+                        op.allowSceneActivation = true;
+                        yield break;
+                    }
+                }
             }
         }
     }

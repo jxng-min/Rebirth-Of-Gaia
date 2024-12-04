@@ -1429,8 +1429,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1330472788}
-        m_TargetAssemblyTypeName: Jongmin.SceneCtrl, Assembly-CSharp
-        m_MethodName: ReplaceScene
+        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1487,10 +1487,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330472783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ecfc7e1b263c5c4c929fa7044312d70, type: 3}
+  m_Script: {fileID: 11500000, guid: b72793ca749d2704cbbd7102b1152ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_scene_name: Game
 --- !u!1 &2029275624
 GameObject:
   m_ObjectHideFlags: 0
