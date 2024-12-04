@@ -1,4 +1,5 @@
 using Junyoung;
+using System.IO;
 using UnityEngine;
 
 namespace Jongmin
@@ -6,6 +7,25 @@ namespace Jongmin
     public class ButtonCtrl : MonoBehaviour
     {
         private PlayerCtrl m_player_ctrl;
+
+        public void TitleClick()
+        {
+            if(File.Exists(Application.persistentDataPath + "/PlayerData.json"))
+            {
+                Debug.Log("이미 캐릭터를 생성한 기록이 있습니다.");
+                SceneCtrl.ReplaceScene("Game");
+            }
+            else
+            {
+                Debug.Log("캐릭터를 생성한 기록이 없습니다.");
+                SceneCtrl.ReplaceScene("PlayerSelect");
+            }
+        }
+
+        public void PlayClick()
+        {
+            SceneCtrl.ReplaceScene("Game");
+        }
 
         public void UpArrowClick()
         {
