@@ -10,10 +10,6 @@ public class EnemyStatus : ScriptableObject
     public EnemyType EnemyType { get { return m_enemy_type; } }
 
     [SerializeField]
-    private string m_enemy_name;
-    public string EnemyName { get { return m_enemy_name; } }
-
-    [SerializeField]
     private float m_enemy_hp;
     public float EnemyHP { get { return m_enemy_hp; } }
 

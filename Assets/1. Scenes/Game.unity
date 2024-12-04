@@ -11468,6 +11468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619886956}
   - component: {fileID: 619886957}
+  - component: {fileID: 619886958}
   m_Layer: 0
   m_Name: InStageManager
   m_TagString: Untagged
@@ -11509,6 +11510,19 @@ MonoBehaviour:
   m_stage_manager: {fileID: 1410502930}
   m_save_manager: {fileID: 1181585560}
   m_talk_manager: {fileID: 1773517161}
+--- !u!114 &619886958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619886955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0092cba133238468705404a68bff62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_save_manager: {fileID: 1181585560}
   m_enemy_status_list:
   - {fileID: 11400000, guid: 6b08c8b11976c6c40849d28ea3f7dcc9, type: 2}
   - {fileID: 11400000, guid: 04918a6f100cff44b8f07d83e902fb74, type: 2}
@@ -11524,12 +11538,8 @@ MonoBehaviour:
   - {fileID: 2448270523165745596, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
   - {fileID: 2448270523165745596, guid: 38319e97a78a17d4badc84b7d56ded29, type: 3}
   - {fileID: 2448270523165745596, guid: ae793def3cd99ef4885d3d7be3f19065, type: 3}
-  - {fileID: 2448270523165745596, guid: 3dbfd3f1a11d5024bb5bf52e0997d2f7, type: 3}
-  m_enemy_spawn_pos:
-  - {x: 7.7377e-41, y: 5.7e-43, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 7.7733e-41, y: 5.7e-43, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {fileID: 2448270523165745596, guid: ae793def3cd99ef4885d3d7be3f19065, type: 3}
+  m_enemy_spawn_pos: []
 --- !u!1 &634814445
 GameObject:
   m_ObjectHideFlags: 0
@@ -24135,7 +24145,7 @@ MonoBehaviour:
   m_now_button_index: 0
   m_talk_manager: {fileID: 1773517161}
   m_save_manager: {fileID: 0}
-  m_in_stage_manager: {fileID: 619886957}
+  m_enemy_factory: {fileID: 619886958}
 --- !u!1 &1437667835
 GameObject:
   m_ObjectHideFlags: 0
