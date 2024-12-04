@@ -3,44 +3,84 @@
     {
         "m_camera_limit_center": { "x": 2.5, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": -9.6, "y": -2 }
+        "m_player_start_position": { "x": -9.6, "y": -2 },
+	"m_enemy_spawn_pos1": { "x": -8, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 8, "y": 3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 10, "y": -1, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 0, "y": -3, "z":0 }
     },
     {
         "m_camera_limit_center": { "x": 35, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 23.5, "y": -3.7 }
+        "m_player_start_position": { "x": 23.5, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 25, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 25, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 25, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 25, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 65, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 53.3, "y": -3.7 }
+        "m_player_start_position": { "x": 53.3, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 55, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 55, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 55, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 55, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 95, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 82, "y": -3.7 }
+        "m_player_start_position": { "x": 82, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 85, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 85, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 85, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 85, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 125, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 112, "y": -3.7 }
+        "m_player_start_position": { "x": 112, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 115, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 115, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 115, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 115, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 155, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 140, "y": -3.7 }
+        "m_player_start_position": { "x": 140, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 145, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 145, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 145, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 145, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 185, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 171, "y": -3.7 }
+        "m_player_start_position": { "x": 171, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 175, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 175, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 175, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 175, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 215, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 202, "y": -3.7 }
+        "m_player_start_position": { "x": 202, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 205, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 205, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 205, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 205, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 245, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 235, "y": -3.7 }
+        "m_player_start_position": { "x": 235, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 238, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 238, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 238, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 238, "y": -3, "z":0 }
     },    {
         "m_camera_limit_center": { "x": 275, "y": 2.5 },
         "m_camera_limit_size": { "x": 28, "y": 17 },
-        "m_player_start_position": { "x": 270, "y": -3.7 }
+        "m_player_start_position": { "x": 270, "y": -3.7 },
+	"m_enemy_spawn_pos1": { "x": 275, "y": -3, "z":0 },
+	"m_enemy_spawn_pos2": { "x": 275, "y": -3, "z":0 },
+	"m_enemy_spawn_pos3": { "x": 275, "y": -3, "z":0 },
+	"m_enemy_spawn_pos4": { "x": 275, "y": -3, "z":0 }
     }
  ]
 }
