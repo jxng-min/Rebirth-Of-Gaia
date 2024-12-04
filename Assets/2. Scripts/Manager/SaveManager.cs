@@ -21,6 +21,11 @@ namespace Jongmin
         [SerializeField]
         private List<CharacterStatus> m_character_statuses;
 
+        public List<CharacterStatus> CharacterStatuses
+        {
+            get { return m_character_statuses;} 
+        }
+
         private void Start()
         {
             m_save_path = Application.persistentDataPath + "/PlayerData.json";

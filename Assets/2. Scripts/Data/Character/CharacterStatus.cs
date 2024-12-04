@@ -9,7 +9,24 @@ public class CharacterStatus : ScriptableObject
 
     public string CharacterName
     {
-        get { return m_character_name;}
+        get { return m_character_name; }
+    }
+
+    [Header("Growth Status")]
+    [SerializeField]
+    private float[] m_growth_stamina = new float[9];
+    
+    public float[] GrowthStamina
+    {
+        get { return m_growth_stamina; }
+    }
+
+    [SerializeField]
+    private float[] m_growth_defense = new float[9];
+
+    public float[] GrowthDefense
+    {
+        get { return m_growth_defense; }
     }
 
     [Header("Default Status")]
@@ -26,7 +43,7 @@ public class CharacterStatus : ScriptableObject
 
     public float Intellect
     {
-        get { return m_intellect;}
+        get { return m_intellect; }
     }
 
     [SerializeField]
@@ -34,6 +51,22 @@ public class CharacterStatus : ScriptableObject
 
     public float Sociality
     {
-        get { return m_sociality;}
+        get { return m_sociality; }
     }
+
+    [SerializeField]
+    private float m_stamina;
+    
+    public float Stamina
+    {
+        get { return m_stamina; } 
+    }
+
+    [SerializeField]
+    private float m_defense;
+    
+    public float Defense
+    {
+        get { return m_defense; }
+    } 
 }
