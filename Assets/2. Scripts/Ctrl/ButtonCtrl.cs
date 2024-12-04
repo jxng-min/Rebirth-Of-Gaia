@@ -18,8 +18,20 @@ namespace Jongmin
             else
             {
                 Debug.Log("캐릭터를 생성한 기록이 없습니다.");
-                SceneCtrl.ReplaceScene("PlayerSelect");
+                SceneCtrl.ReplaceScene("Intro");
             }
+        }
+
+        public void IntroClick()
+        {
+            if(File.Exists(Application.persistentDataPath + "/PlayerData.json"))
+            {
+                SceneCtrl.ReplaceScene("Game");
+            }
+            else
+            {
+                SceneCtrl.ReplaceScene("PlayerSelect");
+            }            
         }
 
         public void PlayClick()
