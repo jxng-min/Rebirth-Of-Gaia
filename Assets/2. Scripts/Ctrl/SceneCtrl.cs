@@ -34,7 +34,7 @@ namespace Jongmin
             {
                 yield return null;
 
-                if(op.progress < 0.9f)
+                if(op.progress < 0.7f)
                 {
                     m_progress_bar.fillAmount = op.progress;
                 }
