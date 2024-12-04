@@ -7,6 +7,9 @@ namespace Jongmin
         public float m_intellect;
         public float m_sociality;
 
+        public float m_stamina;
+        public float m_defense;
+
         public int m_ap_enforce;
         public int m_mp_enforce;
         public int m_si_enforce;
@@ -21,6 +24,8 @@ namespace Jongmin
             m_strength = character_status.Strength;
             m_intellect = character_status.Intellect;
             m_sociality = character_status.Sociality;
+            m_stamina = character_status.Stamina;
+            m_defense = character_status.Defense;
 
             m_ap_enforce = 0;
             m_mp_enforce = 0;
