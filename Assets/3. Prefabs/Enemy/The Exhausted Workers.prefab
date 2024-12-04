@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1830802164359974225}
   - component: {fileID: 2680271108284820996}
   - component: {fileID: -8472236211834233797}
-  - component: {fileID: 3542342767327899642}
-  - component: {fileID: 7615913304083215155}
+  - component: {fileID: 4589099104050363274}
+  - component: {fileID: 8093460896553153982}
   m_Layer: 10
-  m_Name: The Voice of Despair
+  m_Name: The Exhausted Workers
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1303653024, guid: 896c1780b6bd0b64a95cb101e8b94352, type: 3}
+  m_Sprite: {fileID: 1990710269, guid: 896c1780b6bd0b64a95cb101e8b94352, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &3542342767327899642
+--- !u!50 &4589099104050363274
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &7615913304083215155
+--- !u!61 &8093460896553153982
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,9 +1,14 @@
+using Junyoung;
 using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "Enemy Data",menuName ="Scriptable Object/Enemy Status",order =int.MaxValue)]
 public class EnemyStatus : ScriptableObject
 {
+    [SerializeField]
+    private EnemyType m_enemy_type;
+    public EnemyType EnemyType { get { return m_enemy_type; } }
+
     [SerializeField]
     private string m_enemy_name;
     public string EnemyName { get { return m_enemy_name; } }

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1830802164359974225}
   - component: {fileID: 2680271108284820996}
   - component: {fileID: -8472236211834233797}
-  - component: {fileID: -7858777094962890699}
-  - component: {fileID: -344873985561254567}
+  - component: {fileID: -3652151115003102649}
+  - component: {fileID: -4984087814797586084}
   m_Layer: 10
-  m_Name: The Shadow of Capital
+  m_Name: The Polluted Citizens
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 559787792, guid: 896c1780b6bd0b64a95cb101e8b94352, type: 3}
+  m_Sprite: {fileID: -1147582110, guid: 896c1780b6bd0b64a95cb101e8b94352, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-7858777094962890699
+--- !u!50 &-3652151115003102649
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &-344873985561254567
+--- !u!61 &-4984087814797586084
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
