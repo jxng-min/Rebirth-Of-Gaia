@@ -1,4 +1,5 @@
 using Junyoung;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyDeadState : MonoBehaviour , IEnemyState
@@ -10,5 +11,15 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
         m_enemy = enemy;
 
         Debug.Log($"Enemy DeadState");
+
+
+        Invoke("DestroyEnemy", 0.25f);
     }
+
+
+    private void DestroyEnemy()
+    {
+        m_enemy.ReturnToPool();
+    }
+
 }

@@ -62,7 +62,7 @@ namespace Junyoung
         private CameraMoveCtrl m_camera_move_ctrl;
 
         [SerializeField]
-        private InStageManager m_in_stage_manager;
+        private EnemyFactory m_enemy_factory;
 
         void Start()
         {
@@ -171,10 +171,10 @@ namespace Junyoung
             m_camera_move_ctrl.CameraLimitSize = stageData.m_camera_limit_size;
 
             //적 개체 생성위치 설정
-            //m_in_stage_manager.m_enemy_spawn_pos[0]= stageData.m_enemy_spawn_pos1;
-           // m_in_stage_manager.m_enemy_spawn_pos[1]= stageData.m_enemy_spawn_pos2;
-           // m_in_stage_manager.m_enemy_spawn_pos[2]= stageData.m_enemy_spawn_pos3;
-           // m_in_stage_manager.m_enemy_spawn_pos[3]= stageData.m_enemy_spawn_pos4;
+            m_enemy_factory.m_enemy_spawn_pos[0]= stageData.m_enemy_spawn_pos1;
+            m_enemy_factory.m_enemy_spawn_pos[1]= stageData.m_enemy_spawn_pos2;
+            m_enemy_factory.m_enemy_spawn_pos[2]= stageData.m_enemy_spawn_pos3;
+            m_enemy_factory.m_enemy_spawn_pos[3]= stageData.m_enemy_spawn_pos4;
 
 
 
@@ -192,7 +192,12 @@ namespace Junyoung
             //테스트용 적 개체 생성코드
             for (int i = 0; i < 4; i++)
             {
-                //m_in_stage_manager.SpawnEnemy((EnemyType)i, i);
+                for (int j = 0; j < 7; j++)
+                {
+                    m_enemy_factory.SpawnEnemy((EnemyType)i, i);
+                }
+
+                
             }
         }
         

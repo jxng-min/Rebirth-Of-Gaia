@@ -1,5 +1,6 @@
 using Junyoung;
 using UnityEngine;
+using UnityEngine.Pool;
 
 
 namespace Junyoung
@@ -13,6 +14,27 @@ namespace Junyoung
 
         private IEnemyState m_move_state, m_get_damage_state, m_stop_state, m_dead_state;
         private EnemyStateContext m_enemy_state_context;
+
+        public IObjectPool<EnemyCtrl> m_managed_pool { get; set; }
+
+
+        public void testEnemyDead()
+        {
+            Invoke("EnemyDead", 5f);
+        }
+
+
+
+        public void SetEnemyPool(IObjectPool<EnemyCtrl> pool)
+        {
+            m_managed_pool = pool;
+        }
+
+        public void ReturnToPool()
+        {
+            Debug.Log($"Enemy 반환");
+            m_managed_pool.Release(this);
+        }
 
         void Start()
         {
