@@ -17,6 +17,9 @@ namespace Junyoung
 
         public IObjectPool<EnemyCtrl> m_managed_pool { get; set; }
 
+        private Rigidbody2D m_rigidbody;
+
+        private int m_dir=-1;
 
         public void testEnemyDead()
         {
@@ -44,8 +47,27 @@ namespace Junyoung
             m_dead_state = gameObject.AddComponent<EnemyDeadState>();
 
             m_enemy_state_context = new EnemyStateContext(this);
+
+            m_rigidbody = GetComponent<Rigidbody2D>();
         }
 
+        private void FixedUpdate()
+        {
+            GroundChecker();
+            m_rigidbody.linearVelocityX = m_dir * m_enemy_status.EnemyMoveSpeed;
+        }
+
+        private void GroundChecker()// 앞이 낭떨어지인지 체크하는 함수
+        {
+            Vector2 frontVec = new Vector2(m_rigidbody.position.x + m_dir * 1.2f ,m_rigidbody.position.y);
+            Debug.DrawRay(frontVec,Vector3.down, new Color(0,1,0));
+            RaycastHit2D raycast = Physics2D.Raycast(frontVec, Vector3.down, 1.5f, LayerMask.GetMask("GROUND"));
+            if(raycast.collider == null)
+            {
+                m_dir *= -1;
+            }
+        
+        }
 
         public void EnemyMove()
         {
