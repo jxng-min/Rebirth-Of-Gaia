@@ -1,11 +1,16 @@
 using Jongmin;
 using UnityEngine;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject m_slot_grid;
+
     private SlotData[] m_slots;
+
+    [SerializeField]
+    private TMP_Text m_seeds_text;
 
     void Start()
     {
@@ -23,6 +28,12 @@ public class InventoryManager : MonoBehaviour
                     if(m_slots[i].Item.ItemName == item.ItemName)
                     {
                         m_slots[i].SetSlotCount(count);
+
+                        if(m_slots[i].Item.ItemName == "Seed of Desire")
+                        {
+                            m_seeds_text.text = m_slots[i].ItemCount.ToString();
+                        }
+
                         return;
                     }
                 }
@@ -37,6 +48,19 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public SlotData SearchItem(string item_name)
+    {
+        for(int i = 0; i < m_slots.Length; i++)
+        {
+            if(m_slots[i].Item?.ItemName == item_name)
+            {
+                return m_slots[i];
+            }
+        }
+
+        return null;
     }
 
     public void OpenInventory()

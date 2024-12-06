@@ -13,6 +13,7 @@ public class SlotData : MonoBehaviour
     public int ItemCount
     {
         get { return m_item_count; }
+        set { m_item_count = value; }
     }
 
     public Image m_item_image;
