@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class TestGiveItem:MonoBehaviour
+public class TestGiveItem : MonoBehaviour
 {
-    public ItemData m_item;
+    [SerializeField]
+    private ItemData m_item;
+
     [SerializeField]
     private InventoryManager m_inventory;
 
