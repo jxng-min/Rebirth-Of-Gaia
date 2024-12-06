@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bgm_clips:
-  - {fileID: 8300000, guid: 8c7e1f1f58dd6494d8483f1fd033ec13, type: 3}
+  - {fileID: 8300000, guid: 59b046ba9d35ece45994dad04e9636cd, type: 3}
   m_bgm_clip_names:
-  - Title_Background
+  - Title Background
   m_effect_clips: []
   m_effect_clip_names: []
 --- !u!4 &140720037
