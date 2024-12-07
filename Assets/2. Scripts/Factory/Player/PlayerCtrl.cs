@@ -1,4 +1,5 @@
 using Jongmin;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Junyoung
@@ -43,6 +44,7 @@ namespace Junyoung
             GameEventBus.Subscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
             GameEventBus.Subscribe(GameEventType.SETTING, GameManager.Instance.Setting);
             GameEventBus.Subscribe(GameEventType.DEAD, GameManager.Instance.Dead);
+            GameEventBus.Subscribe(GameEventType.CLEAR, GameManager.Instance.Clear);
             GameEventBus.Subscribe(GameEventType.FINISH, GameManager.Instance.Finish);
         }
 
@@ -51,6 +53,7 @@ namespace Junyoung
             GameEventBus.Unsubscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
             GameEventBus.Unsubscribe(GameEventType.SETTING, GameManager.Instance.Setting);
             GameEventBus.Unsubscribe(GameEventType.DEAD, GameManager.Instance.Dead);
+            GameEventBus.Unsubscribe(GameEventType.CLEAR, GameManager.Instance.Clear);
             GameEventBus.Unsubscribe(GameEventType.FINISH, GameManager.Instance.Finish);
         }
 

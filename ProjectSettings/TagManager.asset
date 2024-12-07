@@ -7,6 +7,7 @@ TagManager:
   - PLATFORM
   - Enemy
   - Item
+  - Seed
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - PLAYER
   - COWORKER
   - ENEMY
-  - 
+  - ITEM
   - 
   - 
   - 

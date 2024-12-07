@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Junyoung
@@ -13,7 +14,8 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;
             }
 
-            Debug.Log($"플레이어 ClearState");
+            m_player_ctrl.GetComponent<Animator>().speed = 0f;
+            m_player_ctrl.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         }
     }
 }

@@ -29,6 +29,8 @@ namespace Jongmin
             AsyncOperation op = SceneManager.LoadSceneAsync(m_scene_name);
             op.allowSceneActivation = false;
 
+            GameEventBus.Publish(GameEventType.LOADING);
+
             float timer = 0f;
             while(!op.isDone)
             {

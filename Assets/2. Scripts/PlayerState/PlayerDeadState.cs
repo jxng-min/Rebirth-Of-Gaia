@@ -13,7 +13,8 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;
             }
 
-            Debug.Log($"플레이어 DeadState");
+            m_player_ctrl.GetComponent<Animator>().speed = 0f;
+            m_player_ctrl.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         }
     }
 }
