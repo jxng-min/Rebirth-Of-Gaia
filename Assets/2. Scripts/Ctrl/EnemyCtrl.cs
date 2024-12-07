@@ -21,6 +21,13 @@ namespace Junyoung
 
         private int m_dir=-1;
 
+
+        [SerializeField] private float m_state_time;
+        [SerializeField] private float m_loop_time;
+        [SerializeField] private float m_moving_time;
+ 
+        private SpriteRenderer m_sprite_renderer;
+
         public void testEnemyDead()
         {
             Invoke("EnemyDead", 5f);
@@ -47,14 +54,42 @@ namespace Junyoung
             m_dead_state = gameObject.AddComponent<EnemyDeadState>();
 
             m_enemy_state_context = new EnemyStateContext(this);
-
             m_rigidbody = GetComponent<Rigidbody2D>();
+            m_sprite_renderer = GetComponent<SpriteRenderer>();
         }
 
         private void FixedUpdate()
         {
-            GroundChecker();
-            m_rigidbody.linearVelocityX = m_dir * m_enemy_status.EnemyMoveSpeed;
+
+            if (m_state_time > m_moving_time)
+            {
+                m_state_time -= Time.deltaTime;
+                EnemyMove();
+            }
+            else if (m_state_time > 0)
+            {
+                EnemyStop();
+                m_state_time -= Time.deltaTime;
+            }
+            else
+            {
+                ChangeDir();
+                m_state_time = m_loop_time;
+            }
+             
+        }
+
+        public void SetPatrolTime()
+        {
+            m_loop_time = Random.Range(6f, 11f);
+            m_moving_time = Random.Range(0f, 4f);
+            m_state_time= m_loop_time;
+        }
+
+        public void ChangeDir()
+        {
+            m_dir *= -1;
+            m_sprite_renderer.flipX= !(m_sprite_renderer.flipX);
         }
 
         private void GroundChecker()// 앞이 낭떨어지인지 체크하는 함수
@@ -64,13 +99,15 @@ namespace Junyoung
             RaycastHit2D raycast = Physics2D.Raycast(frontVec, Vector3.down, 1.5f, LayerMask.GetMask("GROUND"));
             if(raycast.collider == null)
             {
-                m_dir *= -1;
+                ChangeDir();
             }
         
         }
 
         public void EnemyMove()
         {
+            GroundChecker();
+            m_rigidbody.linearVelocityX = m_dir * m_enemy_status.EnemyMoveSpeed;
             m_enemy_state_context.Transition(m_move_state);
         }
 

@@ -192,7 +192,7 @@ namespace Junyoung
             //테스트용 적 개체 생성코드
             for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < 7; j++)
+                for (int j = 0; j < 2; j++)
                 {
                     m_enemy_factory.SpawnEnemy((EnemyType)i, i);
                 }

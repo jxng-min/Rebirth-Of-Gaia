@@ -53,7 +53,8 @@ namespace Junyoung
             newEnemy.m_enemy_status = m_enemy_status_list[m_save_manager.Player.m_stage_id];
             newEnemy.name = type.ToString();
             newEnemy.transform.position = m_enemy_spawn_pos[transform_index];
-            newEnemy.testEnemyDead();
+            newEnemy.SetPatrolTime();
+            //newEnemy.testEnemyDead();
             Debug.Log($"{type}타입의 적 생성위치{transform_index}에서 생성");
         }
         
