@@ -7,6 +7,7 @@ namespace Jongmin
         PLAYING = 2,
         SETTING = 3,
         DEAD = 4,
-        FINISH = 5,
+        CLEAR = 5,
+        FINISH = 6,
     }
 }

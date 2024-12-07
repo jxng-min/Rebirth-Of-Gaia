@@ -79,6 +79,11 @@ namespace Jongmin
             }
         }
 
+        public void StopBGM()
+        {
+            m_bgm_source.Stop();
+        }
+
         public float BgmVolume
         {
             get => m_bgm_source.volume;

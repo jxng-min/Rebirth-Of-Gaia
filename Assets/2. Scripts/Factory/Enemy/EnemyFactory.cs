@@ -70,7 +70,7 @@ namespace Junyoung
             enemy.gameObject.SetActive(true);
         }
 
-        private void OnReturnEnemy(EnemyCtrl enemy)
+        public void OnReturnEnemy(EnemyCtrl enemy)
         {
             enemy.gameObject.SetActive(false);
         }

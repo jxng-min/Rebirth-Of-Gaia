@@ -1,3 +1,5 @@
+using Jongmin;
+using Junyoung;
 using System.Collections;
 using UnityEngine;
 
@@ -57,5 +59,7 @@ public class SeedCtrl : MonoBehaviour
             yield return null;
         }
         sprite_renderer.color = new Color(color.r, color.g, color.b, 1f);
+
+        GameEventBus.Publish(GameEventType.CLEAR);
     }
 }
