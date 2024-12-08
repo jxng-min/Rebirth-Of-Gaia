@@ -180,15 +180,24 @@ namespace Junyoung
 
             Debug.Log($"스테이지 {stage_index} 로드");
             
+            /*
+            m_talk_manager.ChangeTalkScene(() =>
 
-            m_save_manager.Player.m_stage_id = stage_index;
-            
-            m_save_manager.Player.m_stage_state = 0;
-            m_talk_manager.ChangeTalkScene();
-
-
+            {
             Debug.Log($"m_stage_id : {m_save_manager.Player.m_stage_id}");
 
+            //테스트용 적 개체 생성코드
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    m_enemy_factory.SpawnEnemy((EnemyType)i, i);
+                }
+
+                
+            }
+            });
+            */
             //테스트용 적 개체 생성코드
             for (int i = 0; i < 4; i++)
             {
@@ -230,11 +239,20 @@ namespace Junyoung
         public void StageSelectYes() //m_stage_index에 맞게 스테이지를 불러옴
         {
             Debug.Log($"스테이지 선택 예 클릭");
-            LoadStage(m_stage_index);
             m_stage_select_ckeck_UI.SetActive(false);
+
+            m_save_manager.Player.m_stage_id = m_stage_index;
+            m_save_manager.Player.m_stage_state = 0;
+            /*
+            m_talk_manager.ChangeTalkScene(() =>
+            {
+                LoadStage(m_stage_index);
+                StageSelectPanelOnoff();
+            });
+            */
+            LoadStage(m_stage_index);
             StageSelectPanelOnoff();
         }
-
         public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감
         {
             Debug.Log($"스테이지 선택 아니오 클릭");

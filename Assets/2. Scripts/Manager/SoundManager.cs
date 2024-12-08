@@ -45,8 +45,6 @@ namespace Jongmin
             m_effect_source.loop = false;
             m_bgm_source.loop = true;
 
-            m_effect_source.volume = 1.0f;
-            m_bgm_source.volume = 1.0f;
         }
 
         // 사운드 이펙트 재생 메소드
