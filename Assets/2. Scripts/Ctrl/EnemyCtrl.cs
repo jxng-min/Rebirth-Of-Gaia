@@ -1,6 +1,8 @@
 using Junyoung;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
+using static UnityEditor.PlayerSettings;
 
 
 namespace Junyoung
@@ -11,8 +13,10 @@ namespace Junyoung
 
         [SerializeField]
         public EnemyStatus m_enemy_status;
+        [SerializeField]
+        public float speed;
 
-        private IEnemyState m_move_state, m_get_damage_state, m_stop_state, m_dead_state;
+        private IEnemyState m_move_state, m_get_damage_state, m_stop_state, m_dead_state, m_attack_state;
         private EnemyStateContext m_enemy_state_context;
 
         public IObjectPool<EnemyCtrl> m_managed_pool { get; set; }
@@ -21,17 +25,17 @@ namespace Junyoung
 
         private int m_dir=-1;
 
+        [SerializeField]
+        private Vector2 m_hit_box_size;
 
-        [SerializeField] private float m_state_time;
-        [SerializeField] private float m_loop_time;
-        [SerializeField] private float m_moving_time;
+        private float m_state_time;
+        private float m_loop_time;
+        private float m_moving_time;
  
         private SpriteRenderer m_sprite_renderer;
 
-        public void testEnemyDead()
-        {
-            Invoke("EnemyDead", 5f);
-        }
+        private bool m_can_attack = true;
+
 
 
 
@@ -48,14 +52,36 @@ namespace Junyoung
 
         void Start()
         {
+            speed = m_enemy_status.EnemyMoveSpeed;
+
             m_move_state = gameObject.AddComponent<EnemyMoveState>();
             m_get_damage_state = gameObject.AddComponent<EnemyGetDamageState>();
             m_stop_state = gameObject.AddComponent<EnemyStopState>();
             m_dead_state = gameObject.AddComponent<EnemyDeadState>();
+            m_attack_state = gameObject.AddComponent<EnemyAttackState>();
 
             m_enemy_state_context = new EnemyStateContext(this);
             m_rigidbody = GetComponent<Rigidbody2D>();
             m_sprite_renderer = GetComponent<SpriteRenderer>();
+
+            SetPatrolTime();
+        }
+
+        private void Update()
+        {
+            //플레이어 감지
+            Collider2D[] InBoxColliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
+            foreach (Collider2D InCollider in InBoxColliders)
+            {
+                if(InCollider.tag == "Player")
+                {
+                    if(m_can_attack)
+                    {
+                        StartCoroutine(DealyAttack());
+                    }
+                        
+                }
+            }
         }
 
         private void FixedUpdate()
@@ -86,7 +112,7 @@ namespace Junyoung
             m_state_time= m_loop_time;
         }
 
-        public void ChangeDir()
+        private void ChangeDir()
         {
             m_dir *= -1;
             m_sprite_renderer.flipX= !(m_sprite_renderer.flipX);
@@ -103,6 +129,22 @@ namespace Junyoung
             }
         
         }
+
+        private IEnumerator DealyAttack() // 공격을 한번 하면 쿨타임 동안 공격이 불가능한 상태로 바꿈
+        {
+            EnemyAttack();
+            
+            m_can_attack = false;
+            yield return new WaitForSeconds(m_enemy_status.EnemyAttackDelay);
+            m_can_attack= true;
+
+        }
+
+        public void EnemyAttack()
+        {
+            m_enemy_state_context.Transition(m_attack_state);
+        }
+
 
         public void EnemyMove()
         {
@@ -126,6 +168,18 @@ namespace Junyoung
             m_enemy_state_context.Transition(m_dead_state);
         }
 
+
+        public void testEnemyDead()
+        {
+            Invoke("EnemyDead", 5f);
+        }
+
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireCube(this.transform.position, m_hit_box_size);
+        }
     }
 }
 

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f247dbd385e98b4792d114ad09096f2, type: 3}
   m_Name: Stage7 Status
   m_EditorClassIdentifier: 
-  m_enemy_name: Stage7 Enemy
+  m_enemy_type: 0
   m_enemy_hp: 120
-  m_enemy_move_speed: 5
+  m_enemy_move_speed: 2
   m_enemy_damage: 30
+  m_enemy_attack_delay: 1

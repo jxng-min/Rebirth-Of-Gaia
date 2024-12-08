@@ -30970,6 +30970,63 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 13.5}
   m_EdgeRadius: 0
+--- !u!1001 &1771611637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.12040056
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830802164359974225, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448270523165745596, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
+      propertyPath: m_Name
+      value: The Exhausted Workers
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb914d9c32a76264a96d857cc149d33d, type: 3}
 --- !u!1 &1773517160
 GameObject:
   m_ObjectHideFlags: 0
@@ -36418,3 +36475,4 @@ SceneRoots:
   - {fileID: 1571796684}
   - {fileID: 1691340152}
   - {fileID: 1017661736}
+  - {fileID: 1771611637}

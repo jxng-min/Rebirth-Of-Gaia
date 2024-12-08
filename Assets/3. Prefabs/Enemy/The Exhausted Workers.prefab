@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4589099104050363274}
   - component: {fileID: 8093460896553153982}
   - component: {fileID: 6745441438431293193}
+  - component: {fileID: 8070256859606496410}
   m_Layer: 10
   m_Name: The Exhausted Workers
   m_TagString: Enemy
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enemy_status: {fileID: 11400000, guid: 6b08c8b11976c6c40849d28ea3f7dcc9, type: 2}
+  m_hit_box_size: {x: 3, y: 2}
 --- !u!212 &-8472236211834233797
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -199,3 +201,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8070256859606496410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2448270523165745596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19e195d58df3b043a63d0407959e59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -26,7 +26,7 @@ namespace Junyoung
      
         [Header("State")]
 
-        private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state, m_down_state, m_fall_state;
+        private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state, m_down_state, m_fall_state, m_get_damage_state;
         private PlayerStateContext m_player_state_context;
 
         public bool IsGrounded { get; set; }
@@ -70,6 +70,7 @@ namespace Junyoung
             m_clear_state = gameObject.AddComponent<PlayerClearState>();
             m_down_state = gameObject.AddComponent<PlayerDownState>();
             m_fall_state = gameObject.AddComponent<PlayerFallState>();
+            m_get_damage_state = gameObject.AddComponent<PlayerGetDamageState>();
 
             m_player_state_context.Transition(m_stop_state);
 
@@ -122,6 +123,12 @@ namespace Junyoung
                 SetPlayerMoveState();
                 m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
             }
+        }
+
+        public void PlayerGetDamage(float damage)
+        {
+            Debug.Log($"플레이어가 {damage} 데미지를 받음");
+            m_player_state_context.Transition(m_get_damage_state);
         }
 
         public void PlayerStop()
