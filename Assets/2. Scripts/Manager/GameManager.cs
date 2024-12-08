@@ -48,6 +48,9 @@ namespace Jongmin
             StartCoroutine(FindPlayer());
 
             m_player_ctrl.GetComponent<Animator>().speed = 1f;
+
+            GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
 
         public void Setting()
@@ -57,6 +60,8 @@ namespace Jongmin
             // 모든 오브젝트 정지 필요
 
             DisableUI();
+            GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
 
         public void Dead()
@@ -76,6 +81,8 @@ namespace Jongmin
             // 게임오버 효과음
 
             DisableUI();
+            GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(true);
 
             Debug.Log("스테이지 게임오버!");
         }
@@ -85,6 +92,13 @@ namespace Jongmin
             GameStatus = "Clear";
 
             m_player_ctrl.ClearPlayer();
+
+            EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
+            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
+            foreach(var enemy in m_enemies)
+            {
+                enemy_factory.OnReturnEnemy(enemy);
+            }
             
             SoundManager.Instance.StopBGM();
             // 클리어 효과음
@@ -93,6 +107,8 @@ namespace Jongmin
             Destroy(seed);
 
             DisableUI();
+            GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
 
             Debug.Log("스테이지 클리어!");
         }
@@ -102,6 +118,8 @@ namespace Jongmin
             GameStatus = "Finish";
 
             DisableUI();
+            GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
 
         private void DisableUI()
