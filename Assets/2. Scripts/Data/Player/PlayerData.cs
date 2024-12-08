@@ -12,6 +12,9 @@ namespace Jongmin
         public int m_max_clear_stage;
         public int m_require_mob;
         public int m_talk_idx;
+        public float m_bgm_volume;
+        public float m_effect_volume;
+        
         
 
         public PlayerData(Character char_type, CharacterStatus character_status)
