@@ -7,8 +7,10 @@ public class EnemyStopState : MonoBehaviour, IEnemyState
 
     public void Handle(EnemyCtrl enemy)
     {
-        m_enemy = enemy;
-
-        Debug.Log($"Enemy StopState");
+        if(!m_enemy)
+        {
+            m_enemy = enemy;
+        }
+        
     }
 }

@@ -8,12 +8,10 @@ public class EnemyMoveState : MonoBehaviour, IEnemyState
 
     public void Handle(EnemyCtrl enemy)
     {
-        if(!enemy)
+        if(!m_enemy)
         {
             m_enemy = enemy;
         }
-
-        Debug.Log($"Enemy MoveState");
     }
     
 

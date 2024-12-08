@@ -8,7 +8,11 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
 
     public void Handle(EnemyCtrl enemy)
     {
-        m_enemy = enemy;
+        if(!m_enemy)
+        {
+            m_enemy = enemy;
+        }
+            
 
         Debug.Log($"Enemy DeadState");
 
