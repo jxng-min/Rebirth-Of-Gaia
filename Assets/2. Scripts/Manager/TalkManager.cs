@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -109,14 +110,15 @@ namespace Taekyung
         }
 
         // 상호작용 메소드
-        public void ChangeTalkScene()
+        public void ChangeTalkScene(Action on_complete)
         {
-            Talk(m_save_manager.Player.m_stage_id);
+            m_save_manager.Player.m_talk_idx = 0;
+            Talk(m_save_manager.Player.m_stage_id, on_complete);
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
         }
 
         // 대화를 진행하는 메소드
-        public void Talk(int stage_id)
+        public void Talk(int stage_id, Action on_complete)
         {
             // Set Talk Data
             string talk_data;
@@ -127,6 +129,9 @@ namespace Taekyung
                 m_is_action = false;
 
                 m_save_manager.Player.m_talk_idx = 0;
+                
+                m_save_manager.Player.m_stage_state++;
+                on_complete?.Invoke();
 
                 return;
             }
