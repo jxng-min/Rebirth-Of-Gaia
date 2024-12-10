@@ -18,8 +18,6 @@ namespace Junyoung
         
         [Header("Stage UI")]
         [SerializeField]
-        private GameObject m_main_panel;
-        [SerializeField]
         private Button[] m_select_buttons; //인스펙터에서 연결
 
         [SerializeField]
@@ -27,6 +25,9 @@ namespace Junyoung
 
         [SerializeField]
         private GameObject m_stage_select_UI;//인스펙터에서 연결
+
+        [SerializeField]
+        private GameObject m_main_panel;//인스펙터에서 연결
 
         [SerializeField]
         private GameObject m_stage_select_ckeck_UI;//인스펙터에서 연결
@@ -178,19 +179,17 @@ namespace Junyoung
             m_enemy_factory.m_enemy_spawn_pos[2]= stageData.m_enemy_spawn_pos3;
             m_enemy_factory.m_enemy_spawn_pos[3]= stageData.m_enemy_spawn_pos4;
 
-
+            
 
             Debug.Log($"스테이지 {stage_index} 로드");
+
             
             m_talk_manager.ChangeTalkScene();
-            for (int i = 0; i < 4; i++)
+            int enemySpawn = stageData.m_enemy_spawn_num;
+            for (int i = 0; i < enemySpawn; i++)
             {
-                for (int j = 0; j < 2; j++)
-                {
-                    m_enemy_factory.SpawnEnemy((EnemyType)i, i);
-                }
 
-                
+                m_enemy_factory.SpawnEnemy((EnemyType)0, i%4);               
             }
         }
         
@@ -212,6 +211,11 @@ namespace Junyoung
                 m_stage_select_ckeck_UI.SetActive(false);
 
 
+        }
+
+        public void MainPanelOff()
+        {
+            m_main_panel.SetActive( false );
         }
 
         public void StageSelect(int stage_index)// 버튼 클릭으로 버튼에 해당하는 스테이지 index를 받아옴

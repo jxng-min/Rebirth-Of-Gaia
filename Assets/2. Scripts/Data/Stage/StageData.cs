@@ -12,6 +12,7 @@ namespace Junyoung
         public Vector3 m_enemy_spawn_pos2;
         public Vector3 m_enemy_spawn_pos3;
         public Vector3 m_enemy_spawn_pos4;
+        public int m_enemy_spawn_num;
 
     }
 
