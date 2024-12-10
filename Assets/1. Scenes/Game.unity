@@ -23829,6 +23829,7 @@ MonoBehaviour:
   - {fileID: 2095502190}
   - {fileID: 1647503060}
   m_stage_select_UI: {fileID: 1495430054}
+  m_main_panel: {fileID: 1568442277}
   m_stage_select_ckeck_UI: {fileID: 215702919}
   m_ui_text: {fileID: 427855684}
   m_player_icon: {fileID: 2122849198}

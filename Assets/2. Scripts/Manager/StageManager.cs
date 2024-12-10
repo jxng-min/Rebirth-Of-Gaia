@@ -27,6 +27,9 @@ namespace Junyoung
         private GameObject m_stage_select_UI;//인스펙터에서 연결
 
         [SerializeField]
+        private GameObject m_main_panel;//인스펙터에서 연결
+
+        [SerializeField]
         private GameObject m_stage_select_ckeck_UI;//인스펙터에서 연결
 
         [SerializeField]
@@ -229,6 +232,11 @@ namespace Junyoung
 
         }
 
+        public void MainPanelOff()
+        {
+            m_main_panel.SetActive( false );
+        }
+
         public void StageSelect(int stage_index)// 버튼 클릭으로 버튼에 해당하는 스테이지 index를 받아옴
         {           
             m_stage_index = stage_index;            
@@ -251,7 +259,7 @@ namespace Junyoung
             });
             */
             LoadStage(m_stage_index);
-            StageSelectPanelOnoff();
+            MainPanelOff();
         }
         public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감
         {
