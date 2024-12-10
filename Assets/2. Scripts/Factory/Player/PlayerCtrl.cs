@@ -1,4 +1,5 @@
 using Jongmin;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ namespace Junyoung
 
         public float MoveSpeed { get; private set; }
         public float JumpPower { get; private set; }
+
+        public float KnockBackForce { get ; private set; } = 10f;
 
         private Vector2 m_move_vec = Vector2.zero;
 
@@ -33,8 +36,11 @@ namespace Junyoung
         public bool IsJump { get; set; }
         public bool IsDown { get; set; }
         public bool IsFall { get; set; }
+        public bool IsKnockBack { get; set; }
 
         private float m_last_height;
+
+        
 
         [Header("Skill")]
         public Skill[] m_player_skills = new Skill[3];
@@ -121,15 +127,17 @@ namespace Junyoung
                 }
 
                 SetPlayerMoveState();
-                m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
+                if(!IsKnockBack)
+                    m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
             }
         }
 
-        public void PlayerGetDamage(float damage)
-        {
-            Debug.Log($"플레이어가 {damage} 데미지를 받음");
+        public void PlayerGetDamage(float damage, Vector2 enemy_vector)
+        {          
+            (m_get_damage_state as PlayerGetDamageState).Init(damage, enemy_vector);
             m_player_state_context.Transition(m_get_damage_state);
         }
+
 
         public void PlayerStop()
         {
@@ -162,12 +170,12 @@ namespace Junyoung
             m_player_state_context.Transition(m_fall_state);
         }
 
-        public void DeadPlayer()
+        public void PlayerDead()
         {
             m_player_state_context.Transition(m_dead_state);
         }
 
-        public void ClearPlayer()
+        public void PlayerClear()
         {
             m_player_state_context.Transition(m_clear_state);
         }
@@ -185,6 +193,15 @@ namespace Junyoung
                     PlayerMove();
                 }
             }
+        }
+
+        public IEnumerator PlayerGetKnockBack(Vector2 EnemyVector) // 넉백을 구현하는 코루틴
+        {
+            IsKnockBack= true;
+            Vector2 dir = ((Vector2)transform.position - EnemyVector).normalized;
+            m_rigidbody.AddForce(dir* KnockBackForce, ForceMode2D.Impulse);
+            yield return new WaitForSeconds(0.5f);
+            IsKnockBack = false;
         }
 
         public abstract void SetPlayerSkill();

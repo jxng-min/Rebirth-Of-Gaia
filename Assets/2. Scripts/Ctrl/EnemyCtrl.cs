@@ -77,7 +77,8 @@ namespace Junyoung
                 {
                     if(m_can_attack)
                     {
-                        StartCoroutine(DealyAttack());
+                        m_can_attack = false;
+                        StartCoroutine(DelayAttack());
                     }
                         
                 }
@@ -130,11 +131,11 @@ namespace Junyoung
         
         }
 
-        private IEnumerator DealyAttack() // 공격을 한번 하면 쿨타임 동안 공격이 불가능한 상태로 바꿈
+        private IEnumerator DelayAttack() // 공격을 한번 하면 쿨타임 동안 공격이 불가능한 상태로 바꿈
         {
             EnemyAttack();
             
-            m_can_attack = false;
+            
             yield return new WaitForSeconds(m_enemy_status.EnemyAttackDelay);
             m_can_attack= true;
 

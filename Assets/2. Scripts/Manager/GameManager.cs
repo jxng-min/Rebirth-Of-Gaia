@@ -68,7 +68,7 @@ namespace Jongmin
         {
             GameStatus = "Dead";
 
-            m_player_ctrl.DeadPlayer();
+            m_player_ctrl.PlayerDead();
 
             EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
             EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
@@ -91,7 +91,7 @@ namespace Jongmin
         {
             GameStatus = "Clear";
 
-            m_player_ctrl.ClearPlayer();
+            m_player_ctrl.PlayerClear();
 
             EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
             EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
