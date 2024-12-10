@@ -27,6 +27,9 @@ namespace Junyoung
         private GameObject m_stage_select_UI;//인스펙터에서 연결
 
         [SerializeField]
+        private GameObject m_main_panel;//인스펙터에서 연결
+
+        [SerializeField]
         private GameObject m_stage_select_ckeck_UI;//인스펙터에서 연결
 
         [SerializeField]
@@ -176,37 +179,23 @@ namespace Junyoung
             m_enemy_factory.m_enemy_spawn_pos[2]= stageData.m_enemy_spawn_pos3;
             m_enemy_factory.m_enemy_spawn_pos[3]= stageData.m_enemy_spawn_pos4;
 
-
+            
 
             Debug.Log($"스테이지 {stage_index} 로드");
-            
+
             /*
             m_talk_manager.ChangeTalkScene(() =>
 
             {
             Debug.Log($"m_stage_id : {m_save_manager.Player.m_stage_id}");
 
-            //테스트용 적 개체 생성코드
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 2; j++)
-                {
-                    m_enemy_factory.SpawnEnemy((EnemyType)i, i);
-                }
-
-                
-            }
-            });
             */
             //테스트용 적 개체 생성코드
-            for (int i = 0; i < 4; i++)
+            int enemySpawn = stageData.m_enemy_spawn_num;
+            for (int i = 0; i < enemySpawn; i++)
             {
-                for (int j = 0; j < 2; j++)
-                {
-                    m_enemy_factory.SpawnEnemy((EnemyType)i, i);
-                }
 
-                
+                m_enemy_factory.SpawnEnemy((EnemyType)0, i%4);               
             }
         }
         
@@ -227,6 +216,11 @@ namespace Junyoung
                 m_stage_select_ckeck_UI.SetActive(false);
 
 
+        }
+
+        public void MainPanelOff()
+        {
+            m_main_panel.SetActive( false );
         }
 
         public void StageSelect(int stage_index)// 버튼 클릭으로 버튼에 해당하는 스테이지 index를 받아옴
@@ -251,7 +245,7 @@ namespace Junyoung
             });
             */
             LoadStage(m_stage_index);
-            StageSelectPanelOnoff();
+            MainPanelOff();
         }
         public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감
         {
