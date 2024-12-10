@@ -40,6 +40,12 @@ namespace Junyoung
             m_save_manager.Player.m_player_status.m_stamina-=m_damage;
             Debug.Log($"플레이어가 {m_damage} 데미지를 받음");
             Debug.Log($"현재 체력 : {m_save_manager.Player.m_player_status.m_stamina}");
+            if(m_save_manager.Player.m_player_status.m_stamina <= 0)
+            {
+                Debug.Log($"플레이어 체력이 0 미만, 사망");
+                GameManager.Instance.Dead();
+
+            }
             m_player_object.layer = 12; // UnDamaging Player로 레이어 변경
             m_player_sprite.color = new Color(1, 1, 1, 0.4f);
 

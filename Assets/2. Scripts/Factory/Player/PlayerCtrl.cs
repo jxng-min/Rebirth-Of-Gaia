@@ -170,12 +170,12 @@ namespace Junyoung
             m_player_state_context.Transition(m_fall_state);
         }
 
-        public void DeadPlayer()
+        public void PlayerDead()
         {
             m_player_state_context.Transition(m_dead_state);
         }
 
-        public void ClearPlayer()
+        public void PlayerClear()
         {
             m_player_state_context.Transition(m_clear_state);
         }
