@@ -183,14 +183,8 @@ namespace Junyoung
 
             Debug.Log($"스테이지 {stage_index} 로드");
 
-            /*
-            m_talk_manager.ChangeTalkScene(() =>
-
-            {
-            Debug.Log($"m_stage_id : {m_save_manager.Player.m_stage_id}");
-
-            */
-            //테스트용 적 개체 생성코드
+            
+            m_talk_manager.ChangeTalkScene();
             int enemySpawn = stageData.m_enemy_spawn_num;
             for (int i = 0; i < enemySpawn; i++)
             {
@@ -211,6 +205,7 @@ namespace Junyoung
             else
                 Debug.Log($"스테이지 선택창 비활성화");
             m_stage_select_UI.SetActive( !isActive );
+            m_main_panel.SetActive( !isActive );
 
             if (m_stage_select_ckeck_UI.activeSelf)
                 m_stage_select_ckeck_UI.SetActive(false);
@@ -237,15 +232,8 @@ namespace Junyoung
 
             m_save_manager.Player.m_stage_id = m_stage_index;
             m_save_manager.Player.m_stage_state = 0;
-            /*
-            m_talk_manager.ChangeTalkScene(() =>
-            {
-                LoadStage(m_stage_index);
-                StageSelectPanelOnoff();
-            });
-            */
-            LoadStage(m_stage_index);
-            MainPanelOff();
+            
+            m_talk_manager.ChangeTalkScene();
         }
         public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감
         {
