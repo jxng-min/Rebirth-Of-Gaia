@@ -9,10 +9,6 @@ namespace Jongmin
         [SerializeField]
         private SaveManager m_save_manager;
 
-        [Header("Ability UI")]
-        [SerializeField]
-        private GameObject m_ability_panel;
-
         [SerializeField]
         private TMP_Text m_strength_state;
         
@@ -28,7 +24,7 @@ namespace Jongmin
         [SerializeField]
         private TMP_Text m_defense_state;
 
-        private void OnEnable()
+        private void Update()
         {
             ShowAllAbility();
         }
@@ -66,18 +62,6 @@ namespace Jongmin
             ShowSocialityAbility();
             ShowStaminaAbility();
             ShowDefenseAbility();
-        }
-
-        public void DeactivateUI()
-        {
-            GameEventBus.Publish(GameEventType.PLAYING);
-            m_ability_panel.SetActive(false);
-        }
-
-        public void ActivateUI()
-        {
-            GameEventBus.Publish(GameEventType.SETTING);
-            m_ability_panel.SetActive(true);
         }
     }
 }

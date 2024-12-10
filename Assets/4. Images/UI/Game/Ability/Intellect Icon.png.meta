@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 74e50b46cdd0354439b01ce48481abb2
+guid: 7988dd744c67099438b98ce5b168028e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8558203965515749781
-    second: Seeds_0
+      213: -1080132129388477955
+    second: Intellect Icon_0
+  - first:
+      213: -1727035512628760106
+    second: Intellect Icon_1
+  - first:
+      213: -3763366131420124698
+    second: Intellect Icon_2
+  - first:
+      213: 6396486078467085742
+    second: Intellect Icon_3
+  - first:
+      213: -6765379039860178986
+    second: Intellect Icon_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Seeds_0
+      name: Intellect Icon_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 23
-        height: 23
+        y: 11
+        width: 11
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 599d7efc929d4c670800000000000000
-      internalID: 8558203965515749781
+      spriteID: df140551d899201f0800000000000000
+      internalID: -1080132129388477955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intellect Icon_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1374bf9565808e0800000000000000
+      internalID: -1727035512628760106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intellect Icon_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 16
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9a7f05176d5cbc0800000000000000
+      internalID: -3763366131420124698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intellect Icon_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea513c5c232e4c850800000000000000
+      internalID: 6396486078467085742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intellect Icon_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfb2469b9b8c12a0800000000000000
+      internalID: -6765379039860178986
       vertices: []
       indices: 
       edges: []
@@ -164,7 +264,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +274,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Seeds_0: 8558203965515749781
+      Intellect Icon_0: -1080132129388477955
+      Intellect Icon_1: -1727035512628760106
+      Intellect Icon_2: -3763366131420124698
+      Intellect Icon_3: 6396486078467085742
+      Intellect Icon_4: -6765379039860178986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

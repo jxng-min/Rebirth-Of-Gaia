@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enva Select_0: -8124640578235289429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
