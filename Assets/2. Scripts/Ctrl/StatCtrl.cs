@@ -10,25 +10,11 @@ namespace Jongmin
         [SerializeField]
         private SaveManager m_save_manager;
 
-        [Header("Stat UI")]
-        [SerializeField]
-        private GameObject m_stat_panel;
-
         [SerializeField]
         private Button[] m_upgrade_buttons;
         
         [SerializeField]
         private TMP_Text m_token_count_text;
-        
-        [SerializeField]
-        private TMP_Text[] m_description_texts;
-
-        private void OnEnable()
-        {
-            UpdateStrengthText();
-            UpdateIntellectText();
-            UpdateSocialityText();
-        }
 
         private void Update()
         {
@@ -82,7 +68,6 @@ namespace Jongmin
             m_save_manager.Player.m_player_status.m_ap_enforce++;
 
             m_save_manager.Player.m_player_status.m_strength += 2;
-            UpdateStrengthText();
         }
 
         // 마력을 업그레이드하는 버튼에 적용되는 메소드
@@ -100,7 +85,6 @@ namespace Jongmin
             m_save_manager.Player.m_player_status.m_mp_enforce++;
 
             m_save_manager.Player.m_player_status.m_intellect += 2;
-            UpdateIntellectText();
         }
 
         // 사회력을 업그레이드하는 버튼에 적용되는 메소드
@@ -120,34 +104,6 @@ namespace Jongmin
             m_save_manager.Player.m_player_status.m_sociality += 1;
             m_save_manager.Player.m_player_status.m_strength += (m_save_manager.Player.m_player_status.m_strength * 0.02f);
             m_save_manager.Player.m_player_status.m_intellect += (m_save_manager.Player.m_player_status.m_intellect * 0.02f);
-            UpdateSocialityText();
-        }
-
-        private void UpdateStrengthText()
-        {
-            m_description_texts[0].text = $"Increase Strength + 2.\nYour Strength: {m_save_manager.Player.m_player_status.m_strength}";
-        }
-
-        private void UpdateIntellectText()
-        {
-            m_description_texts[1].text = $"Increase Intellect + 2.\nYour Intellect: {m_save_manager.Player.m_player_status.m_intellect}";
-        }
-
-        private void UpdateSocialityText()
-        {
-            m_description_texts[2].text = $"Increase Sociality + 2.\nYour Sociality: {m_save_manager.Player.m_player_status.m_sociality}";
-        }
-
-        public void DeactivateUI()
-        {
-            GameEventBus.Publish(GameEventType.PLAYING);
-            m_stat_panel.SetActive(false);
-        }
-
-        public void ActivateUI()
-        {
-            GameEventBus.Publish(GameEventType.SETTING);
-            m_stat_panel.SetActive(true);
         }
     }
 }

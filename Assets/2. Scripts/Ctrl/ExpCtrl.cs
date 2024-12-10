@@ -24,8 +24,8 @@ namespace Jongmin
 
         public void FixedUpdate()
         {
-            //UpdateExp();
-            //LevelUp();
+            UpdateExp();
+            LevelUp();
         }
 
         // EXP 바를 주기적으로 갱신하는 메소드
@@ -58,7 +58,7 @@ namespace Jongmin
             }
         }
 
-        // 테스트를 위한 임시 테스트 메소드
+
         public void TestButton()
         {
             m_save_manager.Player.m_player_status.m_current_exp += 30;
