@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 namespace Jongmin
 {
@@ -12,6 +13,9 @@ namespace Jongmin
 
         [SerializeField]
         private Image m_progress_bar;
+
+        [SerializeField]
+        private TMP_Text m_progress_text;
 
         private void Start()
         {
@@ -32,25 +36,36 @@ namespace Jongmin
             GameEventBus.Publish(GameEventType.LOADING);
 
             float timer = 0f;
+            float display_progress = 0f;
+
             while(!op.isDone)
             {
-                yield return null;
-
-                if(op.progress < 0.7f)
-                {
-                    m_progress_bar.fillAmount = op.progress;
-                }
-                else
+                if(op.progress > 0.5f)
                 {
                     timer += Time.unscaledDeltaTime;
-                    m_progress_bar.fillAmount = Mathf.Lerp(0.9f, 1f, timer);
-                    
-                    if(m_progress_bar.fillAmount >= 1f)
+                    display_progress = Mathf.Lerp(0.5f, 1f, timer / 2f);
+
+                    if(timer >= 2f)
                     {
+                        display_progress = 1f;
+                        m_progress_text.text = "100%";
+                        
+                        yield return new WaitForSeconds(0.5f);
+
                         op.allowSceneActivation = true;
+
                         yield break;
                     }
                 }
+                else
+                {
+                    display_progress = Mathf.Clamp01(op.progress / 0.9f);
+                }
+
+                m_progress_text.text = Mathf.FloorToInt(display_progress * 100).ToString() + "%";
+                m_progress_bar.transform.Rotate(0f, 0f, -1f);
+
+                yield return null;
             }
         }
     }

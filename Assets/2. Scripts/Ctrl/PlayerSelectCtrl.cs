@@ -6,79 +6,80 @@ namespace Jongmin
 {
     public class PlayerSelectCtrl : MonoBehaviour
     {
-        [Header("Player Select UI")]
         [SerializeField]
-        private Button[] m_player_select_buttons;
+        private GameObject[] m_character_select_panels = new GameObject[3];
 
-        private Button m_current_button;
-        
-        [SerializeField]
-        public Button m_play_button;
+        private int m_index = 0;
 
         private void Start()
         {
-            foreach (var button in m_player_select_buttons)
-            {
-                button.GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
-                button.GetComponentInChildren<TMP_Text>().color = new Color(0f, 0f, 0f, 0.5f);
-            }
+            m_character_select_panels[m_index].SetActive(true);
         }
 
-        private void Update()
+        public void LeftButtonSelect()
         {
-            if(m_current_button == null)
+            if(m_index == 0)
             {
-                m_play_button.interactable = false;
-                m_play_button.GetComponentInChildren<TMP_Text>().color = new Color(0f, 0f, 0f, 0.5f);
+                m_index = 2;
             }
             else
             {
-                m_play_button.interactable = true;
-                m_play_button.GetComponentInChildren<TMP_Text>().color = new Color(0f, 0f, 0f, 1.0f);
+                m_index--;
             }
-        }
 
-        // 선택된 버튼을 강조하는 메소드
-        private void HighlightButton(Button selected_button)
-        {
-            if(m_current_button != null)
+            for(int i = 0; i < 3; i++)
             {
-                m_current_button.GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
-                m_current_button.GetComponentInChildren<TMP_Text>().color = new Color(0f, 0f, 0f, 0.5f);
+                if(i == m_index)
+                {
+                    m_character_select_panels[i].SetActive(true);
+                }
+                else
+                {
+                    m_character_select_panels[i].SetActive(false);
+                }
             }
-
-            m_current_button = selected_button;
-            m_current_button.GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-            m_current_button.GetComponentInChildren<TMP_Text>().color = new Color(0f, 0f, 0f, 1.0f);
         }
 
-        // 선택된 버튼에 따라 캐릭터 타입을 선택하는 메소드
-        private void CharacterSelect(Button selected_button)
+        public void RightButtonSelect()
         {
-            switch(selected_button.name)
+            if(m_index == 2)
             {
-            case "Socia Select Button":
-                GameManager.Instance.CharacterType = Character.SOCIA;
-                Debug.Log("캐릭터를 Socia로 선택합니다.");
-            break;
-
-            case "Gov Select Button":
-                GameManager.Instance.CharacterType = Character.GOV;
-                Debug.Log("캐릭터를 Gov로 선택합니다.");
-            break;
-
-            case "Enva Select Button":
-                GameManager.Instance.CharacterType = Character.ENVA;
-                Debug.Log("캐릭터를 Enva로 선택합니다.");
-            break;    
+                m_index = 0;
             }
+            else
+            {
+                m_index++;
+            }
+
+            for(int i = 0; i < 3; i++)
+            {
+                if(i == m_index)
+                {
+                    m_character_select_panels[i].SetActive(true);
+                }
+                else
+                {
+                    m_character_select_panels[i].SetActive(false);
+                }
+            }            
         }
 
-        // 인터페이스 역할을 하는 메소드
-        public void OnButtonClick(Button selected_button)
+        public void SociaStartButtonPressed()
         {
-            HighlightButton(selected_button);
-            CharacterSelect(selected_button);
+            GameManager.Instance.CharacterType = Character.SOCIA;
+            SceneCtrl.ReplaceScene("Game");
+        }
+
+        public void GovStartButtonPressed()
+        {
+            GameManager.Instance.CharacterType = Character.GOV;
+            SceneCtrl.ReplaceScene("Game");
+        }
+
+        public void EnvaStartButtonPressed()
+        {
+            GameManager.Instance.CharacterType = Character.ENVA;
+            SceneCtrl.ReplaceScene("Game");
         }
     }
 }
