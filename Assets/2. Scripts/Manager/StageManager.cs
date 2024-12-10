@@ -179,37 +179,23 @@ namespace Junyoung
             m_enemy_factory.m_enemy_spawn_pos[2]= stageData.m_enemy_spawn_pos3;
             m_enemy_factory.m_enemy_spawn_pos[3]= stageData.m_enemy_spawn_pos4;
 
-
+            
 
             Debug.Log($"스테이지 {stage_index} 로드");
-            
+
             /*
             m_talk_manager.ChangeTalkScene(() =>
 
             {
             Debug.Log($"m_stage_id : {m_save_manager.Player.m_stage_id}");
 
-            //테스트용 적 개체 생성코드
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 2; j++)
-                {
-                    m_enemy_factory.SpawnEnemy((EnemyType)i, i);
-                }
-
-                
-            }
-            });
             */
             //테스트용 적 개체 생성코드
-            for (int i = 0; i < 4; i++)
+            int enemySpawn = stageData.m_enemy_spawn_num;
+            for (int i = 0; i < enemySpawn; i++)
             {
-                for (int j = 0; j < 2; j++)
-                {
-                    m_enemy_factory.SpawnEnemy((EnemyType)i, i);
-                }
 
-                
+                m_enemy_factory.SpawnEnemy((EnemyType)0, i%4);               
             }
         }
         
