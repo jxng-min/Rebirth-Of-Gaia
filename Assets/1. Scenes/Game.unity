@@ -10160,7 +10160,6 @@ GameObject:
   - component: {fileID: 501598833}
   - component: {fileID: 501598832}
   - component: {fileID: 501598831}
-  - component: {fileID: 501598835}
   m_Layer: 5
   m_Name: TalkButton
   m_TagString: Untagged
@@ -10244,9 +10243,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1773517160}
+      - m_Target: {fileID: 1773517161}
         m_TargetAssemblyTypeName: Taekyung.TalkManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ChangeTalkScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10294,28 +10293,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501598829}
   m_CullTransparentMesh: 1
---- !u!95 &501598835
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501598829}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3cd0be35868c4044c88c5ce1a74aeec2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &504372147
 GameObject:
   m_ObjectHideFlags: 0
@@ -20581,6 +20558,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1568442277}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1089603841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26853,6 +26842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b00fb22baff2664e868621ebe66a5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_main_panel: {fileID: 1568442277}
   m_select_buttons:
   - {fileID: 1687063559}
   - {fileID: 1483244960}
@@ -26876,12 +26866,13 @@ MonoBehaviour:
   - {fileID: 2095502190}
   - {fileID: 1647503060}
   m_stage_select_UI: {fileID: 1495430054}
+  m_main_panel: {fileID: 1568442277}
   m_stage_select_ckeck_UI: {fileID: 215702919}
   m_ui_text: {fileID: 427855684}
   m_player_icon: {fileID: 2122849198}
   m_now_button_index: 0
   m_talk_manager: {fileID: 1773517161}
-  m_save_manager: {fileID: 0}
+  m_save_manager: {fileID: 1181585560}
   m_enemy_factory: {fileID: 619886958}
 --- !u!1 &1432486332
 GameObject:
@@ -30048,7 +30039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1568442278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34107,6 +34098,7 @@ MonoBehaviour:
   - {fileID: 722584537, guid: ef69a74d88a7a1541a263eb8d78dcdaa, type: 3}
   - {fileID: 1428198261, guid: ef69a74d88a7a1541a263eb8d78dcdaa, type: 3}
   m_save_manager: {fileID: 1181585560}
+  m_stage_manager: {fileID: 1410502930}
 --- !u!4 &1773517162
 Transform:
   m_ObjectHideFlags: 0
@@ -36286,9 +36278,9 @@ RectTransform:
   m_Children:
   - {fileID: 1539659340}
   - {fileID: 521983597}
-  - {fileID: 836705937}
   - {fileID: 1706657938}
   - {fileID: 1568442278}
+  - {fileID: 836705937}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -125,14 +125,14 @@ namespace Jongmin
         private void DisableUI()
         {
             GameObject joystick = GameObject.Find("Joystick");
-            GameObject menu_button = GameObject.Find("MenuButton");
+            //GameObject menu_button = GameObject.Find("MenuButton");
             GameObject button_ui = GameObject.Find("Button UI");
-            GameObject level_ui = GameObject.Find("Level UI");
+            //GameObject level_ui = GameObject.Find("Level UI");
 
             joystick.SetActive(false);
-            menu_button.SetActive(false);
+            //menu_button.SetActive(false);
             button_ui.SetActive(false);
-            level_ui.SetActive(false);
+            //level_ui.SetActive(false);
         }
 
         private IEnumerator FindPlayer()

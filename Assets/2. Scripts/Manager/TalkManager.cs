@@ -21,9 +21,11 @@ namespace Taekyung
         [SerializeField]
         private Sprite[] m_portrait_arr;
 
-        [Header("SaveManager")]
+        [Header("Manager")]
         [SerializeField]
         private SaveManager m_save_manager;
+        [SerializeField]
+        private StageManager m_stage_manager;
 
         private bool m_is_action;
         private string m_save_path;
@@ -110,15 +112,14 @@ namespace Taekyung
         }
 
         // 상호작용 메소드
-        public void ChangeTalkScene(Action on_complete)
+        public void ChangeTalkScene()
         {
-            m_save_manager.Player.m_talk_idx = 0;
-            Talk(m_save_manager.Player.m_stage_id, on_complete);
+            Talk(m_save_manager.Player.m_stage_id);
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
         }
 
         // 대화를 진행하는 메소드
-        public void Talk(int stage_id, Action on_complete)
+        public void Talk(int stage_id)
         {
             // Set Talk Data
             string talk_data;
@@ -129,10 +130,14 @@ namespace Taekyung
                 m_is_action = false;
 
                 m_save_manager.Player.m_talk_idx = 0;
+                m_save_manager.Player.m_stage_state += 1;
                 
-                m_save_manager.Player.m_stage_state++;
-                on_complete?.Invoke();
-
+                if(m_save_manager.Player.m_stage_state == 1)
+                {
+                    m_stage_manager.LoadStage(stage_id);
+                    m_stage_manager.StageSelectPanelOnoff();
+                }
+                
                 return;
             }
 

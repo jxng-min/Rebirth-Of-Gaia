@@ -30,7 +30,6 @@ namespace Junyoung
             {
                 m_save_manager.Player.m_max_clear_stage++;
                 
-                m_save_manager.Player.m_stage_state = 1;
             }                
             else
             {
