@@ -1,18 +1,14 @@
-using Junyoung;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
-using static UnityEditor.PlayerSettings;
-
 
 namespace Junyoung
 {
     public class EnemyCtrl : MonoBehaviour
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-
         [SerializeField]
         public EnemyStatus m_enemy_status;
+
         [SerializeField]
         public float speed;
 
@@ -35,9 +31,6 @@ namespace Junyoung
         private SpriteRenderer m_sprite_renderer;
 
         private bool m_can_attack = true;
-
-
-
 
         public void SetEnemyPool(IObjectPool<EnemyCtrl> pool)
         {

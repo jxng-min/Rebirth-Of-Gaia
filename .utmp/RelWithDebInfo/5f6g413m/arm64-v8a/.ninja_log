@@ -1,12 +1,23 @@
 # ninja log v5
+10	2366	7541519385402842	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a19b1670d8884da7
 44	287	7541519364482615	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	3ca0cf35e57b04ea
+27	1948	7541519381182910	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e6dddbb6449a30a
+2	1895	7541519380639841	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4798c42aaa181cc
 288	1495	7541519374941191	D:/Project/Unity/GitHub/Rebirth-Of-Gaia/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5f6g413m/obj/arm64-v8a/libswappywrapper.so	a6702b6a1d836eb6
 18	1686	7541519378138487	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	b532cafb1ac83243
+37	2002	7541519381630518	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4f2d4e8fcff3661a
 6	1771	7541519378906441	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	9e55edc2fcf16cac
 22	1880	7541519379358181	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2ecfc67b2dd84db7
-2	1895	7541519380639841	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4798c42aaa181cc
-27	1948	7541519381182910	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e6dddbb6449a30a
-37	2002	7541519381630518	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4f2d4e8fcff3661a
 14	2191	7541519383571453	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	74944d14f754310
-10	2366	7541519385402842	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a19b1670d8884da7
 2366	2448	7541519386236898	D:/Project/Unity/GitHub/Rebirth-Of-Gaia/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5f6g413m/obj/arm64-v8a/libgame.so	b3386691d210
+35	492	7556208070338264	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	3ca0cf35e57b04ea
+492	742	7556208072688763	D:/Project/Unity/GitHub/Rebirth-Of-Gaia/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5f6g413m/obj/arm64-v8a/libswappywrapper.so	a6702b6a1d836eb6
+23	1447	7556208079890631	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	b532cafb1ac83243
+9	1477	7556208080157119	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	9e55edc2fcf16cac
+27	1484	7556208080237704	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e6dddbb6449a30a
+31	1565	7556208081014836	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4f2d4e8fcff3661a
+16	1612	7556208081515375	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2ecfc67b2dd84db7
+4	1680	7556208082220917	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4798c42aaa181cc
+19	1779	7556208083214836	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	74944d14f754310
+12	1850	7556208083879907	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a19b1670d8884da7
+1851	1965	7556208085054660	D:/Project/Unity/GitHub/Rebirth-Of-Gaia/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5f6g413m/obj/arm64-v8a/libgame.so	b3386691d210
