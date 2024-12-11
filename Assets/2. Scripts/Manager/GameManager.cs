@@ -122,6 +122,13 @@ namespace Jongmin
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
 
+        public void Conquer()
+        {
+            GameStatus = "Conquer";
+
+            //마지막 적에게서 씨앗을 소환하는 로직
+        }
+
         private void DisableUI()
         {
             GameObject joystick = GameObject.Find("Joystick");

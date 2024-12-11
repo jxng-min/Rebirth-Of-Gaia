@@ -232,7 +232,7 @@ namespace Junyoung
 
             m_save_manager.Player.m_stage_id = m_stage_index;
             m_save_manager.Player.m_stage_state = 0;
-            
+
             m_talk_manager.ChangeTalkScene();
         }
         public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감

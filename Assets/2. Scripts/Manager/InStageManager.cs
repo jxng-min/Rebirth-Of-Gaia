@@ -37,6 +37,7 @@ namespace Junyoung
                 return;
             }
             m_save_manager.SaveData();
+            GameEventBus.Publish(GameEventType.CLEAR);//게임 이벤트버스로 CLEAR이벤트 호출
             Debug.Log($"스테이지 클리어. m_max_clear_stage를 {m_save_manager.Player.m_max_clear_stage}로 변경");
         }
     }
