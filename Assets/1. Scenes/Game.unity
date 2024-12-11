@@ -26842,7 +26842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b00fb22baff2664e868621ebe66a5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_main_panel: {fileID: 1568442277}
   m_select_buttons:
   - {fileID: 1687063559}
   - {fileID: 1483244960}
