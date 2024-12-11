@@ -17,6 +17,10 @@ namespace Junyoung
         [SerializeField]
         private TalkManager m_talk_manager;
 
+        public int m_total_enemy_num { get; set; }
+        public int m_killed_enemy_num { get; set; } = 0;
+
+
         public void ResetClearStage()
         {            
             m_save_manager.Player.m_max_clear_stage=-1;

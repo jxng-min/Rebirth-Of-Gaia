@@ -91,7 +91,7 @@ namespace Jongmin
         {
             GameStatus = "Clear";
 
-            m_player_ctrl.PlayerClear();
+            
 
             EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
             EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
