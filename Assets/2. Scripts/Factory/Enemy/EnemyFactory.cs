@@ -41,16 +41,15 @@ namespace Junyoung
             {
                 EnemyType type = (EnemyType)i;
 
-                m_enemy_pools[type] = new ObjectPool<EnemyCtrl>( ()=> CreateEnemy(type), OnGetEnemy, OnReturnEnemy, OnDestoryEnemy, maxSize:m_max_pool_size); // 매개변수 없는 함수를 요하기 때문에 람다식으로 감싸서 매개변수를 넘김
+                m_enemy_pools[type] = new ObjectPool<EnemyCtrl>( ()=> CreateEnemy(type), OnGetEnemy, OnReturnEnemy, OnDestoryEnemy, maxSize:m_max_pool_size);
                 Debug.Log($"오브젝트 pool 타입 : {type} 초기화 완료.");
-
             }           
         }
         
         public void SpawnEnemy(EnemyType type, int transform_index)
         {
             var newEnemy = m_enemy_pools[type].Get();
-            newEnemy.m_enemy_status = m_enemy_status_list[m_save_manager.Player.m_stage_id];
+            newEnemy.EnemyStatus = m_enemy_status_list[m_save_manager.Player.m_stage_id];
             newEnemy.name = type.ToString();
             newEnemy.transform.position = m_enemy_spawn_pos[transform_index];
             newEnemy.SetPatrolTime();

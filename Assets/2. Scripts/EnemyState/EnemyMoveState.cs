@@ -3,17 +3,13 @@ using UnityEngine;
 
 public class EnemyMoveState : MonoBehaviour, IEnemyState
 {
+    private EnemyCtrl m_enemy_ctrl;
 
-    private EnemyCtrl m_enemy;
-
-    public void Handle(EnemyCtrl enemy)
+    public void Handle(EnemyCtrl enemy_ctrl)
     {
-        if(!m_enemy)
+        if(!m_enemy_ctrl)
         {
-            m_enemy = enemy;
+            m_enemy_ctrl = enemy_ctrl;
         }
     }
-    
-
-    
 }

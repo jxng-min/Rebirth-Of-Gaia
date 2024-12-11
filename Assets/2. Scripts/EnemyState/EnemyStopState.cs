@@ -3,14 +3,13 @@ using UnityEngine;
 
 public class EnemyStopState : MonoBehaviour, IEnemyState
 {
-    private EnemyCtrl m_enemy;
+    private EnemyCtrl m_enemy_ctrl;
 
-    public void Handle(EnemyCtrl enemy)
+    public void Handle(EnemyCtrl enemy_ctrl)
     {
-        if(!m_enemy)
+        if(!m_enemy_ctrl)
         {
-            m_enemy = enemy;
+            m_enemy_ctrl = enemy_ctrl;
         }
-        
     }
 }

@@ -2,7 +2,7 @@ using Junyoung;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Enemy Data",menuName ="Scriptable Object/Enemy Status",order =int.MaxValue)]
+[CreateAssetMenu(fileName = "Enemy Data", menuName ="Scriptable Object/Enemy Status", order =int.MaxValue)]
 public class EnemyStatus : ScriptableObject
 {
     [SerializeField]
@@ -11,7 +11,7 @@ public class EnemyStatus : ScriptableObject
 
     [SerializeField]
     private float m_enemy_hp;
-    public float EnemyHP { get { return m_enemy_hp; } }
+    public float EnemyHP { get { return m_enemy_hp; } set { m_enemy_hp = value; } }
 
     [SerializeField]
     private float m_enemy_move_speed;
@@ -19,12 +19,9 @@ public class EnemyStatus : ScriptableObject
 
     [SerializeField]
     private float m_enemy_damage;
-    public float EnemyDamage { get { return m_enemy_damage; } }
+    public float EnemyDamage { get { return m_enemy_damage; } set { m_enemy_damage = value; } }
 
     [SerializeField]
     private float m_enemy_attack_delay;
     public float EnemyAttackDelay { get { return m_enemy_attack_delay; } }
-
-
-
 }

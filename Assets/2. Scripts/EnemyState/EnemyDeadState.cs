@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class EnemyDeadState : MonoBehaviour , IEnemyState
 {
-    private EnemyCtrl m_enemy;
+    private EnemyCtrl m_enemy_ctrl;
     private InStageManager m_in_stage_manager;
     private SeedShortcutCtrl m_seed_short_cut_ctrl;
 
-    public void Handle(EnemyCtrl enemy)
+    public void Handle(EnemyCtrl enemy_ctrl)
     {
-        if(!m_enemy)
+        if(!m_enemy_ctrl)
         {
+            m_enemy_ctrl = enemy_ctrl;
             m_in_stage_manager = GameObject.FindAnyObjectByType<InStageManager>();
             m_seed_short_cut_ctrl = GameObject.FindAnyObjectByType<SeedShortcutCtrl>();
             m_enemy = enemy;
@@ -34,17 +35,10 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
 
         Invoke("DestroyEnemy", 0.25f);
     }
-
-    /*
-    private void DropItem()
-    {
-
-    }
-    */
-
+    
     private void DestroyEnemy()
     {
-        m_enemy.ReturnToPool();
+        m_enemy_ctrl.ReturnToPool();
     }
 
 }
