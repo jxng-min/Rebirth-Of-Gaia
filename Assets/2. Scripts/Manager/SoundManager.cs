@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 
 namespace Jongmin
@@ -21,12 +22,43 @@ namespace Jongmin
         [SerializeField]
         private string[] m_effect_clip_names;
 
+        public float BgmVolume
+        {
+            get => m_bgm_source.volume;
+            set => m_bgm_source.volume = Mathf.Clamp01(value);
+        }
+        public float EffectVolume
+        {
+            get => m_effect_source.volume;
+            set => m_effect_source.volume = Mathf.Clamp01(value);
+        }
+
         private void Start()
         {
             m_bgm_source = gameObject.AddComponent<AudioSource>();
             m_effect_source = gameObject.AddComponent<AudioSource>();
 
+            LoadVolume();
             Initialize();
+        }
+
+        private void LoadVolume()
+        {
+            string file_path = Application.persistentDataPath + "/PlayerData.json";
+
+            if(File.Exists(file_path))
+            {
+                string data = File.ReadAllText(file_path);
+
+                PlayerData player_data = JsonUtility.FromJson<PlayerData>(data);
+
+                m_bgm_source.volume = player_data.m_bgm_volume;
+                m_effect_source.volume = player_data.m_effect_volume;
+            }
+            else
+            {
+                Debug.Log("PlayerData.json이 없습니다. 기본 설정으로 오디오 크기를 설정합니다.");
+            }
         }
 
         // 오디오 소스 초기화, 오디오 클립 초기화 메소드
@@ -42,8 +74,8 @@ namespace Jongmin
                 m_effect_clips[i] = Resources.Load<AudioClip>($"Sounds/effect/{m_effect_clip_names[i]}");
             }
 
-            m_effect_source.loop = false;
             m_bgm_source.loop = true;
+            m_effect_source.loop = false;
         }
 
         // 사운드 이펙트 재생 메소드
@@ -79,17 +111,6 @@ namespace Jongmin
         public void StopBGM()
         {
             m_bgm_source.Stop();
-        }
-
-        public float BgmVolume
-        {
-            get => m_bgm_source.volume;
-            set => m_bgm_source.volume = Mathf.Clamp01(value);
-        }
-        public float EffectVolume
-        {
-            get => m_effect_source.volume;
-            set => m_effect_source.volume = Mathf.Clamp01(value);
         }
     }
 }
