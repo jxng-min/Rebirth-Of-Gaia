@@ -35,7 +35,7 @@ namespace Junyoung
 
             if(m_save_manager.Player.m_player_status.m_stamina <= 0f)
             {
-                Debug.Log($"플레이어 체력이 0 미만, 사망");
+                Debug.Log($"플레이어 체력이 0 이하, 사망");
                 GameEventBus.Publish(GameEventType.DEAD);
             }
 
@@ -54,5 +54,3 @@ namespace Junyoung
         }
     }
 }
-
-

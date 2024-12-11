@@ -91,7 +91,7 @@ namespace Jongmin
         {
             GameStatus = "Clear";
 
-            m_player_ctrl.PlayerClear();
+            
 
             EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
             EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
@@ -120,6 +120,13 @@ namespace Jongmin
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+        public void Conquer()
+        {
+            GameStatus = "Conquer";
+
+            //마지막 적에게서 씨앗을 소환하는 로직
         }
 
         private void DisableUI()

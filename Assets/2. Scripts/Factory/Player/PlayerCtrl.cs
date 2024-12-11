@@ -52,6 +52,8 @@ namespace Junyoung
             GameEventBus.Subscribe(GameEventType.DEAD, GameManager.Instance.Dead);
             GameEventBus.Subscribe(GameEventType.CLEAR, GameManager.Instance.Clear);
             GameEventBus.Subscribe(GameEventType.FINISH, GameManager.Instance.Finish);
+            GameEventBus.Subscribe(GameEventType.CONQUER, GameManager.Instance.Conquer);
+
         }
 
         private void OnDisable()
@@ -61,6 +63,7 @@ namespace Junyoung
             GameEventBus.Unsubscribe(GameEventType.DEAD, GameManager.Instance.Dead);
             GameEventBus.Unsubscribe(GameEventType.CLEAR, GameManager.Instance.Clear);
             GameEventBus.Unsubscribe(GameEventType.FINISH, GameManager.Instance.Finish);
+            GameEventBus.Unsubscribe(GameEventType.CONQUER, GameManager.Instance.Conquer);
         }
 
         private void Start()

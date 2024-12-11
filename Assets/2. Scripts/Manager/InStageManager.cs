@@ -17,6 +17,10 @@ namespace Junyoung
         [SerializeField]
         private TalkManager m_talk_manager;
 
+        public int m_total_enemy_num { get; set; }
+        public int m_killed_enemy_num { get; set; } = 0;
+
+
         public void ResetClearStage()
         {            
             m_save_manager.Player.m_max_clear_stage=-1;
@@ -37,6 +41,7 @@ namespace Junyoung
                 return;
             }
             m_save_manager.SaveData();
+            GameEventBus.Publish(GameEventType.CLEAR);//게임 이벤트버스로 CLEAR이벤트 호출
             Debug.Log($"스테이지 클리어. m_max_clear_stage를 {m_save_manager.Player.m_max_clear_stage}로 변경");
         }
     }

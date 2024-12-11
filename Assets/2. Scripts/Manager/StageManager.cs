@@ -62,6 +62,9 @@ namespace Junyoung
         [SerializeField]
         private SaveManager m_save_manager;
 
+        [SerializeField]
+        private InStageManager m_in_stage_manager;
+
         private CameraMoveCtrl m_camera_move_ctrl;
 
         [SerializeField]
@@ -71,8 +74,9 @@ namespace Junyoung
         {
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
 
-            m_player = GameObject.FindGameObjectWithTag("Player");           
+            m_player = GameObject.FindGameObjectWithTag("Player");
             m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
+            m_in_stage_manager = GameObject.FindAnyObjectByType<InStageManager>();
             LoadStagesData("StageData.json");
             
         }
@@ -179,19 +183,26 @@ namespace Junyoung
             m_enemy_factory.m_enemy_spawn_pos[2]= stageData.m_enemy_spawn_pos3;
             m_enemy_factory.m_enemy_spawn_pos[3]= stageData.m_enemy_spawn_pos4;
 
-            
+            //소환되는 총 적 수 전달
+            int totalEnemyNum = stageData.m_enemy_spawn_num;
+            m_in_stage_manager.m_total_enemy_num = totalEnemyNum;
+          
+            m_talk_manager.ChangeTalkScene();
+
+            // 스테이지에 해당하는 몬스터 수 만큼 몬스터 소환
+            SpawnStageEnemy(totalEnemyNum); 
 
             Debug.Log($"스테이지 {stage_index} 로드");
+        }
 
-            
-            m_talk_manager.ChangeTalkScene();
-            int enemySpawn = stageData.m_enemy_spawn_num;
-            for (int i = 0; i < enemySpawn; i++)
+        public void SpawnStageEnemy(int num)
+        {
+            for (int i = 0; i < num; i++)
             {
-
-                m_enemy_factory.SpawnEnemy((EnemyType)0, i%4);               
+                m_enemy_factory.SpawnEnemy((EnemyType)0, i % 4);
             }
         }
+
         
         public void StageSelectPanelOnoff() // 스테이지 선택 UI를 활성화/비활성화 함
         {
@@ -232,7 +243,7 @@ namespace Junyoung
 
             m_save_manager.Player.m_stage_id = m_stage_index;
             m_save_manager.Player.m_stage_state = 0;
-            
+
             m_talk_manager.ChangeTalkScene();
         }
         public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감
