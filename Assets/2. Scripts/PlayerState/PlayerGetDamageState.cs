@@ -42,8 +42,8 @@ namespace Junyoung
             Debug.Log($"현재 체력 : {m_save_manager.Player.m_player_status.m_stamina}");
             if(m_save_manager.Player.m_player_status.m_stamina <= 0)
             {
-                Debug.Log($"플레이어 체력이 0 미만, 사망");
-                GameManager.Instance.Dead();
+                Debug.Log($"플레이어 체력이 0 이하, 사망");
+                GameEventBus.Publish(GameEventType.DEAD);
 
             }
             m_player_object.layer = 12; // UnDamaging Player로 레이어 변경

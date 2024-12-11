@@ -14,10 +14,10 @@ public class SeedShortcutCtrl : MonoBehaviour
 
     public void OnClick()
     {
-        CheckSeed();
+        //CheckSeed();
     }
 
-    private void CheckSeed()
+    public void CheckSeed(Vector3 enemy)
     {
         if(!m_seed_data)
         {
@@ -30,10 +30,10 @@ public class SeedShortcutCtrl : MonoBehaviour
             }
         }
 
-        DropSeed();
+        DropSeed(enemy);
     }
 
-    private void DropSeed()
+    public void DropSeed(Vector3 enemy)
     {
         if(m_seed_data.ItemCount <= 0)
         {
@@ -47,7 +47,7 @@ public class SeedShortcutCtrl : MonoBehaviour
 
         m_seed_data.ItemCount--;
 
-        m_seed = Instantiate(m_seed_prefab, m_player_ctrl.transform.position + Vector3.up * 2f, Quaternion.identity);
+        m_seed = Instantiate(m_seed_prefab, enemy + Vector3.up * 2f, Quaternion.identity);
 
         StartCoroutine(ColliderEnabled());
 

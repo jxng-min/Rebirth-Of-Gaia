@@ -9,5 +9,6 @@ namespace Jongmin
         DEAD = 4,
         CLEAR = 5,
         FINISH = 6,
+        CONQUER = 7
     }
 }
