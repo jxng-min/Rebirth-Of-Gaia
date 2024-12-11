@@ -7,10 +7,11 @@ namespace Junyoung
     public class EnemyCtrl : MonoBehaviour
     {
         [SerializeField]
-        public EnemyStatus m_enemy_status;
+        private EnemyStatus m_enemy_status;
+        public EnemyStatus EnemyStatus { get; set; }
 
         [SerializeField]
-        public float speed;
+        public float m_speed;
 
         private IEnemyState m_move_state, m_get_damage_state, m_stop_state, m_dead_state, m_attack_state;
         private EnemyStateContext m_enemy_state_context;
@@ -19,7 +20,7 @@ namespace Junyoung
 
         private Rigidbody2D m_rigidbody;
 
-        private int m_dir=-1;
+        private int m_dir = -1;
 
         [SerializeField]
         private Vector2 m_hit_box_size;
@@ -32,6 +33,9 @@ namespace Junyoung
 
         private bool m_can_attack = true;
 
+        public bool IsKnockBack { get; set; }
+        public float KnockBackForce { get ; private set; } = 5f;
+
         public void SetEnemyPool(IObjectPool<EnemyCtrl> pool)
         {
             m_managed_pool = pool;
@@ -43,9 +47,9 @@ namespace Junyoung
             m_managed_pool.Release(this);
         }
 
-        void Start()
+        private void Start()
         {
-            speed = m_enemy_status.EnemyMoveSpeed;
+            m_speed = m_enemy_status.EnemyMoveSpeed;
 
             m_move_state = gameObject.AddComponent<EnemyMoveState>();
             m_get_damage_state = gameObject.AddComponent<EnemyGetDamageState>();
@@ -62,76 +66,40 @@ namespace Junyoung
 
         private void Update()
         {
-            //플레이어 감지
-            Collider2D[] InBoxColliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
-            foreach (Collider2D InCollider in InBoxColliders)
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
+            foreach (Collider2D in_collider in in_box_colliders)
             {
-                if(InCollider.tag == "Player")
+                if(in_collider.tag == "Player")
                 {
                     if(m_can_attack)
                     {
                         m_can_attack = false;
                         StartCoroutine(DelayAttack());
-                    }
-                        
+                    }    
                 }
             }
         }
 
         private void FixedUpdate()
         {
-
-            if (m_state_time > m_moving_time)
+            if(!IsKnockBack)
             {
-                m_state_time -= Time.deltaTime;
-                EnemyMove();
+                if (m_state_time > m_moving_time)
+                {
+                    m_state_time -= Time.deltaTime;
+                    EnemyMove();
+                }
+                else if (m_state_time > 0)
+                {
+                    EnemyStop();
+                    m_state_time -= Time.deltaTime;
+                }
+                else
+                {
+                    ChangeDirection();
+                    m_state_time = m_loop_time;
+                }
             }
-            else if (m_state_time > 0)
-            {
-                EnemyStop();
-                m_state_time -= Time.deltaTime;
-            }
-            else
-            {
-                ChangeDir();
-                m_state_time = m_loop_time;
-            }
-             
-        }
-
-        public void SetPatrolTime()
-        {
-            m_loop_time = Random.Range(6f, 11f);
-            m_moving_time = Random.Range(0f, 4f);
-            m_state_time= m_loop_time;
-        }
-
-        private void ChangeDir()
-        {
-            m_dir *= -1;
-            m_sprite_renderer.flipX= !(m_sprite_renderer.flipX);
-        }
-
-        private void GroundChecker()// 앞이 낭떨어지인지 체크하는 함수
-        {
-            Vector2 frontVec = new Vector2(m_rigidbody.position.x + m_dir * 1.2f ,m_rigidbody.position.y);
-            Debug.DrawRay(frontVec,Vector3.down, new Color(0,1,0));
-            RaycastHit2D raycast = Physics2D.Raycast(frontVec, Vector3.down, 1.5f, LayerMask.GetMask("GROUND"));
-            if(raycast.collider == null)
-            {
-                ChangeDir();
-            }
-        
-        }
-
-        private IEnumerator DelayAttack() // 공격을 한번 하면 쿨타임 동안 공격이 불가능한 상태로 바꿈
-        {
-            EnemyAttack();
-            
-            
-            yield return new WaitForSeconds(m_enemy_status.EnemyAttackDelay);
-            m_can_attack= true;
-
         }
 
         public void EnemyAttack()
@@ -139,11 +107,12 @@ namespace Junyoung
             m_enemy_state_context.Transition(m_attack_state);
         }
 
-
         public void EnemyMove()
         {
             GroundChecker();
+
             m_rigidbody.linearVelocityX = m_dir * m_enemy_status.EnemyMoveSpeed;
+
             m_enemy_state_context.Transition(m_move_state);
         }
 
@@ -162,18 +131,65 @@ namespace Junyoung
             m_enemy_state_context.Transition(m_dead_state);
         }
 
+        public void SetPatrolTime()
+        {
+            m_loop_time = Random.Range(6f, 11f);
+            m_moving_time = Random.Range(0f, 4f);
 
-        public void testEnemyDead()
+            m_state_time= m_loop_time;
+        }
+
+        private void ChangeDirection()
+        {
+            m_dir *= -1;
+            m_sprite_renderer.flipX = !(m_sprite_renderer.flipX);
+        }
+
+        // 낭떠러지 유무를 확인하는 메소드
+        private void GroundChecker()
+        {
+            Vector2 frontVec = new Vector2(m_rigidbody.position.x + m_dir * 1.2f ,m_rigidbody.position.y);
+
+            Debug.DrawRay(frontVec, Vector3.down, new Color(0f, 1f ,0f));
+            RaycastHit2D raycast = Physics2D.Raycast(frontVec, Vector3.down, 1.5f, LayerMask.GetMask("GROUND"));
+
+            if(raycast.collider == null)
+            {
+                ChangeDirection();
+            }
+        }
+
+        // 공격이 불가능한 상태로 변경하는 코루틴
+        private IEnumerator DelayAttack()
+        {
+            EnemyAttack();
+
+            yield return new WaitForSeconds(m_enemy_status.EnemyAttackDelay);
+
+            m_can_attack= true;
+        }
+
+        public void TestEnemyDead()
         {
             Invoke("EnemyDead", 5f);
         }
-
 
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireCube(this.transform.position, m_hit_box_size);
         }
+
+        public IEnumerator EnemyGetKnockBack(Vector2 player_vector)
+        {
+            IsKnockBack = true;
+
+            Vector2 dir = ((Vector2)transform.position - player_vector).normalized;
+            m_rigidbody.AddForce(dir * KnockBackForce, ForceMode2D.Impulse);
+
+            yield return new WaitForSeconds(0.5f);
+
+            IsKnockBack = false;
+        }
     }
 }
-

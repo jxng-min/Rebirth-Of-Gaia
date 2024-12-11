@@ -9,7 +9,7 @@ public class EnemyStateContext
 
     public EnemyStateContext(EnemyCtrl enemy_ctrl)
     {
-        m_enemy_ctrl= enemy_ctrl;
+        m_enemy_ctrl = enemy_ctrl;
     }
 
     public void Transition()
@@ -17,10 +17,9 @@ public class EnemyStateContext
         m_current_state.Handle(m_enemy_ctrl);
     }
 
-    public void Transition(IEnemyState enemyState)
+    public void Transition(IEnemyState enemy_state)
     {
-        m_current_state= enemyState;
+        m_current_state = enemy_state;
         m_current_state.Handle(m_enemy_ctrl);
     }
-
 }

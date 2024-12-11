@@ -6,22 +6,22 @@ namespace Junyoung
 {
     public class EnemyAttackState : MonoBehaviour, IEnemyState
     {
-        private EnemyCtrl m_enemy;
-        private GameObject m_player;
-
-        private void Start()
-        {
-            m_player = GameObject.FindGameObjectWithTag("Player");
-        }
+        private EnemyCtrl m_enemy_ctrl;
+        private PlayerCtrl m_player_ctrl;
 
         public void Handle(EnemyCtrl enemy)
         {
-            if (!m_enemy)
+            if (!m_enemy_ctrl)
             {
-                m_enemy = enemy;
+                m_enemy_ctrl = enemy;
             }
-            m_player.GetComponent<PlayerCtrl>().PlayerGetDamage(m_enemy.m_enemy_status.EnemyDamage, m_enemy.transform.position); //스테이터스의 데미지 만큼 플레이어에게 데미지를 줌
-            Debug.Log($"Enemy : Attack to Player");
+
+            if(!m_player_ctrl)
+            {
+                m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
+            }
+
+            m_player_ctrl.GetComponent<PlayerCtrl>().PlayerGetDamage(m_enemy_ctrl.EnemyStatus.EnemyDamage, m_enemy_ctrl.transform.position);
         }
     }
 

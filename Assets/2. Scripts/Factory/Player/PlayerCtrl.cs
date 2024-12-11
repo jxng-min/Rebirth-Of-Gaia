@@ -134,7 +134,6 @@ namespace Junyoung
 
         public void PlayerGetDamage(float damage, Vector2 enemy_vector)
         {          
-            (m_get_damage_state as PlayerGetDamageState).Init(damage, enemy_vector);
             m_player_state_context.Transition(m_get_damage_state);
         }
 
@@ -195,12 +194,15 @@ namespace Junyoung
             }
         }
 
-        public IEnumerator PlayerGetKnockBack(Vector2 EnemyVector) // 넉백을 구현하는 코루틴
+        public IEnumerator PlayerGetKnockBack(Vector2 enemy_vector)
         {
-            IsKnockBack= true;
-            Vector2 dir = ((Vector2)transform.position - EnemyVector).normalized;
-            m_rigidbody.AddForce(dir* KnockBackForce, ForceMode2D.Impulse);
+            IsKnockBack = true;
+
+            Vector2 dir = ((Vector2)transform.position - enemy_vector).normalized;
+            m_rigidbody.AddForce(dir * KnockBackForce, ForceMode2D.Impulse);
+
             yield return new WaitForSeconds(0.5f);
+
             IsKnockBack = false;
         }
 
