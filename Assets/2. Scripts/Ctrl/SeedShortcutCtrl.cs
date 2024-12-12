@@ -17,7 +17,7 @@ public class SeedShortcutCtrl : MonoBehaviour
         //CheckSeed();
     }
 
-    public void CheckSeed(Vector3 enemy)
+    public void CheckSeed()
     {
         if(!m_seed_data)
         {
@@ -30,10 +30,10 @@ public class SeedShortcutCtrl : MonoBehaviour
             }
         }
 
-        DropSeed(enemy);
+        PutSeed();
     }
 
-    public void DropSeed(Vector3 enemy)
+    public void PutSeed()//버튼 클릭으로 씨앗 심기
     {
         if(m_seed_data.ItemCount <= 0)
         {
@@ -47,7 +47,12 @@ public class SeedShortcutCtrl : MonoBehaviour
 
         m_seed_data.ItemCount--;
 
-        m_seed = Instantiate(m_seed_prefab, enemy + Vector3.up * 2f, Quaternion.identity);
+        SpawnSeed(m_player_ctrl.transform.position);
+    }
+
+    public void SpawnSeed(Vector3 spawn_pos )//몬스터 처치시 씨앗 드랍
+    {
+        m_seed = Instantiate(m_seed_prefab, spawn_pos + Vector3.up * 2f, Quaternion.identity);
 
         StartCoroutine(ColliderEnabled());
 
