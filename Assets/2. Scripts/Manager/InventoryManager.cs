@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     private GameObject m_slot_grid;
 
+    [SerializeField]
     private SlotData[] m_slots;
 
     [SerializeField]
@@ -14,7 +15,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        m_slots = m_slot_grid.GetComponentsInChildren<SlotData>();
+        //m_slots = m_slot_grid.GetComponentsInChildren<SlotData>();
     }
 
     public void AcquireItem(ItemData item, int count = 1)
@@ -32,6 +33,7 @@ public class InventoryManager : MonoBehaviour
                         if(m_slots[i].Item.ItemName == "Seed of Desire")
                         {
                             m_seeds_text.text = m_slots[i].ItemCount.ToString();
+                            Debug.Log($"씨앗을 습득 하였습니다.");
                         }
 
                         return;
