@@ -8,15 +8,18 @@ public class SeedCtrl : MonoBehaviour
     [SerializeField]
     private LayerMask m_ground_layer;
 
+    public ItemData m_seed_data;
+
     private void OnCollisionEnter2D(Collision2D coll)
     {
+        /*
         Debug.Log(coll.gameObject.layer + " " + m_ground_layer.value);
         if(((1 << coll.gameObject.layer) & m_ground_layer) != 0)
         {
             Debug.Log("희망의 씨앗이 자라납니다.");
             StartCoroutine(SetAlphaDown());
             StartCoroutine(Germination());
-        }
+        }*/
     }
 
     private IEnumerator SetAlphaDown()

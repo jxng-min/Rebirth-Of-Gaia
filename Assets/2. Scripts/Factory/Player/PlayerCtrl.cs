@@ -14,6 +14,16 @@ namespace Junyoung
         [Header("Physics")]
         private Rigidbody2D m_rigidbody;
 
+        [SerializeField]
+        private LayerMask m_item_layer;
+
+        [SerializeField]
+        private ItemData m_item;
+
+        [Header("Manager")]
+        [SerializeField]
+        private InventoryManager m_inventory_manager;
+
         public float MoveSpeed { get; private set; }
         private Vector2 m_move_vec = Vector2.zero;
 
@@ -84,8 +94,10 @@ namespace Junyoung
             m_fall_state = gameObject.AddComponent<PlayerFallState>();
             m_get_damage_state = gameObject.AddComponent<PlayerGetDamageState>();
             m_attack_state = gameObject.AddComponent<PlayerAttackState>();
-
+            
             m_player_state_context.Transition(m_stop_state);
+            
+            m_inventory_manager = gameObject.AddComponent<InventoryManager>();
 
             m_rigidbody = GetComponent<Rigidbody2D>();
             gameObject.AddComponent<ObjectScanCtrl>();
@@ -147,6 +159,30 @@ namespace Junyoung
                     m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
                 }
             }
+        }
+        
+        protected void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.layer == LayerMask.NameToLayer("ITEM") )
+            {
+                if(col.gameObject.tag == "Seed")
+                {
+                    Debug.Log($"씨앗 감지");
+                    if(m_inventory_manager!= null)
+                    {
+                        Debug.Log("인벤토리 매니저 널");
+
+                    }
+                    else
+                    {
+                        m_inventory_manager.AcquireItem(col.gameObject.GetComponent<SeedCtrl>().m_seed_data);
+                        Destroy(col.gameObject);
+                    }
+
+                }
+                
+            }
+
         }
 
         public void PlayerGetDamage(float damage, Vector2 enemy_vector)
@@ -242,4 +278,7 @@ namespace Junyoung
             }
         }
     }
+
+
+
 }

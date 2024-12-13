@@ -177,6 +177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_value: {fileID: 11400000, guid: 33ba12c7fc35d264e9479f7f8e8f8532, type: 2}
+  m_item_layer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_item: {fileID: 11400000, guid: c6ce65268b6730a489a7a7c6987fc38c, type: 2}
+  m_inventory_manager: {fileID: 0}
 --- !u!95 &636156033008634757
 Animator:
   serializedVersion: 7

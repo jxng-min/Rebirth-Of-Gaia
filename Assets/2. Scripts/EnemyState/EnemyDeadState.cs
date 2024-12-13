@@ -16,7 +16,6 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
             m_enemy_ctrl = enemy_ctrl;
             m_in_stage_manager = GameObject.FindAnyObjectByType<InStageManager>();
             m_seed_short_cut_ctrl = GameObject.FindAnyObjectByType<SeedShortcutCtrl>();
-            m_enemy_ctrl = enemy_ctrl;
         }
 
         Debug.Log($"Enemy DeadState");
