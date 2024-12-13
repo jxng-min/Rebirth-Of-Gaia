@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 39d93aa1195350a48b9381f364d3ab50
+guid: 60e83c88610e9674783ed713b36a348b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7883150673708754735
-    second: Sociality Icon_0
+      213: -8435473132337243760
+    second: Vector (7)_0
   - first:
-      213: -6462760543342333935
-    second: Sociality Icon_1
+      213: -6527272049056721640
+    second: Vector (7)_1
   - first:
-      213: -2347319482520443059
-    second: Sociality Icon_2
+      213: -1055569435781092116
+    second: Vector (7)_2
   - first:
-      213: -3985131993969766656
-    second: Sociality Icon_3
+      213: -5646235107442006176
+    second: Vector (7)_3
   - first:
-      213: 6927111201724818350
-    second: Sociality Icon_4
+      213: -8793301353922529245
+    second: Vector (7)_4
   - first:
-      213: 3137397125672841150
-    second: Sociality Icon_5
+      213: -3119474257344754249
+    second: Vector (7)_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sociality Icon_0
+      name: Vector (7)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 11
-        height: 19
+        x: 53
+        y: 337
+        width: 129
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f27aa4165c3966d60800000000000000
-      internalID: 7883150673708754735
+      spriteID: 099dfa211ed2fea80800000000000000
+      internalID: -8435473132337243760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sociality Icon_1
+      name: Vector (7)_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 20
-        width: 11
-        height: 11
+        x: 222
+        y: 337
+        width: 171
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1107ba9e689af46a0800000000000000
-      internalID: -6462760543342333935
+      spriteID: 81553a387a87a65a0800000000000000
+      internalID: -6527272049056721640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sociality Icon_2
+      name: Vector (7)_2
       rect:
         serializedVersion: 2
-        x: 10
+        x: 432
+        y: 337
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec2288d03dd951f0800000000000000
+      internalID: -1055569435781092116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector (7)_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 38
+        width: 147
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0676496b51b84a1b0800000000000000
+      internalID: -5646235107442006176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector (7)_4
+      rect:
+        serializedVersion: 2
+        x: 179
         y: 0
-        width: 18
-        height: 20
+        width: 256
+        height: 297
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d47e3060e55ac6fd0800000000000000
-      internalID: -2347319482520443059
+      spriteID: 3287c7ce10be7f580800000000000000
+      internalID: -8793301353922529245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sociality Icon_3
+      name: Vector (7)_5
       rect:
         serializedVersion: 2
-        x: 12
-        y: 20
-        width: 14
-        height: 12
+        x: 456
+        y: 38
+        width: 136
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,52 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00f436cc097f1b8c0800000000000000
-      internalID: -3985131993969766656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sociality Icon_4
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 20
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea3ef62cfea022060800000000000000
-      internalID: 6927111201724818350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sociality Icon_5
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 1
-        width: 11
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebfaf0b20164a8b20800000000000000
-      internalID: 3137397125672841150
+      spriteID: 7bd8dfcc0b665b4d0800000000000000
+      internalID: -3119474257344754249
       vertices: []
       indices: 
       edges: []
@@ -299,12 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sociality Icon_0: 7883150673708754735
-      Sociality Icon_1: -6462760543342333935
-      Sociality Icon_2: -2347319482520443059
-      Sociality Icon_3: -3985131993969766656
-      Sociality Icon_4: 6927111201724818350
-      Sociality Icon_5: 3137397125672841150
+      Vector (7)_0: -8435473132337243760
+      Vector (7)_1: -6527272049056721640
+      Vector (7)_2: -1055569435781092116
+      Vector (7)_3: -5646235107442006176
+      Vector (7)_4: -8793301353922529245
+      Vector (7)_5: -3119474257344754249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

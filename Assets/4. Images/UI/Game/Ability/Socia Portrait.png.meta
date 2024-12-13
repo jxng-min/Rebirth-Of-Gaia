@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 265b9cca05134e14a86c9e3995a4106a
+guid: e44a09ba4b5bd454187c6741d1c8775a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5150445762103811291
-    second: Socia_0
+      213: -4440910234303745120
+    second: "\uC18C\uC154 1_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Socia_0
+      name: "\uC18C\uC154 1_0"
       rect:
         serializedVersion: 2
-        x: 25
+        x: 46
         y: 0
-        width: 160
-        height: 277
+        width: 280
+        height: 486
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bdc1d15e12f0a7740800000000000000
-      internalID: 5150445762103811291
+      spriteID: 0a3bdecbba7be52c0800000000000000
+      internalID: -4440910234303745120
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Socia_0: 5150445762103811291
+      "\uC18C\uC154 1_0": -4440910234303745120
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

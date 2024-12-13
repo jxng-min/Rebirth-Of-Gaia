@@ -1,0 +1,1534 @@
+fileFormatVersion: 2
+guid: f11d8f6c27adb2b418f163a56e7a457b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6412579787547503759
+    second: Rectangle 104_0
+  - first:
+      213: -8372913910407940189
+    second: Rectangle 104_1
+  - first:
+      213: -7646120728242254525
+    second: Rectangle 104_2
+  - first:
+      213: -312265385448849140
+    second: Rectangle 104_3
+  - first:
+      213: 7058067637019010833
+    second: Rectangle 104_4
+  - first:
+      213: 457722615286582186
+    second: Rectangle 104_5
+  - first:
+      213: 7403641259596930173
+    second: Rectangle 104_6
+  - first:
+      213: 1144337038858483215
+    second: Rectangle 104_7
+  - first:
+      213: -2742026206823472685
+    second: Rectangle 104_8
+  - first:
+      213: -2489184782049733200
+    second: Rectangle 104_9
+  - first:
+      213: 9004941720801301019
+    second: Rectangle 104_10
+  - first:
+      213: -3531594161786997540
+    second: Rectangle 104_11
+  - first:
+      213: 1394010988530895114
+    second: Rectangle 104_12
+  - first:
+      213: 3384077821618460179
+    second: Rectangle 104_13
+  - first:
+      213: -8652212382416500986
+    second: Rectangle 104_14
+  - first:
+      213: -8802070745982903866
+    second: Rectangle 104_15
+  - first:
+      213: -6886328179731876751
+    second: Rectangle 104_16
+  - first:
+      213: 458301462303074089
+    second: Rectangle 104_17
+  - first:
+      213: 2049013104916085036
+    second: Rectangle 104_18
+  - first:
+      213: 5334256760788086965
+    second: Rectangle 104_19
+  - first:
+      213: 8464194334601827634
+    second: Rectangle 104_20
+  - first:
+      213: 7267580558158392768
+    second: Rectangle 104_21
+  - first:
+      213: -2995439902567402550
+    second: Rectangle 104_22
+  - first:
+      213: -2790869539037267396
+    second: Rectangle 104_23
+  - first:
+      213: -3038100742100986375
+    second: Rectangle 104_24
+  - first:
+      213: -3310049106004984126
+    second: Rectangle 104_25
+  - first:
+      213: -2135801228931868352
+    second: Rectangle 104_26
+  - first:
+      213: 8429390717716166140
+    second: Rectangle 104_27
+  - first:
+      213: 1840603512348507782
+    second: Rectangle 104_28
+  - first:
+      213: -8135777428421661893
+    second: Rectangle 104_29
+  - first:
+      213: -1100848935326233716
+    second: Rectangle 104_30
+  - first:
+      213: 3622081017477979358
+    second: Rectangle 104_31
+  - first:
+      213: 4461921601385720805
+    second: Rectangle 104_32
+  - first:
+      213: -1280960495116893893
+    second: Rectangle 104_33
+  - first:
+      213: -8365842031133192254
+    second: Rectangle 104_34
+  - first:
+      213: 6749723967709142076
+    second: Rectangle 104_35
+  - first:
+      213: 473126945699206242
+    second: Rectangle 104_36
+  - first:
+      213: -8885376712950724273
+    second: Rectangle 104_37
+  - first:
+      213: -6499556338278675233
+    second: Rectangle 104_38
+  - first:
+      213: 4077006226628443937
+    second: Rectangle 104_39
+  - first:
+      213: -1980492994932734513
+    second: Rectangle 104_40
+  - first:
+      213: 4875849780776225709
+    second: Rectangle 104_41
+  - first:
+      213: -8479164859285842923
+    second: Rectangle 104_42
+  - first:
+      213: -8909293346798845346
+    second: Rectangle 104_43
+  - first:
+      213: -6174659518894501717
+    second: Rectangle 104_44
+  - first:
+      213: -7300176065658441467
+    second: Rectangle 104_45
+  - first:
+      213: 9102416801358042995
+    second: Rectangle 104_46
+  - first:
+      213: 6663592263691143324
+    second: Rectangle 104_47
+  - first:
+      213: 1968879647647874165
+    second: Rectangle 104_48
+  - first:
+      213: -7717342864720570058
+    second: Rectangle 104_49
+  - first:
+      213: 7464368025739211507
+    second: Rectangle 104_50
+  - first:
+      213: -6161474294949062447
+    second: Rectangle 104_51
+  - first:
+      213: -5102219995501307453
+    second: Rectangle 104_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rectangle 104_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 32738
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c6e9a675f0ef850800000000000000
+      internalID: 6412579787547503759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 125
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7353bf82f6dcb80800000000000000
+      internalID: -8372913910407940189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 115
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d8e5365b583e590800000000000000
+      internalID: -7646120728242254525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 115
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01cba0594c9aabf0800000000000000
+      internalID: -312265385448849140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 123
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117e231ee1b43f160800000000000000
+      internalID: 7058067637019010833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_5
+      rect:
+        serializedVersion: 2
+        x: 32728
+        y: 122
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aabc1d12b482a5600800000000000000
+      internalID: 457722615286582186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_6
+      rect:
+        serializedVersion: 2
+        x: 32733
+        y: 68
+        width: 20
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c53badf740fb660800000000000000
+      internalID: 7403641259596930173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_7
+      rect:
+        serializedVersion: 2
+        x: 32735
+        y: 124
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f067b70597081ef00800000000000000
+      internalID: 1144337038858483215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_8
+      rect:
+        serializedVersion: 2
+        x: 32741
+        y: 122
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1a97951bd52f9d0800000000000000
+      internalID: -2742026206823472685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 101
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b51e9501a3a47dd0800000000000000
+      internalID: -2489184782049733200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 108
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12d47be8caf7fc70800000000000000
+      internalID: 9004941720801301019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_11
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 95
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4b7df22d14dfec0800000000000000
+      internalID: -3531594161786997540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_12
+      rect:
+        serializedVersion: 2
+        x: 32747
+        y: 109
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a090068bb95885310800000000000000
+      internalID: 1394010988530895114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 91
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31698d169d8a6fe20800000000000000
+      internalID: 3384077821618460179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 97
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60704d8fdaa2de780800000000000000
+      internalID: -8652212382416500986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 93
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9d4d9ba43c8d580800000000000000
+      internalID: -8802070745982903866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_16
+      rect:
+        serializedVersion: 2
+        x: 32723
+        y: 91
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174b1508109de60a0800000000000000
+      internalID: -6886328179731876751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_17
+      rect:
+        serializedVersion: 2
+        x: 32745
+        y: 96
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927ed9470c63c5600800000000000000
+      internalID: 458301462303074089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_18
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 85
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29b4a2109e8f6c10800000000000000
+      internalID: 2049013104916085036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_19
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 79
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0ff770346170a40800000000000000
+      internalID: 5334256760788086965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_20
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 80
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235d0dfe6ebd67570800000000000000
+      internalID: 8464194334601827634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_21
+      rect:
+        serializedVersion: 2
+        x: 32733
+        y: 77
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cde0992302abd460800000000000000
+      internalID: 7267580558158392768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 71
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac37075774f0e66d0800000000000000
+      internalID: -2995439902567402550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_23
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 56
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ab93fd0f6d449d0800000000000000
+      internalID: -2790869539037267396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_24
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 72
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5583bb87f76d5d0800000000000000
+      internalID: -3038100742100986375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_25
+      rect:
+        serializedVersion: 2
+        x: 32739
+        y: 74
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce397f10e75012d0800000000000000
+      internalID: -3310049106004984126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_26
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 55
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0495ca6291c1c52e0800000000000000
+      internalID: -2135801228931868352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_27
+      rect:
+        serializedVersion: 2
+        x: 32731
+        y: 55
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5727a62363bf470800000000000000
+      internalID: 8429390717716166140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_28
+      rect:
+        serializedVersion: 2
+        x: 32733
+        y: 41
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e7edd74232b8910800000000000000
+      internalID: 1840603512348507782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_29
+      rect:
+        serializedVersion: 2
+        x: 32741
+        y: 56
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b2947b889e71f80800000000000000
+      internalID: -8135777428421661893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 42
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b4382d9bff8b0f0800000000000000
+      internalID: -1100848935326233716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_31
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 39
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcd57aae77344230800000000000000
+      internalID: 3622081017477979358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_32
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 46
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebec326e0eebed30800000000000000
+      internalID: 4461921601385720805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_33
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 37
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31cf3d673d193ee0800000000000000
+      internalID: -1280960495116893893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_34
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 29
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf064f2ffe86eb80800000000000000
+      internalID: -8365842031133192254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_35
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 35
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c5e33ef26dbad50800000000000000
+      internalID: 6749723967709142076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_36
+      rect:
+        serializedVersion: 2
+        x: 32733
+        y: 33
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264111c4372e09600800000000000000
+      internalID: 473126945699206242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_37
+      rect:
+        serializedVersion: 2
+        x: 32746
+        y: 34
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f494b01d4fcc0b480800000000000000
+      internalID: -8885376712950724273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_38
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 24
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcc24b42ffecc5a0800000000000000
+      internalID: -6499556338278675233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_39
+      rect:
+        serializedVersion: 2
+        x: 32732
+        y: 20
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f7e3def8f649830800000000000000
+      internalID: 4077006226628443937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_40
+      rect:
+        serializedVersion: 2
+        x: 32736
+        y: 28
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc582ec3d10e384e0800000000000000
+      internalID: -1980492994932734513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_41
+      rect:
+        serializedVersion: 2
+        x: 32742
+        y: 28
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab4551da8f7aa340800000000000000
+      internalID: 4875849780776225709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_42
+      rect:
+        serializedVersion: 2
+        x: 32744
+        y: 22
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514da4a2c74f35a80800000000000000
+      internalID: -8479164859285842923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52cd4097e4db5480800000000000000
+      internalID: -8909293346798845346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_44
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 11
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba01f4fd1e33f4aa0800000000000000
+      internalID: -6174659518894501717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_45
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 16
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501be98db8090ba90800000000000000
+      internalID: -7300176065658441467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_46
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 4
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3775e7aaad7425e70800000000000000
+      internalID: 9102416801358042995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_47
+      rect:
+        serializedVersion: 2
+        x: 32739
+        y: 13
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c980a5dcbd5d97c50800000000000000
+      internalID: 6663592263691143324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_48
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c3c83ab9dd25b10800000000000000
+      internalID: 1968879647647874165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_49
+      rect:
+        serializedVersion: 2
+        x: 32730
+        y: 8
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6395f628d8d76e490800000000000000
+      internalID: -7717342864720570058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_50
+      rect:
+        serializedVersion: 2
+        x: 32736
+        y: 7
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f238f6eb23c69760800000000000000
+      internalID: 7464368025739211507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_51
+      rect:
+        serializedVersion: 2
+        x: 32741
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d85cdc06cb0e7aa0800000000000000
+      internalID: -6161474294949062447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 104_52
+      rect:
+        serializedVersion: 2
+        x: 32731
+        y: 1
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9df3262f54139b0800000000000000
+      internalID: -5102219995501307453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rectangle 104_0: 6412579787547503759
+      Rectangle 104_1: -8372913910407940189
+      Rectangle 104_10: 9004941720801301019
+      Rectangle 104_11: -3531594161786997540
+      Rectangle 104_12: 1394010988530895114
+      Rectangle 104_13: 3384077821618460179
+      Rectangle 104_14: -8652212382416500986
+      Rectangle 104_15: -8802070745982903866
+      Rectangle 104_16: -6886328179731876751
+      Rectangle 104_17: 458301462303074089
+      Rectangle 104_18: 2049013104916085036
+      Rectangle 104_19: 5334256760788086965
+      Rectangle 104_2: -7646120728242254525
+      Rectangle 104_20: 8464194334601827634
+      Rectangle 104_21: 7267580558158392768
+      Rectangle 104_22: -2995439902567402550
+      Rectangle 104_23: -2790869539037267396
+      Rectangle 104_24: -3038100742100986375
+      Rectangle 104_25: -3310049106004984126
+      Rectangle 104_26: -2135801228931868352
+      Rectangle 104_27: 8429390717716166140
+      Rectangle 104_28: 1840603512348507782
+      Rectangle 104_29: -8135777428421661893
+      Rectangle 104_3: -312265385448849140
+      Rectangle 104_30: -1100848935326233716
+      Rectangle 104_31: 3622081017477979358
+      Rectangle 104_32: 4461921601385720805
+      Rectangle 104_33: -1280960495116893893
+      Rectangle 104_34: -8365842031133192254
+      Rectangle 104_35: 6749723967709142076
+      Rectangle 104_36: 473126945699206242
+      Rectangle 104_37: -8885376712950724273
+      Rectangle 104_38: -6499556338278675233
+      Rectangle 104_39: 4077006226628443937
+      Rectangle 104_4: 7058067637019010833
+      Rectangle 104_40: -1980492994932734513
+      Rectangle 104_41: 4875849780776225709
+      Rectangle 104_42: -8479164859285842923
+      Rectangle 104_43: -8909293346798845346
+      Rectangle 104_44: -6174659518894501717
+      Rectangle 104_45: -7300176065658441467
+      Rectangle 104_46: 9102416801358042995
+      Rectangle 104_47: 6663592263691143324
+      Rectangle 104_48: 1968879647647874165
+      Rectangle 104_49: -7717342864720570058
+      Rectangle 104_5: 457722615286582186
+      Rectangle 104_50: 7464368025739211507
+      Rectangle 104_51: -6161474294949062447
+      Rectangle 104_52: -5102219995501307453
+      Rectangle 104_6: 7403641259596930173
+      Rectangle 104_7: 1144337038858483215
+      Rectangle 104_8: -2742026206823472685
+      Rectangle 104_9: -2489184782049733200
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

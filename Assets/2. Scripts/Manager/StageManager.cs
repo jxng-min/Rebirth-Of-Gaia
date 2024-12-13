@@ -163,6 +163,9 @@ namespace Junyoung
 
             StageData stageData = m_stages_data[stage_index];
 
+            // 퍼사드 이미지 설정
+            FindAnyObjectByType<PersadeCtrl>().UpdatePersade(stage_index);
+
             // 플레이어 위치 설정
             m_player.transform.position = new Vector3(
                                                         stageData.m_player_start_position.x,
