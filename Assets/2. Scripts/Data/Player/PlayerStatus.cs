@@ -33,7 +33,7 @@ namespace Jongmin
             m_stat_token = 0;
 
             m_current_level = 1;
-            m_current_exp = ExpData.m_exps[m_current_level - 1];
+            m_current_exp = 0;
         }
     }
 }

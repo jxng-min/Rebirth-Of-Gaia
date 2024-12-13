@@ -12,37 +12,34 @@ namespace Junyoung
 
     public class StageManager : MonoBehaviour
     {
-        
-
         private List<StageData> m_stages_data;
         
         [Header("Stage UI")]
         [SerializeField]
-        private Button[] m_select_buttons; //인스펙터에서 연결
+        private Button[] m_select_buttons;
 
         [SerializeField]
         private RectTransform[] m_select_buttons_pos_list;
 
         [SerializeField]
-        private GameObject m_stage_select_UI;//인스펙터에서 연결
+        private GameObject m_stage_select_UI;
 
         [SerializeField]
-        private GameObject m_main_panel;//인스펙터에서 연결
+        private GameObject m_main_panel;
 
         [SerializeField]
-        private GameObject m_stage_select_ckeck_UI;//인스펙터에서 연결
+        private GameObject m_stage_select_ckeck_UI;
 
         [SerializeField]
-        private TMP_Text m_ui_text;//인스펙터에서 연결
+        private TMP_Text m_ui_text;
 
         [SerializeField]
-        private RectTransform m_player_icon;//인스펙터에서 연결
+        private RectTransform m_player_icon;
 
         private int m_stage_index;
         public int m_max_stage { get; private set; } = 9;
 
         private GameObject m_player;
-
 
         [SerializeField] 
         private int m_now_button_index = 0;
@@ -52,9 +49,6 @@ namespace Junyoung
         private float m_icon_move_speed = 250f;
        
         
-       
-
-
         [Header("Managers")]
         [SerializeField]
         private TalkManager m_talk_manager;
@@ -70,15 +64,18 @@ namespace Junyoung
         [SerializeField]
         private EnemyFactory m_enemy_factory;
 
-        void Start()
+        private void Start()
         {
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
 
             m_player = GameObject.FindGameObjectWithTag("Player");
             m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
             m_in_stage_manager = GameObject.FindAnyObjectByType<InStageManager>();
+
+            m_main_panel.SetActive(true);
+            m_main_panel.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+
             LoadStagesData("StageData.json");
-            
         }
 
         private IEnumerator MoveIconCorutine()
