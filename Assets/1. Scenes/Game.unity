@@ -5234,6 +5234,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226856171}
   m_CullTransparentMesh: 1
+--- !u!1 &232331019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232331020}
+  - component: {fileID: 232331021}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &232331020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232331019}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1228860650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232331021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232331019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e46a819bbc635244ada5f0ce08ca794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &234748455
 GameObject:
   m_ObjectHideFlags: 0
@@ -22675,6 +22719,7 @@ Transform:
   - {fileID: 1410502929}
   - {fileID: 619886956}
   - {fileID: 2049278477}
+  - {fileID: 232331020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229041977
@@ -33850,11 +33895,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_talk_ui_manager: {fileID: 1074997033}
   m_portrait_arr:
-  - {fileID: -1994874850, guid: ef69a74d88a7a1541a263eb8d78dcdaa, type: 3}
-  - {fileID: 722584537, guid: ef69a74d88a7a1541a263eb8d78dcdaa, type: 3}
-  - {fileID: 1428198261, guid: ef69a74d88a7a1541a263eb8d78dcdaa, type: 3}
+  - {fileID: -1985338588, guid: cfe6c07c81d3e1c4fafa3b329b539397, type: 3}
+  - {fileID: -1985338588, guid: 2fdeff98ee1318948a1f8b2bf21683e3, type: 3}
+  - {fileID: 1452848858, guid: 00f45b6e3f7bbde4a8fd1a7b85900333, type: 3}
   m_save_manager: {fileID: 1181585560}
   m_stage_manager: {fileID: 1410502930}
+  m_quest_manager: {fileID: 232331021}
 --- !u!4 &1773517162
 Transform:
   m_ObjectHideFlags: 0
