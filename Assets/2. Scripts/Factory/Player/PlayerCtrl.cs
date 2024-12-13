@@ -25,10 +25,6 @@ namespace Junyoung
         private InventoryManager m_inventory_manager;
 
         public float MoveSpeed { get; private set; }
-        public float JumpPower { get; private set; }
-
-        public float KnockBackForce { get ; private set; } = 10f;
-
         private Vector2 m_move_vec = Vector2.zero;
 
         public Vector2 MoveVector
@@ -38,20 +34,27 @@ namespace Junyoung
         }
      
         [Header("State")]
-
         private IPlayerState m_stop_state, m_move_state, m_jump_state, m_dead_state, m_clear_state, m_down_state, m_fall_state, m_get_damage_state;
-        private PlayerStateContext m_player_state_context;
+        protected IPlayerState m_attack_state;
+        protected PlayerStateContext m_player_state_context;
 
+        public float JumpPower { get; private set; }
         public bool IsGrounded { get; set; }
         public bool IsJump { get; set; }
         public bool IsDown { get; set; }
         public bool IsFall { get; set; }
-        public bool IsKnockBack { get; set; }
-
         private float m_last_height;
 
-        
+        [Header("About Attack")]
+        public bool IsAttack { get; set;}
+        public int AttackStack { get; set; }
+        public float InputDelay { get; set; } = 0.3f;
+        public float AttackTimer { get; set; } = 0f;
 
+        [Header("About KnockBack")]
+        public bool IsKnockBack { get; set; }
+        public float KnockBackForce { get ; private set; } = 10f;
+        
         [Header("Skill")]
         public Skill[] m_player_skills = new Skill[3];
 
@@ -90,9 +93,11 @@ namespace Junyoung
             m_down_state = gameObject.AddComponent<PlayerDownState>();
             m_fall_state = gameObject.AddComponent<PlayerFallState>();
             m_get_damage_state = gameObject.AddComponent<PlayerGetDamageState>();
-            m_inventory_manager = gameObject.AddComponent<InventoryManager>();
-
+            m_attack_state = gameObject.AddComponent<PlayerAttackState>();
+            
             m_player_state_context.Transition(m_stop_state);
+            
+            m_inventory_manager = gameObject.AddComponent<InventoryManager>();
 
             m_rigidbody = GetComponent<Rigidbody2D>();
             gameObject.AddComponent<ObjectScanCtrl>();
@@ -106,20 +111,25 @@ namespace Junyoung
 
         private void Update()
         {
-            if((!IsDown && !IsJump))
+            if(GameManager.Instance.GameStatus == "Playing")
             {
-                float current_height = m_rigidbody.linearVelocity.y;
-                if(!IsFall)
+                if((!IsDown && !IsJump))
                 {
-                    if(m_last_height - current_height > 0.2f)
+                    float current_height = m_rigidbody.linearVelocity.y;
+                    if(!IsFall)
                     {
-                        Debug.Log("떨어지는 상태 호출됨");
-                        PlayerFall();
-                    }
+                        if(m_last_height - current_height > 0.2f)
+                        {
+                            Debug.Log("떨어지는 상태 호출됨");
+                            PlayerFall();
+                        }
 
-                    m_last_height = current_height;
+                        m_last_height = current_height;
+                    }
+                    m_last_height = current_height = m_rigidbody.linearVelocity.y;
                 }
-                m_last_height = current_height = m_rigidbody.linearVelocity.y;
+
+                PlayerAttack();
             }
         }
 
@@ -128,21 +138,26 @@ namespace Junyoung
             if(GameManager.Instance.GameStatus == "Playing")
             {
                 float joystick_value = 0f;
-
-                if(m_value.m_joy_touch.x < 0f)
+                if(!IsAttack)
                 {
-                    joystick_value = -1f;
-                    GetComponent<SpriteRenderer>().flipX = true;
-                }
-                else if(m_value.m_joy_touch.x > 0f)
-                {
-                    joystick_value = 1f;
-                    GetComponent<SpriteRenderer>().flipX = false;
+                    if(m_value.m_joy_touch.x < 0f)
+                    {
+                        joystick_value = -1f;
+                        GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                    else if(m_value.m_joy_touch.x > 0f)
+                    {
+                        joystick_value = 1f;
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    }
+
+                    SetPlayerMoveState();
                 }
 
-                SetPlayerMoveState();
                 if(!IsKnockBack)
+                {
                     m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
+                }
             }
         }
         
@@ -175,6 +190,7 @@ namespace Junyoung
             m_player_state_context.Transition(m_get_damage_state);
         }
 
+        public abstract void PlayerAttack();
 
         public void PlayerStop()
         {

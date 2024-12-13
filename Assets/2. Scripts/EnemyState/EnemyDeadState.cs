@@ -16,7 +16,6 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
             m_enemy_ctrl = enemy_ctrl;
             m_in_stage_manager = GameObject.FindAnyObjectByType<InStageManager>();
             m_seed_short_cut_ctrl = GameObject.FindAnyObjectByType<SeedShortcutCtrl>();
-            
         }
 
         Debug.Log($"Enemy DeadState");
@@ -26,7 +25,7 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
         {
             Debug.Log($"마지막 적 처치");
             //GameEventBus.Publish(GameEventType.CONQUER);
-            m_seed_short_cut_ctrl.SpawnSeed(m_enemy_ctrl.transform.position);
+            m_seed_short_cut_ctrl.CheckSeed(m_enemy_ctrl.transform.position);
         }
         else
         {
