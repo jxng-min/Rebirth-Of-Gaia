@@ -12,7 +12,7 @@ namespace Taekyung
     public class TalkManager : MonoBehaviour
     {
         private Dictionary<string, string[]> m_talk_data;
-        private Dictionary<string, Sprite> m_portrait_data;
+        private Dictionary<int, Sprite> m_portrait_data;
 
         [Header("Talk UI")]
         [SerializeField]
@@ -26,6 +26,8 @@ namespace Taekyung
         private SaveManager m_save_manager;
         [SerializeField]
         private StageManager m_stage_manager;
+        [SerializeField]
+        private QuestManager m_quest_manager;
 
         private bool m_is_action;
         private string m_save_path;
@@ -42,7 +44,11 @@ namespace Taekyung
         // 대화 중 초상화 UI를 생성하기 위한 메소드
         public void GeneratePortrait()
         {
-            m_portrait_data.Add("scene_name" + "0", m_portrait_arr[0]);
+            for(int i = 0; i < m_portrait_arr.Length; i++)
+            {
+                m_portrait_data.Add(i , m_portrait_arr[i]);
+
+            }
         }
 
         // JSON 파일에서 NPC 정보와 대사를 불러오는 메소드
@@ -98,11 +104,11 @@ namespace Taekyung
         }
 
         // id와 일치하는 NPC의 스프라이트를 리턴하는 메소드
-        public Sprite GetPortrait(int stage_id, int portrait_idx)
+        public Sprite GetPortrait(int portrait_idx)
         {
             foreach (var key in m_portrait_data.Keys)
             {
-                if (key == stage_id + "portrait_idx")
+                if (key == portrait_idx)
                 {
                     return m_portrait_data[key];
                 }
@@ -113,6 +119,7 @@ namespace Taekyung
         // 상호작용 메소드
         public void ChangeTalkScene()
         {
+            m_save_manager.Player.m_talk_state = true;
             Talk(m_save_manager.Player.m_stage_id);
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
         }
@@ -130,13 +137,23 @@ namespace Taekyung
 
                 m_save_manager.Player.m_talk_idx = 0;
                 m_save_manager.Player.m_stage_state += 1;
-                
+                // m_stage_state 가 1 이 라는 것이 스테이지 시작 화면이라는 것을 뜻함
                 if(m_save_manager.Player.m_stage_state == 1)
                 {
                     m_stage_manager.LoadStage(stage_id);
                     m_stage_manager.StageSelectPanelOnoff();
                 }
-                
+                // 퀘스트 여부 확인 후 퀘스트 부여
+                if (m_quest_manager.CheckQuest(stage_id + "_" + m_save_manager.Player.m_stage_state))
+                {
+                    m_quest_manager.StartQuest(stage_id + "_" + m_save_manager.Player.m_stage_state);
+                }
+                else
+                {
+                    Debug.Log($"수행해야할 퀘스트 없음");
+                }
+                // talk 상태가 아님을 알림
+                m_save_manager.Player.m_talk_state = false;
                 return;
             }
 
@@ -147,7 +164,7 @@ namespace Taekyung
                 Debug.Log(split_data[i]);
             }
             string text = split_data[0];
-            int portrait_index = split_data.Length > 1 ? int.Parse(split_data[1]) : 0;
+            string portrait_index = split_data.Length > 1 ? split_data[1] : "0";
 
             // 플레이어의 대사 차례인지 확인
             bool is_player;
@@ -161,7 +178,7 @@ namespace Taekyung
             }
 
             // 초상화 가져오기
-            Sprite portrait = GetPortrait(m_save_manager.Player.m_stage_id, portrait_index);
+            Sprite portrait = GetPortrait(int.Parse(portrait_index));
             
             // ui 변경
             m_talk_ui_manager.UpdateTalkUI(text, portrait, is_player);

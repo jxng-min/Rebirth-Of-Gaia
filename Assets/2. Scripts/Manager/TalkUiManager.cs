@@ -54,12 +54,14 @@ public class TalkUIManager : MonoBehaviour
     {
         if (portrait != null)
         {
-            m_npc_img.sprite = portrait;
-            m_npc_img.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-
             if (is_player)
             {
                 m_npc_img.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            }
+            else
+            {
+                m_npc_img.sprite = portrait;
+                m_npc_img.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
         }
         else

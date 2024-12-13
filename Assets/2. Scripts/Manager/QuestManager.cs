@@ -1,10 +1,14 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Taekyung;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class QuestManager : MonoBehaviour
 {
-    private Dictionary<string, string[]> m_quest_list;
+    private Dictionary<string, QuestData> m_quest_list;
+    private string[] m_current_quest_id;
 
     private string m_save_path;
     private void Start()
@@ -37,13 +41,30 @@ public class QuestManager : MonoBehaviour
             Debug.Log($"{m_save_path}/QuestData.json에서 퀘스트 정보와 대사를 불러오는 데 성공하였습니다.");
         }
 
-        m_quest_list = new Dictionary<string, string[]>();
+        m_quest_list = new Dictionary<string, QuestData>();
         foreach (var data in quest_data_wrapper.m_quest_datas)
         {
             if (data.m_quest_name == null)
                 continue;
-            m_quest_list[data.m_quest_name] = data.m_quest_data;
+            m_quest_list[data.m_quest_id] = data;
         }
     }
 
+    public bool CheckQuest(string quest_id)
+    {
+        if (m_quest_list.ContainsKey(quest_id))
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log($"m_quest_list에 {quest_id}가 없음");
+            return false;
+        }
+    }
+
+    public void StartQuest(string quest_id)
+    {
+
+    }
 }
