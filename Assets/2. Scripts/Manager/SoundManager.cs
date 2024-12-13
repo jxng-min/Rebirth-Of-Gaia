@@ -58,6 +58,8 @@ namespace Jongmin
             else
             {
                 Debug.Log("PlayerData.json이 없습니다. 기본 설정으로 오디오 크기를 설정합니다.");
+                m_bgm_source.volume = 0.5f;
+                m_effect_source.volume = 0.5f;
             }
         }
 
