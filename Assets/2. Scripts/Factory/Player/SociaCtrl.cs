@@ -14,7 +14,7 @@ namespace Jongmin
 
         public override void PlayerAttack()
         {
-            if(Input.GetButtonDown("Fire1"))
+            if(Input.GetButtonDown("Fire2"))
             {
                 Debug.Log($"중첩 되는 중 {AttackStack}");
                 AttackStack++;

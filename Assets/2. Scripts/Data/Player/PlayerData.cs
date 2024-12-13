@@ -24,6 +24,8 @@ namespace Jongmin
             m_require_mob = 0;
             m_talk_idx = 0;
             m_max_clear_stage = -1;
+            m_bgm_volume = 0.5f;
+            m_effect_volume = 0.5f;
         }
     }
 }
