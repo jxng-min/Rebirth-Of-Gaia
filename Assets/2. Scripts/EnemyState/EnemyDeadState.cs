@@ -25,7 +25,7 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
         {
             Debug.Log($"마지막 적 처치");
             //GameEventBus.Publish(GameEventType.CONQUER);
-            m_seed_short_cut_ctrl.CheckSeed(m_enemy_ctrl.transform.position);
+            m_seed_short_cut_ctrl.SpawnSeed(m_enemy_ctrl.transform.position);
         }
         else
         {

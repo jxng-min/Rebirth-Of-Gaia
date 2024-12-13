@@ -50,7 +50,7 @@ public class SeedShortcutCtrl : MonoBehaviour
         SpawnSeed(m_player_ctrl.transform.position);
     }
 
-    public void SpawnSeed(Vector3 spawn_pos )//몬스터 처치시 씨앗 드랍
+    public void SpawnSeed(Vector3 spawn_pos) //몬스터 처치시 씨앗 드랍
     {
         m_seed = Instantiate(m_seed_prefab, spawn_pos + Vector3.up * 2f, Quaternion.identity);
 
