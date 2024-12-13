@@ -142,10 +142,10 @@ TextureImporter:
       name: Point_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 11
-        height: 13
+        x: 43
+        y: 21
+        width: 360
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

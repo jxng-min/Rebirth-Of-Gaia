@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: 7988dd744c67099438b98ce5b168028e
+guid: ddfe5259c9d959941b1b826ca252fd61
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1080132129388477955
-    second: Intellect Icon_0
+      213: 1402686243230121200
+    second: Vector (6)_0
   - first:
-      213: -1727035512628760106
-    second: Intellect Icon_1
+      213: -4700489066926393253
+    second: Vector (6)_1
   - first:
-      213: -3763366131420124698
-    second: Intellect Icon_2
+      213: 7440175101561180067
+    second: Vector (6)_2
   - first:
-      213: 6396486078467085742
-    second: Intellect Icon_3
+      213: 474299452675899512
+    second: Vector (6)_3
   - first:
-      213: -6765379039860178986
-    second: Intellect Icon_4
+      213: 8701946171443426435
+    second: Vector (6)_4
+  - first:
+      213: 8202809203202775899
+    second: Vector (6)_5
+  - first:
+      213: -9164048846832153899
+    second: Vector (6)_6
+  - first:
+      213: -3469217818661449029
+    second: Vector (6)_7
+  - first:
+      213: 7814096246623305101
+    second: Vector (6)_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -151,13 +163,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Intellect Icon_0
+      name: Vector (6)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 11
-        width: 11
-        height: 13
+        x: 65
+        y: 374
+        width: 80
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df140551d899201f0800000000000000
-      internalID: -1080132129388477955
+      spriteID: 0fcfe0bd4b7577310800000000000000
+      internalID: 1402686243230121200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Intellect Icon_1
+      name: Vector (6)_1
       rect:
         serializedVersion: 2
-        x: 3
-        y: 24
-        width: 8
-        height: 8
+        x: 188
+        y: 408
+        width: 36
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d1374bf9565808e0800000000000000
-      internalID: -1727035512628760106
+      spriteID: b58be3f091284ceb0800000000000000
+      internalID: -4700489066926393253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Intellect Icon_2
+      name: Vector (6)_2
       rect:
         serializedVersion: 2
-        x: 9
-        y: 16
-        width: 9
-        height: 18
+        x: 267
+        y: 374
+        width: 80
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +222,130 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e9a7f05176d5cbc0800000000000000
-      internalID: -3763366131420124698
+      spriteID: 3af824bc5dfc04760800000000000000
+      internalID: 7440175101561180067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Intellect Icon_3
+      name: Vector (6)_3
       rect:
         serializedVersion: 2
-        x: 11
+        x: 13
+        y: 295
+        width: 99
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870c8e9d6dc059600800000000000000
+      internalID: 474299452675899512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector (6)_4
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 261
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384b47320f583c870800000000000000
+      internalID: 8701946171443426435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector (6)_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 295
+        width: 99
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5bd43d828b36d170800000000000000
+      internalID: 8202809203202775899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector (6)_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 172
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dacd348022c2d080800000000000000
+      internalID: -9164048846832153899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector (6)_7
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 121
+        width: 36
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb29a3e46ccdadfc0800000000000000
+      internalID: -3469217818661449029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector (6)_8
+      rect:
+        serializedVersion: 2
+        x: 255
         y: 0
-        width: 23
-        height: 24
+        width: 258
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,30 +354,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea513c5c232e4c850800000000000000
-      internalID: 6396486078467085742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Intellect Icon_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6dfb2469b9b8c12a0800000000000000
-      internalID: -6765379039860178986
+      spriteID: d8df1bca22f317c60800000000000000
+      internalID: 7814096246623305101
       vertices: []
       indices: 
       edges: []
@@ -274,11 +374,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Intellect Icon_0: -1080132129388477955
-      Intellect Icon_1: -1727035512628760106
-      Intellect Icon_2: -3763366131420124698
-      Intellect Icon_3: 6396486078467085742
-      Intellect Icon_4: -6765379039860178986
+      Vector (6)_0: 1402686243230121200
+      Vector (6)_1: -4700489066926393253
+      Vector (6)_2: 7440175101561180067
+      Vector (6)_3: 474299452675899512
+      Vector (6)_4: 8701946171443426435
+      Vector (6)_5: 8202809203202775899
+      Vector (6)_6: -9164048846832153899
+      Vector (6)_7: -3469217818661449029
+      Vector (6)_8: 7814096246623305101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

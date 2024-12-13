@@ -34,9 +34,8 @@ namespace Taekyung
 
         private void Start()
         {
-            m_save_path = Application.persistentDataPath + "/Data";
-            m_portrait_data = new Dictionary<int, Sprite>();
-            Debug.Log($"Persistent Data Path: {Application.persistentDataPath}");
+            m_save_path = Application.streamingAssetsPath;
+            m_portrait_data = new Dictionary<string, Sprite>();
 
             GeneratePortrait();
             BringTalkLineDataFromJson();
