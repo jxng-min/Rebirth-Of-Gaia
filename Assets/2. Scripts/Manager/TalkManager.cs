@@ -17,15 +17,17 @@ namespace Taekyung
 
         [SerializeField]
         private Sprite[] m_portrait_arr;
+        [SerializeField]
+        private GameObject m_narration_panel;
 
         [Header("Manager")]
         [SerializeField]
         private SaveManager m_save_manager;
         [SerializeField]
         private StageManager m_stage_manager;
-        [SerializeField]
-        private QuestManager m_quest_manager;
 
+        [SerializeField]
+        private GameObject m_main_panel;
         private bool m_is_action;
         private string m_save_path;
 
@@ -119,6 +121,7 @@ namespace Taekyung
             m_save_manager.Player.m_talk_state = true;
             Talk(m_save_manager.Player.m_stage_id);
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
+            m_main_panel.SetActive(false);
         }
 
         // 대화를 진행하는 메소드
@@ -137,23 +140,15 @@ namespace Taekyung
                 // m_stage_state 가 1 이 라는 것이 스테이지 시작 화면이라는 것을 뜻함
                 if(m_save_manager.Player.m_stage_state == 1)
                 {
+                    m_narration_panel.SetActive(false);
                     m_stage_manager.LoadStage(stage_id);
                 }
                 
-                // 퀘스트 여부 확인 후 퀘스트 부여
-                if (m_quest_manager.CheckQuest(stage_id + "_" + m_save_manager.Player.m_stage_state))
-                {
-                    m_quest_manager.StartQuest(stage_id + "_" + m_save_manager.Player.m_stage_state);
-                }
-                else
-                {
-                    Debug.Log($"수행해야할 퀘스트 없음");
-                }
                 // talk 상태가 아님을 알림
                 m_save_manager.Player.m_talk_state = false;
                 return;
             }
-
+ 
             // : 이후 숫자에 따른 초상화 선택 및 대사 선택
             string[] split_data = talk_data.Split(';');
             for(int i = 0; i < split_data.Length; i++)
