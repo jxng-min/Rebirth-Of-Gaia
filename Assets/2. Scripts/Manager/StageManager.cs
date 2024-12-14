@@ -72,9 +72,6 @@ namespace Junyoung
             m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
             m_in_stage_manager = GameObject.FindAnyObjectByType<InStageManager>();
 
-            m_main_panel.SetActive(true);
-            m_main_panel.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-
             LoadStagesData("StageData.json");
         }
 
@@ -201,27 +198,6 @@ namespace Junyoung
             {
                 m_enemy_factory.SpawnEnemy((EnemyType)0, i % 4);
             }
-        }
-
-        
-        public void StageSelectPanelOnoff() // 스테이지 선택 UI를 활성화/비활성화 함
-        {
-            bool isActive = m_stage_select_UI.activeSelf;
-            if ( !isActive )
-            {
-                SelectButtonInteract();
-                Debug.Log($"스테이지 선택창 활성화");
-            }
-                
-            else
-                Debug.Log($"스테이지 선택창 비활성화");
-            m_stage_select_UI.SetActive( !isActive );
-            m_main_panel.SetActive( !isActive );
-
-            if (m_stage_select_ckeck_UI.activeSelf)
-                m_stage_select_ckeck_UI.SetActive(false);
-
-
         }
 
         public void MainPanelOff()

@@ -22,9 +22,6 @@ public class SoundSettingCtrl : MonoBehaviour
 
         m_bgm_slider.onValueChanged.AddListener(OnBgmVolumeChanged);
         m_effect_slider.onValueChanged.AddListener(OnEffectVolumeChanged);
-
-        OnBgmVolumeChanged(m_save_manager.Player.m_bgm_volume);
-        OnEffectVolumeChanged(m_save_manager.Player.m_effect_volume);
     }
 
     private void OnBgmVolumeChanged(float value)
