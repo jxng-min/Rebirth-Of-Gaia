@@ -18,7 +18,15 @@ namespace Jongmin
         [SerializeField]
         private TMP_Text m_exp_text;
 
-        private void OnEnable()
+        private void Update()
+        {
+            if(m_save_manager)
+            {
+                UpdateLevel();
+            }
+        }
+
+        public void UpdateLevel()
         {
             float current_exp = (float)m_save_manager.Player.m_player_status.m_current_exp;
             float max_exp = (float)ExpData.m_exps[m_save_manager.Player.m_player_status.m_current_level - 1];

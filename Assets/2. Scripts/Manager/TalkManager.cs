@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using Jongmin;
 using Junyoung;
 using UnityEngine;
@@ -35,7 +32,7 @@ namespace Taekyung
         private void Start()
         {
             m_save_path = Application.streamingAssetsPath;
-            m_portrait_data = new Dictionary<string, Sprite>();
+            m_portrait_data = new Dictionary<int, Sprite>();
 
             GeneratePortrait();
             BringTalkLineDataFromJson();
@@ -141,8 +138,8 @@ namespace Taekyung
                 if(m_save_manager.Player.m_stage_state == 1)
                 {
                     m_stage_manager.LoadStage(stage_id);
-                    m_stage_manager.StageSelectPanelOnoff();
                 }
+                
                 // 퀘스트 여부 확인 후 퀘스트 부여
                 if (m_quest_manager.CheckQuest(stage_id + "_" + m_save_manager.Player.m_stage_state))
                 {
