@@ -37,7 +37,6 @@ public class SoundSettingCtrl : MonoBehaviour
             }
 
             m_save_manager.Player.m_bgm_volume = value;
-            m_save_manager.SaveData();
         }
         else
         {
@@ -58,7 +57,6 @@ public class SoundSettingCtrl : MonoBehaviour
             }
             
             m_save_manager.Player.m_effect_volume = value;
-            m_save_manager.SaveData();
         }
         else
         {
