@@ -40,14 +40,14 @@ namespace Junyoung
         private TalkManager m_talk_manager;
         [SerializeField]
         private SaveManager m_save_manager;
-        [SerializeField]
-        private InStageManager m_in_stage_manager;
         
         [Header("About InGame")]
         [SerializeField]
         private EnemyFactory m_enemy_factory;
         private GameObject m_player;
         private CameraMoveCtrl m_camera_move_ctrl;
+        public int m_total_enemy_num { get; set; }
+        public int m_killed_enemy_num { get; set; } = 0;
 
         private void Start()
         {
@@ -178,12 +178,14 @@ namespace Junyoung
             m_enemy_factory.m_enemy_spawn_pos[2] = stage_data.m_enemy_spawn_pos3;
             m_enemy_factory.m_enemy_spawn_pos[3] = stage_data.m_enemy_spawn_pos4;
 
-            int total_enemy_num = stage_data.m_enemy_spawn_num;
-            m_in_stage_manager.m_total_enemy_num = total_enemy_num;
-          
+            
+            m_total_enemy_num = stage_data.m_enemy_spawn_num;
+
             m_talk_manager.ChangeTalkScene();
 
-            SpawnStageEnemy(total_enemy_num); 
+            GameEventBus.Subscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
+
+            SpawnStageEnemy(m_total_enemy_num); 
         }
 
         private void SpawnStageEnemy(int enemy_count)
