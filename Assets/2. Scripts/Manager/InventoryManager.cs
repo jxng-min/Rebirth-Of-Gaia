@@ -18,9 +18,9 @@ public class InventoryManager : MonoBehaviour
         //m_slots = m_slot_grid.GetComponentsInChildren<SlotData>();
     }
 
-    public void AcquireItem(ItemData item, int count = 1)
+    public void AcquireItem(ItemData item, int count = 1) 
     {
-        if(item.ItemType != ItemType.Equipment)
+        if(item.ItemType != ItemType.Equipment) // 기존에 있던 아이템 추가
         {
             for(int i = 0; i < m_slots.Length; i++)
             {
@@ -33,7 +33,7 @@ public class InventoryManager : MonoBehaviour
                         if(m_slots[i].Item.ItemName == "Seed of Desire")
                         {
                             m_seeds_text.text = m_slots[i].ItemCount.ToString();
-                            Debug.Log($"씨앗을 습득 하였습니다.");
+                            Debug.Log($"{item.ItemName}을 습득 하였습니다.");
                         }
 
                         return;
@@ -42,11 +42,16 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        for(int i = 0; i < m_slots.Length; i++)
+        for(int i = 0; i < m_slots.Length; i++) //기존에 없는 아이템 추가
         {
             if(m_slots[i].Item == null)
             {
                 m_slots[i].AddItem(item, count);
+                Debug.Log($"{item.ItemName}을 습득 하였습니다.");
+                if (m_slots[i].Item.ItemName == "Seed of Desire")
+                {
+                    m_seeds_text.text = m_slots[i].ItemCount.ToString();
+                }
                 return;
             }
         }
