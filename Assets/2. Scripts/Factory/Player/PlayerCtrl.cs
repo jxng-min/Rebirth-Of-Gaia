@@ -65,8 +65,6 @@ namespace Junyoung
             GameEventBus.Subscribe(GameEventType.DEAD, GameManager.Instance.Dead);
             GameEventBus.Subscribe(GameEventType.CLEAR, GameManager.Instance.Clear);
             GameEventBus.Subscribe(GameEventType.FINISH, GameManager.Instance.Finish);
-            GameEventBus.Subscribe(GameEventType.CONQUER, GameManager.Instance.Conquer);
-
         }
 
         private void OnDisable()
@@ -76,7 +74,6 @@ namespace Junyoung
             GameEventBus.Unsubscribe(GameEventType.DEAD, GameManager.Instance.Dead);
             GameEventBus.Unsubscribe(GameEventType.CLEAR, GameManager.Instance.Clear);
             GameEventBus.Unsubscribe(GameEventType.FINISH, GameManager.Instance.Finish);
-            GameEventBus.Unsubscribe(GameEventType.CONQUER, GameManager.Instance.Conquer);
         }
 
         private void Start()
@@ -97,7 +94,7 @@ namespace Junyoung
             
             m_player_state_context.Transition(m_stop_state);
             
-            m_inventory_manager = gameObject.AddComponent<InventoryManager>();
+            m_inventory_manager = GameObject.FindAnyObjectByType<InventoryManager>();
 
             m_rigidbody = GetComponent<Rigidbody2D>();
             gameObject.AddComponent<ObjectScanCtrl>();
@@ -161,17 +158,15 @@ namespace Junyoung
             }
         }
         
-        protected void OnCollisionEnter2D(Collision2D col)
+        protected void OnCollisionEnter2D(Collision2D col) //아이템 습득
         {
             if (col.gameObject.layer == LayerMask.NameToLayer("ITEM") )
             {
                 if(col.gameObject.tag == "Seed")
                 {
-                    Debug.Log($"씨앗 감지");
-                    if(m_inventory_manager!= null)
+                    if(m_inventory_manager== null)
                     {
                         Debug.Log("인벤토리 매니저 널");
-
                     }
                     else
                     {

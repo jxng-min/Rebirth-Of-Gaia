@@ -12,14 +12,17 @@ public class SeedCtrl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        /*
-        Debug.Log(coll.gameObject.layer + " " + m_ground_layer.value);
-        if(((1 << coll.gameObject.layer) & m_ground_layer) != 0)
+        if (this.gameObject.layer == 14)
         {
-            Debug.Log("희망의 씨앗이 자라납니다.");
-            StartCoroutine(SetAlphaDown());
-            StartCoroutine(Germination());
-        }*/
+            Debug.Log(coll.gameObject.layer + " " + m_ground_layer.value);
+            if (((1 << coll.gameObject.layer) & m_ground_layer) != 0)
+            {
+                Debug.Log("희망의 씨앗이 자라납니다.");
+                StartCoroutine(SetAlphaDown());
+                StartCoroutine(Germination());
+            }
+        }
+
     }
 
     private IEnumerator SetAlphaDown()

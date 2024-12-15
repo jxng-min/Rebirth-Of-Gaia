@@ -14,7 +14,7 @@ public class SeedShortcutCtrl : MonoBehaviour
 
     public void OnClick()
     {
-        //CheckSeed();
+        CheckSeed();
     }
 
     public void CheckSeed()
@@ -47,34 +47,17 @@ public class SeedShortcutCtrl : MonoBehaviour
 
         m_seed_data.ItemCount--;
 
+        
         SpawnSeed(m_player_ctrl.transform.position);
+        m_seed.layer = 14;
     }
 
     public void SpawnSeed(Vector3 spawn_pos) //몬스터 처치시 씨앗 드랍
     {
         m_seed = Instantiate(m_seed_prefab, spawn_pos + Vector3.up * 2f, Quaternion.identity);
-
-        StartCoroutine(ColliderEnabled());
-
         m_seed.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 4f, ForceMode2D.Impulse);
+        m_seed.layer = 11;
+
     }
 
-    private IEnumerator ColliderEnabled()
-    {
-        BoxCollider2D box_collider = m_seed.GetComponent<BoxCollider2D>();
-
-        box_collider.enabled = false;
-
-        float target_time = 1f;
-        float elapsed_time = 0f;
-
-        while(elapsed_time < target_time)
-        {
-            elapsed_time += Time.deltaTime;
-            
-            yield return null;
-        }
-
-        box_collider.enabled = true;
-    }
 }
