@@ -9,37 +9,24 @@ using System.Collections;
 
 namespace Junyoung
 {
-
     public class StageManager : MonoBehaviour
     {
         private List<StageData> m_stages_data;
         
         [Header("Stage UI")]
         [SerializeField]
-        private Button[] m_select_buttons;
-
-        [SerializeField]
-        private RectTransform[] m_select_buttons_pos_list;
-
-        [SerializeField]
-        private GameObject m_stage_select_UI;
-
-        [SerializeField]
-        private GameObject m_main_panel;
-
-        [SerializeField]
-        private GameObject m_stage_select_ckeck_UI;
-
-        [SerializeField]
-        private TMP_Text m_ui_text;
-
-        [SerializeField]
         private RectTransform m_player_icon;
+        [SerializeField]
+        private Button[] m_select_buttons;
+        [SerializeField]
+        private GameObject m_stage_select_check_UI;
+        [SerializeField]
+        private Sprite[] m_stage_status_images;
 
-        private int m_stage_index;
-        public int m_max_stage { get; private set; } = 9;
+        [Header("About Index")]
+        private int m_current_index;
+        public int m_max_stage { get; private set; }
 
-        private GameObject m_player;
 
         [SerializeField] 
         private int m_now_button_index = 0;
@@ -47,37 +34,57 @@ namespace Junyoung
         private int m_current_path_index = 0;
         private bool m_is_icon_moving = false;
         private float m_icon_move_speed = 250f;
-       
         
         [Header("Managers")]
         [SerializeField]
         private TalkManager m_talk_manager;
-
         [SerializeField]
         private SaveManager m_save_manager;
-
         [SerializeField]
         private InStageManager m_in_stage_manager;
-
-        private CameraMoveCtrl m_camera_move_ctrl;
-
+        
+        [Header("About InGame")]
         [SerializeField]
         private EnemyFactory m_enemy_factory;
+        private GameObject m_player;
+        private CameraMoveCtrl m_camera_move_ctrl;
 
         private void Start()
         {
-            m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
+            m_max_stage = m_select_buttons.Length;
+
+            m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
 
             m_player = GameObject.FindGameObjectWithTag("Player");
-            m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
-            m_in_stage_manager = GameObject.FindAnyObjectByType<InStageManager>();
+            m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
 
             LoadStagesData("StageData.json");
         }
 
+        private void Update()
+        {
+            for(int i = 0; i < m_select_buttons.Length; i++)
+            {
+                if(i < m_save_manager.Player.m_stage_id)
+                {
+                    m_select_buttons[i].interactable = true;
+                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[2];
+                }
+                else if(i == m_save_manager.Player.m_stage_id)
+                {
+                    m_select_buttons[i].interactable = true;
+                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[1];
+                }
+                else
+                {
+                    m_select_buttons[i].interactable = false;
+                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[0];
+                }
+            }
+        }
+
         private IEnumerator MoveIconCorutine()
         {
-
             while (m_is_icon_moving && m_path_list.Count > 0)
             {
                 if (m_current_path_index < 0 || m_current_path_index >= m_path_list.Count)
@@ -89,15 +96,15 @@ namespace Junyoung
 
                 int target_index = m_path_list[m_current_path_index]; // 만들어진 경로 리스트를 path_index값을 따라서 하나씩 이동
 
-                if (target_index < 0 || target_index >= m_select_buttons_pos_list.Length)
+                if (target_index < 0 || target_index >= m_select_buttons.Length)
                 {
-                    Debug.LogError($"target_index 범위 초과: {target_index}, m_select_buttons_pos_list.Length={m_select_buttons_pos_list.Length}");
+                    Debug.LogError($"target_index 범위 초과: {target_index}, m_select_buttons_pos_list.Length={m_select_buttons.Length}");
                     m_is_icon_moving = false;
                     yield break;
                 }
                 Debug.Log($"MoveIconCorutine 정상 실행");
 
-                Vector2 target_pos = m_select_buttons_pos_list[target_index].anchoredPosition;
+                Vector2 target_pos = m_select_buttons[target_index].GetComponent<RectTransform>().anchoredPosition;
 
                 target_pos += new Vector2(0, 70); // 아이콘이 버튼을 가리지 않도록 70만큼 offset
 
@@ -109,14 +116,15 @@ namespace Junyoung
                     m_player_icon.anchoredPosition = Vector2.MoveTowards(m_player_icon.anchoredPosition, target_pos, m_icon_move_speed * Time.deltaTime);
                     yield return null; //다음 프레임까지 대기, 프레임 단위로 부드럽게 이동시키기 위해 사용
                 }
-                //다음 경로로 이동
-                if (m_current_path_index < m_path_list.Count - 1) // 버튼에 도착한 이후에도 index++하면 index범위 오류가 발생함
+                
+                if (m_current_path_index < m_path_list.Count - 1)
+                {
                     m_current_path_index++;
-                else //최종 도착
+                }
+                else
                 {
                     m_is_icon_moving = false;
-
-                    m_stage_select_ckeck_UI.SetActive(true);
+                    m_stage_select_check_UI.SetActive(true);
 
                     Debug.Log($"아이콘이 버튼 {m_now_button_index}에 도달");
                 }
@@ -129,7 +137,6 @@ namespace Junyoung
 
             if (!File.Exists(file_path))
             {
-                Debug.LogError($"JSON 파일이 없음 {file_path}");
                 return;
             }
 
@@ -139,18 +146,13 @@ namespace Junyoung
 
             if (wrapper == null || wrapper.StageData == null)
             {
-                Debug.LogError("JSON 파싱 실패, 데이터가 유효하지 않음");
                 return;
             }
+
             m_stages_data = new List<StageData>(wrapper.StageData);
-
-
-            Debug.Log(json_data);
-
-            Debug.Log("스테이지 데이터 로드 성공");
         }
         
-        public void LoadStage(int stage_index) //버튼에서 로드할 경우 인덱스는 인스펙터에서 버튼마다 직접 할당
+        public void LoadStage(int stage_index)
         {
             if (stage_index < 0 || stage_index >= m_stages_data.Count)
             {
@@ -158,79 +160,60 @@ namespace Junyoung
                 return;
             }
 
-            StageData stageData = m_stages_data[stage_index];
-
-            // 퍼사드 이미지 설정
             FindAnyObjectByType<PersadeCtrl>().UpdatePersade(stage_index);
 
-            // 플레이어 위치 설정
+            StageData stage_data = m_stages_data[stage_index];
+
             m_player.transform.position = new Vector3(
-                                                        stageData.m_player_start_position.x,
-                                                        stageData.m_player_start_position.y,
+                                                        stage_data.m_player_start_position.x,
+                                                        stage_data.m_player_start_position.y,
                                                         m_player.transform.position.z
                                                      );
 
-            // 카메라 제한 설정
-            m_camera_move_ctrl.CameraLimitCenter = stageData.m_camera_limit_center;
-            m_camera_move_ctrl.CameraLimitSize = stageData.m_camera_limit_size;
+            m_camera_move_ctrl.CameraLimitCenter = stage_data.m_camera_limit_center;
+            m_camera_move_ctrl.CameraLimitSize = stage_data.m_camera_limit_size;
 
-            //적 개체 생성위치 설정
-            m_enemy_factory.m_enemy_spawn_pos[0]= stageData.m_enemy_spawn_pos1;
-            m_enemy_factory.m_enemy_spawn_pos[1]= stageData.m_enemy_spawn_pos2;
-            m_enemy_factory.m_enemy_spawn_pos[2]= stageData.m_enemy_spawn_pos3;
-            m_enemy_factory.m_enemy_spawn_pos[3]= stageData.m_enemy_spawn_pos4;
+            m_enemy_factory.m_enemy_spawn_pos[0] = stage_data.m_enemy_spawn_pos1;
+            m_enemy_factory.m_enemy_spawn_pos[1] = stage_data.m_enemy_spawn_pos2;
+            m_enemy_factory.m_enemy_spawn_pos[2] = stage_data.m_enemy_spawn_pos3;
+            m_enemy_factory.m_enemy_spawn_pos[3] = stage_data.m_enemy_spawn_pos4;
 
-            //소환되는 총 적 수 전달
-            int totalEnemyNum = stageData.m_enemy_spawn_num;
-            m_in_stage_manager.m_total_enemy_num = totalEnemyNum;
+            int total_enemy_num = stage_data.m_enemy_spawn_num;
+            m_in_stage_manager.m_total_enemy_num = total_enemy_num;
           
             m_talk_manager.ChangeTalkScene();
 
-            // 스테이지에 해당하는 몬스터 수 만큼 몬스터 소환
-            SpawnStageEnemy(totalEnemyNum); 
-
-            Debug.Log($"스테이지 {stage_index} 로드");
+            SpawnStageEnemy(total_enemy_num); 
         }
 
-        public void SpawnStageEnemy(int num)
+        private void SpawnStageEnemy(int enemy_count)
         {
-            for (int i = 0; i < num; i++)
+            for (int i = 0; i < enemy_count; i++)
             {
-                m_enemy_factory.SpawnEnemy((EnemyType)0, i % 4);
+                m_enemy_factory.SpawnEnemy(EnemyType.The_Exhausted_Worker, i % 4);
             }
         }
 
-        public void MainPanelOff()
-        {
-            m_main_panel.SetActive( false );
-        }
-
-        public void StageSelect(int stage_index)// 버튼 클릭으로 버튼에 해당하는 스테이지 index를 받아옴
+        private void StageSelect(int stage_index)
         {           
-            m_stage_index = stage_index;            
-            m_ui_text.text = $"Do you want to go to Stage {m_stage_index+1} ?";
-
+            m_current_index = stage_index;            
+            m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"Do you want to go to Stage {m_current_index + 1}?";
         }
 
-        public void StageSelectYes() //m_stage_index에 맞게 스테이지를 불러옴
+        public void StageSelectYes()
         {
             Debug.Log($"스테이지 선택 예 클릭");
-            m_stage_select_ckeck_UI.SetActive(false);
+            m_stage_select_check_UI.SetActive(false);
 
-            m_save_manager.Player.m_stage_id = m_stage_index;
+            m_save_manager.Player.m_stage_id = m_current_index;
             m_save_manager.Player.m_stage_state = 0;
 
             m_talk_manager.ChangeTalkScene();
         }
-        public void StageSelectNo() // 다시 스테이지 선택 UI로 돌아감
-        {
-            Debug.Log($"스테이지 선택 아니오 클릭");
-            m_stage_select_ckeck_UI.SetActive(false);
-        }
 
-        public void SelectButtonInteract() //스테이지 선택 버튼을 최대 클리어 스테이지 +1 만큼 활성화 
+        public void SelectButtonInteract()
         {
-            for(int i =1; i<= m_save_manager.Player.m_max_clear_stage +1; i++)
+            for(int i = 1; i <= m_save_manager.Player.m_max_clear_stage + 1; i++)
             {
                 if(i > m_max_stage)
                 {
@@ -238,20 +221,19 @@ namespace Junyoung
                     return;
                 }
                 m_select_buttons[i].interactable = true;
+                m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[(int)StageButton.UNLOCK];
             }
-            Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage +1} 까지 버튼 활성화");
+            Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage + 1} 까지 버튼 활성화");
         }
 
-        public void SelectButtonReset() //활성화된 버튼들을 전부 비활성화
+        public void SelectButtonReset()
         {
-            for(int i = 1; i <= 9; i++)
+            for(int i = 1; i <= (m_select_buttons.Length - 1); i++)
             {
+                m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[(int)StageButton.LOCK];
                 m_select_buttons[i].interactable = false;
             }
-            
-            Debug.Log($"스테이지 선택 버튼 비활성화");
         }
-
 
         public void ClickedButtonIndex(int button_index) //클릭된 버튼의 index값을 불러와서 지금 위치와 가려는 위치를 비교하여 정방향/역방향 경로를 리스트에 추가
         {
