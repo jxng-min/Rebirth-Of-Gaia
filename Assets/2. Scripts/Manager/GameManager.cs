@@ -90,12 +90,13 @@ namespace Jongmin
         public void Clear()
         {
             GameStatus = "Clear";
-
-            
-
+          
             EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
             EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
-            foreach(var enemy in m_enemies)
+            SaveManager m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
+            StageManager m_stage_manager = GameObject.FindAnyObjectByType<StageManager>();
+
+            foreach (var enemy in m_enemies)
             {
                 enemy_factory.OnReturnEnemy(enemy);
             }
@@ -110,7 +111,16 @@ namespace Jongmin
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
 
-            Debug.Log("스테이지 클리어!");
+            if (m_save_manager.Player.m_max_clear_stage < m_stage_manager.m_max_stage)
+            {
+                m_save_manager.Player.m_max_clear_stage++;
+            }
+            else
+            {
+                Debug.Log($"최대 스테이지({m_stage_manager.m_max_stage})까지 클리어");
+            }
+            m_save_manager.SaveData();
+            Debug.Log($"스테이지 클리어. m_max_clear_stage를 {m_save_manager.Player.m_max_clear_stage}로 변경");
         }
 
         public void Finish()
@@ -120,13 +130,6 @@ namespace Jongmin
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
-        }
-
-        public void Conquer()
-        {
-            GameStatus = "Conquer";
-
-            //마지막 적에게서 씨앗을 소환하는 로직
         }
 
         private void DisableUI()
