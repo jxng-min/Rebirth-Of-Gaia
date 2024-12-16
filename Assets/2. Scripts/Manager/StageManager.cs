@@ -183,7 +183,7 @@ namespace Junyoung
 
             m_talk_manager.ChangeTalkScene();
 
-            GameEventBus.Subscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
+            GameEventBus.Publish(GameEventType.PLAYING);
 
             SpawnStageEnemy(m_total_enemy_num); 
         }
