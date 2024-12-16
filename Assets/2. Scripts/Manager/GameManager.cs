@@ -50,6 +50,7 @@ namespace Jongmin
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 1f;
 
+            AbleUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
@@ -60,7 +61,7 @@ namespace Jongmin
 
             SoundManager.Instance.PlayeBGM("Title");
 
-            //DisableUI();
+            DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
@@ -84,7 +85,7 @@ namespace Jongmin
             SoundManager.Instance.StopBGM();
             // 게임오버 효과음
 
-            //DisableUI();
+            DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(true);
         }
@@ -105,7 +106,7 @@ namespace Jongmin
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
 
-            //DisableUI();
+            DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
 
@@ -123,21 +124,29 @@ namespace Jongmin
         {
             GameStatus = "Finish";
 
-            //DisableUI();
+            DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
 
-        private void DisableUI()
+        private void AbleUI()
         {
-            GameObject joystick = GameObject.Find("Joystick");
-            GameObject button_ui = GameObject.Find("Button UI");
+            Debug.Log($"인게임 UI 활성화");
+            GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(true);
             // 인게임 내 환경설정 버튼
             // HP, MP 상황?
             // 이거 비활성화까지
+        }
 
-            joystick.SetActive(false);
-            button_ui.SetActive(false);
+        private void DisableUI()
+        {
+            Debug.Log($"인게임 UI 비활성화");
+            GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(false);
+            // 인게임 내 환경설정 버튼
+            // HP, MP 상황?
+            // 이거 비활성화까지
         }
     }
 }
