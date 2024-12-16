@@ -45,8 +45,9 @@ namespace Jongmin
         {
             GameStatus = "Playing";
 
-            StartCoroutine(FindPlayer());
+            m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
 
+            m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 1f;
 
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
@@ -57,9 +58,9 @@ namespace Jongmin
         {
             GameStatus = "Setting";
 
-            // 모든 오브젝트 정지 필요
+            SoundManager.Instance.PlayeBGM("Title");
 
-            DisableUI();
+            //DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
@@ -77,57 +78,52 @@ namespace Jongmin
                 enemy_factory.OnReturnEnemy(enemy);
             }
 
+            m_player_ctrl.MoveVector = Vector2.zero;
+            m_player_ctrl.GetComponent<Animator>().speed = 0f;
+
             SoundManager.Instance.StopBGM();
             // 게임오버 효과음
 
-            DisableUI();
+            //DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(true);
-
-            Debug.Log("스테이지 게임오버!");
         }
 
         public void Clear()
         {
             GameStatus = "Clear";
           
-            EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
-            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
-            SaveManager m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
-            StageManager m_stage_manager = GameObject.FindAnyObjectByType<StageManager>();
+            SaveManager m_save_manager = FindAnyObjectByType<SaveManager>();
+            StageManager m_stage_manager = FindAnyObjectByType<StageManager>();
 
-            foreach (var enemy in m_enemies)
-            {
-                enemy_factory.OnReturnEnemy(enemy);
-            }
-            
             SoundManager.Instance.StopBGM();
             // 클리어 효과음
 
             SeedCtrl seed = FindAnyObjectByType<SeedCtrl>();
             Destroy(seed);
 
-            DisableUI();
+            m_player_ctrl.MoveVector = Vector2.zero;
+            m_player_ctrl.GetComponent<Animator>().speed = 0f;
+
+            //DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
 
-            if (m_save_manager.Player.m_max_clear_stage < m_stage_manager.m_max_stage)
+            if (m_save_manager.Player.m_stage_id < m_stage_manager.m_max_stage && m_save_manager.Player.m_stage_id == m_save_manager.Player.m_max_clear_stage)
             {
+                Debug.Log($"스테이지를 클리어 해서 최고 스테이지를 {m_save_manager.Player.m_max_clear_stage}로 변경합니다.");
                 m_save_manager.Player.m_max_clear_stage++;
             }
-            else
-            {
-                Debug.Log($"최대 스테이지({m_stage_manager.m_max_stage})까지 클리어");
-            }
+
             m_save_manager.SaveData();
-            Debug.Log($"스테이지 클리어. m_max_clear_stage를 {m_save_manager.Player.m_max_clear_stage}로 변경");
+            
         }
 
         public void Finish()
         {
             GameStatus = "Finish";
 
-            DisableUI();
+            //DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
@@ -135,34 +131,13 @@ namespace Jongmin
         private void DisableUI()
         {
             GameObject joystick = GameObject.Find("Joystick");
-            //GameObject menu_button = GameObject.Find("MenuButton");
             GameObject button_ui = GameObject.Find("Button UI");
-            //GameObject level_ui = GameObject.Find("Level UI");
+            // 인게임 내 환경설정 버튼
+            // HP, MP 상황?
+            // 이거 비활성화까지
 
             joystick.SetActive(false);
-            //menu_button.SetActive(false);
             button_ui.SetActive(false);
-            //level_ui.SetActive(false);
-        }
-
-        private IEnumerator FindPlayer()
-        {
-            float target_time = 3f;
-            float elapsed_time = 0f;
-
-            while(elapsed_time < target_time)
-            {
-                elapsed_time += Time.deltaTime;
-
-                m_player_ctrl = FindAnyObjectByType<PlayerCtrl>();
-
-                if(m_player_ctrl)
-                {
-                    yield break;
-                }
-
-                yield return null;
-            }
         }
     }
 }

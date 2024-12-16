@@ -65,12 +65,12 @@ namespace Junyoung
         {
             for(int i = 0; i < m_select_buttons.Length; i++)
             {
-                if(i < m_save_manager.Player.m_stage_id)
+                if(i < m_save_manager.Player.m_max_clear_stage)
                 {
                     m_select_buttons[i].interactable = true;
                     m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[2];
                 }
-                else if(i == m_save_manager.Player.m_stage_id)
+                else if(i == m_save_manager.Player.m_max_clear_stage)
                 {
                     m_select_buttons[i].interactable = true;
                     m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[1];

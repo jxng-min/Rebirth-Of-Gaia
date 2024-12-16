@@ -56,8 +56,24 @@ public class SeedShortcutCtrl : MonoBehaviour
     {
         m_seed = Instantiate(m_seed_prefab, spawn_pos + Vector3.up * 2f, Quaternion.identity);
         m_seed.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 4f, ForceMode2D.Impulse);
+        StartCoroutine(DisableSeedCollider());
         m_seed.layer = 11;
-
     }
 
+    private IEnumerator DisableSeedCollider()
+    {
+        float target_time = 1f;
+        float elapsed_time = 0f;
+
+        m_seed.GetComponent<BoxCollider2D>().enabled = false;        
+
+        while(elapsed_time < target_time)
+        {
+            elapsed_time += Time.deltaTime;
+            
+            yield return null;
+        }
+
+        m_seed.GetComponent<BoxCollider2D>().enabled = true;
+    }
 }
