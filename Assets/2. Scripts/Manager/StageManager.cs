@@ -181,7 +181,7 @@ namespace Junyoung
             
             m_total_enemy_num = stage_data.m_enemy_spawn_num;
 
-            m_talk_manager.ChangeTalkScene();
+            GameEventBus.Publish(GameEventType.TALKING);
 
             GameEventBus.Publish(GameEventType.PLAYING);
 
@@ -210,7 +210,7 @@ namespace Junyoung
             m_save_manager.Player.m_stage_id = m_current_index;
             m_save_manager.Player.m_stage_state = 0;
 
-            m_talk_manager.ChangeTalkScene();
+            GameEventBus.Publish(GameEventType.TALKING);
         }
 
         public void SelectButtonInteract()
