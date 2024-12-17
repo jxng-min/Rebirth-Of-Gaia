@@ -38,8 +38,15 @@ namespace Taekyung
 
             GeneratePortrait();
             BringTalkLineDataFromJson();
+
+            //Talkking 이벤트 구독
+            GameEventBus.Subscribe(GameEventType.TALKING, ChangeTalkScene);
         }
 
+        private void OnDestroy()
+        {
+            GameEventBus.Unsubscribe(GameEventType.TALKING, ChangeTalkScene);
+        }
         // 대화 중 초상화 UI를 생성하기 위한 메소드
         public void GeneratePortrait()
         {
