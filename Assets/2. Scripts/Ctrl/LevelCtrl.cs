@@ -6,10 +6,6 @@ namespace Jongmin
 {
     public class LevelCtrl : MonoBehaviour
     {
-        [Header("SaveManager")]
-        [SerializeField]
-        private SaveManager m_save_manager;
-        
         [Header("LV / EXP UI")]
         [SerializeField]
         private Slider m_exp_bar;
@@ -20,19 +16,16 @@ namespace Jongmin
 
         private void Update()
         {
-            if(m_save_manager)
-            {
-                UpdateLevel();
-            }
+            UpdateLevel();
         }
 
         public void UpdateLevel()
         {
-            float current_exp = (float)m_save_manager.Player.m_player_status.m_current_exp;
-            float max_exp = (float)ExpData.m_exps[m_save_manager.Player.m_player_status.m_current_level - 1];
+            float current_exp = (float)SaveManager.Instance.Player.m_player_status.m_current_exp;
+            float max_exp = (float)ExpData.m_exps[SaveManager.Instance.Player.m_player_status.m_current_level - 1];
 
-            m_level_text.text = $"Lv.{m_save_manager.Player.m_player_status.m_current_level.ToString()}";
-            m_exp_text.text = $"({m_save_manager.Player.m_player_status.m_current_exp} / {ExpData.m_exps[m_save_manager.Player.m_player_status.m_current_level - 1]})"; 
+            m_level_text.text = $"Lv.{SaveManager.Instance.Player.m_player_status.m_current_level.ToString()}";
+            m_exp_text.text = $"({SaveManager.Instance.Player.m_player_status.m_current_exp} / {ExpData.m_exps[SaveManager.Instance.Player.m_player_status.m_current_level - 1]})"; 
 
             m_exp_bar.value =  current_exp / max_exp;
         }

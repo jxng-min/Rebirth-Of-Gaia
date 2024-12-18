@@ -13,13 +13,6 @@ namespace Junyoung
         public float Damage { get; set; }
         public Vector2 EnemyVector { get; set;}
 
-        private SaveManager m_save_manager;
-
-        private void Start()
-        {
-            m_save_manager=GameObject.FindAnyObjectByType<SaveManager>();
-        }
-
         public void Handle(PlayerCtrl player_ctrl)
         {
             if (!m_player_ctrl)
@@ -29,11 +22,11 @@ namespace Junyoung
                 m_player_sprite = m_player_object.GetComponent<SpriteRenderer>();
             }
 
-            m_save_manager.Player.m_player_status.m_stamina -= Damage;
+            SaveManager.Instance.Player.m_player_status.m_stamina -= Damage;
             Debug.Log($"플레이어가 {Damage} 데미지를 받음");
-            Debug.Log($"현재 체력 : {m_save_manager.Player.m_player_status.m_stamina}");
+            Debug.Log($"현재 체력 : {SaveManager.Instance.Player.m_player_status.m_stamina}");
 
-            if(m_save_manager.Player.m_player_status.m_stamina <= 0f)
+            if(SaveManager.Instance.Player.m_player_status.m_stamina <= 0f)
             {
                 Debug.Log($"플레이어 체력이 0 이하, 사망");
                 GameEventBus.Publish(GameEventType.DEAD);

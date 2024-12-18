@@ -8,10 +8,6 @@ namespace Junyoung
 {
     public class EnemyFactory : MonoBehaviour
     {
-        [Header("SaveManager")]
-        [SerializeField]
-        private SaveManager m_save_manager;
-
         [Header("SpawnEnemy")]
         [SerializeField]
         private List<EnemyStatus> m_enemy_status_list;
@@ -49,7 +45,7 @@ namespace Junyoung
         public void SpawnEnemy(EnemyType type, int transform_index)
         {
             var newEnemy = m_enemy_pools[type].Get();
-            newEnemy.EnemyStatus = m_enemy_status_list[m_save_manager.Player.m_stage_id];
+            newEnemy.EnemyStatus = m_enemy_status_list[SaveManager.Instance.Player.m_stage_id];
             newEnemy.name = type.ToString();
             newEnemy.transform.position = m_enemy_spawn_pos[transform_index];
             newEnemy.SetPatrolTime();

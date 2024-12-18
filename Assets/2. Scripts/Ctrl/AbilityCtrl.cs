@@ -5,10 +5,6 @@ namespace Jongmin
 {
     public class AbilityCtrl : MonoBehaviour
     {
-        [Header("SaveManager")]
-        [SerializeField]
-        private SaveManager m_save_manager;
-
         [SerializeField]
         private GameObject[] m_portraits;
 
@@ -57,27 +53,27 @@ namespace Jongmin
 
         private void ShowStrengthAbility()
         {
-            m_strength_state.text = m_save_manager.Player.m_player_status.m_strength.ToString("F1");
+            m_strength_state.text = SaveManager.Instance.Player.m_player_status.m_strength.ToString("F1");
         }
 
         private void ShowIntellectAbility()
         {
-            m_intellect_state.text = m_save_manager.Player.m_player_status.m_intellect.ToString("F1");
+            m_intellect_state.text = SaveManager.Instance.Player.m_player_status.m_intellect.ToString("F1");
         }
 
         private void ShowSocialityAbility()
         {
-            m_sociality_state.text = m_save_manager.Player.m_player_status.m_sociality.ToString("F1");
+            m_sociality_state.text = SaveManager.Instance.Player.m_player_status.m_sociality.ToString("F1");
         }
 
         private void ShowStaminaAbility()
         {
-            m_stamina_state.text = m_save_manager.Player.m_player_status.m_stamina.ToString("F1");
+            m_stamina_state.text = SaveManager.Instance.Player.m_player_status.m_stamina.ToString("F1");
         }
 
         private void ShowDefenseAbility()
         {
-            m_defense_state.text = m_save_manager.Player.m_player_status.m_defense.ToString("F1");
+            m_defense_state.text = SaveManager.Instance.Player.m_player_status.m_defense.ToString("F1");
         }
 
         // 모든 능력을 출력하는 메소드

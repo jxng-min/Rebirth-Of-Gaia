@@ -7,8 +7,6 @@ public class EnemyGetDamageState : MonoBehaviour, IEnemyState
     private EnemyCtrl m_enemy_ctrl;
     private GameObject m_enemy_object;
 
-    private SaveManager m_save_manager;
-
     public float Damage { get; set; }
     public Vector2 PlayerVector { get; set; }
 
@@ -20,12 +18,7 @@ public class EnemyGetDamageState : MonoBehaviour, IEnemyState
             m_enemy_object = enemy.gameObject;
         }
 
-        if(!m_save_manager)
-        {
-            m_save_manager = FindAnyObjectByType<SaveManager>();
-        }
-
-        m_enemy_ctrl.EnemyStatus.EnemyHP -= m_save_manager.Player.m_player_status.m_strength;
+        m_enemy_ctrl.EnemyStatus.EnemyHP -= SaveManager.Instance.Player.m_player_status.m_strength;
 
         if(m_enemy_ctrl.EnemyStatus.EnemyHP <= 0f)
         {

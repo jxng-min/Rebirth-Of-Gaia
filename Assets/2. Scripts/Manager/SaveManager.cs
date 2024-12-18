@@ -6,7 +6,7 @@ using System;
 
 namespace Jongmin
 {
-    public class SaveManager : MonoBehaviour
+    public class SaveManager : Singleton<SaveManager>
     {
         private PlayerData m_now_player;
 
