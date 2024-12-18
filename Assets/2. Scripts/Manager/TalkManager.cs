@@ -22,8 +22,6 @@ namespace Taekyung
 
         [Header("Manager")]
         [SerializeField]
-        private SaveManager m_save_manager;
-        [SerializeField]
         private StageManager m_stage_manager;
 
         [SerializeField]
@@ -118,8 +116,8 @@ namespace Taekyung
         // 상호작용 메소드
         public void ChangeTalkScene()
         {
-            m_save_manager.Player.m_talk_state = true;
-            Talk(m_save_manager.Player.m_stage_id);
+            SaveManager.Instance.Player.m_talk_state = true;
+            Talk(SaveManager.Instance.Player.m_stage_id);
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
             m_main_panel.SetActive(false);
         }
@@ -129,23 +127,23 @@ namespace Taekyung
         {
             // Set Talk Data
             string talk_data;
-            talk_data = GetTalkData(stage_id + "_" + m_save_manager.Player.m_stage_state, m_save_manager.Player.m_talk_idx);
+            talk_data = GetTalkData(stage_id + "_" + SaveManager.Instance.Player.m_stage_state, SaveManager.Instance.Player.m_talk_idx);
             // End Talk 
             if (talk_data == null)
             {
                 m_is_action = false;
 
-                m_save_manager.Player.m_talk_idx = 0;
-                m_save_manager.Player.m_stage_state += 1;
+                SaveManager.Instance.Player.m_talk_idx = 0;
+                SaveManager.Instance.Player.m_stage_state += 1;
                 // m_stage_state 가 1 이 라는 것이 스테이지 시작 화면이라는 것을 뜻함
-                if(m_save_manager.Player.m_stage_state == 1)
+                if(SaveManager.Instance.Player.m_stage_state == 1)
                 {
                     m_narration_panel.SetActive(false);
                     m_stage_manager.LoadStage(stage_id);
                 }
                 
                 // talk 상태가 아님을 알림
-                m_save_manager.Player.m_talk_state = false;
+                SaveManager.Instance.Player.m_talk_state = false;
                 return;
             }
  
@@ -176,7 +174,7 @@ namespace Taekyung
             m_talk_ui_manager.UpdateTalkUI(text, portrait, is_player);
 
             m_is_action = true;
-            m_save_manager.Player.m_talk_idx++;
+            SaveManager.Instance.Player.m_talk_idx++;
         }
     }
 }

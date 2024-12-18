@@ -4,10 +4,6 @@ using UnityEngine.UI;
 
 public class SoundSettingCtrl : MonoBehaviour
 {
-    [Header("Save Manager")]
-    [SerializeField]
-    private SaveManager m_save_manager;
-
     [Header("Sound Setting UI")]
     [SerializeField]
     private Slider m_bgm_slider;
@@ -30,13 +26,13 @@ public class SoundSettingCtrl : MonoBehaviour
         {
             SoundManager.Instance.BgmVolume = value;
 
-            if(m_save_manager.Player == null)
+            if(SaveManager.Instance.Player == null)
             {
                 Debug.Log("사운드의 볼륨을 참조할 플레이어가 null입니다.");
                 return;
             }
 
-            m_save_manager.Player.m_bgm_volume = value;
+            SaveManager.Instance.Player.m_bgm_volume = value;
         }
         else
         {
@@ -50,13 +46,13 @@ public class SoundSettingCtrl : MonoBehaviour
         {
             SoundManager.Instance.EffectVolume = value;
 
-            if(m_save_manager.Player == null)
+            if(SaveManager.Instance.Player == null)
             {
                 Debug.Log("사운드의 볼륨을 참조할 플레이어가 null입니다.");
                 return;
             }
             
-            m_save_manager.Player.m_effect_volume = value;
+            SaveManager.Instance.Player.m_effect_volume = value;
         }
         else
         {

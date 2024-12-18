@@ -10,6 +10,8 @@ public class SwipeUICtrl : MonoBehaviour
     [SerializeField]
     private Transform[] m_diamond_contents;
 
+    private Vector2[] m_diamond_pos;
+
     [SerializeField]
     private float m_swipe_time = 0.2f;
 
@@ -24,10 +26,17 @@ public class SwipeUICtrl : MonoBehaviour
     private float m_end_touch_x;
     private bool m_is_swipe_mode = false;
     private float m_diamond_content_scale = 2f;
+    private int m_previous_highlighted_index = -1;
 
     private void Awake()
     {
         m_scroll_page_values = new float[transform.childCount];
+
+        m_diamond_pos = new Vector2[transform.childCount];
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            m_diamond_pos[i] = m_diamond_contents[i].GetComponent<RectTransform>().anchoredPosition;
+        }
 
         m_value_distance = 1f / (m_scroll_page_values.Length - 1f);
 
@@ -142,16 +151,35 @@ public class SwipeUICtrl : MonoBehaviour
 
     private void UpdateCircleContent()
     {
-        for(int i = 0; i < m_scroll_page_values.Length; i++)
+        for (int i = 0; i < m_scroll_page_values.Length; i++)
         {
             m_diamond_contents[i].localScale = Vector2.one;
             m_diamond_contents[i].GetComponent<Image>().color = new Color(0.6f, 0.6f, 0.6f, 1f);
 
-            if(m_scroll_bar.value < m_scroll_page_values[i] + (m_value_distance / 2) &&
-               m_scroll_bar.value > m_scroll_page_values[i] - (m_value_distance / 2))
+            if (m_previous_highlighted_index >= 0 && m_previous_highlighted_index != i)
+            {
+                m_diamond_contents[i].GetComponent<RectTransform>().anchoredPosition = m_diamond_pos[i];
+            }
+
+            if (m_scroll_bar.value < m_scroll_page_values[i] + (m_value_distance / 2) &&
+                m_scroll_bar.value > m_scroll_page_values[i] - (m_value_distance / 2))
             {
                 m_diamond_contents[i].localScale = Vector2.one * m_diamond_content_scale;
                 m_diamond_contents[i].GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+
+                if (m_previous_highlighted_index != i)
+                {
+                    if (m_previous_highlighted_index >= 0)
+                    {
+                        m_diamond_contents[m_previous_highlighted_index].GetComponent<RectTransform>().anchoredPosition =
+                            m_diamond_pos[m_previous_highlighted_index];
+                    }
+
+                    m_diamond_contents[i].GetComponent<RectTransform>().anchoredPosition =
+                        m_diamond_pos[i] + Vector2.up * 20;
+
+                    m_previous_highlighted_index = i;
+                }
             }
         }
     }

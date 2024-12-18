@@ -38,8 +38,6 @@ namespace Junyoung
         [Header("Managers")]
         [SerializeField]
         private TalkManager m_talk_manager;
-        [SerializeField]
-        private SaveManager m_save_manager;
         
         [Header("About InGame")]
         [SerializeField]
@@ -53,8 +51,6 @@ namespace Junyoung
         {
             m_max_stage = m_select_buttons.Length;
 
-            m_save_manager = GameObject.FindAnyObjectByType<SaveManager>();
-
             m_player = GameObject.FindGameObjectWithTag("Player");
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
 
@@ -65,12 +61,12 @@ namespace Junyoung
         {
             for(int i = 0; i < m_select_buttons.Length; i++)
             {
-                if(i < m_save_manager.Player.m_max_clear_stage)
+                if(i < SaveManager.Instance.Player.m_max_clear_stage)
                 {
                     m_select_buttons[i].interactable = true;
                     m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[2];
                 }
-                else if(i == m_save_manager.Player.m_max_clear_stage)
+                else if(i == SaveManager.Instance.Player.m_max_clear_stage)
                 {
                     m_select_buttons[i].interactable = true;
                     m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[1];
@@ -207,15 +203,15 @@ namespace Junyoung
             Debug.Log($"스테이지 선택 예 클릭");
             m_stage_select_check_UI.SetActive(false);
 
-            m_save_manager.Player.m_stage_id = m_current_index;
-            m_save_manager.Player.m_stage_state = 0;
+            SaveManager.Instance.Player.m_stage_id = m_current_index;
+            SaveManager.Instance.Player.m_stage_state = 0;
 
             m_talk_manager.ChangeTalkScene();
         }
 
         public void SelectButtonInteract()
         {
-            for(int i = 1; i <= m_save_manager.Player.m_max_clear_stage + 1; i++)
+            for(int i = 1; i <= SaveManager.Instance.Player.m_max_clear_stage + 1; i++)
             {
                 if(i > m_max_stage)
                 {
@@ -225,7 +221,7 @@ namespace Junyoung
                 m_select_buttons[i].interactable = true;
                 m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[(int)StageButton.UNLOCK];
             }
-            Debug.Log($"스테이지 {m_save_manager.Player.m_max_clear_stage + 1} 까지 버튼 활성화");
+            Debug.Log($"스테이지 {SaveManager.Instance.Player.m_max_clear_stage + 1} 까지 버튼 활성화");
         }
 
         public void SelectButtonReset()
