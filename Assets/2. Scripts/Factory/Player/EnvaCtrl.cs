@@ -11,7 +11,16 @@ namespace Jongmin
             m_player_skills[1] = new EnvaSkill2();
             m_player_skills[2] = new EnvaSkill3();
         }
+        public override void PlayerUseSkill1()
+        {
+        }
+        public override void PlayerUseSkill2()
+        {
+        }
 
+        public override void PlayerUseSkill3()
+        {
+        }
         public override void PlayerAttack()
         {
             

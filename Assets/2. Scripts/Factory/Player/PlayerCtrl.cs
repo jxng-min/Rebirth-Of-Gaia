@@ -181,7 +181,9 @@ namespace Junyoung
         }
 
         public void PlayerGetDamage(float damage, Vector2 enemy_vector)
-        {          
+        {
+            (m_get_damage_state as PlayerGetDamageState).Damage = damage;
+            (m_get_damage_state as PlayerGetDamageState).EnemyVector = enemy_vector;
             m_player_state_context.Transition(m_get_damage_state);
         }
 
@@ -227,6 +229,11 @@ namespace Junyoung
         {
             m_player_state_context.Transition(m_clear_state);
         }
+
+        public abstract void PlayerUseSkill1();
+        public abstract void PlayerUseSkill2();
+        public abstract void PlayerUseSkill3();
+
 
         private void SetPlayerMoveState()
         {
