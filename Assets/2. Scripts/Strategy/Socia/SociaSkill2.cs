@@ -4,7 +4,7 @@ using UnityEngine;
 public class SociaSkill2 :MonoBehaviour, Skill
 {
     private SkillCoolDownCtrl m_skill_cool_cown_ctrl;
-    private float m_skill_cool_time = 25f;
+    public float m_skill_cool_time { get; set; } = 25f;
 
     public void Effect()
     {
@@ -22,6 +22,7 @@ public class SociaSkill2 :MonoBehaviour, Skill
             Debug.Log($"소셔가 설득의 힘을 사용하여{collider.name}을 제거한다.");
             collider.GetComponent<EnemyCtrl>().EnemyDead();
             StartCoroutine(m_skill_cool_cown_ctrl.CoolDownCoroutine(m_skill_cool_time));
+
         }
         else
         {

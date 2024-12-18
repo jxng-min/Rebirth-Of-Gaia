@@ -4,7 +4,7 @@ using UnityEngine;
 public class SociaSkill3 :MonoBehaviour, Skill
 {
     private SkillCoolDownCtrl m_skill_cool_cown_ctrl;
-    private float m_skill_cool_time = 20f;
+    public float m_skill_cool_time { get; set; } = 20f;
     private float m_heal_value = 0.3f;
     private float m_max_stamina = 0;
     public void Effect()
@@ -23,6 +23,7 @@ public class SociaSkill3 :MonoBehaviour, Skill
         {
             Debug.Log("소셔가 희망의 결속을 사용한다.");
             StartCoroutine(m_skill_cool_cown_ctrl.CoolDownCoroutine(m_skill_cool_time));
+
             float heal = m_max_stamina * m_heal_value;
             if (SaveManager.Instance.Player.m_player_status.m_stamina + heal > m_max_stamina)
             {
