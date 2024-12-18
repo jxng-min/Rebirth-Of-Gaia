@@ -93,7 +93,7 @@ namespace Jongmin
 
             if(GameManager.Instance.GameStatus == "Playing")
             {
-                m_player_ctrl.m_player_skills[0].Effect();
+                m_player_ctrl.PlayerUseSkill1();
             }
         }
 
@@ -108,7 +108,7 @@ namespace Jongmin
 
             if(GameManager.Instance.GameStatus == "Playing")
             {
-                m_player_ctrl.m_player_skills[1].Effect();
+                m_player_ctrl.PlayerUseSkill2();
             }
         }
 
@@ -123,7 +123,7 @@ namespace Jongmin
 
             if(GameManager.Instance.GameStatus == "Playing")
             {
-                m_player_ctrl.m_player_skills[2].Effect();
+                m_player_ctrl.PlayerUseSkill3();
             }
         }
     }
