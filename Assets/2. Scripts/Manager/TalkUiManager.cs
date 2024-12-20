@@ -27,9 +27,9 @@ public class TalkUIManager : MonoBehaviour
         gameObject.GetComponent<TypingEffectCtrl>().EndCursor += SetEndCursor;
     }
 
-    public void UpdateTalkUI(string text, Sprite portrait, bool is_player)
+    public void UpdateTalkUI(Sprite portrait, bool is_player)
     {
-        m_text.text = text;
+        //m_text.text = text;
         
         UpdatePlayerPortrait(is_player, portrait);
         UpdateNpcPortrait(portrait, is_player);
