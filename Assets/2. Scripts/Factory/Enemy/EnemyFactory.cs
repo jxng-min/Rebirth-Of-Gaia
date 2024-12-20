@@ -49,7 +49,7 @@ namespace Junyoung
             newEnemy.name = type.ToString();
             newEnemy.transform.position = m_enemy_spawn_pos[transform_index];
             newEnemy.SetPatrolTime();
-            newEnemy.TestEnemyDead();
+            //newEnemy.TestEnemyDead();
             Debug.Log($"{type}타입의 적 생성위치{transform_index}에서 생성");
         }
         

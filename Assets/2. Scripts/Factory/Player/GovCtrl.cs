@@ -11,6 +11,16 @@ namespace Jongmin
             m_player_skills[1] = new GovSkill2();
             m_player_skills[2] = new GovSkill3();
         }
+        public override void PlayerUseSkill1()
+        {
+        }
+        public override void PlayerUseSkill2()
+        {
+        }
+
+        public override void PlayerUseSkill3()
+        {
+        }
 
         public override void PlayerAttack()
         {
