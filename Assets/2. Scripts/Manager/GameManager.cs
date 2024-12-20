@@ -1,4 +1,5 @@
 using Junyoung;
+using System;
 using System.Collections;
 using Unity.Loading;
 using Unity.VisualScripting;
@@ -81,7 +82,10 @@ namespace Jongmin
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
-
+            int now_lv = SaveManager.Instance.Player.m_player_status.m_current_level;
+            float default_stamina = SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].Stamina;
+            SaveManager.Instance.Player.m_player_status.m_stamina = default_stamina + SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].GrowthStamina[now_lv - 1];
+            Debug.Log($"플레이어 체력 회복 : {SaveManager.Instance.Player.m_player_status.m_stamina}");
             SoundManager.Instance.StopBGM();
             // 게임오버 효과음
 
@@ -115,6 +119,11 @@ namespace Jongmin
                 Debug.Log($"스테이지를 클리어 해서 최고 스테이지를 {m_save_manager.Player.m_max_clear_stage}로 변경합니다.");
                 m_save_manager.Player.m_max_clear_stage++;
             }
+
+            int now_lv = SaveManager.Instance.Player.m_player_status.m_current_level;
+            float default_stamina = SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].Stamina;
+            SaveManager.Instance.Player.m_player_status.m_stamina = default_stamina + SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].GrowthStamina[now_lv - 1];
+            Debug.Log($"플레이어 체력 회복 : {SaveManager.Instance.Player.m_player_status.m_stamina}");
 
             m_save_manager.SaveData();
             

@@ -16,6 +16,9 @@ namespace Junyoung
         [Header("Stage UI")]
         [SerializeField]
         private RectTransform m_player_icon;
+
+        [SerializeField]
+        private RectTransform[] m_icon_path;
         [SerializeField]
         private Button[] m_select_buttons;
         [SerializeField]
@@ -92,18 +95,15 @@ namespace Junyoung
 
                 int target_index = m_path_list[m_current_path_index]; // 만들어진 경로 리스트를 path_index값을 따라서 하나씩 이동
 
-                if (target_index < 0 || target_index >= m_select_buttons.Length)
+                if (target_index < 0 || target_index >= m_icon_path.Length)
                 {
-                    Debug.LogError($"target_index 범위 초과: {target_index}, m_select_buttons_pos_list.Length={m_select_buttons.Length}");
+                    Debug.LogError($"target_index 범위 초과: {target_index}, m_select_buttons_pos_list.Length={m_icon_path.Length}");
                     m_is_icon_moving = false;
                     yield break;
                 }
                 Debug.Log($"MoveIconCorutine 정상 실행");
 
-                Vector2 target_pos = m_select_buttons[target_index].GetComponent<RectTransform>().anchoredPosition;
-
-                target_pos += new Vector2(0, 70); // 아이콘이 버튼을 가리지 않도록 70만큼 offset
-
+                Vector2 target_pos = m_icon_path[target_index].GetComponent<RectTransform>().anchoredPosition;
 
                 //아이콘이 클릭한 버튼 위치로 이동 
                 // 부동 소수점 오류 때문에 ==로 단순 비교는 오류가 발생 할 수 있음
@@ -233,12 +233,12 @@ namespace Junyoung
             }
         }
 
-        public void ClickedButtonIndex(int button_index) //클릭된 버튼의 index값을 불러와서 지금 위치와 가려는 위치를 비교하여 정방향/역방향 경로를 리스트에 추가
+        public void ClickedButtonPath(int button_index) //클릭된 버튼의 index값을 불러와서 지금 위치와 가려는 위치를 비교하여 정방향/역방향 경로를 리스트에 추가
         {
             Debug.Log($"ClickedButtonPosiotion 호출됨: button_index={button_index}, m_now_button_index={m_now_button_index}");
-            if (button_index < 0 || button_index >= m_select_buttons.Length)
+            if (button_index < 0 || button_index >= m_icon_path.Length)
             {
-                Debug.LogError($"잘못된 button_index: {button_index}, 유효 범위: 0 ~ {m_select_buttons.Length - 1}");
+                Debug.LogError($"잘못된 button_index: {button_index}, 유효 범위: 0 ~ {m_icon_path.Length - 1}");
                 return;
             }
 
