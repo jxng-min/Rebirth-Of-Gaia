@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Seed of Desire
   m_EditorClassIdentifier: 
   m_item_name: Seed of Desire
-  m_item_type: 1
+  m_item_type: 3
   m_item_image: {fileID: -621052030, guid: 896c1780b6bd0b64a95cb101e8b94352, type: 3}
   m_item_prefab: {fileID: 6323026331242765481, guid: 891b31c6538a4834890efd28a9d455d8, type: 3}
   m_equipment_type: 0
