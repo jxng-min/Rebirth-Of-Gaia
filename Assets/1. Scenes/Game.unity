@@ -997,6 +997,7 @@ GameObject:
   - component: {fileID: 38823086}
   - component: {fileID: 38823085}
   - component: {fileID: 38823084}
+  - component: {fileID: 38823087}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1065,6 +1066,19 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: 15}
   m_SizeDelta: {x: -120, y: -70}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &38823087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38823083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efa42409e5b6514c8e8c9265fc0c8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_current_text: {fileID: 38823084}
 --- !u!1 &40293812
 GameObject:
   m_ObjectHideFlags: 0
@@ -15787,6 +15801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4efa42409e5b6514c8e8c9265fc0c8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_current_text: {fileID: 0}
 --- !u!114 &1074997033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26697,6 +26712,7 @@ MonoBehaviour:
   m_narration_panel: {fileID: 599530210}
   m_stage_manager: {fileID: 1410502930}
   m_main_panel: {fileID: 1568442277}
+  m_talk_effect: {fileID: 38823087}
 --- !u!4 &1773517162
 Transform:
   m_ObjectHideFlags: 0

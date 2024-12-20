@@ -26,6 +26,9 @@ namespace Taekyung
 
         [SerializeField]
         private GameObject m_main_panel;
+
+        [SerializeField]
+        private TypingEffectCtrl m_talk_effect;
         private bool m_is_action;
         private string m_save_path;
 
@@ -161,6 +164,7 @@ namespace Taekyung
                 Debug.Log(split_data[i]);
             }
             string text = split_data[0];
+            m_talk_effect.SetText(split_data[0]);
             string portrait_index = split_data.Length > 1 ? split_data[1] : "0";
 
             // 플레이어의 대사 차례인지 확인
@@ -178,7 +182,7 @@ namespace Taekyung
             Sprite portrait = GetPortrait(int.Parse(portrait_index));
             
             // ui 변경
-            m_talk_ui_manager.UpdateTalkUI(text, portrait, is_player);
+            m_talk_ui_manager.UpdateTalkUI(portrait, is_player);
 
             m_is_action = true;
             SaveManager.Instance.Player.m_talk_idx++;

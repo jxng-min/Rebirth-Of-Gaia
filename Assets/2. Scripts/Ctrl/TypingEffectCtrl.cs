@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Jongmin
 {
@@ -11,7 +12,8 @@ namespace Jongmin
         private int m_cps;
 
         private string m_target_text;
-        private TMP_Text m_current_text;
+        [SerializeField]
+        private Text m_current_text;
 
         private int m_current_idx;
         private float m_interval;
@@ -21,7 +23,12 @@ namespace Jongmin
         private void Start()
         {
             m_talk_manager = GetComponent<TalkUIManager>();
-            m_current_text = GetComponent<TMP_Text>();
+            m_current_text = GetComponent<Text>();
+            if(EndCursor == null)
+            {
+                EndCursor = (isEnd) => { };
+            }
+            m_cps = 50;
         }
 
         // 대화 UI 창에 출력하고자 하는 텍스트를 설정하는 메소드
@@ -35,6 +42,10 @@ namespace Jongmin
         // 텍스트 출력을 시작하는 메소드
         private void TypingEffectStart()
         {
+            if(EndCursor == null)
+            {
+                EndCursor = (isEnd) => { };
+            }
             EndCursor(false);
 
             m_current_text.text = "";
