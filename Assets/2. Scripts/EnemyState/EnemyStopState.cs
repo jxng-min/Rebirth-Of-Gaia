@@ -11,5 +11,8 @@ public class EnemyStopState : MonoBehaviour, IEnemyState
         {
             m_enemy_ctrl = enemy_ctrl;
         }
+
+        GetComponent<Animator>().SetBool("IsMove", false);
+
     }
 }
