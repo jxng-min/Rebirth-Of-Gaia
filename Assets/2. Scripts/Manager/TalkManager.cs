@@ -31,6 +31,7 @@ namespace Taekyung
         private TypingEffectCtrl m_talk_effect;
         private bool m_is_action;
         private string m_save_path;
+        private string m_current_talk;
 
         private void Start()
         {
@@ -135,6 +136,12 @@ namespace Taekyung
         // 대화를 진행하는 메소드
         public void Talk(int stage_id)
         {
+            if (m_talk_effect.CurrentState() == true)
+            {
+                Debug.Log($"대화중");
+                m_talk_effect.SetTextHard(m_current_talk);
+                return;
+            }
             // Set Talk Data
             string talk_data;
             talk_data = GetTalkData(stage_id + "_" + SaveManager.Instance.Player.m_stage_state, SaveManager.Instance.Player.m_talk_idx);
@@ -163,7 +170,6 @@ namespace Taekyung
             {
                 Debug.Log(split_data[i]);
             }
-            string text = split_data[0];
             m_talk_effect.SetText(split_data[0]);
             string portrait_index = split_data.Length > 1 ? split_data[1] : "0";
 
@@ -186,6 +192,7 @@ namespace Taekyung
 
             m_is_action = true;
             SaveManager.Instance.Player.m_talk_idx++;
+            m_current_talk = split_data[0];
         }
     }
 }

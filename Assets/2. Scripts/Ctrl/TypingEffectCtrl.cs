@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,11 +18,13 @@ namespace Jongmin
 
         private int m_current_idx;
         private float m_interval;
+        private bool m_state;
 
         public UnityAction<bool> EndCursor;
         
         private void Start()
         {
+            m_state = false;
             m_talk_manager = GetComponent<TalkUIManager>();
             m_current_text = GetComponent<Text>();
             if(EndCursor == null)
@@ -38,10 +41,15 @@ namespace Jongmin
 
             TypingEffectStart();
         }
+        public void SetTextHard(string text)
+        {
+            m_current_text.text = text;
+        }
 
         // 텍스트 출력을 시작하는 메소드
         private void TypingEffectStart()
         {
+            m_state = true;
             if(EndCursor == null)
             {
                 EndCursor = (isEnd) => { };
@@ -72,7 +80,17 @@ namespace Jongmin
         // 텍스트 출력이 마무리되면 호출되는 메소드
         private void TypingEffectEnd()
         {
+            m_state = false;
             EndCursor(true);
+        }
+
+        public string CurrentText()
+        {
+            return m_current_text.text;
+        }
+        public bool CurrentState()
+        {
+            return m_state;
         }
     }
 }
