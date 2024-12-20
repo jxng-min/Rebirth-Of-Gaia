@@ -42,13 +42,13 @@ namespace Junyoung
                 {
                     SociaSkill2 skill = m_player_skills[1] as SociaSkill2;
                     skill.Effect(in_collider);
+                    break;
                 }
                 else
                 {
                     Debug.Log($"사거리 내에 적이 존재하지 않음");
                 }
-            }
-            
+            }           
         }
 
         public override void PlayerUseSkill3()
