@@ -8225,6 +8225,10 @@ MonoBehaviour:
   - {fileID: 1396841629}
   - {fileID: 227706839}
   - {fileID: 612374698}
+  m_skill_button:
+  - {fileID: 762843081}
+  - {fileID: 1950489746}
+  - {fileID: 1226655215}
 --- !u!1 &541986842
 GameObject:
   m_ObjectHideFlags: 0
