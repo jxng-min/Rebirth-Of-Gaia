@@ -22,11 +22,6 @@ public class TalkUIManager : MonoBehaviour
     [SerializeField]
     private GameObject m_end_cursor;
 
-    private void Start()
-    {
-        gameObject.GetComponent<TypingEffectCtrl>().EndCursor += SetEndCursor;
-    }
-
     public void UpdateTalkUI(Sprite portrait, bool is_player)
     {
         //m_text.text = text;

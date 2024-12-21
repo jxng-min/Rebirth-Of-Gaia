@@ -21,8 +21,8 @@ namespace Jongmin
         private float m_interval;
         private bool m_state;
 
-        public UnityAction<bool> EndCursor = (isEnd) => { };
-        
+        [SerializeField]
+        private GameObject m_end_cursor;
         private void Start()
         {
             m_state = false;
@@ -42,14 +42,14 @@ namespace Jongmin
         public void SetTextHard(string text)
         {
             m_current_text.text = text;
+            m_end_cursor.SetActive(true);
         }
 
         // 텍스트 출력을 시작하는 메소드
         private void TypingEffectStart()
         {
             m_state = true;
-            EndCursor(false);
-
+            m_end_cursor.SetActive(false);
             m_current_text.text = "";
             m_current_idx = 0;
 
@@ -75,7 +75,7 @@ namespace Jongmin
         private void TypingEffectEnd()
         {
             m_state = false;
-            EndCursor(true);
+            m_end_cursor.SetActive(true);
         }
 
         public string CurrentText()
