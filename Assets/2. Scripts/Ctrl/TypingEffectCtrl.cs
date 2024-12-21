@@ -21,18 +21,13 @@ namespace Jongmin
         private float m_interval;
         private bool m_state;
 
-        public UnityAction<bool> EndCursor;
+        public UnityAction<bool> EndCursor = (isEnd) => { };
         
         private void Start()
         {
             m_state = false;
             m_talk_manager = GetComponent<TalkUIManager>();
             m_current_text = GetComponent<Text>();
-
-            if(EndCursor == null)
-            {
-                EndCursor = (isEnd) => { };
-            }
             
             m_cps = 25;
         }
@@ -53,10 +48,6 @@ namespace Jongmin
         private void TypingEffectStart()
         {
             m_state = true;
-            if(EndCursor == null)
-            {
-                EndCursor = (isEnd) => { };
-            }
             EndCursor(false);
 
             m_current_text.text = "";
