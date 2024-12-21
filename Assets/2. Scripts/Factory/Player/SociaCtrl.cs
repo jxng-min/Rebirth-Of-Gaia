@@ -1,7 +1,6 @@
 using UnityEngine;
 using Junyoung;
 using System.Collections;
-using System.Security.Cryptography;
 
 namespace Junyoung
 {
