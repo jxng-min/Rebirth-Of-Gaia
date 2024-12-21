@@ -289,6 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_target_toggle: {fileID: 786837314}
+  m_target_panel: {fileID: 1509127536}
   m_toggle_group: {fileID: 1446110837}
 --- !u!1 &55936524
 GameObject:
@@ -3308,6 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_target_toggle: {fileID: 1103582587}
+  m_target_panel: {fileID: 396453237}
   m_toggle_group: {fileID: 683417796}
 --- !u!1 &520017776
 GameObject:
@@ -3692,6 +3694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_target_toggle: {fileID: 1333776313}
+  m_target_panel: {fileID: 1202423887}
   m_toggle_group: {fileID: 1191941185}
 --- !u!1 &613869475
 GameObject:

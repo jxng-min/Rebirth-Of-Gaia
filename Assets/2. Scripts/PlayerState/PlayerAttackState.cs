@@ -22,7 +22,7 @@ public class PlayerAttackState : MonoBehaviour, IPlayerState
         {
             case 1:
                 Debug.Log("1번 중첩 공격");
-                //m_player_animator.SetTrigger("Attack1");
+                m_player_animator.SetTrigger("Attack1");
                 break;
 
             case 2:

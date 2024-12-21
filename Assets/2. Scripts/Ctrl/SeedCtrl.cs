@@ -22,7 +22,6 @@ public class SeedCtrl : MonoBehaviour
                 StartCoroutine(Germination());
             }
         }
-
     }
 
     private IEnumerator SetAlphaDown()

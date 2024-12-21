@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: bb84482e02ebd1441a8f23a1da4dce75
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3995391042621142937
+    second: Socia Attack_0
+  - first:
+      213: 6761825958592062214
+    second: Socia Attack_1
+  - first:
+      213: 2584488884282746197
+    second: Socia Attack_2
+  - first:
+      213: -466356759255286742
+    second: Socia Attack_3
+  - first:
+      213: 314967857869541724
+    second: Socia Attack_4
+  - first:
+      213: 1616847178845200415
+    second: Socia Attack_5
+  - first:
+      213: 8516523585769813971
+    second: Socia Attack_6
+  - first:
+      213: -3677316066920734080
+    second: Socia Attack_7
+  - first:
+      213: 1099448267933545400
+    second: Socia Attack_8
+  - first:
+      213: 8612366071940192093
+    second: Socia Attack_9
+  - first:
+      213: 3426930021061104907
+    second: Socia Attack_10
+  - first:
+      213: -8094950542616676136
+    second: Socia Attack_11
+  - first:
+      213: 2225269453261467554
+    second: Socia Attack_12
+  - first:
+      213: 6118193718701382145
+    second: Socia Attack_13
+  - first:
+      213: 7176319420473616305
+    second: Socia Attack_14
+  - first:
+      213: -7415797289364496536
+    second: Socia Attack_15
+  - first:
+      213: 2603084721488878811
+    second: Socia Attack_16
+  - first:
+      213: 1247869402382218647
+    second: Socia Attack_17
+  - first:
+      213: -4471678364650914308
+    second: Socia Attack_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Socia Attack_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 16
+        width: 250
+        height: 623
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7680ac5e3058d88c0800000000000000
+      internalID: -3995391042621142937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_1
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 24
+        width: 435
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60325e632e4d6dd50800000000000000
+      internalID: 6761825958592062214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_7
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 18
+        width: 556
+        height: 572
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0826a58358c87fcc0800000000000000
+      internalID: -3677316066920734080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_8
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 23
+        width: 693
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3f813ef56024f00800000000000000
+      internalID: 1099448267933545400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_9
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 24
+        width: 678
+        height: 695
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d571f99ef45458770800000000000000
+      internalID: 8612366071940192093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_10
+      rect:
+        serializedVersion: 2
+        x: 2777
+        y: 21
+        width: 807
+        height: 527
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05187f82b6ee8f20800000000000000
+      internalID: 3426930021061104907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_12
+      rect:
+        serializedVersion: 2
+        x: 3588
+        y: 19
+        width: 1027
+        height: 377
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af6d2b17ceb1ee10800000000000000
+      internalID: 2225269453261467554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_14
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 6
+        width: 963
+        height: 442
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7211cbd78679360800000000000000
+      internalID: 7176319420473616305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_15
+      rect:
+        serializedVersion: 2
+        x: 5596
+        y: 12
+        width: 983
+        height: 440
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fdf19e7abc51990800000000000000
+      internalID: -7415797289364496536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Attack_16
+      rect:
+        serializedVersion: 2
+        x: 6586
+        y: 13
+        width: 978
+        height: 397
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc579033c3002420800000000000000
+      internalID: 2603084721488878811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9b76de53895bd044f9264f405285e427
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Socia Attack_0: -3995391042621142937
+      Socia Attack_1: 6761825958592062214
+      Socia Attack_10: 3426930021061104907
+      Socia Attack_12: 2225269453261467554
+      Socia Attack_14: 7176319420473616305
+      Socia Attack_15: -7415797289364496536
+      Socia Attack_16: 2603084721488878811
+      Socia Attack_7: -3677316066920734080
+      Socia Attack_8: 1099448267933545400
+      Socia Attack_9: 8612366071940192093
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

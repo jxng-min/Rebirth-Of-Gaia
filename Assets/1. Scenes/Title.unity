@@ -691,6 +691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72793ca749d2704cbbd7102b1152ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_hide_images: []
+  m_skill_button: []
 --- !u!95 &1059172616
 Animator:
   serializedVersion: 7

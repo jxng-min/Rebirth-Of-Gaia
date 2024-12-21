@@ -1,6 +1,7 @@
 using Junyoung;
 using System.Collections;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,35 @@ namespace Jongmin
         private Button[] m_skill_button;
 
         private PlayerCtrl m_player_ctrl;
+
+        [SerializeField]
+        private InventoryManager m_inventory_manager;
+
+        [Header("Buttons")]
+        [SerializeField]
+        private Button m_attack_button;
+        [SerializeField]
+        private Button m_seed_button;
+
+        private void Update()
+        {
+            if(m_attack_button == null || m_seed_button == null)
+            {
+                return;
+            }
+
+            if(m_inventory_manager.SearchItem("Seed of Desire") == null)
+            {
+                m_attack_button.gameObject.SetActive(true);
+                m_seed_button.gameObject.SetActive(false);
+            }
+            else
+            {
+                m_attack_button.gameObject.SetActive(false);
+                m_seed_button.gameObject.SetActive(true);
+            }
+
+        }
 
         public void TitleClick()
         {
@@ -49,7 +79,7 @@ namespace Jongmin
             SceneCtrl.ReplaceScene("Game");
         }
 
-        public void UpArrowClick()
+        public void JumpClick()
         {
             if (m_player_ctrl == null)
             {
@@ -58,25 +88,17 @@ namespace Jongmin
                 Debug.Log("PlayerCtrl을 찾는 데 성공했습니다.");
             }
 
-            if (GameManager.Instance.GameStatus == "Playing")
+            if(GameManager.Instance.GameStatus == "Playing")
             {
-                m_player_ctrl.PlayerJump();
-            }
-        }
-
-        public void DownArrowClick()
-        {
-            if (m_player_ctrl == null)
-            {
-                Debug.Log("PlayerCtrl이 없으므로 태그로 찾아보고 있습니다.");
-                m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
-                Debug.Log("PlayerCtrl을 찾는 데 성공했습니다.");
-            }
-
-            if (GameManager.Instance.GameStatus == "Playing")
-            {
-                m_player_ctrl.PlayerDown();
-            }
+                if(m_player_ctrl.JoyValue.m_joy_touch.y < -0.3f)
+                {
+                    m_player_ctrl.PlayerDown();
+                }
+                else
+                {
+                    m_player_ctrl.PlayerJump();
+                }
+            }            
         }
 
         public void ArrowUp()
@@ -90,6 +112,32 @@ namespace Jongmin
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.PlayerStop();
+        }
+
+        public void AttackClick()
+        {
+            if (m_player_ctrl == null)
+            {
+                Debug.Log("PlayerCtrl이 없으므로 태그로 찾아보고 있습니다.");
+                m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
+                Debug.Log("PlayerCtrl을 찾는 데 성공했습니다.");
+            }
+            Debug.Log($"중첩 되는 중 {m_player_ctrl.AttackStack}");
+
+            switch(GameManager.Instance.CharacterType)
+            {
+                case Character.SOCIA:
+                    (m_player_ctrl as SociaCtrl).PlayerAttack();
+                    break;
+                
+                case Character.GOV:
+                    (m_player_ctrl as GovCtrl).PlayerAttack();
+                    break;
+
+                case Character.ENVA:
+                    (m_player_ctrl as EnvaCtrl).PlayerAttack();
+                    break;
+            }            
         }
 
         public void Skill1Click()

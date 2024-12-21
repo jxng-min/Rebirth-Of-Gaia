@@ -195,7 +195,7 @@ namespace Junyoung
         private void StageSelect(int stage_index)
         {           
             m_current_index = stage_index;            
-            m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"Do you want to go to Stage {m_current_index + 1}?";
+            m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"STAGE {m_current_index + 1}";
         }
 
         public void StageSelectYes()

@@ -10,6 +10,7 @@ namespace Jongmin
     {
         private TalkUIManager m_talk_manager;
 
+        [SerializeField]
         private int m_cps;
 
         private string m_target_text;
@@ -27,11 +28,13 @@ namespace Jongmin
             m_state = false;
             m_talk_manager = GetComponent<TalkUIManager>();
             m_current_text = GetComponent<Text>();
+
             if(EndCursor == null)
             {
                 EndCursor = (isEnd) => { };
             }
-            m_cps = 50;
+            
+            m_cps = 25;
         }
 
         // 대화 UI 창에 출력하고자 하는 텍스트를 설정하는 메소드

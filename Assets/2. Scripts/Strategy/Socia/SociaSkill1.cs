@@ -17,7 +17,9 @@ public class SociaSkill1 : MonoBehaviour,Skill
         float increase_strength = SaveManager.Instance.Player.m_player_status.m_strength * m_increase_value;
         SaveManager.Instance.Player.m_player_status.m_strength += increase_strength;
         Debug.Log($"소셔의 공격력이 20%상승 : {SaveManager.Instance.Player.m_player_status.m_strength}");
+
         yield return new WaitForSeconds(time);
+        
         SaveManager.Instance.Player.m_player_status.m_strength -= increase_strength;
         Debug.Log($"소셔의 공격력이 다시 감소 :{SaveManager.Instance.Player.m_player_status.m_strength}");
     }

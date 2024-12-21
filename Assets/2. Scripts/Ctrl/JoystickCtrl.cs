@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -17,7 +18,14 @@ public class JoyStickCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     [Header("Value")]
     [SerializeField] 
-    JoyStickValue m_value;
+    private JoyStickValue m_value;
+
+    [Header("Arrow")]
+    [SerializeField]
+    private GameObject m_arrow;
+
+    [SerializeField]
+    private GameObject m_light;
 
     private void Start()
     {
@@ -27,16 +35,25 @@ public class JoyStickCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnDrag(PointerEventData eventData)
     {
+        m_arrow.SetActive(true);
+        m_light.SetActive(true);
+
         Vector2 localPoint;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(m_rect, eventData.position, eventData.pressEventCamera, out localPoint);
         m_touch = localPoint / m_width_half;
 
-        m_touch.y = 0;
-
-        if(m_touch.magnitude > 1)
-            m_touch = m_touch.normalized;
+        if(m_touch.magnitude > 0.55f)
+        {
+            m_touch = m_touch.normalized * 0.55f;
+        }
         m_value.m_joy_touch = m_touch;
 
+        float angle = Mathf.Atan2(m_touch.y, m_touch.x) * Mathf.Rad2Deg;
+        m_arrow.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+        m_light.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+
+        m_arrow.GetComponent<RectTransform>().anchoredPosition = m_touch.normalized * 0.9f * m_width_half;
+        m_light.GetComponent<RectTransform>().anchoredPosition = m_touch.normalized * 0.7f * m_width_half;
         m_handle.anchoredPosition = m_touch * m_width_half;
     }
 
@@ -49,5 +66,8 @@ public class JoyStickCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         m_value.m_joy_touch = Vector2.zero;
         m_handle.anchoredPosition = Vector2.zero;
+
+        m_arrow.SetActive(false);
+        m_light.SetActive(false);
     }
 }
