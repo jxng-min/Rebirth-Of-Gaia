@@ -7,7 +7,15 @@ public class ToggleCtrl : MonoBehaviour
     private Toggle m_target_toggle;
 
     [SerializeField]
+    private GameObject m_target_panel;
+
+    [SerializeField]
     private ToggleGroup m_toggle_group;
+
+    private void Awake()
+    {
+        m_target_panel.SetActive(true);
+    }
 
     private void OnEnable()
     {

@@ -37,7 +37,7 @@ namespace Junyoung
 
             StartCoroutine(m_player_ctrl.PlayerGetKnockBack(EnemyVector));
 
-            Invoke("OnDamaged", 1.3f);
+            Invoke("OnDamaged", 2f);
         }
 
         public void OnDamaged()

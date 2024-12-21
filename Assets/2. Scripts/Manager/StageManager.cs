@@ -102,7 +102,7 @@ namespace Junyoung
 
                 Vector2 target_pos = m_select_buttons[target_index].GetComponent<RectTransform>().anchoredPosition;
 
-                target_pos += new Vector2(0, 70); // 아이콘이 버튼을 가리지 않도록 70만큼 offset
+                target_pos += new Vector2(0, 0); // 아이콘이 버튼을 가리지 않도록 70만큼 offset
 
 
                 //아이콘이 클릭한 버튼 위치로 이동 
@@ -195,7 +195,7 @@ namespace Junyoung
         private void StageSelect(int stage_index)
         {           
             m_current_index = stage_index;            
-            m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"Do you want to go to Stage {m_current_index + 1}?";
+            m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"STAGE {m_current_index + 1}";
         }
 
         public void StageSelectYes()

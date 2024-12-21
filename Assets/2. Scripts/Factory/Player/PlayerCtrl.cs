@@ -11,6 +11,8 @@ namespace Junyoung
         [SerializeField]
         private JoyStickValue m_value;
 
+        public JoyStickValue JoyValue { get { return m_value; } }
+
         [Header("Physics")]
         private Rigidbody2D m_rigidbody;
 
@@ -125,8 +127,6 @@ namespace Junyoung
                     }
                     m_last_height = current_height = m_rigidbody.linearVelocity.y;
                 }
-
-                PlayerAttack();
             }
         }
 
@@ -173,11 +173,8 @@ namespace Junyoung
                         m_inventory_manager.AcquireItem(col.gameObject.GetComponent<SeedCtrl>().m_seed_data);
                         Destroy(col.gameObject);
                     }
-
                 }
-                
             }
-
         }
 
         public void PlayerGetDamage(float damage, Vector2 enemy_vector)

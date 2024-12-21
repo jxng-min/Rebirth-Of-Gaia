@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,9 @@ public class SwipeUICtrl : MonoBehaviour
 {
     [SerializeField]
     private Scrollbar m_scroll_bar;
+
+    [SerializeField]
+    private GameObject[] m_panel_images;
 
     [SerializeField]
     private Transform[] m_diamond_contents;
@@ -36,6 +40,7 @@ public class SwipeUICtrl : MonoBehaviour
         for(int i = 0; i < transform.childCount; i++)
         {
             m_diamond_pos[i] = m_diamond_contents[i].GetComponent<RectTransform>().anchoredPosition;
+            m_panel_images[i].GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.7f);
         }
 
         m_value_distance = 1f / (m_scroll_page_values.Length - 1f);
@@ -46,6 +51,8 @@ public class SwipeUICtrl : MonoBehaviour
         }
 
         m_max_page = transform.childCount;
+
+        StartCoroutine(AlphaChange(m_current_page, 0f));
     }
 
     private void Update()
@@ -68,6 +75,27 @@ public class SwipeUICtrl : MonoBehaviour
     {
         m_current_page = index;
         m_scroll_bar.value = m_scroll_page_values[index];
+    }
+
+    private IEnumerator AlphaChange(int index, float target_alpha)
+    {
+        float target_time = 0.5f;
+        float elapsed_time = 0f;
+
+        Color current_color = m_panel_images[index].GetComponent<Image>().color;
+        float start_alpha = current_color.a;
+
+        while(elapsed_time < target_time)
+        {
+            elapsed_time += Time.deltaTime;
+
+            float new_alpha = Mathf.Lerp(start_alpha, target_alpha, elapsed_time / target_time);
+            m_panel_images[index].GetComponent<Image>().color = new Color(current_color.r, current_color.g, current_color.b, new_alpha);
+
+            yield return null;
+        }
+
+        m_panel_images[index].GetComponent<Image>().color = new Color(current_color.r, current_color.g, current_color.b, target_alpha);
     }
 
     public void UpdateInput()
@@ -113,6 +141,7 @@ public class SwipeUICtrl : MonoBehaviour
                 return;
             }
 
+            StartCoroutine(AlphaChange(m_current_page, 0.7f));
             m_current_page--;
         }
         else
@@ -122,6 +151,7 @@ public class SwipeUICtrl : MonoBehaviour
                 return;
             }
 
+            StartCoroutine(AlphaChange(m_current_page, 0.7f));
             m_current_page++;
         }
 
@@ -130,6 +160,8 @@ public class SwipeUICtrl : MonoBehaviour
 
     private IEnumerator OnSwipeOneStep(int index)
     {
+        StartCoroutine(AlphaChange(m_current_page, 0.0f));
+
         float start = m_scroll_bar.value;
         float current = 0f;
         float percent = 0f;
