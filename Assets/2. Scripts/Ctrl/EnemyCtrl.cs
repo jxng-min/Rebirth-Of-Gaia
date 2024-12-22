@@ -1,11 +1,17 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Pool;
 
 namespace Junyoung
 {
     public class EnemyCtrl : MonoBehaviour
     {
+        [SerializeField]
+        public GameObject StaminaBackground;
+        [SerializeField]
+        public Image StaminaBar;
+
         [SerializeField]
         private EnemyStatus m_original_enemy_status;
         public EnemyStatus OriginalStatus { get { return m_original_enemy_status; } set { m_original_enemy_status = value; } }
