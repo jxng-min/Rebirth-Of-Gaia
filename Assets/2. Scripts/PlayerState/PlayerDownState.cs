@@ -1,3 +1,4 @@
+using Jongmin;
 using System.Collections;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace Junyoung
 
             if(GetComponent<PlatformScanCtrl>().CurrentPlatform)
             {
+                SoundManager.Instance.PlayEffect("socia_jump_down");
                 m_player_ctrl.IsDown = true;
                 GetComponent<Animator>().SetTrigger("Down");
                 GetComponent<PlatformScanCtrl>().StartDisableCollision();

@@ -1,3 +1,4 @@
+using Jongmin;
 using System.Collections;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace Junyoung
                 m_player_ctrl = player_ctrl;                            
             }
 
+            SoundManager.Instance.PlayEffect("socia_jump_up");
             m_player_ctrl.IsJump = true;
             GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * m_player_ctrl.JumpPower;
             GetComponent<Animator>().SetTrigger("Jump");
