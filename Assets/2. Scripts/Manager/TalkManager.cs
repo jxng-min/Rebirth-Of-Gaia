@@ -52,6 +52,7 @@ namespace Taekyung
         {
             GameEventBus.Unsubscribe(GameEventType.TALKING, ChangeTalkScene);
         }
+
         // 대화 중 초상화 UI를 생성하기 위한 메소드
         public void GeneratePortrait()
         {
@@ -132,6 +133,8 @@ namespace Taekyung
         {
             SaveManager.Instance.Player.m_talk_state = true;
             Talk(SaveManager.Instance.Player.m_stage_id);
+
+            
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
             m_main_panel.SetActive(false);
         }
@@ -145,6 +148,7 @@ namespace Taekyung
                 m_talk_effect.SetTextHard(m_current_talk);
                 return;
             }
+
             // Set Talk Data
             string talk_data;
             talk_data = GetTalkData(stage_id + "_" + SaveManager.Instance.Player.m_stage_state, SaveManager.Instance.Player.m_talk_idx);
@@ -166,8 +170,9 @@ namespace Taekyung
                 SaveManager.Instance.Player.m_talk_state = false;
                 return;
             }
- 
-            // ; 이후 숫자에 따른 초상화 선택 및 대사 선택
+            
+            SoundManager.Instance.PlayEffect("script_click");
+            // : 이후 숫자에 따른 초상화 선택 및 대사 선택
             string[] split_data = talk_data.Split(';');
             for(int i = 0; i < split_data.Length; i++)
             {

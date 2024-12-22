@@ -35,21 +35,29 @@ namespace Jongmin
                 return;
             }
 
-            if(m_inventory_manager.SearchItem("Seed of Desire") == null)
+            if(!m_player_ctrl)
             {
+                return;
+            }
+
+            if(m_player_ctrl.GetSeed)
+            {
+                SoundManager.Instance.StopEffect(true);
                 m_attack_button.gameObject.SetActive(true);
                 m_seed_button.gameObject.SetActive(false);
             }
             else
             {
+                SoundManager.Instance.PlayEffect("seed_active", true);
                 m_attack_button.gameObject.SetActive(false);
                 m_seed_button.gameObject.SetActive(true);
             }
-
         }
 
         public void TitleClick()
         {
+            SoundManager.Instance.PlayEffect("ui_start");
+
             if (File.Exists(Application.persistentDataPath + "/PlayerData.json"))
             {
                 Debug.Log("이미 캐릭터를 생성한 기록이 있습니다.");
@@ -205,6 +213,11 @@ namespace Jongmin
             image.gameObject.SetActive(false);
             m_skill_button[skill_index].interactable = true;
 
+        }
+
+        public void PlayButtonSound()
+        {
+            SoundManager.Instance.PlayEffect("ui_click_basic");
         }
     }
 }

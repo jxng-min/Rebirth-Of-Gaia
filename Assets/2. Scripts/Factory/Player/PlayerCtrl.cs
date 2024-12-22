@@ -60,6 +60,8 @@ namespace Junyoung
         [Header("Skill")]
         public Skill[] m_player_skills = new Skill[3];
 
+        public bool GetSeed { get; set; }
+
         private void OnEnable()
         {
             GameEventBus.Subscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
@@ -80,7 +82,7 @@ namespace Junyoung
 
         private void Start()
         {
-            GameEventBus.Publish(GameEventType.PLAYING);
+            GameEventBus.Publish(GameEventType.SETTING);
 
             m_player_state_context = new PlayerStateContext(this);
 
@@ -166,6 +168,7 @@ namespace Junyoung
                     }
                     else
                     {
+                        GetSeed = true;
                         m_inventory_manager.AcquireItem(col.gameObject.GetComponent<SeedCtrl>().m_seed_data);
                         Destroy(col.gameObject);
                     }

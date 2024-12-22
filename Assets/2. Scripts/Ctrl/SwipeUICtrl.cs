@@ -1,3 +1,4 @@
+using Jongmin;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -130,6 +131,8 @@ public class SwipeUICtrl : MonoBehaviour
             StartCoroutine(OnSwipeOneStep(m_current_page));
             return;
         }
+
+        SoundManager.Instance.PlayEffect("ui_map_drag");
 
         bool is_left = m_start_touch_x < m_end_touch_x ? true : false;
 
