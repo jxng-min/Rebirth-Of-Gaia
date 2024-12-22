@@ -7,6 +7,7 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
 {
     private EnemyCtrl m_enemy_ctrl;
     private StageManager m_stage_manager;
+    [SerializeField]
     private SeedShortcutCtrl m_seed_short_cut_ctrl;
 
     public void Handle(EnemyCtrl enemy_ctrl)

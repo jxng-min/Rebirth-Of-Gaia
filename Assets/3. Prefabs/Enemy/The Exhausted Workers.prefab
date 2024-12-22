@@ -49,7 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abfcb5596e05b5c4f93010e4c2da4d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemy_status: {fileID: 11400000, guid: 6b08c8b11976c6c40849d28ea3f7dcc9, type: 2}
+  m_original_enemy_status: {fileID: 0}
+  m_enemy_status: {fileID: 0}
+  m_speed: 0
   m_hit_box_size: {x: 3, y: 2}
 --- !u!212 &-8472236211834233797
 SpriteRenderer:

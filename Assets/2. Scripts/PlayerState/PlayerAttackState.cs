@@ -5,6 +5,7 @@ public class PlayerAttackState : MonoBehaviour, IPlayerState
 {
     private PlayerCtrl m_player_ctrl;
     private Animator m_player_animator;
+    public Collider2D EnemyCollider { get; set; }
 
     public void Handle(PlayerCtrl player_ctrl)
     {
@@ -34,6 +35,10 @@ public class PlayerAttackState : MonoBehaviour, IPlayerState
                 Debug.Log("3번 중첩 공격");
                 //m_player_animator.SetTrigger("Attack3");
                 break;
+        }
+        if(EnemyCollider)
+        {
+            EnemyCollider.GetComponent<EnemyCtrl>().EnemyGetDamage();
         }
 
         Invoke("ResetAttackFlag", 1f);

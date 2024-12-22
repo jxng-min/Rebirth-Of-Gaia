@@ -60,11 +60,14 @@ namespace Junyoung
 
         public override void PlayerAttack()
         {
+ 
             StartCoroutine(DescendingAttackTimer());
         }
 
         private IEnumerator DescendingAttackTimer()
         {
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + m_hit_box_center, m_hit_box_size, 0);           
+
             AttackTimer = InputDelay;
 
             Debug.Log($"중첩 되는 중 {AttackStack}");
@@ -80,8 +83,20 @@ namespace Junyoung
             AttackTimer = 0f;
 
             if(AttackTimer <= 0f || AttackStack >= 3)
-            {
-                m_player_state_context.Transition(m_attack_state);
+            {               
+                foreach (Collider2D in_collider in in_box_colliders)
+                {
+                    if (in_collider.tag == "Enemy")
+                    {
+                        (m_attack_state as PlayerAttackState).EnemyCollider = in_collider;
+                        m_player_state_context.Transition(m_attack_state);
+                    }
+                    else
+                    {
+                        (m_attack_state as PlayerAttackState).EnemyCollider = null;
+                        m_player_state_context.Transition(m_attack_state);
+                    }
+                }
                 AttackStack = 0;
             }
         }

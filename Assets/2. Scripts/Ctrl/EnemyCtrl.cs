@@ -7,8 +7,12 @@ namespace Junyoung
     public class EnemyCtrl : MonoBehaviour
     {
         [SerializeField]
+        private EnemyStatus m_original_enemy_status;
+        public EnemyStatus OriginalStatus { get { return m_original_enemy_status; } set { m_original_enemy_status = value; } }
+
+        [SerializeField]
         private EnemyStatus m_enemy_status;
-        public EnemyStatus EnemyStatus { get; set; }
+        public EnemyStatus EnemyStatus { get { return m_enemy_status; }}
 
         [SerializeField]
         public float m_speed;
@@ -35,6 +39,28 @@ namespace Junyoung
 
         public bool IsKnockBack { get; set; }
         public float KnockBackForce { get ; private set; } = 5f;
+
+        private void OnEnable()
+        {
+            if (!m_enemy_status)
+            {
+                m_enemy_status = ScriptableObject.CreateInstance<EnemyStatus>();
+            }
+            if (m_original_enemy_status)
+            {
+                InitStatus();
+            }
+        }
+
+        public void InitStatus()
+        {
+            m_enemy_status.EnemyType = m_original_enemy_status.EnemyType;
+            m_enemy_status.EnemyHP = m_original_enemy_status.EnemyHP;
+            m_enemy_status.EnemyDamage = m_original_enemy_status.EnemyDamage;
+            m_enemy_status.EnemyAttackDelay = m_original_enemy_status.EnemyAttackDelay;
+            m_enemy_status.EnemyMoveSpeed = m_original_enemy_status.EnemyMoveSpeed;
+        }
+
 
         public void SetEnemyPool(IObjectPool<EnemyCtrl> pool)
         {

@@ -7,7 +7,7 @@ public class EnemyStatus : ScriptableObject
 {
     [SerializeField]
     private EnemyType m_enemy_type;
-    public EnemyType EnemyType { get { return m_enemy_type; } }
+    public EnemyType EnemyType { get { return m_enemy_type; } set { m_enemy_type = value; } }
 
     [SerializeField]
     private float m_enemy_hp;
@@ -15,7 +15,7 @@ public class EnemyStatus : ScriptableObject
 
     [SerializeField]
     private float m_enemy_move_speed;
-    public float EnemyMoveSpeed { get { return m_enemy_move_speed; } }
+    public float EnemyMoveSpeed { get { return m_enemy_move_speed; } set { m_enemy_move_speed = value; } }
 
     [SerializeField]
     private float m_enemy_damage;
@@ -23,5 +23,5 @@ public class EnemyStatus : ScriptableObject
 
     [SerializeField]
     private float m_enemy_attack_delay;
-    public float EnemyAttackDelay { get { return m_enemy_attack_delay; } }
+    public float EnemyAttackDelay { get { return m_enemy_attack_delay; } set { m_enemy_attack_delay = value; } }
 }
