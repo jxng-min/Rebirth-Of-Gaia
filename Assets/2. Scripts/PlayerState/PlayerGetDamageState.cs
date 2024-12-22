@@ -36,6 +36,7 @@ namespace Junyoung
             m_player_sprite.color = new Color(1f, 1f, 1f, 0.4f);
 
             StartCoroutine(m_player_ctrl.PlayerGetKnockBack(EnemyVector));
+            m_player_ctrl.GetComponent<Animator>().SetTrigger("GetDamage");
 
             Invoke("OnDamaged", 2f);
         }

@@ -96,7 +96,7 @@ namespace Junyoung
             Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
             foreach (Collider2D in_collider in in_box_colliders)
             {
-                if(in_collider.tag == "Player")
+                if (in_collider.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
                 {
                     if(m_can_attack)
                     {
@@ -214,7 +214,7 @@ namespace Junyoung
             Vector2 dir = ((Vector2)transform.position - player_vector).normalized;
             m_rigidbody.AddForce(dir * KnockBackForce, ForceMode2D.Impulse);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
 
             IsKnockBack = false;
         }
