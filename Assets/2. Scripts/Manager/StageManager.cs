@@ -25,6 +25,8 @@ namespace Junyoung
         private GameObject m_stage_select_check_UI;
         [SerializeField]
         private Sprite[] m_stage_status_images;
+        [SerializeField]
+        private Sprite[] m_stage_images;
 
         [Header("About Index")]
         private int m_current_index;
@@ -67,23 +69,24 @@ namespace Junyoung
                 if(i < SaveManager.Instance.Player.m_max_clear_stage)
                 {
                     m_select_buttons[i].interactable = true;
-                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[2];
+                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[1];
                 }
                 else if(i == SaveManager.Instance.Player.m_max_clear_stage)
                 {
                     m_select_buttons[i].interactable = true;
-                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[1];
+                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[0];
                 }
                 else
                 {
                     m_select_buttons[i].interactable = false;
-                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_status_images[0];
+                    m_select_buttons[i].GetComponent<Image>().sprite = m_stage_images[i];
                 }
             }
         }
 
         private IEnumerator MoveIconCorutine()
         {
+            SoundManager.Instance.PlayEffect("ui_map_walk");
             while (m_is_icon_moving && m_path_list.Count > 0)
             {
                 if (m_current_path_index < 0 || m_current_path_index >= m_path_list.Count)
@@ -123,6 +126,7 @@ namespace Junyoung
                     m_stage_select_check_UI.SetActive(true);
 
                     Debug.Log($"아이콘이 버튼 {m_now_button_index}에 도달");
+                    SoundManager.Instance.StopEffect();
                 }
             }
         }
@@ -202,11 +206,19 @@ namespace Junyoung
         {
             Debug.Log($"스테이지 선택 예 클릭");
             m_stage_select_check_UI.SetActive(false);
+            SoundManager.Instance.PlayEffect("ui_map_go");
 
             SaveManager.Instance.Player.m_stage_id = m_current_index;
             SaveManager.Instance.Player.m_stage_state = 0;
 
+            SoundManager.Instance.PlayBGM("bgm_talk");
             GameEventBus.Publish(GameEventType.TALKING);
+        }
+
+        public void StageSelectNo()
+        {
+            m_stage_select_check_UI.SetActive(false);
+            SoundManager.Instance.PlayEffect("ui_map_go");
         }
 
         public void SelectButtonInteract()
@@ -235,6 +247,8 @@ namespace Junyoung
 
         public void ClickedButtonPath(int button_index) //클릭된 버튼의 index값을 불러와서 지금 위치와 가려는 위치를 비교하여 정방향/역방향 경로를 리스트에 추가
         {
+            SoundManager.Instance.PlayEffect("ui_map_click");
+
             Debug.Log($"ClickedButtonPosiotion 호출됨: button_index={button_index}, m_now_button_index={m_now_button_index}");
             if (button_index < 0 || button_index >= m_icon_path.Length)
             {

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Jongmin;
 using Junyoung;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Taekyung
 {
@@ -19,6 +20,8 @@ namespace Taekyung
         private Sprite[] m_portrait_arr;
         [SerializeField]
         private GameObject m_narration_panel;
+        [SerializeField]
+        private Text m_name;
 
         [Header("Manager")]
         [SerializeField]
@@ -49,6 +52,7 @@ namespace Taekyung
         {
             GameEventBus.Unsubscribe(GameEventType.TALKING, ChangeTalkScene);
         }
+
         // 대화 중 초상화 UI를 생성하기 위한 메소드
         public void GeneratePortrait()
         {
@@ -129,6 +133,8 @@ namespace Taekyung
         {
             SaveManager.Instance.Player.m_talk_state = true;
             Talk(SaveManager.Instance.Player.m_stage_id);
+
+            
             m_talk_ui_manager.SetTalkUIActive(m_is_action);
             m_main_panel.SetActive(false);
         }
@@ -142,6 +148,7 @@ namespace Taekyung
                 m_talk_effect.SetTextHard(m_current_talk);
                 return;
             }
+
             // Set Talk Data
             string talk_data;
             talk_data = GetTalkData(stage_id + "_" + SaveManager.Instance.Player.m_stage_state, SaveManager.Instance.Player.m_talk_idx);
@@ -163,7 +170,8 @@ namespace Taekyung
                 SaveManager.Instance.Player.m_talk_state = false;
                 return;
             }
- 
+            
+            SoundManager.Instance.PlayEffect("script_click");
             // : 이후 숫자에 따른 초상화 선택 및 대사 선택
             string[] split_data = talk_data.Split(';');
             for(int i = 0; i < split_data.Length; i++)
@@ -171,11 +179,14 @@ namespace Taekyung
                 Debug.Log(split_data[i]);
             }
             m_talk_effect.SetText(split_data[0]);
-            string portrait_index = split_data.Length > 1 ? split_data[1] : "0";
-
+            string portrait_index = split_data.Length > 2 ? split_data[1] : "0";
+            
+            //m_name.text = split_data[split_data.Length - 1];   Ui적인 요소는 충돌날까봐 안건들임
+            //Debug.Log($"name = {m_name.text}");
+            
             // 플레이어의 대사 차례인지 확인
             bool is_player;
-            if (split_data.Length > 2)
+            if (split_data[split_data.Length - 1] == "Socia")
             {
                 is_player = true;
             }

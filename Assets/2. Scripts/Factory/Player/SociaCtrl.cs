@@ -1,6 +1,7 @@
 using UnityEngine;
 using Junyoung;
 using System.Collections;
+using Jongmin;
 
 namespace Junyoung
 {
@@ -32,6 +33,7 @@ namespace Junyoung
 
         public override void PlayerUseSkill1()
         {
+            SoundManager.Instance.PlayEffect("socia_skill_01");
             m_player_skills[0].Effect();
         }
 
@@ -43,6 +45,7 @@ namespace Junyoung
             {
                 if (in_collider.tag == "Enemy")
                 {
+                    SoundManager.Instance.PlayEffect("socia_skill_02");
                     (m_player_skills[1] as SociaSkill2).Effect(in_collider);
                     break;
                 }
@@ -55,6 +58,7 @@ namespace Junyoung
 
         public override void PlayerUseSkill3()
         {
+            SoundManager.Instance.PlayEffect("socia_skill_03");
             m_player_skills[2].Effect();
         }
 

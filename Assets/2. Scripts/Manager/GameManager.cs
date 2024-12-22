@@ -19,8 +19,6 @@ namespace Jongmin
             GameEventBus.Subscribe(GameEventType.NONE, None);
             GameEventBus.Subscribe(GameEventType.LOADING, Loading);
             GameEventBus.Publish(GameEventType.NONE);
-
-            SoundManager.Instance.PlayeBGM("Title");
         }
 
         public void ExitGame()
@@ -35,6 +33,7 @@ namespace Jongmin
         public void None()
         {
             GameStatus = "None";
+            SoundManager.Instance.PlayBGM("bgm_main");
         }
 
         public void Loading()
@@ -51,6 +50,8 @@ namespace Jongmin
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 1f;
 
+            SoundManager.Instance.PlayBGM("bgm_battle");
+
             AbleUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
@@ -60,7 +61,7 @@ namespace Jongmin
         {
             GameStatus = "Setting";
 
-            SoundManager.Instance.PlayeBGM("Title");
+            SoundManager.Instance.PlayBGM("bgm_lobby");
 
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
@@ -82,12 +83,15 @@ namespace Jongmin
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
+            m_player_ctrl.GetSeed = false;
+
             int now_lv = SaveManager.Instance.Player.m_player_status.m_current_level;
             float default_stamina = SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].Stamina;
+            
             SaveManager.Instance.Player.m_player_status.m_stamina = default_stamina + SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].GrowthStamina[now_lv - 1];
             Debug.Log($"플레이어 체력 회복 : {SaveManager.Instance.Player.m_player_status.m_stamina}");
             SoundManager.Instance.StopBGM();
-            // 게임오버 효과음
+            SoundManager.Instance.PlayEffect("stage_fail");
 
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
@@ -102,13 +106,14 @@ namespace Jongmin
             StageManager m_stage_manager = FindAnyObjectByType<StageManager>();
 
             SoundManager.Instance.StopBGM();
-            // 클리어 효과음
+            SoundManager.Instance.PlayEffect("stage_clear");
 
             SeedCtrl seed = FindAnyObjectByType<SeedCtrl>();
             Destroy(seed);
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
+            m_player_ctrl.GetSeed = false;
 
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(true);
