@@ -17,14 +17,10 @@ public class TalkUIManager : MonoBehaviour
     private Image m_player_img;
     
     [SerializeField]
-    private Text m_text;
-    
-    [SerializeField]
     private GameObject m_end_cursor;
 
     public void UpdateTalkUI(Sprite portrait, bool is_player)
     {
-        //m_text.text = text;
         
         UpdatePlayerPortrait(is_player, portrait);
         UpdateNpcPortrait(portrait, is_player);

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Jongmin;
 using Junyoung;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Taekyung
 {
@@ -19,6 +20,8 @@ namespace Taekyung
         private Sprite[] m_portrait_arr;
         [SerializeField]
         private GameObject m_narration_panel;
+        [SerializeField]
+        private Text m_name;
 
         [Header("Manager")]
         [SerializeField]
@@ -164,18 +167,21 @@ namespace Taekyung
                 return;
             }
  
-            // : 이후 숫자에 따른 초상화 선택 및 대사 선택
+            // ; 이후 숫자에 따른 초상화 선택 및 대사 선택
             string[] split_data = talk_data.Split(';');
             for(int i = 0; i < split_data.Length; i++)
             {
                 Debug.Log(split_data[i]);
             }
             m_talk_effect.SetText(split_data[0]);
-            string portrait_index = split_data.Length > 1 ? split_data[1] : "0";
-
+            string portrait_index = split_data.Length > 2 ? split_data[1] : "0";
+            
+            //m_name.text = split_data[split_data.Length - 1];   Ui적인 요소는 충돌날까봐 안건들임
+            //Debug.Log($"name = {m_name.text}");
+            
             // 플레이어의 대사 차례인지 확인
             bool is_player;
-            if (split_data.Length > 2)
+            if (split_data[split_data.Length - 1] == "Socia")
             {
                 is_player = true;
             }
