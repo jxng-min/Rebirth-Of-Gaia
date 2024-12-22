@@ -59,6 +59,7 @@ namespace Junyoung
             m_enemy_status.EnemyDamage = m_original_enemy_status.EnemyDamage;
             m_enemy_status.EnemyAttackDelay = m_original_enemy_status.EnemyAttackDelay;
             m_enemy_status.EnemyMoveSpeed = m_original_enemy_status.EnemyMoveSpeed;
+            m_enemy_status.EnemyEx = m_original_enemy_status.EnemyEx;
         }
 
 

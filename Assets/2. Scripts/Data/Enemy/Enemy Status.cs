@@ -24,4 +24,8 @@ public class EnemyStatus : ScriptableObject
     [SerializeField]
     private float m_enemy_attack_delay;
     public float EnemyAttackDelay { get { return m_enemy_attack_delay; } set { m_enemy_attack_delay = value; } }
+
+    [SerializeField]
+    private int m_enemy_ex;
+    public int EnemyEx { get { return m_enemy_ex; } set { m_enemy_ex= value; } }
 }
