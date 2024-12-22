@@ -7,8 +7,12 @@ namespace Junyoung
     public class EnemyCtrl : MonoBehaviour
     {
         [SerializeField]
+        private EnemyStatus m_original_enemy_status;
+        public EnemyStatus OriginalStatus { get { return m_original_enemy_status; } set { m_original_enemy_status = value; } }
+
+        [SerializeField]
         private EnemyStatus m_enemy_status;
-        public EnemyStatus EnemyStatus { get; set; }
+        public EnemyStatus EnemyStatus { get { return m_enemy_status; }}
 
         [SerializeField]
         public float m_speed;
@@ -35,6 +39,29 @@ namespace Junyoung
 
         public bool IsKnockBack { get; set; }
         public float KnockBackForce { get ; private set; } = 5f;
+
+        private void OnEnable()
+        {
+            if (!m_enemy_status)
+            {
+                m_enemy_status = ScriptableObject.CreateInstance<EnemyStatus>();
+            }
+            if (m_original_enemy_status)
+            {
+                InitStatus();
+            }
+        }
+
+        public void InitStatus()
+        {
+            m_enemy_status.EnemyType = m_original_enemy_status.EnemyType;
+            m_enemy_status.EnemyHP = m_original_enemy_status.EnemyHP;
+            m_enemy_status.EnemyDamage = m_original_enemy_status.EnemyDamage;
+            m_enemy_status.EnemyAttackDelay = m_original_enemy_status.EnemyAttackDelay;
+            m_enemy_status.EnemyMoveSpeed = m_original_enemy_status.EnemyMoveSpeed;
+            m_enemy_status.EnemyEx = m_original_enemy_status.EnemyEx;
+        }
+
 
         public void SetEnemyPool(IObjectPool<EnemyCtrl> pool)
         {
@@ -69,7 +96,7 @@ namespace Junyoung
             Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
             foreach (Collider2D in_collider in in_box_colliders)
             {
-                if(in_collider.tag == "Player")
+                if (in_collider.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
                 {
                     if(m_can_attack)
                     {
@@ -187,7 +214,7 @@ namespace Junyoung
             Vector2 dir = ((Vector2)transform.position - player_vector).normalized;
             m_rigidbody.AddForce(dir * KnockBackForce, ForceMode2D.Impulse);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
 
             IsKnockBack = false;
         }

@@ -17,3 +17,4 @@ MonoBehaviour:
   m_enemy_move_speed: 2
   m_enemy_damage: 5
   m_enemy_attack_delay: 1
+  m_enemy_ex: 10

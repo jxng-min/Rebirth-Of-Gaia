@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
 
                         if(m_slots[i].Item.ItemName == "Seed of Desire")
                         {
-                            m_seeds_text.text = m_slots[i].ItemCount.ToString();
+                            //m_seeds_text.text = m_slots[i].ItemCount.ToString();
                             Debug.Log($"{item.ItemName}을 습득 하였습니다.");
                         }
 
@@ -50,7 +50,7 @@ public class InventoryManager : MonoBehaviour
                 Debug.Log($"{item.ItemName}을 습득 하였습니다.");
                 if (m_slots[i].Item.ItemName == "Seed of Desire")
                 {
-                    m_seeds_text.text = m_slots[i].ItemCount.ToString();
+                    //m_seeds_text.text = m_slots[i].ItemCount.ToString();
                 }
                 return;
             }

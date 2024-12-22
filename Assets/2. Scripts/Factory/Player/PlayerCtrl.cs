@@ -55,7 +55,7 @@ namespace Junyoung
 
         [Header("About KnockBack")]
         public bool IsKnockBack { get; set; }
-        public float KnockBackForce { get ; private set; } = 10f;
+        public float KnockBackForce { get ; private set; } = 6.5f;
         
         [Header("Skill")]
         public Skill[] m_player_skills = new Skill[3];
@@ -132,10 +132,10 @@ namespace Junyoung
 
         private void FixedUpdate()
         {
-            if(GameManager.Instance.GameStatus == "Playing")
+            if(GameManager.Instance.GameStatus == "Playing" )
             {
                 float joystick_value = 0f;
-                if(!IsAttack)
+                if(!IsAttack && !IsKnockBack)
                 {
                     if(m_value.m_joy_touch.x < 0f)
                     {
@@ -149,12 +149,8 @@ namespace Junyoung
                     }
 
                     SetPlayerMoveState();
-                }
-
-                if(!IsKnockBack)
-                {
-                    m_rigidbody.linearVelocity = new Vector2(joystick_value * MoveSpeed, m_rigidbody.linearVelocity.y);
-                }
+                    m_rigidbody.linearVelocityX = joystick_value * MoveSpeed;
+                }                   
             }
         }
         
@@ -252,9 +248,12 @@ namespace Junyoung
             IsKnockBack = true;
 
             Vector2 dir = ((Vector2)transform.position - enemy_vector).normalized;
-            m_rigidbody.AddForce(dir * KnockBackForce, ForceMode2D.Impulse);
+            dir.y += 1f;
+            dir = dir.normalized;
+            //m_rigidbody.AddForce(dir * KnockBackForce, ForceMode2D.Impulse);
+            m_rigidbody.linearVelocity = dir * KnockBackForce;
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
 
             IsKnockBack = false;
         }

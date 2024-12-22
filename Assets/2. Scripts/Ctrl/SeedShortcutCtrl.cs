@@ -12,6 +12,8 @@ public class SeedShortcutCtrl : MonoBehaviour
     [SerializeField]
     private GameObject m_seed_prefab;
 
+    
+
     public void OnClick()
     {
         CheckSeed();

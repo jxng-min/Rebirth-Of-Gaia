@@ -693,6 +693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hide_images: []
   m_skill_button: []
+  m_inventory_manager: {fileID: 0}
+  m_attack_button: {fileID: 0}
+  m_seed_button: {fileID: 0}
 --- !u!95 &1059172616
 Animator:
   serializedVersion: 7
