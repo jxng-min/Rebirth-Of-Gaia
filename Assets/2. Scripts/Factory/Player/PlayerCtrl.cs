@@ -169,7 +169,7 @@ namespace Junyoung
                     else
                     {
                         GetSeed = true;
-                        m_inventory_manager.AcquireItem(col.gameObject.GetComponent<SeedCtrl>().m_seed_data);
+                        //m_inventory_manager.AcquireItem(col.gameObject.GetComponent<SeedCtrl>().m_seed_data);
                         Destroy(col.gameObject);
                     }
                 }
