@@ -55,7 +55,6 @@ namespace Jongmin
 
             m_interval = 1.0f / m_cps;
             Invoke("TypingEffecting", m_interval);
-            Debug.Log($"TypingEffectStart Invoke");
         }
 
         // 텍스트 출력을 하는 동안 호출되는 메소드
@@ -70,7 +69,6 @@ namespace Jongmin
             m_current_text.text += m_target_text[m_current_idx++];
 
             Invoke("TypingEffecting", m_interval);
-            Debug.Log($"TypingEffecting Invoke");
         }
 
         // 텍스트 출력이 마무리되면 호출되는 메소드
