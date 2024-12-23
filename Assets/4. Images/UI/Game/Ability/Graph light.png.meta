@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 7170eff27bce7b94ba028de85bcd1b49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5733349059528325709
+    second: Graph light_0
+  - first:
+      213: 5456169098623633372
+    second: Graph light_1
+  - first:
+      213: 7666066107931244341
+    second: Graph light_2
+  - first:
+      213: 8002104601471301286
+    second: Graph light_3
+  - first:
+      213: -7426705486525565150
+    second: Graph light_4
+  - first:
+      213: 7495842908629505108
+    second: Graph light_5
+  - first:
+      213: 2862808298353004362
+    second: Graph light_6
+  - first:
+      213: -7577549355333584536
+    second: Graph light_7
+  - first:
+      213: 5273774871370406911
+    second: Graph light_8
+  - first:
+      213: 1936180076062358686
+    second: Graph light_9
+  - first:
+      213: -564195437365240642
+    second: Graph light_10
+  - first:
+      213: -393083973631593720
+    second: Graph light_11
+  - first:
+      213: -702585398045001538
+    second: Graph light_12
+  - first:
+      213: 3377401635482031055
+    second: Graph light_13
+  - first:
+      213: 8678503366516446500
+    second: Graph light_14
+  - first:
+      213: 6732709924068783962
+    second: Graph light_15
+  - first:
+      213: -4050140868573561071
+    second: Graph light_16
+  - first:
+      213: 4329628441226379066
+    second: Graph light_17
+  - first:
+      213: 1860525385536027437
+    second: Graph light_18
+  - first:
+      213: -375814234392925651
+    second: Graph light_19
+  - first:
+      213: 3464854092705032981
+    second: Graph light_20
+  - first:
+      213: -2175026573770499236
+    second: Graph light_21
+  - first:
+      213: -6873645949910499831
+    second: Graph light_22
+  - first:
+      213: -1842170808012013878
+    second: Graph light_23
+  - first:
+      213: 1721808932546708512
+    second: Graph light_24
+  - first:
+      213: -6233016853030929583
+    second: Graph light_25
+  - first:
+      213: 6223511866056699727
+    second: Graph light_26
+  - first:
+      213: -5170277215707712645
+    second: Graph light_27
+  - first:
+      213: -402115971030187284
+    second: Graph light_28
+  - first:
+      213: -9200150302611353093
+    second: Graph light_29
+  - first:
+      213: 2975441221300237690
+    second: Graph light_30
+  - first:
+      213: 6007276579497528137
+    second: Graph light_31
+  - first:
+      213: -3350878965734310796
+    second: Graph light_32
+  - first:
+      213: -2203384778790884945
+    second: Graph light_33
+  - first:
+      213: -2253262815716199647
+    second: Graph light_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Graph light_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 32738
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a7182d792f09f40800000000000000
+      internalID: 5733349059528325709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7cced13e438bb40800000000000000
+      internalID: 5456169098623633372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 159
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53737e33286536a60800000000000000
+      internalID: 7666066107931244341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_3
+      rect:
+        serializedVersion: 2
+        x: 32738
+        y: 166
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a63732fcbf2d0f60800000000000000
+      internalID: 8002104601471301286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 141
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227f23855ba0fe890800000000000000
+      internalID: -7426705486525565150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 158
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4541ef42965960860800000000000000
+      internalID: 7495842908629505108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 151
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f0f53cafcbab720800000000000000
+      internalID: 2862808298353004362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_7
+      rect:
+        serializedVersion: 2
+        x: 32745
+        y: 156
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869f957420327d690800000000000000
+      internalID: -7577549355333584536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_8
+      rect:
+        serializedVersion: 2
+        x: 32746
+        y: 150
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb1a69cd46303940800000000000000
+      internalID: 5273774871370406911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 135
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9cb2e65581beda10800000000000000
+      internalID: 1936180076062358686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_10
+      rect:
+        serializedVersion: 2
+        x: 32747
+        y: 144
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebcd2fb2d339b28f0800000000000000
+      internalID: -564195437365240642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_11
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 132
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8033ac8653c7b8af0800000000000000
+      internalID: -393083973631593720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 124
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8b62d8d4aef36f0800000000000000
+      internalID: -702585398045001538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 108
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3dabaa4e0fede20800000000000000
+      internalID: 3377401635482031055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_14
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 107
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4259e37c4dc307870800000000000000
+      internalID: 8678503366516446500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_15
+      rect:
+        serializedVersion: 2
+        x: 32739
+        y: 106
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57fdd721046f6d50800000000000000
+      internalID: 6732709924068783962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_16
+      rect:
+        serializedVersion: 2
+        x: 32745
+        y: 103
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f716ea6520bc7c0800000000000000
+      internalID: -4050140868573561071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_17
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 98
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ff9b0c02ee51c30800000000000000
+      internalID: 4329628441226379066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 92
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2bb87c0bf9e1d910800000000000000
+      internalID: 1860525385536027437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_19
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 99
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a6979e1f6d8caf0800000000000000
+      internalID: -375814234392925651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 78
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51bed329072a51030800000000000000
+      internalID: 3464854092705032981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_21
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 80
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bdf5ddad0c0d1e0800000000000000
+      internalID: -2175026573770499236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 49
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e38cb3d67eb90a0800000000000000
+      internalID: -6873645949910499831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_23
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 52
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace79dc096b4f66e0800000000000000
+      internalID: -1842170808012013878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_24
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 55
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0248a830a1815e710800000000000000
+      internalID: 1721808932546708512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_25
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 43
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b71143230ef79a0800000000000000
+      internalID: -6233016853030929583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_26
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 36
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fecbf811b5e5650800000000000000
+      internalID: 6223511866056699727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_27
+      rect:
+        serializedVersion: 2
+        x: 32744
+        y: 35
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73327ff34c7f38b0800000000000000
+      internalID: -5170277215707712645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_28
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 31
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce20c34a7a56b6af0800000000000000
+      internalID: -402115971030187284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_29
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 27
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1d5a45b00825080800000000000000
+      internalID: -9200150302611353093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_30
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 23
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75b7a5b604ea4920800000000000000
+      internalID: 2975441221300237690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_31
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 17
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b497c98322e5350800000000000000
+      internalID: 6007276579497528137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_32
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 14
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cf31a95594f71d0800000000000000
+      internalID: -3350878965734310796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_33
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 4
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9aaacb7310c61e0800000000000000
+      internalID: -2203384778790884945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graph light_34
+      rect:
+        serializedVersion: 2
+        x: 32745
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123b3ab486dcab0e0800000000000000
+      internalID: -2253262815716199647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Graph light_0: 5733349059528325709
+      Graph light_1: 5456169098623633372
+      Graph light_10: -564195437365240642
+      Graph light_11: -393083973631593720
+      Graph light_12: -702585398045001538
+      Graph light_13: 3377401635482031055
+      Graph light_14: 8678503366516446500
+      Graph light_15: 6732709924068783962
+      Graph light_16: -4050140868573561071
+      Graph light_17: 4329628441226379066
+      Graph light_18: 1860525385536027437
+      Graph light_19: -375814234392925651
+      Graph light_2: 7666066107931244341
+      Graph light_20: 3464854092705032981
+      Graph light_21: -2175026573770499236
+      Graph light_22: -6873645949910499831
+      Graph light_23: -1842170808012013878
+      Graph light_24: 1721808932546708512
+      Graph light_25: -6233016853030929583
+      Graph light_26: 6223511866056699727
+      Graph light_27: -5170277215707712645
+      Graph light_28: -402115971030187284
+      Graph light_29: -9200150302611353093
+      Graph light_3: 8002104601471301286
+      Graph light_30: 2975441221300237690
+      Graph light_31: 6007276579497528137
+      Graph light_32: -3350878965734310796
+      Graph light_33: -2203384778790884945
+      Graph light_34: -2253262815716199647
+      Graph light_4: -7426705486525565150
+      Graph light_5: 7495842908629505108
+      Graph light_6: 2862808298353004362
+      Graph light_7: -7577549355333584536
+      Graph light_8: 5273774871370406911
+      Graph light_9: 1936180076062358686
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

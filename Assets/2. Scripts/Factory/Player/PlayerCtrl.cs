@@ -28,6 +28,7 @@ namespace Junyoung
 
         public float MoveSpeed { get; private set; }
         private Vector2 m_move_vec = Vector2.zero;
+        public bool IsMove { get; set;}
 
         public Vector2 MoveVector
         {
