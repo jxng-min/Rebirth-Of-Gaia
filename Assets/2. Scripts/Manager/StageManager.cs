@@ -180,7 +180,7 @@ namespace Junyoung
 
             
             m_total_enemy_num = stage_data.m_enemy_spawn_num;
-
+            m_killed_enemy_num = 0;
             GameEventBus.Publish(GameEventType.TALKING);
 
             GameEventBus.Publish(GameEventType.PLAYING);

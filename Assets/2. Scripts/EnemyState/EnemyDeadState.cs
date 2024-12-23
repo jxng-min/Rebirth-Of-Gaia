@@ -34,8 +34,8 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
         {
             //DropItem();
         }
-
-        Invoke("DestroyEnemy", 0.25f);
+        DestroyEnemy();
+        //Invoke("DestroyEnemy", 0.25f);
     }
 
 

@@ -39,7 +39,7 @@ namespace Jongmin
                 return;
             }
 
-            if(!m_player_ctrl.GetSeed)
+            if(m_player_ctrl.GetSeed)
             {
                 SoundManager.Instance.PlayEffect("seed_active", true);
                 m_attack_button.gameObject.SetActive(false);
