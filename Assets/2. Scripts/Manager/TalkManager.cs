@@ -165,6 +165,10 @@ namespace Taekyung
                     m_narration_panel.SetActive(false);
                     m_stage_manager.LoadStage(stage_id);
                 }
+                else if (SaveManager.Instance.Player.m_stage_state == 2)
+                {
+                    m_stage_manager.LoadMob(stage_id);
+                }
                 
                 // talk 상태가 아님을 알림
                 SaveManager.Instance.Player.m_talk_state = false;
@@ -181,8 +185,7 @@ namespace Taekyung
             m_talk_effect.SetText(split_data[0]);
             string portrait_index = split_data.Length > 2 ? split_data[1] : "0";
             
-            //m_name.text = split_data[split_data.Length - 1];   Ui적인 요소는 충돌날까봐 안건들임
-            //Debug.Log($"name = {m_name.text}");
+            m_name.text = split_data[split_data.Length - 1];
             
             // 플레이어의 대사 차례인지 확인
             bool is_player;

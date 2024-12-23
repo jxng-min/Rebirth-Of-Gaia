@@ -173,6 +173,12 @@ namespace Junyoung
             m_camera_move_ctrl.CameraLimitCenter = stage_data.m_camera_limit_center;
             m_camera_move_ctrl.CameraLimitSize = stage_data.m_camera_limit_size;
 
+            GameEventBus.Publish(GameEventType.TALKING);
+        }
+        public void LoadMob(int stage_index)
+        {
+            StageData stage_data = m_stages_data[stage_index];
+
             m_enemy_factory.m_enemy_spawn_pos[0] = stage_data.m_enemy_spawn_pos1;
             m_enemy_factory.m_enemy_spawn_pos[1] = stage_data.m_enemy_spawn_pos2;
             m_enemy_factory.m_enemy_spawn_pos[2] = stage_data.m_enemy_spawn_pos3;
@@ -181,7 +187,7 @@ namespace Junyoung
             
             m_total_enemy_num = stage_data.m_enemy_spawn_num;
             m_killed_enemy_num = 0;
-            GameEventBus.Publish(GameEventType.TALKING);
+            
 
             GameEventBus.Publish(GameEventType.PLAYING);
 
