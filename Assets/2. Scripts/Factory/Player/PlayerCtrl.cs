@@ -49,7 +49,7 @@ namespace Junyoung
         private float m_last_height;
 
         [Header("About Attack")]
-        public bool IsAttack { get; set;}
+        public bool IsAttack { get; set;} = false;
         public int AttackStack { get; set; }
         public float InputDelay { get; set; } = 0.3f;
         public float AttackTimer { get; set; } = 0f;
