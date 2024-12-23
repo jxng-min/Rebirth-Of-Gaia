@@ -1,7 +1,6 @@
 using Junyoung;
 using System.Collections;
 using System.IO;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,7 +39,7 @@ namespace Jongmin
                 return;
             }
 
-            if(m_player_ctrl.GetSeed)
+            if(!m_player_ctrl.GetSeed)
             {
                 SoundManager.Instance.PlayEffect("seed_active", true);
                 m_attack_button.gameObject.SetActive(false);
@@ -131,22 +130,26 @@ namespace Jongmin
                 m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
                 Debug.Log("PlayerCtrl을 찾는 데 성공했습니다.");
             }
-            Debug.Log($"중첩 되는 중 {m_player_ctrl.AttackStack}");
 
-            switch(GameManager.Instance.CharacterType)
+            if(!m_player_ctrl.IsAttack)
             {
-                case Character.SOCIA:
-                    (m_player_ctrl as SociaCtrl).PlayerAttack();
-                    break;
-                
-                case Character.GOV:
-                    (m_player_ctrl as GovCtrl).PlayerAttack();
-                    break;
+                Debug.Log($"중첩 되는 중 {m_player_ctrl.AttackStack}");
 
-                case Character.ENVA:
-                    (m_player_ctrl as EnvaCtrl).PlayerAttack();
-                    break;
-            }            
+                switch(GameManager.Instance.CharacterType)
+                {
+                    case Character.SOCIA:
+                        (m_player_ctrl as SociaCtrl).PlayerAttack();
+                        break;
+                    
+                    case Character.GOV:
+                        (m_player_ctrl as GovCtrl).PlayerAttack();
+                        break;
+
+                    case Character.ENVA:
+                        (m_player_ctrl as EnvaCtrl).PlayerAttack();
+                        break;
+                }
+            }
         }
 
         public void Skill1Click()
@@ -219,6 +222,46 @@ namespace Jongmin
         public void PlayButtonSound()
         {
             SoundManager.Instance.PlayEffect("ui_click_basic");
+        }
+
+        public void InGameSettingAbled()
+        {
+            if (m_player_ctrl == null)
+            {
+                Debug.Log("PlayerCtrl이 없으므로 태그로 찾아보고 있습니다.");
+                m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
+                Debug.Log("PlayerCtrl을 찾는 데 성공했습니다.");
+            }
+
+            m_player_ctrl.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            m_player_ctrl.GetComponent<Animator>().speed = 0f;
+
+            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
+            foreach(var enemy in m_enemies)
+            {
+                enemy.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+                enemy.GetComponent<Animator>().speed = 0f;
+                enemy.IsSetting = true;
+            }
+        }
+
+        public void InGameSettingDisabled()
+        {
+            if (m_player_ctrl == null)
+            {
+                Debug.Log("PlayerCtrl이 없으므로 태그로 찾아보고 있습니다.");
+                m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
+                Debug.Log("PlayerCtrl을 찾는 데 성공했습니다.");
+            }
+
+            m_player_ctrl.GetComponent<Animator>().speed = 1f;
+
+            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
+            foreach(var enemy in m_enemies)
+            {
+                enemy.GetComponent<Animator>().speed = 1f;
+                enemy.IsSetting = false;
+            }
         }
     }
 }

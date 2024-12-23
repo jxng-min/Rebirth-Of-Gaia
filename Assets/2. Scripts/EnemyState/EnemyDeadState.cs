@@ -20,7 +20,7 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
         }
 
         Debug.Log($"Enemy DeadState");
-
+        
         SaveManager.Instance.Player.m_player_status.m_current_exp += m_enemy_ctrl.EnemyStatus.EnemyEx;
         Debug.Log($"플레이어 경험치 {m_enemy_ctrl.EnemyStatus.EnemyEx}만큼 상승. 현재 경험치 : {SaveManager.Instance.Player.m_player_status.m_current_exp}");
 

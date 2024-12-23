@@ -64,6 +64,8 @@ public class SwipeUICtrl : MonoBehaviour
     private void OnEnable()
     {
         SetScrollBarValue(0);
+
+        StartCoroutine(AlphaChange(0, 0f));
     }
 
     private void Start()

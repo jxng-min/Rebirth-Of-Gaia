@@ -44,7 +44,7 @@ public class SoundSettingCtrl : MonoBehaviour
     {
         if(SoundManager.Instance != null)
         {
-            SoundManager.Instance.EffectVolume = value;
+            SoundManager.Instance.SetEffectVolume(value);
 
             if(SaveManager.Instance.Player == null)
             {

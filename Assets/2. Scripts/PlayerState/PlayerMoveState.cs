@@ -1,3 +1,4 @@
+using Jongmin;
 using UnityEngine;
 
 namespace Junyoung
@@ -12,7 +13,7 @@ namespace Junyoung
             {
                 m_player_ctrl = player_ctrl;
             }
-
+            
             GetComponent<Animator>().SetBool("IsMove", true);
         }
     }
