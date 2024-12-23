@@ -18598,7 +18598,6 @@ MonoBehaviour:
   m_talk_ui: {fileID: 836705936}
   m_npc_img: {fileID: 1101485743}
   m_player_img: {fileID: 1334635363}
-  m_text: {fileID: 38823084}
   m_end_cursor: {fileID: 408189874}
 --- !u!1 &1084883912
 GameObject:
@@ -19743,6 +19742,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 521983598}
+        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
+        m_MethodName: InGameSettingDisabled
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -31248,6 +31259,7 @@ MonoBehaviour:
   - {fileID: -1985338588, guid: 2fdeff98ee1318948a1f8b2bf21683e3, type: 3}
   - {fileID: 1452848858, guid: 00f45b6e3f7bbde4a8fd1a7b85900333, type: 3}
   m_narration_panel: {fileID: 599530210}
+  m_name: {fileID: 0}
   m_stage_manager: {fileID: 1410502930}
   m_main_panel: {fileID: 1568442277}
   m_talk_effect: {fileID: 38823087}
@@ -32896,6 +32908,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 521983598}
+        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
+        m_MethodName: InGameSettingDisabled
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -37789,6 +37813,18 @@ MonoBehaviour:
       - m_Target: {fileID: 521983598}
         m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
         m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 521983598}
+        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
+        m_MethodName: InGameSettingAbled
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

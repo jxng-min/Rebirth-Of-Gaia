@@ -46,6 +46,8 @@ namespace Junyoung
         public bool IsKnockBack { get; set; }
         public float KnockBackForce { get ; private set; } = 5f;
 
+        public bool IsSetting { get; set; }
+
         private void OnEnable()
         {
             if (!m_enemy_status)
@@ -99,38 +101,44 @@ namespace Junyoung
 
         private void Update()
         {
-            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
-            foreach (Collider2D in_collider in in_box_colliders)
+            if(!IsSetting)
             {
-                if (in_collider.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
+                Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
+                foreach (Collider2D in_collider in in_box_colliders)
                 {
-                    if(m_can_attack)
+                    if (in_collider.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
                     {
-                        m_can_attack = false;
-                        StartCoroutine(DelayAttack());
-                    }    
+                        if(m_can_attack)
+                        {
+                            m_can_attack = false;
+                            StartCoroutine(DelayAttack());
+                        }    
+                    }
                 }
             }
         }
 
         private void FixedUpdate()
         {
-            if(!IsKnockBack)
+            if(!IsSetting)
             {
-                if (m_state_time > m_moving_time)
+                if(!IsKnockBack)
                 {
-                    m_state_time -= Time.deltaTime;
-                    EnemyMove();
-                }
-                else if (m_state_time > 0)
-                {
-                    EnemyStop();
-                    m_state_time -= Time.deltaTime;
-                }
-                else
-                {
-                    ChangeDirection();
-                    m_state_time = m_loop_time;
+                    if (m_state_time > m_moving_time)
+                    {
+                        m_state_time -= Time.deltaTime;
+                        EnemyMove();
+                    }
+                    else if (m_state_time > 0)
+                    {
+                        EnemyStop();
+                        m_state_time -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        ChangeDirection();
+                        m_state_time = m_loop_time;
+                    }
                 }
             }
         }
