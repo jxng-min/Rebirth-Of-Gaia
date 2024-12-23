@@ -29,7 +29,11 @@ public class EnemyGetDamageState : MonoBehaviour, IEnemyState
         {
             m_enemy_ctrl.EnemyDead();
         }
+        else
+        {
+            StartCoroutine(m_enemy_ctrl.EnemyGetKnockBack(PlayerVector));
+        }
 
-        StartCoroutine(m_enemy_ctrl.EnemyGetKnockBack(PlayerVector));
+        
     }
 }

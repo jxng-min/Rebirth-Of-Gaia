@@ -77,7 +77,7 @@ namespace Junyoung
             Debug.Log($"중첩 되는 중 {AttackStack}");
             AttackStack++;
 
-            while(AttackTimer > 0f)
+            while(AttackTimer > 0f && !IsAttack)
             {
                 AttackTimer -= Time.deltaTime;
 

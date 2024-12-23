@@ -16,7 +16,14 @@ public class SeedShortcutCtrl : MonoBehaviour
 
     public void OnClick()
     {
-        CheckSeed();
+        if (!m_player_ctrl)
+        {
+            m_player_ctrl = FindAnyObjectByType<PlayerCtrl>();
+        }
+
+        SpawnSeed(m_player_ctrl.transform.position);
+        m_seed.layer = 14;
+        m_player_ctrl.GetSeed = false;
     }
 
     public void CheckSeed()
@@ -37,11 +44,12 @@ public class SeedShortcutCtrl : MonoBehaviour
 
     public void PutSeed()//버튼 클릭으로 씨앗 심기
     {
+        
         if(m_seed_data.ItemCount <= 0)
         {
             return;
         }
-
+        
         if(!m_player_ctrl)
         {
             m_player_ctrl = FindAnyObjectByType<PlayerCtrl>();
