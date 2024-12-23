@@ -52,6 +52,8 @@ namespace Jongmin
 
             SoundManager.Instance.PlayBGM("bgm_battle");
 
+            Recover();
+
             AbleUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
@@ -85,11 +87,7 @@ namespace Jongmin
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
             m_player_ctrl.GetSeed = false;
 
-            int now_lv = SaveManager.Instance.Player.m_player_status.m_current_level;
-            float default_stamina = SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].Stamina;
-            
-            SaveManager.Instance.Player.m_player_status.m_stamina = default_stamina + SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].GrowthStamina[now_lv - 1];
-            Debug.Log($"플레이어 체력 회복 : {SaveManager.Instance.Player.m_player_status.m_stamina}");
+            Recover();
             SoundManager.Instance.StopBGM();
             SoundManager.Instance.PlayEffect("stage_fail");
 
@@ -125,13 +123,16 @@ namespace Jongmin
                 m_save_manager.Player.m_max_clear_stage++;
             }
 
-            int now_lv = SaveManager.Instance.Player.m_player_status.m_current_level;
-            float default_stamina = SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].Stamina;
-            SaveManager.Instance.Player.m_player_status.m_stamina = default_stamina + SaveManager.Instance.CharacterStatuses[Convert.ToInt32(GameManager.Instance.CharacterType)].GrowthStamina[now_lv - 1];
-            Debug.Log($"플레이어 체력 회복 : {SaveManager.Instance.Player.m_player_status.m_stamina}");
+            Recover();
 
             m_save_manager.SaveData();
             
+        }
+
+        public void Recover()
+        {
+            SaveManager.Instance.Player.m_player_status.m_stamina = SaveManager.Instance.Player.m_player_status.m_max_stamina;
+            Debug.Log($"플레이어 체력 회복 : {SaveManager.Instance.Player.m_player_status.m_stamina}");
         }
 
         public void Finish()
