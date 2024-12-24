@@ -53,7 +53,7 @@ public class SeedCtrl : MonoBehaviour
 
         GetComponent<Animator>().SetBool("IsDropped", true);
 
-        float target_time = 3f;
+        float target_time = 10f;
         float elapsed_time = 0f;
 
         while(elapsed_time < target_time)

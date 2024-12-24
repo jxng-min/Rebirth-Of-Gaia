@@ -52,6 +52,8 @@ public class SwipeUICtrl : MonoBehaviour
         m_max_page = transform.childCount - 1;
 
         StartCoroutine(AlphaChange(m_current_page, 0f));
+
+        m_scroll_bar.value = 0.2425f;
     }
 
     private void Update()
