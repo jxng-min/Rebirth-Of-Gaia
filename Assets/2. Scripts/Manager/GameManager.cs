@@ -85,6 +85,9 @@ namespace Jongmin
                 enemy_factory.OnReturnEnemy(enemy);
             }
 
+            SeedCtrl seed = FindAnyObjectByType<SeedCtrl>();
+            Destroy(seed);
+
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
             m_player_ctrl.GetSeed = false;
