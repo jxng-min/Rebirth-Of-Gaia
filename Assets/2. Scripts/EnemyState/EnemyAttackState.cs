@@ -20,7 +20,7 @@ namespace Junyoung
             {
                 m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
             }
-
+            m_enemy_ctrl.GetComponent<Animator>().SetTrigger("Attack");
             m_player_ctrl.GetComponent<PlayerCtrl>().PlayerGetDamage(m_enemy_ctrl.EnemyStatus.EnemyDamage, m_enemy_ctrl.transform.position);
         }
     }

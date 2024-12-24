@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SociaSkill1 : MonoBehaviour,Skill
 {
-    public float m_skill_cool_time { get; set; } = 10f;
-    private float m_skill_duration = 5f;
+    public float m_skill_cool_time { get; set; } = 30f;
+    private float m_skill_duration = 10f;
     private float m_increase_value = 0.2f;
     public void Effect()
     {

@@ -63,6 +63,8 @@ namespace Junyoung
 
         public bool GetSeed { get; set; }
 
+        public float JoyStickValue { get; set; }
+
         private void OnEnable()
         {
             GameEventBus.Subscribe(GameEventType.PLAYING, GameManager.Instance.Playing);
@@ -137,22 +139,22 @@ namespace Junyoung
         {
             if(GameManager.Instance.GameStatus == "Playing" )
             {
-                float joystick_value = 0f;
+                JoyStickValue = 0f;
                 if(!IsAttack && !IsKnockBack)
                 {
                     if(m_value.m_joy_touch.x < 0f)
                     {
-                        joystick_value = -1f;
+                        JoyStickValue = -1f;
                         GetComponent<SpriteRenderer>().flipX = true;
                     }
                     else if(m_value.m_joy_touch.x > 0f)
                     {
-                        joystick_value = 1f;
+                        JoyStickValue = 1f;
                         GetComponent<SpriteRenderer>().flipX = false;
                     }
 
                     SetPlayerMoveState();
-                    m_rigidbody.linearVelocityX = joystick_value * MoveSpeed;
+                    m_rigidbody.linearVelocityX = JoyStickValue * MoveSpeed;
                 }                   
             }
         }

@@ -35,11 +35,12 @@ namespace Junyoung
         {
             SoundManager.Instance.PlayEffect("socia_skill_01");
             m_player_skills[0].Effect();
+
         }
 
         public override void PlayerUseSkill2()
         {
-            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + m_hit_box_center, m_hit_box_size, 0);
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2(m_hit_box_center.x * this.JoyStickValue, m_hit_box_center.y ), m_hit_box_size, 0);
             
             foreach (Collider2D in_collider in in_box_colliders)
             {
@@ -70,7 +71,7 @@ namespace Junyoung
 
         private IEnumerator DescendingAttackTimer()
         {
-            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + m_hit_box_center, m_hit_box_size, 0);           
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + m_hit_box_center * this.JoyStickValue , m_hit_box_size, 0);           
 
             AttackTimer = InputDelay;
 
