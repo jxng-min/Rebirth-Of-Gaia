@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.Networking;
 
 namespace Junyoung
 {
@@ -16,6 +17,7 @@ namespace Junyoung
         [Header("Stage UI")]
         [SerializeField]
         private RectTransform m_player_icon;
+        private Animator m_player_icon_animator;
 
         [SerializeField]
         private RectTransform[] m_icon_path;
@@ -58,6 +60,7 @@ namespace Junyoung
 
             m_player = GameObject.FindGameObjectWithTag("Player");
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
+            m_player_icon_animator = m_player_icon.GetComponent<Animator>();
 
             LoadStagesData("StageData.json");
         }
@@ -113,6 +116,10 @@ namespace Junyoung
                 while (Vector2.Distance(m_player_icon.anchoredPosition, target_pos) > 0.1f)
                 {
                     m_player_icon.anchoredPosition = Vector2.MoveTowards(m_player_icon.anchoredPosition, target_pos, m_icon_move_speed * Time.deltaTime);
+                    m_player_icon_animator.SetFloat("DirX", (target_pos - m_player_icon.anchoredPosition).normalized.x);
+                    m_player_icon_animator.SetFloat("DirY", (target_pos - m_player_icon.anchoredPosition).normalized.y);
+                    m_player_icon_animator.SetBool("IsMove", true);
+                    
                     yield return null; //다음 프레임까지 대기, 프레임 단위로 부드럽게 이동시키기 위해 사용
                 }
                 
@@ -123,6 +130,9 @@ namespace Junyoung
                 else
                 {
                     m_is_icon_moving = false;
+                    m_player_icon_animator.SetFloat("DirX", 0f);
+                    m_player_icon_animator.SetFloat("DirY", -1f);
+                    m_player_icon_animator.SetBool("IsMove", false);
                     m_stage_select_check_UI.SetActive(true);
 
                     Debug.Log($"아이콘이 버튼 {m_now_button_index}에 도달");
@@ -133,6 +143,7 @@ namespace Junyoung
 
         private void LoadStagesData(string file_name)
         {
+#if UNITY_EDITOR
             string file_path = Path.Combine(Application.streamingAssetsPath, file_name);
 
             if (!File.Exists(file_path))
@@ -150,6 +161,37 @@ namespace Junyoung
             }
 
             m_stages_data = new List<StageData>(wrapper.StageData);
+#endif
+
+#if UNITY_ANDROID
+            string json_path = $"jar:file://{Application.dataPath}!/assets/{file_name}";
+
+            UnityWebRequest request = UnityWebRequest.Get(json_path);
+            request.SendWebRequest();
+
+            while(!request.isDone) {}
+            if(request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"파일 다운로드 실패: {request.error}");
+                return;
+            }
+
+            var save_path = $"{Application.persistentDataPath}/TalkData.json";
+            File.WriteAllBytes(save_path, request.downloadHandler.data);
+
+            StreamReader reader = new StreamReader(save_path);
+            string json_content = reader.ReadToEnd();
+            reader.Close();
+
+            StageDataWrapper and_wrapper = JsonUtility.FromJson<StageDataWrapper>(json_content);
+
+            if (and_wrapper == null || and_wrapper.StageData == null)
+            {
+                return;
+            }
+
+            m_stages_data = new List<StageData>(and_wrapper.StageData);
+#endif
         }
         
         public void LoadStage(int stage_index)
