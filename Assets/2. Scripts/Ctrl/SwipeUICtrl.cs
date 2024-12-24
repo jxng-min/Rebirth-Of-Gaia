@@ -24,7 +24,7 @@ public class SwipeUICtrl : MonoBehaviour
 
     private float[] m_scroll_page_values;
     private float m_value_distance = 0f;
-    private int m_current_page = 0;
+    private int m_current_page;
     private int m_max_page = 0;
     private float m_start_touch_x;
     private float m_end_touch_x;
@@ -43,14 +43,13 @@ public class SwipeUICtrl : MonoBehaviour
             m_panel_images[i].GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.7f);
         }
 
-        m_value_distance = 1f / (m_scroll_page_values.Length - 1f);
+        m_value_distance = 0.2575f;
 
-        for(int i = 0; i < m_scroll_page_values.Length; i++)
-        {
-            m_scroll_page_values[i] = m_value_distance * i;
-        }
+        m_scroll_page_values[1] = 0.2425f;
+        m_scroll_page_values[2] = 0.5f;
+        m_scroll_page_values[3] = 0.7575f;
 
-        m_max_page = transform.childCount;
+        m_max_page = transform.childCount - 1;
 
         StartCoroutine(AlphaChange(m_current_page, 0f));
     }
@@ -63,14 +62,14 @@ public class SwipeUICtrl : MonoBehaviour
 
     private void OnEnable()
     {
-        SetScrollBarValue(0);
+        SetScrollBarValue(1);
 
-        StartCoroutine(AlphaChange(0, 0f));
+        StartCoroutine(AlphaChange(1, 0f));
     }
 
     private void Start()
     {
-        SetScrollBarValue(0);
+        SetScrollBarValue(1);        
     }
 
     public void SetScrollBarValue(int index)
@@ -134,14 +133,14 @@ public class SwipeUICtrl : MonoBehaviour
             return;
         }
 
-        SoundManager.Instance.PlayEffect("ui_map_drag");
-
         bool is_left = m_start_touch_x < m_end_touch_x ? true : false;
 
         if(is_left)
         {
-            if(m_current_page == 0)
+            if(m_current_page == 1)
             {
+                m_scroll_bar.value = 0.2425f;
+                Debug.Log("왼쪽으로 더 넘어갈 수 없습니다.");
                 return;
             }
 
@@ -152,12 +151,15 @@ public class SwipeUICtrl : MonoBehaviour
         {
             if(m_current_page == m_max_page - 1)
             {
+                m_scroll_bar.value = 0.7575f;
+                Debug.Log("오른쪽으로 더 넘어갈 수 없습니다.");
                 return;
             }
 
             StartCoroutine(AlphaChange(m_current_page, 0.7f));
             m_current_page++;
         }
+        SoundManager.Instance.PlayEffect("ui_map_drag");
 
         StartCoroutine(OnSwipeOneStep(m_current_page));
     }
@@ -187,7 +189,7 @@ public class SwipeUICtrl : MonoBehaviour
 
     private void UpdateCircleContent()
     {
-        for (int i = 0; i < m_scroll_page_values.Length; i++)
+        for (int i = 1; i < m_scroll_page_values.Length - 1; i++)
         {
             m_diamond_contents[i].localScale = Vector2.one;
             m_diamond_contents[i].GetComponent<Image>().color = new Color(0.6f, 0.6f, 0.6f, 1f);
