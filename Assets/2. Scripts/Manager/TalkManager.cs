@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.IO;
 using Jongmin;
 using Junyoung;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 namespace Taekyung
@@ -66,7 +68,9 @@ namespace Taekyung
         // JSON 파일에서 NPC 정보와 대사를 불러오는 메소드
         public void BringTalkLineDataFromJson()
         {
-            string json_path = m_save_path + "/TalkData.json";
+            string json_path;
+#if UNITY_EDITOR
+            json_path = m_save_path + "/TalkData.json";
 
             if (!System.IO.File.Exists(json_path))
             {
@@ -95,7 +99,51 @@ namespace Taekyung
 
                 m_talk_data[data.m_stage_data] = data.m_talk_data;
             }
+#endif
+
+#if UNITY_ANDROID
+            json_path = "jar:file://" + Application.dataPath + "!/assets/TalkData.json";
+
+            UnityWebRequest request = UnityWebRequest.Get(json_path);
+            request.SendWebRequest();
+
+            while(!request.isDone) {}
+            if(request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"파일 다운로드 실패: {request.error}");
+                return;
+            }
+
+            var file_path = $"{Application.persistentDataPath}/TalkData.json";
+            File.WriteAllBytes(file_path, request.downloadHandler.data);
+
+            StreamReader reader = new StreamReader(file_path);
+            string json_content = reader.ReadToEnd();
+            reader.Close();
+
+            TalkDataWrapper _and_talk_data_wrapper = JsonUtility.FromJson<TalkDataWrapper>(json_content);
+
+            if (_and_talk_data_wrapper == null || _and_talk_data_wrapper.m_talk_datas == null)
+            {
+                Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 실패하였습니다.");
+                return;
+            }
+            else
+            {
+                Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 성공하였습니다.");
+            }
+
+            m_talk_data = new Dictionary<string, string[]>();
+            foreach (var data in _and_talk_data_wrapper.m_talk_datas)
+            {
+                if (data.m_stage_data == null)
+                    continue;
+
+                m_talk_data[data.m_stage_data] = data.m_talk_data;
+            }
+#endif
         }
+        
         // scene_name과 일치하는 scene의 대사를 state에 맞게 리턴하는 메소드
         public string GetTalkData(string scene_name, int talk_idx)
         {

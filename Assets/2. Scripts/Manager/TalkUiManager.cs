@@ -36,7 +36,7 @@ public class TalkUIManager : MonoBehaviour
         }
         else
         {
-            m_player_img.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            m_player_img.color = new Color(1.0f, 1.0f, 1.0f, 0f);
         }
     }
 
@@ -47,7 +47,7 @@ public class TalkUIManager : MonoBehaviour
         {
             if (is_player)
             {
-                m_npc_img.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+                m_npc_img.color = new Color(1.0f, 1.0f, 1.0f, 0f);
             }
             else
             {

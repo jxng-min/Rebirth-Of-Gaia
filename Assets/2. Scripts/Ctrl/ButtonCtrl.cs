@@ -26,6 +26,8 @@ namespace Jongmin
         private Button m_attack_button;
         [SerializeField]
         private Button m_seed_button;
+        [SerializeField]
+        private Button m_jump_button;
 
         private void Update()
         {
@@ -100,13 +102,43 @@ namespace Jongmin
             {
                 if(m_player_ctrl.JoyValue.m_joy_touch.y < -0.3f)
                 {
+                    if(m_player_ctrl.IsDown)
+                    {
+                        return;
+                    }
+
                     m_player_ctrl.PlayerDown();
+                    StartCoroutine(JumpCoolTime(m_hide_images[3], 1f));
                 }
                 else
                 {
+                    if(m_player_ctrl.IsJump)
+                    {
+                        return;
+                    }
+
                     m_player_ctrl.PlayerJump();
+                    StartCoroutine(JumpCoolTime(m_hide_images[3], 1.25f));
                 }
             }            
+        }
+
+        private IEnumerator JumpCoolTime(Image image, float cool_time)
+        {
+            m_jump_button.interactable = false;
+            image.gameObject.SetActive(true);
+
+            float now_time = cool_time;
+            while (now_time > 0)
+            {
+                now_time -= Time.deltaTime;
+                image.fillAmount = now_time / cool_time;
+                yield return null;
+            }
+
+            image.fillAmount = 0f;
+            image.gameObject.SetActive(false);
+            m_jump_button.interactable = true;
         }
 
         public void ArrowUp()
@@ -206,6 +238,7 @@ namespace Jongmin
             float cool_time = m_player_ctrl.m_player_skills[skill_index].m_skill_cool_time;
             m_skill_button[skill_index].interactable = false;
             image.gameObject.SetActive(true);
+
             float now_time = cool_time;
             while (now_time > 0)
             {
@@ -213,10 +246,10 @@ namespace Jongmin
                 image.fillAmount = now_time / cool_time;
                 yield return null;
             }
+
             image.fillAmount = 0f;
             image.gameObject.SetActive(false);
             m_skill_button[skill_index].interactable = true;
-
         }
 
         public void PlayButtonSound()

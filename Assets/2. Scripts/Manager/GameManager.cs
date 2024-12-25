@@ -47,6 +47,8 @@ namespace Jongmin
 
             m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
 
+            m_player_ctrl.JoyValue.m_joy_touch = Vector2.zero;
+            m_player_ctrl.GetComponent<SpriteRenderer>().flipX = false;
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 1f;
 
@@ -82,6 +84,9 @@ namespace Jongmin
             {
                 enemy_factory.OnReturnEnemy(enemy);
             }
+
+            SeedCtrl seed = FindAnyObjectByType<SeedCtrl>();
+            Destroy(seed);
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
