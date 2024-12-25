@@ -182,8 +182,8 @@ MonoBehaviour:
     m_Bits: 0
   m_item: {fileID: 11400000, guid: c6ce65268b6730a489a7a7c6987fc38c, type: 2}
   m_inventory_manager: {fileID: 0}
-  m_hit_box_size: {x: 2.5, y: 2.3}
-  m_hit_box_center: {x: 1.5, y: 1}
+  m_hit_box_size: {x: 3.9, y: 2.3}
+  m_hit_box_center: {x: 1.56, y: 1.17}
 --- !u!95 &636156033008634757
 Animator:
   serializedVersion: 7

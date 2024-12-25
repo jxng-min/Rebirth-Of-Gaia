@@ -32,8 +32,11 @@ namespace Junyoung
 
         private int m_dir = -1;
 
+        [Header("Attack")]
         [SerializeField]
         private Vector2 m_hit_box_size;
+        [SerializeField]
+        private Vector2 m_hit_box_center;
 
         private float m_state_time;
         private float m_loop_time;
@@ -43,6 +46,7 @@ namespace Junyoung
 
         private bool m_can_attack = true;
 
+        
         public bool IsKnockBack { get; set; }
         public float KnockBackForce { get ; private set; } = 5f;
 
@@ -103,7 +107,7 @@ namespace Junyoung
         {
             if(!IsSetting)
             {
-                Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll(this.transform.position, m_hit_box_size, 0);
+                Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)transform.position+ new Vector2(m_hit_box_center.x * m_dir * -1, m_hit_box_center.y), m_hit_box_size, 0);
                 foreach (Collider2D in_collider in in_box_colliders)
                 {
                     if (in_collider.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
@@ -122,7 +126,7 @@ namespace Junyoung
         {
             if(!IsSetting)
             {
-                if(!IsKnockBack)
+                if(!IsKnockBack && m_can_attack)
                 {
                     if (m_state_time > m_moving_time)
                     {
@@ -183,7 +187,7 @@ namespace Junyoung
         private void ChangeDirection()
         {
             m_dir *= -1;
-            m_sprite_renderer.flipX = !(m_sprite_renderer.flipX);
+            m_sprite_renderer.flipX = !(m_sprite_renderer.flipX);           
         }
 
         // 낭떠러지 유무를 확인하는 메소드
@@ -218,7 +222,7 @@ namespace Junyoung
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireCube(this.transform.position, m_hit_box_size);
+            Gizmos.DrawWireCube((Vector2)transform.position+ new Vector2(m_hit_box_center.x*m_dir * -1 ,m_hit_box_center.y), m_hit_box_size);
         }
 
         public IEnumerator EnemyGetKnockBack(Vector2 player_vector)

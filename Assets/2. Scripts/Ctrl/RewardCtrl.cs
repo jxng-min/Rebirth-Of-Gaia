@@ -7,7 +7,7 @@ using Jongmin;
 namespace Taekyung
 {
 public class RewardCtrl : MonoBehaviour
-{
+    {/*
     [SerializeField]
     private Button m_reward_button;
 
@@ -76,6 +76,6 @@ public class RewardCtrl : MonoBehaviour
         Debug.Log($"클리어 전 레벨 = {SaveManager.Instance.Player.m_player_status.m_current_level}, 클리어 전 경험치 = {SaveManager.Instance.Player.m_player_status.m_current_exp}");
         SaveManager.Instance.Player.m_player_status.m_current_exp += m_reward_data[SaveManager.Instance.Player.m_stage_id].m_exp;
         Debug.Log($"클리어 후 레벨 = {SaveManager.Instance.Player.m_player_status.m_current_level}, 클리어 후 경험치 = {SaveManager.Instance.Player.m_player_status.m_current_exp}");
+    }*/
     }
-}
 }
