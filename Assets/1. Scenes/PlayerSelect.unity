@@ -2398,7 +2398,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SOCIA STORY
+  m_text: "\uC18C\uC154\uB294 \uD669\uD3D0\uD654\uB41C \uC138\uC0C1 \uC18D\uC5D0\uC11C\uB3C4
+    \uD76C\uB9DD\uC744 \uC783\uC9C0 \uC54A\uB294 \uC18C\uB144\uC774\uB2E4. \uC9C0\uC5ED\uC758
+    \uC8FC\uBBFC\uB4E4\uACFC \uCE5C\uAD6C\uB4E4\uC774 \uC0DD\uC874\uC744 \uC704\uD574
+    \uAC1C\uC778\uC8FC\uC758\uC801 \uC0AC\uACE0\uBC29\uC2DD\uACFC \uD3ED\uB825\uC801
+    \uBAA8\uC2B5\uC744 \uBCF4\uC77C \uB54C \uC18C\uC154\uB294 \uC791\uC740 \uACF5\uB3D9\uCCB4\uB97C
+    \uB9CC\uB4E4\uC5B4 \uC774 \uC0C1\uD669\uC744 \uC774\uACA8 \uB098\uAC08 \uC218
+    \uC788\uB2E4\uACE0 \uBBFF\uACE0 \uC788\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff60f4b3bd210694baf46e1007420295, type: 2}
   m_sharedMaterial: {fileID: -907819451598374203, guid: ff60f4b3bd210694baf46e1007420295, type: 2}
@@ -4950,6 +4956,7 @@ MonoBehaviour:
   m_inventory_manager: {fileID: 0}
   m_attack_button: {fileID: 0}
   m_seed_button: {fileID: 0}
+  m_jump_button: {fileID: 0}
 --- !u!1 &813720106
 GameObject:
   m_ObjectHideFlags: 0
