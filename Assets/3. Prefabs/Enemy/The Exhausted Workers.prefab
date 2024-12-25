@@ -130,8 +130,8 @@ MonoBehaviour:
   m_original_enemy_status: {fileID: 0}
   m_enemy_status: {fileID: 0}
   m_speed: 0
-  m_hit_box_size: {x: 2.16, y: 2}
-  m_hit_box_center: {x: -1.29, y: 0}
+  m_hit_box_size: {x: 1.46, y: 2}
+  m_hit_box_center: {x: -1.47, y: 0}
 --- !u!212 &-8472236211834233797
 SpriteRenderer:
   m_ObjectHideFlags: 0
