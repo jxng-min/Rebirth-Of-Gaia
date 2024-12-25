@@ -13,6 +13,8 @@ namespace Junyoung
 
         public JoyStickValue JoyValue { get { return m_value; } }
 
+        public float JoyStickDir { get; set; } = 1f;
+
         [Header("Physics")]
         private Rigidbody2D m_rigidbody;
 
@@ -63,7 +65,7 @@ namespace Junyoung
 
         public bool GetSeed { get; set; }
 
-        public float JoyStickValue { get; set; }
+       
 
         private void OnEnable()
         {
@@ -139,22 +141,23 @@ namespace Junyoung
         {
             if(GameManager.Instance.GameStatus == "Playing" )
             {
-                JoyStickValue = 0f;
                 if(!IsAttack && !IsKnockBack)
                 {
                     if(m_value.m_joy_touch.x < 0f)
                     {
-                        JoyStickValue = -1f;
+                        JoyStickDir = -1f;
                         GetComponent<SpriteRenderer>().flipX = true;
+                        m_rigidbody.linearVelocityX = JoyStickDir * MoveSpeed;
                     }
                     else if(m_value.m_joy_touch.x > 0f)
                     {
-                        JoyStickValue = 1f;
+                        JoyStickDir = 1f;
                         GetComponent<SpriteRenderer>().flipX = false;
+                        m_rigidbody.linearVelocityX = JoyStickDir * MoveSpeed;
                     }
 
                     SetPlayerMoveState();
-                    m_rigidbody.linearVelocityX = JoyStickValue * MoveSpeed;
+                    
                 }                   
             }
         }

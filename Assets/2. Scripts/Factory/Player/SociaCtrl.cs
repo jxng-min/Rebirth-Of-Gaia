@@ -13,16 +13,7 @@ namespace Junyoung
         [SerializeField]
         Vector2 m_hit_box_center;
 
-        private bool m_was_flipX = false;
-
-        public void Update()
-        {
-            if (GetComponent<SpriteRenderer>().flipX != m_was_flipX)
-            {
-                m_hit_box_center.x *= -1;
-                m_was_flipX = GetComponent<SpriteRenderer>().flipX;
-            }
-        }
+        //private bool m_was_flipX = false;
 
         public override void SetPlayerSkill()
         {
@@ -40,7 +31,7 @@ namespace Junyoung
 
         public override void PlayerUseSkill2()
         {
-            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2(m_hit_box_center.x * this.JoyStickValue, m_hit_box_center.y ), m_hit_box_size, 0);
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2(m_hit_box_center.x * this.JoyStickDir, m_hit_box_center.y ), m_hit_box_size, 0);
             
             foreach (Collider2D in_collider in in_box_colliders)
             {
@@ -71,14 +62,14 @@ namespace Junyoung
 
         private IEnumerator DescendingAttackTimer()
         {
-            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + m_hit_box_center * this.JoyStickValue , m_hit_box_size, 0);           
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2( m_hit_box_center.x * this.JoyStickDir,m_hit_box_center.y ), m_hit_box_size, 0);           
 
             AttackTimer = InputDelay;
 
             Debug.Log($"중첩 되는 중 {AttackStack}");
             AttackStack++;
 
-            while(AttackTimer > 0f && !IsAttack)
+            while(AttackTimer > 0f)
             {
                 AttackTimer -= Time.deltaTime;
 
@@ -109,7 +100,7 @@ namespace Junyoung
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireCube((Vector2)this.transform.position +m_hit_box_center , m_hit_box_size);
+            Gizmos.DrawWireCube((Vector2)this.transform.position + new Vector2(m_hit_box_center.x * this.JoyStickDir, m_hit_box_center.y), m_hit_box_size);
         }
 
     }

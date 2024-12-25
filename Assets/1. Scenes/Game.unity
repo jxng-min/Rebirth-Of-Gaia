@@ -558,6 +558,14 @@ PrefabInstance:
       value: Stage Button 6
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -566,8 +574,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -575,7 +587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 10
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2851,6 +2867,14 @@ PrefabInstance:
       value: Stage Button 4
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -2859,8 +2883,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -2868,7 +2896,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7206,6 +7238,14 @@ PrefabInstance:
       value: Stage Button 9
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -7214,8 +7254,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -7223,7 +7267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 16
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12500,6 +12548,14 @@ PrefabInstance:
       value: Stage Button 7
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -12508,8 +12564,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -12517,7 +12577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 12
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15143,7 +15207,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1775489004}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.21489622
+  m_Size: 0.2148962
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19107,6 +19171,14 @@ PrefabInstance:
       value: Stage Button 3
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -19115,8 +19187,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -19124,7 +19200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22123,6 +22203,14 @@ PrefabInstance:
       value: Stage Button 5
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -22131,8 +22219,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -22140,7 +22232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 8
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22427,6 +22523,14 @@ PrefabInstance:
       value: Stage Button 10
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -22435,8 +22539,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -22444,7 +22552,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 17
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22915,7 +23027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4809e92ab90b4c941a1c611dd92529f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_reward_button: {fileID: 1105583180}
 --- !u!1 &1226655213
 GameObject:
   m_ObjectHideFlags: 0
@@ -37781,6 +37892,14 @@ PrefabInstance:
       value: Stage Button 2
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -37789,8 +37908,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -37798,7 +37921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38444,6 +38571,14 @@ PrefabInstance:
       value: Stage Button 8
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -38452,8 +38587,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -38461,7 +38600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 14
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40851,6 +40994,14 @@ PrefabInstance:
       value: Stage Button 1
       objectReference: {fileID: 0}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1410502930}
@@ -40859,8 +41010,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1410502930}
     - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ClickedButtonPath
+      value: StageSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219727279053723840, guid: 86165cadeef034440b8a2ca4a181ce2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -41,6 +41,7 @@ namespace Junyoung
         private int m_current_path_index = 0;
         private bool m_is_icon_moving = false;
         private float m_icon_move_speed = 250f;
+        private bool m_can_select = true;
         
         [Header("Managers")]
         [SerializeField]
@@ -90,6 +91,8 @@ namespace Junyoung
         private IEnumerator MoveIconCorutine()
         {
             SoundManager.Instance.PlayEffect("ui_map_walk");
+            
+
             while (m_is_icon_moving && m_path_list.Count > 0)
             {
                 if (m_current_path_index < 0 || m_current_path_index >= m_path_list.Count)
@@ -111,6 +114,8 @@ namespace Junyoung
 
                 Vector2 target_pos = m_icon_path[target_index].GetComponent<RectTransform>().anchoredPosition;
 
+                
+
                 //아이콘이 클릭한 버튼 위치로 이동 
                 // 부동 소수점 오류 때문에 ==로 단순 비교는 오류가 발생 할 수 있음
                 while (Vector2.Distance(m_player_icon.anchoredPosition, target_pos) > 0.1f)
@@ -119,7 +124,7 @@ namespace Junyoung
                     m_player_icon_animator.SetFloat("DirX", (target_pos - m_player_icon.anchoredPosition).normalized.x);
                     m_player_icon_animator.SetFloat("DirY", (target_pos - m_player_icon.anchoredPosition).normalized.y);
                     m_player_icon_animator.SetBool("IsMove", true);
-                    
+                    m_can_select = false;
                     yield return null; //다음 프레임까지 대기, 프레임 단위로 부드럽게 이동시키기 위해 사용
                 }
                 
@@ -134,6 +139,7 @@ namespace Junyoung
                     m_player_icon_animator.SetFloat("DirY", -1f);
                     m_player_icon_animator.SetBool("IsMove", false);
                     m_stage_select_check_UI.SetActive(true);
+                    m_can_select = true;
 
                     Debug.Log($"아이콘이 버튼 {m_now_button_index}에 도달");
                     SoundManager.Instance.StopEffect();
@@ -244,10 +250,25 @@ namespace Junyoung
             }
         }
 
-        private void StageSelect(int stage_index)
-        {           
-            m_current_index = stage_index;            
-            m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"STAGE {m_current_index + 1}";
+        public void StageSelect(int stage_index)
+        {
+            if (!m_is_icon_moving)
+            {
+                m_current_index = stage_index;
+                m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"STAGE {m_current_index + 1}";
+                if(stage_index == 9)
+                {
+                    ClickedButtonPath(stage_index * 2 - 1);
+                }
+                else
+                {
+                    ClickedButtonPath(stage_index * 2);
+                }
+            }               
+            else
+            {
+                Debug.Log($"아이콘이 이미 이동중 ");
+            }
         }
 
         public void StageSelectYes()
@@ -296,7 +317,7 @@ namespace Junyoung
         public void ClickedButtonPath(int button_index) //클릭된 버튼의 index값을 불러와서 지금 위치와 가려는 위치를 비교하여 정방향/역방향 경로를 리스트에 추가
         {
             SoundManager.Instance.PlayEffect("ui_map_click");
-
+                                
             Debug.Log($"ClickedButtonPosiotion 호출됨: button_index={button_index}, m_now_button_index={m_now_button_index}");
             if (button_index < 0 || button_index >= m_icon_path.Length)
             {
@@ -334,6 +355,7 @@ namespace Junyoung
             Debug.Log($"경로 생성 완료: {string.Join(", ", m_path_list)}");
 
             StartCoroutine(MoveIconCorutine());
+            
         }
     }
 }

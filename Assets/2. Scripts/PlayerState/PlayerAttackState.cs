@@ -17,41 +17,59 @@ public class PlayerAttackState : MonoBehaviour, IPlayerState
         }      
 
         if(!m_player_ctrl.IsAttack)
-        {
-            
+        {           
             if(EnemyCollider)
-            {
                 EnemyCollider.GetComponent<EnemyCtrl>().EnemyGetDamage();
-                switch(m_player_ctrl.AttackStack)
-                {
+            switch(m_player_ctrl.AttackStack)
+            {
                 case 1:
-                    SoundManager.Instance.PlayEffect("socia_attack_01");
+                    if(EnemyCollider)
+                    {
+                        SoundManager.Instance.PlayEffect("socia_attack_01");
+                    }
+                    else
+                    {
+                        SoundManager.Instance.PlayEffect("socia_attack_whoosh");
+                        Debug.Log($"빚맟췄을때 소리");
+                    }
                     Debug.Log("1번 중첩 공격");
                     m_player_animator.SetTrigger("Attack1");
                     break;
 
                 case 2:
-                    SoundManager.Instance.PlayEffect("socia_attack_02");
+                    if (EnemyCollider)
+                    {
+                        SoundManager.Instance.PlayEffect("socia_attack_02");
+                    }
+                    else
+                    {
+                        SoundManager.Instance.PlayEffect("socia_attack_whoosh");
+                        Debug.Log($"빚맟췄을때 소리");
+                    }
                     Debug.Log("2번 중첩 공격");
                     //m_player_animator.SetTrigger("Attack2");
                     break;
 
                 case 3:
-                    SoundManager.Instance.PlayEffect("socia_attack_03");
+                    if (EnemyCollider)
+                    {
+                        SoundManager.Instance.PlayEffect("socia_attack_03");
+                    }
+                    else
+                    {
+                        SoundManager.Instance.PlayEffect("socia_attack_whoosh");
+                        Debug.Log($"빚맟췄을때 소리");
+                    }
                     Debug.Log("3번 중첩 공격");
                     //m_player_animator.SetTrigger("Attack3");
                     break;
-                }
-            }
-            else
-            {
-                SoundManager.Instance.PlayEffect("socia_attack_whoosh");
-                Debug.Log($"빚맟췄을때 소리");
             }
             m_player_ctrl.IsAttack = true;
             Invoke("ResetAttackFlag", 1f);
         }
+            
     }
+    
 
     private void ResetAttackFlag()
     {
