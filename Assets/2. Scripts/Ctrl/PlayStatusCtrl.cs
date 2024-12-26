@@ -42,7 +42,7 @@ public class PlayStatusCtrl : MonoBehaviour
 
     void Update()
     {
-        m_stamina_slider.value = SaveManager.Instance.Player.m_player_status.m_stamina;
+        m_stamina_slider.value = (float)SaveManager.Instance.Player.m_player_status.m_stamina / SaveManager.Instance.Player.m_player_status.m_max_stamina;
         m_player_stamina_text.text = $"{SaveManager.Instance.Player.m_player_status.m_stamina} / {SaveManager.Instance.Player.m_player_status.m_max_stamina}";
 
         m_exp_slider.value = (float)SaveManager.Instance.Player.m_player_status.m_current_exp / ExpData.m_exps[SaveManager.Instance.Player.m_player_status.m_current_level - 1];
