@@ -11,6 +11,8 @@ public class SoundSettingCtrl : MonoBehaviour
     [SerializeField]
     private Slider m_effect_slider;
 
+    private bool m_bgm_slider_interactable;
+    private bool m_effect_slider_interactable;
     private void Start()
     {
         m_bgm_slider.value = SoundManager.Instance.BgmVolume;
@@ -18,8 +20,39 @@ public class SoundSettingCtrl : MonoBehaviour
 
         m_bgm_slider.onValueChanged.AddListener(OnBgmVolumeChanged);
         m_effect_slider.onValueChanged.AddListener(OnEffectVolumeChanged);
+
+        m_bgm_slider_interactable = m_bgm_slider.interactable;
+        m_effect_slider_interactable = m_effect_slider.interactable;
     }
 
+    private void Update()
+    {
+        if(m_bgm_slider.interactable != m_bgm_slider_interactable)
+        {
+            m_bgm_slider_interactable = m_bgm_slider.interactable;
+
+            if(m_bgm_slider_interactable)
+            {
+                SoundManager.Instance.BgmVolume = m_bgm_slider.value;
+            }
+            else
+            {
+                SoundManager.Instance.BgmVolume = 0f;
+            }
+        }
+        if(m_effect_slider.interactable != m_effect_slider_interactable)
+        {
+            m_effect_slider_interactable = m_effect_slider.interactable;
+            if(m_effect_slider_interactable)
+            {
+                SoundManager.Instance.SetEffectVolume(m_effect_slider.value);
+            }
+            else
+            {
+                SoundManager.Instance.SetEffectVolume(0f);
+            }
+        }
+    }
     private void OnBgmVolumeChanged(float value)
     {
         if(SoundManager.Instance != null)
