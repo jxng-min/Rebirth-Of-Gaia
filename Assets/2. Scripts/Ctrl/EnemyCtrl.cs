@@ -38,19 +38,24 @@ namespace Junyoung
         [SerializeField]
         private Vector2 m_hit_box_center;
 
+        [SerializeField]
         private float m_state_time;
+        [SerializeField]
         private float m_loop_time;
+        [SerializeField]
         private float m_moving_time;
  
         private SpriteRenderer m_sprite_renderer;
 
+        [SerializeField]
         private bool m_can_attack = true;
 
-        
+        [SerializeField]
         public bool IsKnockBack { get; set; }
         public float KnockBackForce { get ; private set; } = 5f;
 
-        public bool IsSetting { get; set; }
+
+        [SerializeField] public bool IsSetting { get ; set; }
 
         private void OnEnable()
         {
@@ -75,6 +80,7 @@ namespace Junyoung
             m_enemy_status.EnemyEx = m_original_enemy_status.EnemyEx;
             m_stamina_background.SetActive( false );
             m_stamina_bar.fillAmount = EnemyStatus.EnemyHP / OriginalStatus.EnemyHP;
+            m_can_attack = true;
         }
 
 
