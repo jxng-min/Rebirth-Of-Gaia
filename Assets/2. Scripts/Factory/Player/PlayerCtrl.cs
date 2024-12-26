@@ -119,7 +119,7 @@ namespace Junyoung
         {
             if(GameManager.Instance.GameStatus == "Playing")
             {
-                if((!IsDown && !IsJump))
+                if((!IsDown && !IsJump && !IsKnockBack))
                 {
                     float current_height = m_rigidbody.linearVelocity.y;
                     if(!IsFall)

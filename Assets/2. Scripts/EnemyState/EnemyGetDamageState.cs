@@ -25,6 +25,8 @@ public class EnemyGetDamageState : MonoBehaviour, IEnemyState
         m_enemy_ctrl.StaminaBackground.SetActive(true);
         m_enemy_ctrl.StaminaBar.fillAmount = m_enemy_ctrl.EnemyStatus.EnemyHP / m_enemy_ctrl.OriginalStatus.EnemyHP;
 
+        m_enemy_ctrl.GetComponent<Animator>().SetTrigger("GetDamage");
+
         if (m_enemy_ctrl.EnemyStatus.EnemyHP <= 0f)
         {
             m_enemy_ctrl.EnemyDead();
