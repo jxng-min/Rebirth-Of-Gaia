@@ -8,9 +8,9 @@ namespace Junyoung
     public class EnemyCtrl : MonoBehaviour
     {
         [SerializeField]
-        public GameObject StaminaBackground;
+        public GameObject m_stamina_background;
         [SerializeField]
-        public Image StaminaBar;
+        public Image m_stamina_bar;
 
         [SerializeField]
         private EnemyStatus m_original_enemy_status;
@@ -66,12 +66,15 @@ namespace Junyoung
 
         public void InitStatus()
         {
+            Debug.Log($"{this.name} 스테이터스 초기화");
             m_enemy_status.EnemyType = m_original_enemy_status.EnemyType;
             m_enemy_status.EnemyHP = m_original_enemy_status.EnemyHP;
             m_enemy_status.EnemyDamage = m_original_enemy_status.EnemyDamage;
             m_enemy_status.EnemyAttackDelay = m_original_enemy_status.EnemyAttackDelay;
             m_enemy_status.EnemyMoveSpeed = m_original_enemy_status.EnemyMoveSpeed;
             m_enemy_status.EnemyEx = m_original_enemy_status.EnemyEx;
+            m_stamina_background.SetActive( false );
+            m_stamina_bar.fillAmount = EnemyStatus.EnemyHP / OriginalStatus.EnemyHP;
         }
 
 

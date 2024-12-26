@@ -22,8 +22,8 @@ public class EnemyGetDamageState : MonoBehaviour, IEnemyState
         m_enemy_ctrl.EnemyStatus.EnemyHP -= SaveManager.Instance.Player.m_player_status.m_strength;
         Debug.Log($"{m_enemy_object.name}가 {SaveManager.Instance.Player.m_player_status.m_strength}데미지를 받음. 현재 체력 : {m_enemy_ctrl.EnemyStatus.EnemyHP}");
 
-        m_enemy_ctrl.StaminaBackground.SetActive(true);
-        m_enemy_ctrl.StaminaBar.fillAmount = m_enemy_ctrl.EnemyStatus.EnemyHP / m_enemy_ctrl.OriginalStatus.EnemyHP;
+        m_enemy_ctrl.m_stamina_background.SetActive(true);
+        m_enemy_ctrl.m_stamina_bar.fillAmount = m_enemy_ctrl.EnemyStatus.EnemyHP / m_enemy_ctrl.OriginalStatus.EnemyHP;
 
         m_enemy_ctrl.GetComponent<Animator>().SetTrigger("GetDamage");
 

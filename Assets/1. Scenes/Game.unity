@@ -39223,7 +39223,7 @@ MonoBehaviour:
   m_portrait_arr:
   - {fileID: -3259015902642866930, guid: 951a1f3a5d7e4654b912ea8d52973e0b, type: 3}
   - {fileID: 678313107415481112, guid: 951a1f3a5d7e4654b912ea8d52973e0b, type: 3}
-  - {fileID: 1144340558657471802, guid: 1c9bf3df772fa534a93fa7e6a3a212e6, type: 3}
+  - {fileID: -5597864034637504615, guid: 3cc2dce942a54d84482a018a6a42b0e3, type: 3}
   m_narration_panel: {fileID: 599530210}
   m_name: {fileID: 404314689}
   m_stage_manager: {fileID: 1410502930}
