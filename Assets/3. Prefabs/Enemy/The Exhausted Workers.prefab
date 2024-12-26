@@ -125,13 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abfcb5596e05b5c4f93010e4c2da4d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StaminaBackground: {fileID: 4290412154367466550}
-  StaminaBar: {fileID: 728687712023432550}
+  m_stamina_background: {fileID: 4290412154367466550}
+  m_stamina_bar: {fileID: 728687712023432550}
   m_original_enemy_status: {fileID: 0}
   m_enemy_status: {fileID: 0}
   m_speed: 0
   m_hit_box_size: {x: 1.46, y: 2}
-  m_hit_box_center: {x: -0.61, y: 1.18}
+  m_hit_box_center: {x: -0.6, y: 1.18}
 --- !u!212 &-8472236211834233797
 SpriteRenderer:
   m_ObjectHideFlags: 0
