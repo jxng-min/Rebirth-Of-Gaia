@@ -36,5 +36,5 @@ MonoBehaviour:
   m_strength: 10
   m_intellect: 8
   m_sociality: 12
-  m_stamina: 300
+  m_stamina: 100
   m_defense: 10
