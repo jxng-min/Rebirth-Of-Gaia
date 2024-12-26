@@ -62,10 +62,25 @@ namespace Junyoung
 
         private IEnumerator DescendingAttackTimer()
         {
-            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2( m_hit_box_center.x * this.JoyStickDir,m_hit_box_center.y ), m_hit_box_size, 0);           
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2( m_hit_box_center.x * this.JoyStickDir,m_hit_box_center.y ), m_hit_box_size, 0);
 
+            foreach (Collider2D in_collider in in_box_colliders)
+            {
+                if (in_collider.tag == "Enemy")
+                {
+                    (m_attack_state as PlayerAttackState).EnemyCollider = in_collider;
+                    m_player_state_context.Transition(m_attack_state);
+                }
+                else
+                {
+                    (m_attack_state as PlayerAttackState).EnemyCollider = null;
+                    m_player_state_context.Transition(m_attack_state);
+                }
+            }
+            yield return null;
+            /*
             AttackTimer = InputDelay;
-
+            
             Debug.Log($"중첩 되는 중 {AttackStack}");
             AttackStack++;
 
@@ -94,7 +109,7 @@ namespace Junyoung
                     }
                 }
                 AttackStack = 0;
-            }
+            }*/
         }
 
         private void OnDrawGizmos()

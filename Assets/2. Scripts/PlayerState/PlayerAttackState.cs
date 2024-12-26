@@ -18,9 +18,21 @@ public class PlayerAttackState : MonoBehaviour, IPlayerState
 
         if(!m_player_ctrl.IsAttack)
         {           
-            if(EnemyCollider)
+            if (EnemyCollider)
+            {
                 EnemyCollider.GetComponent<EnemyCtrl>().EnemyGetDamage();
-            switch(m_player_ctrl.AttackStack)
+                SoundManager.Instance.PlayEffect("socia_attack_01");
+            }
+            else
+            {
+                SoundManager.Instance.PlayEffect("socia_attack_whoosh");
+                Debug.Log($"빚맟췄을때 소리");
+            }
+            m_player_animator.SetTrigger("Attack1");
+            m_player_ctrl.IsAttack = true;
+            Invoke("ResetAttackFlag", 0.7f);
+            /*
+            switch (m_player_ctrl.AttackStack)
             {
                 case 1:
                     if(EnemyCollider)
@@ -63,11 +75,8 @@ public class PlayerAttackState : MonoBehaviour, IPlayerState
                     Debug.Log("3번 중첩 공격");
                     //m_player_animator.SetTrigger("Attack3");
                     break;
-            }
-            m_player_ctrl.IsAttack = true;
-            Invoke("ResetAttackFlag", 1f);
-        }
-            
+            }*/
+        }          
     }
     
 

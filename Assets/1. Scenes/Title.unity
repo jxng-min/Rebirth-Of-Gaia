@@ -724,6 +724,7 @@ MonoBehaviour:
   m_inventory_manager: {fileID: 0}
   m_attack_button: {fileID: 0}
   m_seed_button: {fileID: 0}
+  m_jump_button: {fileID: 0}
 --- !u!95 &1059172616
 Animator:
   serializedVersion: 7
