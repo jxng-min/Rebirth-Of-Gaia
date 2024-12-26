@@ -12,6 +12,10 @@ namespace Junyoung
         Vector2 m_hit_box_size;
         [SerializeField]
         Vector2 m_hit_box_center;
+        [SerializeField]
+        private GameObject m_skill_effect;
+        [SerializeField]
+        private Vector2 m_skill_effect_center;
 
         //private bool m_was_flipX = false;
 
@@ -25,12 +29,14 @@ namespace Junyoung
         public override void PlayerUseSkill1()
         {
             SoundManager.Instance.PlayEffect("socia_skill_01");
+            StartCoroutine(PlayEffect(3));
             m_player_skills[0].Effect();
 
         }
 
         public override void PlayerUseSkill2()
         {
+            
             Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2(m_hit_box_center.x * this.JoyStickDir, m_hit_box_center.y ), m_hit_box_size, 0);
             
             foreach (Collider2D in_collider in in_box_colliders)
@@ -39,6 +45,7 @@ namespace Junyoung
                 {
                     SoundManager.Instance.PlayEffect("socia_skill_02");
                     (m_player_skills[1] as SociaSkill2).Effect(in_collider);
+                    StartCoroutine(PlayEffect(2, in_collider.transform.position));
                     break;
                 }
                 else
@@ -50,6 +57,7 @@ namespace Junyoung
 
         public override void PlayerUseSkill3()
         {
+            StartCoroutine(PlayEffect(1));
             SoundManager.Instance.PlayEffect("socia_skill_03");
             m_player_skills[2].Effect();
         }
@@ -73,6 +81,30 @@ namespace Junyoung
             }
 
             m_player_state_context.Transition(m_attack_state);
+        }
+
+        private IEnumerator PlayEffect(int skill_index)
+        {
+            var effect = Instantiate(m_skill_effect);
+            effect.transform.position = (Vector2)this.transform.position + m_skill_effect_center;
+            string trigger_name = $"Skill {skill_index}";
+            effect.GetComponent<Animator>().SetTrigger(trigger_name);
+
+            yield return new WaitForSeconds(1f);
+
+            Destroy(effect);
+        }
+
+        private IEnumerator PlayEffect(int skill_index , Vector2 enemy_vector)
+        {
+            var effect = Instantiate(m_skill_effect);
+            effect.transform.position = enemy_vector + m_skill_effect_center;
+            string trigger_name = $"Skill {skill_index}";
+            effect.GetComponent<Animator>().SetTrigger(trigger_name);
+
+            yield return new WaitForSeconds(1f);
+
+            Destroy(effect);
         }
 
         private IEnumerator DescendingAttackTimer()
