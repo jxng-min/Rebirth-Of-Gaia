@@ -260,6 +260,20 @@ namespace Jongmin
             m_skill_button[skill_index].interactable = true;
         }
 
+        public void CoolDownReset()
+        {
+            Debug.Log($"스킬 3개, 점프 쿨타임 초기화");
+            for(int i=0; i<3; i++)
+            {
+                m_hide_images[i].fillAmount= 0f;
+                m_hide_images[i].gameObject.SetActive(false);
+                m_skill_button[i].interactable = true;
+            }
+            m_hide_images[3].fillAmount = 0f;
+            m_hide_images[3].gameObject.SetActive(false);
+            m_jump_button.interactable = true;
+        }
+
         public void PlayButtonSound()
         {
             SoundManager.Instance.PlayEffect("ui_click_basic");

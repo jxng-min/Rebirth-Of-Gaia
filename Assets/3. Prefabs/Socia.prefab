@@ -184,6 +184,8 @@ MonoBehaviour:
   m_inventory_manager: {fileID: 0}
   m_hit_box_size: {x: 4.3, y: 0}
   m_hit_box_center: {x: 1.65, y: 1.5}
+  m_skill_effect: {fileID: 1165699175494791807, guid: 1796719db4d8db74791dc6a79c68e26a, type: 3}
+  m_skill_effect_center: {x: -0.1, y: 0}
 --- !u!95 &636156033008634757
 Animator:
   serializedVersion: 7
