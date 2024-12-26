@@ -56,27 +56,27 @@ namespace Junyoung
 
         public override void PlayerAttack()
         {
- 
-            StartCoroutine(DescendingAttackTimer());
+            Vector2 hitboxPosition = (Vector2)this.transform.position + new Vector2(m_hit_box_center.x * this.JoyStickDir, m_hit_box_center.y);
+            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll(hitboxPosition, m_hit_box_size, 0);
+
+            PlayerAttackState attackState = m_attack_state as PlayerAttackState;
+            attackState.EnemyCollider = null;
+
+            foreach (Collider2D in_collider in in_box_colliders)
+            {
+                Debug.Log($"Detected: {in_collider.name} with tag: {in_collider.tag}");
+                if (in_collider.CompareTag("Enemy"))
+                {
+                    attackState.EnemyCollider = in_collider;
+                    break;
+                }
+            }
+
+            m_player_state_context.Transition(m_attack_state);
         }
 
         private IEnumerator DescendingAttackTimer()
         {
-            Collider2D[] in_box_colliders = Physics2D.OverlapBoxAll((Vector2)this.transform.position + new Vector2( m_hit_box_center.x * this.JoyStickDir,m_hit_box_center.y ), m_hit_box_size, 0);
-
-            foreach (Collider2D in_collider in in_box_colliders)
-            {
-                if (in_collider.tag == "Enemy")
-                {
-                    (m_attack_state as PlayerAttackState).EnemyCollider = in_collider;
-                    m_player_state_context.Transition(m_attack_state);
-                }
-                else
-                {
-                    (m_attack_state as PlayerAttackState).EnemyCollider = null;
-                    m_player_state_context.Transition(m_attack_state);
-                }
-            }
             yield return null;
             /*
             AttackTimer = InputDelay;
@@ -117,7 +117,6 @@ namespace Junyoung
             Gizmos.color = Color.blue;
             Gizmos.DrawWireCube((Vector2)this.transform.position + new Vector2(m_hit_box_center.x * this.JoyStickDir, m_hit_box_center.y), m_hit_box_size);
         }
-
     }
 }
 

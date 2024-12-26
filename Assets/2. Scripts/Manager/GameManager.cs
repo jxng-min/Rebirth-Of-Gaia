@@ -67,6 +67,8 @@ namespace Jongmin
 
             SoundManager.Instance.PlayBGM("bgm_lobby");
 
+            Destroy(GameObject.FindGameObjectWithTag("Seed"));
+
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
@@ -84,9 +86,6 @@ namespace Jongmin
             {
                 enemy_factory.OnReturnEnemy(enemy);
             }
-
-            SeedCtrl seed = FindAnyObjectByType<SeedCtrl>();
-            Destroy(seed);
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
@@ -110,9 +109,6 @@ namespace Jongmin
 
             SoundManager.Instance.StopBGM();
             SoundManager.Instance.PlayEffect("stage_clear");
-
-            SeedCtrl seed = FindAnyObjectByType<SeedCtrl>();
-            Destroy(seed);
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
