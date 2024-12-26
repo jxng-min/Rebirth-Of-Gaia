@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Seed
   - Growing Seed
+  - Spot
   layers:
   - Default
   - TransparentFX
