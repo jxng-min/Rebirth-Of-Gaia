@@ -66,6 +66,7 @@ namespace Jongmin
             GameStatus = "Setting";
 
             SoundManager.Instance.PlayBGM("bgm_lobby");
+            Recover();
 
             Destroy(GameObject.FindGameObjectWithTag("Seed"));
 
@@ -90,8 +91,8 @@ namespace Jongmin
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
             m_player_ctrl.GetSeed = false;
+            m_player_ctrl.DropSeed = false;
 
-            Recover();
             SoundManager.Instance.StopBGM();
             SoundManager.Instance.PlayEffect("stage_fail");
 
@@ -113,6 +114,7 @@ namespace Jongmin
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
             m_player_ctrl.GetSeed = false;
+            m_player_ctrl.DropSeed = false;
 
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(true);
@@ -123,8 +125,6 @@ namespace Jongmin
                 Debug.Log($"스테이지를 클리어 해서 최고 스테이지를 {m_save_manager.Player.m_max_clear_stage}로 변경합니다.");
                 m_save_manager.Player.m_max_clear_stage++;
             }
-
-            Recover();
 
             m_save_manager.SaveData();
             

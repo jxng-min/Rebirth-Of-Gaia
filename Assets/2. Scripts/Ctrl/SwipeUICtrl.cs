@@ -45,15 +45,16 @@ public class SwipeUICtrl : MonoBehaviour
 
         m_value_distance = 0.2575f;
 
+        m_scroll_page_values[0] = 0f;
         m_scroll_page_values[1] = 0.2425f;
         m_scroll_page_values[2] = 0.5f;
         m_scroll_page_values[3] = 0.7575f;
+        m_scroll_page_values[4] = 0f;
 
         m_max_page = transform.childCount - 1;
 
-        StartCoroutine(AlphaChange(m_current_page, 0f));
+        StartCoroutine(AlphaChange(1, 0f));
 
-        m_scroll_bar.value = 0.2425f;
     }
 
     private void Update()

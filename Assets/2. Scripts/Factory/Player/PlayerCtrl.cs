@@ -64,6 +64,7 @@ namespace Junyoung
         public Skill[] m_player_skills = new Skill[3];
 
         public bool GetSeed { get; set; }
+        public bool DropSeed { get; set;}
 
        
 
@@ -180,6 +181,29 @@ namespace Junyoung
                     }
                 }
             }
+        }
+
+        protected void OnTriggerEnter2D(Collider2D col)
+        {
+            Debug.Log("닿고 있다.");
+            if(GetSeed)
+            {
+                if(col.gameObject.tag == "Spot")
+                {
+                    DropSeed = true;
+                }
+            }
+        }
+
+        protected void OnTriggerExit2D(Collider2D col)
+        {
+            if (GetSeed)
+            {
+                if (col.CompareTag("Spot"))
+                {
+                    DropSeed = false;
+                }
+            }       
         }
 
         public void PlayerGetDamage(float damage, Vector2 enemy_vector)
