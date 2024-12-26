@@ -10,6 +10,7 @@ namespace Jongmin
     public class GameManager : Singleton<GameManager>
     {
         private PlayerCtrl m_player_ctrl;
+        private ButtonCtrl m_button_ctrl;
 
         public string GameStatus { get; private set; }
         public Character CharacterType{ get; set; }
@@ -54,9 +55,13 @@ namespace Jongmin
 
             SoundManager.Instance.PlayBGM("bgm_battle");
 
+            AbleUI();
+
             Recover();
 
-            AbleUI();
+            m_button_ctrl = FindAnyObjectByType<ButtonCtrl>();
+            m_button_ctrl.CoolDownReset();
+                      
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
         }
