@@ -54,8 +54,23 @@ namespace Jongmin
 
                 PlayerData player_data = JsonUtility.FromJson<PlayerData>(data);
 
-                m_bgm_source.volume = player_data.m_bgm_volume;
-                SetEffectVolume(player_data.m_effect_volume);
+                if(player_data.m_bgm_slider_on)
+                {
+                    m_bgm_source.volume = player_data.m_bgm_volume;
+                }
+                else
+                {
+                    m_bgm_source.volume = 0f;
+                }
+
+                if(player_data.m_effect_slider_on)
+                {
+                    SetEffectVolume(player_data.m_effect_volume);
+                }
+                else
+                {
+                    SetEffectVolume(0f);
+                }
             }
             else
             {

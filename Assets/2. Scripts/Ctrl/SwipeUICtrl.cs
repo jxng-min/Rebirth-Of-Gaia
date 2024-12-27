@@ -72,7 +72,13 @@ public class SwipeUICtrl : MonoBehaviour
 
     private void Start()
     {
-        SetScrollBarValue(1);        
+        StartCoroutine(SetScrollBarAfterFrame());
+    }
+
+    private IEnumerator SetScrollBarAfterFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        SetScrollBarValue(1);
     }
 
     public void SetScrollBarValue(int index)

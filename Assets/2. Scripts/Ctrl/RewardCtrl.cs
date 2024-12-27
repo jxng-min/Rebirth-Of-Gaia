@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.IO;
 using System.Collections.Generic;
 using Jongmin;
+using UnityEngine.Networking;
+
 namespace Taekyung
 {
 public class RewardCtrl : MonoBehaviour
