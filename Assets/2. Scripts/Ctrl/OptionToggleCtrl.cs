@@ -2,111 +2,75 @@ using Jongmin;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class OptionToggleCtrl : MonoBehaviour
 {
     [SerializeField]
-    private Animator m_bgm_toggle_animator;
-
+    private Toggle m_toggle;
     [SerializeField]
-    private Animator m_effect_toggle_animator;
-
+    private Image m_background;
     [SerializeField]
-    private Slider m_bgm_slider;
-
-    [SerializeField]
-    private Slider m_effect_slider;
-
-    private void Awake()
+    private GameObject m_checkmark;
+    private void Start()
     {
-        m_bgm_slider.interactable = SaveManager.Instance.Player.m_bgm_slider_on;
-        m_effect_slider.interactable = SaveManager.Instance.Player.m_effect_slider_on;
-
-        if(!SaveManager.Instance.Player.m_bgm_slider_on)
+        if (m_toggle != null)
         {
-            m_bgm_toggle_animator.SetTrigger("Disabled");
+            m_toggle.onValueChanged.AddListener(delegate { ToggleOnOff(); });
+            Debug.Log("$Toggle 이벤트 연결 성공");
         }
         else
         {
-            m_bgm_toggle_animator.ResetTrigger("Disabled");
-        }
-
-        if(!SaveManager.Instance.Player.m_effect_slider_on)
-        {
-            m_effect_toggle_animator.SetTrigger("Disabled");
-        }
-        else
-        {
-            m_effect_toggle_animator.ResetTrigger("Disabled");
+            Debug.Log("$Toggle 연결 실패");
         }
     }
-
-    private void OnEnable()
+    public void ToggleOnOff()
     {
-        m_bgm_slider.interactable = SaveManager.Instance.Player.m_bgm_slider_on;
-        m_effect_slider.interactable = SaveManager.Instance.Player.m_effect_slider_on;
-
-        if(!SaveManager.Instance.Player.m_bgm_slider_on)
+        BackgroundOnOff();
+        CheckmarkOnOff();
+        Debug.Log("$toggle onoff 실행 성공");
+    }
+    private void BackgroundOnOff()
+    {
+        if(m_background != null)
         {
-            m_bgm_toggle_animator.SetTrigger("Disabled");
+            Debug.Log("$background인식 성공");
+            Color currentcolor = m_background.color;
+            if (currentcolor.a == 1f)
+            {
+                currentcolor.a = 0.12f;
+                Debug.Log("$background alpha값 하락 성공");
+            }
+            else if (currentcolor.a == 0.12f)
+            {
+                currentcolor.a = 1f;
+                Debug.Log("$background alpha값 상승 성공");
+            }
+            m_background.color = currentcolor;
         }
         else
         {
-            m_bgm_toggle_animator.ResetTrigger("Disabled");
-        }
-
-        if(!SaveManager.Instance.Player.m_effect_slider_on)
-        {
-            m_effect_toggle_animator.SetTrigger("Disabled");
-        }
-        else
-        {
-            m_effect_toggle_animator.ResetTrigger("Disabled");
+            Debug.Log("$background인식 실패");
         }
     }
-
-    private void Update()
+    private void CheckmarkOnOff()
+{
+    if (m_checkmark != null)
     {
-        if(!SaveManager.Instance.Player.m_bgm_slider_on)
+        Debug.Log("Checkmark 인식 성공");
+        RectTransform rectTransform = m_checkmark.GetComponent<RectTransform>();
+        if (rectTransform != null)
         {
-            m_bgm_toggle_animator.SetTrigger("Disabled");
-        }
-        else
-        {
-            m_bgm_toggle_animator.ResetTrigger("Disabled");
-        }
-
-        if(!SaveManager.Instance.Player.m_effect_slider_on)
-        {
-            m_effect_toggle_animator.SetTrigger("Disabled");
-        }
-        else
-        {
-            m_effect_toggle_animator.ResetTrigger("Disabled");
+            Vector2 currentPosition = rectTransform.anchoredPosition;
+            Debug.Log($"현재 위치: {currentPosition}");
+            currentPosition.x *= -1;
+            rectTransform.anchoredPosition = currentPosition;
+            Debug.Log($"변경된 위치: {rectTransform.anchoredPosition}");
+            Debug.Log("Checkmark 위치 변경 성공");
         }
     }
-
-    public void BgmToggle()
+    else
     {
-        if(SaveManager.Instance.Player.m_bgm_slider_on)
-        {
-            SaveManager.Instance.Player.m_bgm_slider_on = false;
-        }
-        else
-        {
-            SaveManager.Instance.Player.m_bgm_slider_on = true;
-        }
+        Debug.Log("Checkmark 인식 실패");
     }
-
-    public void EffectToggle()
-    {
-        if(SaveManager.Instance.Player.m_effect_slider_on)
-        {
-            SaveManager.Instance.Player.m_effect_slider_on = false;
-        }
-        else
-        {
-            SaveManager.Instance.Player.m_effect_slider_on = true;
-        }
-    }
+}
+    
 }
