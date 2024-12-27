@@ -318,5 +318,11 @@ namespace Jongmin
                 enemy.IsSetting = false;
             }
         }
+
+        public void MainActiveButton()
+        {
+            GameEventBus.Publish(GameEventType.SETTING);
+            GameManager.Instance.ReturnEnemy();
+        }
     }
 }

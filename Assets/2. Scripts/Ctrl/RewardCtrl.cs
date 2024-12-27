@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.IO;
 using System.Collections.Generic;
 using Jongmin;
+using UnityEngine.Networking;
+
 namespace Taekyung
 {
 public class RewardCtrl : MonoBehaviour
@@ -38,9 +40,7 @@ public class RewardCtrl : MonoBehaviour
             }
 
             m_reward_data = new List<RewardData>(wrapper.RewardData);
-#endif
-
-#if UNITY_ANDROID
+#elif UNITY_ANDROID
             string json_path = $"jar:file://{Application.dataPath}!/assets/{file_name}";
 
             UnityWebRequest request = UnityWebRequest.Get(json_path);

@@ -18,6 +18,9 @@ namespace Jongmin
         // volume
         public float m_bgm_volume;
         public float m_effect_volume;
+
+        public bool m_bgm_slider_on;
+        public bool m_effect_slider_on;
         
         public PlayerData(Character char_type, CharacterStatus character_status)
         {
@@ -31,6 +34,8 @@ namespace Jongmin
             m_talk_state = false;
             m_bgm_volume = 0.5f;
             m_effect_volume = 0.5f;
+            m_bgm_slider_on = true;
+            m_effect_slider_on = true;
         }
     }
 }

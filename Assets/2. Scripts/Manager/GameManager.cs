@@ -75,6 +75,14 @@ namespace Jongmin
 
             Destroy(GameObject.FindGameObjectWithTag("Seed"));
 
+            if(m_player_ctrl)
+            {
+                m_player_ctrl.MoveVector = Vector2.zero;
+                m_player_ctrl.GetComponent<Animator>().speed = 0f;
+                m_player_ctrl.GetSeed = false;
+                m_player_ctrl.DropSeed = false;
+            }
+
             DisableUI();
             GameObject.Find("Panels").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Panels").transform.GetChild(1).gameObject.SetActive(false);
@@ -86,12 +94,7 @@ namespace Jongmin
 
             m_player_ctrl.PlayerDead();
 
-            EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
-            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
-            foreach(var enemy in m_enemies)
-            {
-                enemy_factory.OnReturnEnemy(enemy);
-            }
+            ReturnEnemy();
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
@@ -168,6 +171,17 @@ namespace Jongmin
             // 인게임 내 환경설정 버튼
             // HP, MP 상황?
             // 이거 비활성화까지
+        }
+
+        public void ReturnEnemy()
+        {
+            EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
+            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
+
+            foreach(var enemy in m_enemies)
+            {
+                enemy_factory.OnReturnEnemy(enemy);
+            }
         }
     }
 }
