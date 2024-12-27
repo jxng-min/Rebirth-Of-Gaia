@@ -28,6 +28,12 @@ namespace Jongmin
         private Button m_seed_button;
         [SerializeField]
         private Button m_jump_button;
+        [SerializeField]
+        private GameObject m_seed_button_effect;
+        [SerializeField]
+        private float m_effect_speed;
+        private SpriteRenderer m_effect_renderer;
+        private bool m_is_effect;
 
         [SerializeField]
         private StageManager m_stage_manager;
@@ -49,16 +55,20 @@ namespace Jongmin
                 SoundManager.Instance.PlayEffect("seed_active", true);
                 m_attack_button.gameObject.SetActive(false);
                 m_seed_button.gameObject.SetActive(true);
+                
+
 
                 m_stage_manager.GetSeedSpot(SaveManager.Instance.Player.m_stage_id).SetActive(true);
 
                 if(m_player_ctrl.DropSeed)
                 {
                     m_seed_button.interactable = true;
+                    m_seed_button_effect.SetActive(true);
                 }
                 else
                 {
                     m_seed_button.interactable = false;
+                    m_seed_button_effect.SetActive(false);
                 }
             }
             else
@@ -68,6 +78,41 @@ namespace Jongmin
                 m_seed_button.gameObject.SetActive(false);
 
                 m_stage_manager.GetSeedSpot(SaveManager.Instance.Player.m_stage_id).SetActive(false);
+            }
+
+            if(m_seed_button_effect.activeSelf)
+            {                
+                if(!m_effect_renderer)
+                {
+                    m_effect_renderer = m_seed_button_effect.GetComponent<SpriteRenderer>();
+                }
+                StartCoroutine( SeedButtonEffect());
+            }
+            else
+            {
+                m_is_effect = false;
+            }
+        }
+
+        private IEnumerator SeedButtonEffect()
+        {
+            m_is_effect = true;
+            Color color = m_effect_renderer.color;
+
+            while (m_is_effect)
+            {             
+                for (float alpha = 0; alpha <= 1; alpha += Time.deltaTime * m_effect_speed)
+                {
+                    color.a = alpha;
+                    m_effect_renderer.color = color;
+                    yield return null;
+                }
+                for (float alpha = 1; alpha >= 0; alpha -= Time.deltaTime * m_effect_speed)
+                {
+                    color.a = alpha;
+                    m_effect_renderer.color = color;
+                    yield return null;
+                }
             }
         }
 
