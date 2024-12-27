@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 571dc9ee721931347aed15a77cf5a705
+guid: 82d85a2d2cbbc0540807ee58098f57e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2665729522925184327
-    second: River 3_0
+      213: -6130709645149498718
+    second: image 81_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: River 3_0
+      name: image 81_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 44
-        width: 2532
-        height: 1456
+        y: 0
+        width: 865
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bad5ce5f1d610bd0800000000000000
-      internalID: -2665729522925184327
+      spriteID: 2a29dc34f085beaa0800000000000000
+      internalID: -6130709645149498718
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      River 3_0: -2665729522925184327
+      image 81_0: -6130709645149498718
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 6b5a73faff6fec4478425f4cd3044966
+guid: 5c72accfe9cfebd4590461baad1a9419
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -107719277739490888
-    second: TestStageSelect_0
+      213: 4935769532990095490
+    second: Seed Spot_0
+  - first:
+      213: -245919840298015680
+    second: Seed Spot_1
+  - first:
+      213: -5406346929117116613
+    second: Seed Spot_2
+  - first:
+      213: -6209545150046535806
+    second: Seed Spot_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +81,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +119,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +132,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TestStageSelect_0
+      name: Seed Spot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 700
-        height: 499
+        width: 511
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b140ea33ed418ef0800000000000000
-      internalID: -107719277739490888
+      spriteID: 280021b4d306f7440800000000000000
+      internalID: 4935769532990095490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seed Spot_1
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 0
+        width: 511
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044e0db4531569cf0800000000000000
+      internalID: -245919840298015680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seed Spot_2
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 0
+        width: 511
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37437dac1cc8f4b0800000000000000
+      internalID: -5406346929117116613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seed Spot_3
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 0
+        width: 511
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ff9bae59343d9a0800000000000000
+      internalID: -6209545150046535806
       vertices: []
       indices: 
       edges: []
@@ -164,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e9c6ec8fe47660a4bb85837e19e2e9cd
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TestStageSelect_0: -107719277739490888
+      Seed Spot_0: 4935769532990095490
+      Seed Spot_1: -245919840298015680
+      Seed Spot_2: -5406346929117116613
+      Seed Spot_3: -6209545150046535806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

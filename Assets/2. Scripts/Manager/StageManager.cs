@@ -34,6 +34,9 @@ namespace Junyoung
         private int m_current_index;
         public int m_max_stage { get; private set; }
 
+        [SerializeField]
+        private GameObject[] m_seed_spots;
+
 
         [SerializeField] 
         private int m_now_button_index = 0;
@@ -253,7 +256,7 @@ namespace Junyoung
             if (!m_is_icon_moving)
             {
                 m_current_index = stage_index;
-                m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"STAGE {m_current_index + 1}";
+                m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"스테이지 {m_current_index + 1}";
                 if(stage_index == 9)
                 {
                     ClickedButtonPath(stage_index * 2 - 1);
@@ -354,6 +357,11 @@ namespace Junyoung
 
             StartCoroutine(MoveIconCorutine());
             
+        }
+
+        public GameObject GetSeedSpot(int index)
+        {
+            return m_seed_spots[index];
         }
     }
 }

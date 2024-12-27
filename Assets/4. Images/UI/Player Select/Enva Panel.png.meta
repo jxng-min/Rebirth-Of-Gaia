@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7117d374f31de1b4fb3d24e462832a4f
+guid: 6fa0847559d3d8840a5af6747551f623
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9106358608341437066
-    second: Group 2471_0
+      213: -460269345299194802
+    second: Enva Panel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Group 2471_0
+      name: Enva Panel_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2532
-        height: 1170
+        width: 1109
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 675fc70e717bf9180800000000000000
-      internalID: -9106358608341437066
+      spriteID: e4c9074187bcc99f0800000000000000
+      internalID: -460269345299194802
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Group 2471_0: -9106358608341437066
+      Enva Panel_0: -460269345299194802
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
