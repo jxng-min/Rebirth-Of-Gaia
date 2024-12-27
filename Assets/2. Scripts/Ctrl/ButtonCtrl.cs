@@ -46,6 +46,7 @@ namespace Jongmin
 
             if(m_player_ctrl.GetSeed)
             {
+                //SoundManager.Instance.FadeBackground("bgm_battle_amb");
                 SoundManager.Instance.PlayEffect("seed_active", true);
                 m_attack_button.gameObject.SetActive(false);
                 m_seed_button.gameObject.SetActive(true);
@@ -101,6 +102,7 @@ namespace Jongmin
 
         public void PlayClick()
         {
+            SoundManager.Instance.PlayEffect("ui_start");
             SceneCtrl.ReplaceScene("Game");
         }
 
