@@ -29,6 +29,9 @@ namespace Jongmin
         [SerializeField]
         private Button m_jump_button;
 
+        [SerializeField]
+        private StageManager m_stage_manager;
+
         private void Update()
         {
             if(m_attack_button == null || m_seed_button == null)
@@ -47,6 +50,8 @@ namespace Jongmin
                 m_attack_button.gameObject.SetActive(false);
                 m_seed_button.gameObject.SetActive(true);
 
+                m_stage_manager.GetSeedSpot(SaveManager.Instance.Player.m_stage_id).SetActive(true);
+
                 if(m_player_ctrl.DropSeed)
                 {
                     m_seed_button.interactable = true;
@@ -61,6 +66,8 @@ namespace Jongmin
                 SoundManager.Instance.StopEffect(true);
                 m_attack_button.gameObject.SetActive(true);
                 m_seed_button.gameObject.SetActive(false);
+
+                m_stage_manager.GetSeedSpot(SaveManager.Instance.Player.m_stage_id).SetActive(false);
             }
         }
 

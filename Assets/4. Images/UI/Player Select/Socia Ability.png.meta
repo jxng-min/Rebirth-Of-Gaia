@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: ce2dc03babcdcd24da192788412d2aa6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3307845639411673755
+    second: Socia Ability_0
+  - first:
+      213: 5455040528555967051
+    second: Socia Ability_1
+  - first:
+      213: -1837818241518334701
+    second: Socia Ability_2
+  - first:
+      213: -3593076218620962943
+    second: Socia Ability_3
+  - first:
+      213: 3783978214846982976
+    second: Socia Ability_4
+  - first:
+      213: 1455527494348556993
+    second: Socia Ability_5
+  - first:
+      213: 5404739459626268294
+    second: Socia Ability_6
+  - first:
+      213: 4247301463661600474
+    second: Socia Ability_7
+  - first:
+      213: -478422917732198732
+    second: Socia Ability_8
+  - first:
+      213: -7820764230965616066
+    second: Socia Ability_9
+  - first:
+      213: -535340017436621483
+    second: Socia Ability_10
+  - first:
+      213: 3081002446965533957
+    second: Socia Ability_11
+  - first:
+      213: 7974043768649353602
+    second: Socia Ability_12
+  - first:
+      213: -6933450956926295818
+    second: Socia Ability_13
+  - first:
+      213: 630182807155253393
+    second: Socia Ability_14
+  - first:
+      213: -6596232750516668288
+    second: Socia Ability_15
+  - first:
+      213: -970981144518149470
+    second: Socia Ability_16
+  - first:
+      213: 5917131323451526929
+    second: Socia Ability_17
+  - first:
+      213: -817582458478760228
+    second: Socia Ability_18
+  - first:
+      213: 665933744718339038
+    second: Socia Ability_19
+  - first:
+      213: 6141016939888364891
+    second: Socia Ability_20
+  - first:
+      213: -5235859603124879823
+    second: Socia Ability_21
+  - first:
+      213: -4451987382251381482
+    second: Socia Ability_22
+  - first:
+      213: -8448539310605011525
+    second: Socia Ability_23
+  - first:
+      213: 9065180743598153663
+    second: Socia Ability_24
+  - first:
+      213: 8608445146545287011
+    second: Socia Ability_25
+  - first:
+      213: -1053828546225194885
+    second: Socia Ability_26
+  - first:
+      213: 6602755152425514412
+    second: Socia Ability_27
+  - first:
+      213: 5864967551376637299
+    second: Socia Ability_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Socia Ability_0
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 491
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565da0baaeb2812d0800000000000000
+      internalID: -3307845639411673755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_1
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 496
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4200fb657234bb40800000000000000
+      internalID: 5455040528555967051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_2
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 476
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d0198eb02ce76e0800000000000000
+      internalID: -1837818241518334701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_3
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 489
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18791325734d22ec0800000000000000
+      internalID: -3593076218620962943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 476
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b65c55324638430800000000000000
+      internalID: 3783978214846982976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_5
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 476
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cac57d5b82133410800000000000000
+      internalID: 1455527494348556993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 299
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6867f8a27ed710b40800000000000000
+      internalID: 5404739459626268294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_7
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 290
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adedb839d2271fa30800000000000000
+      internalID: 4247301463661600474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 303
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b69a2024ec4c59f0800000000000000
+      internalID: -478422917732198732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 55
+        width: 418
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32a63d3e50177390800000000000000
+      internalID: -7820764230965616066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_10
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 297
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55583aa27171298f0800000000000000
+      internalID: -535340017436621483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_11
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 290
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d6d73d66be1ca20800000000000000
+      internalID: 3081002446965533957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_12
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 317
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28903cd2f8e79ae60800000000000000
+      internalID: 7974043768649353602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_13
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 296
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0e0d4f61f67cf90800000000000000
+      internalID: -6933450956926295818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_14
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 290
+        width: 7
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1902c0c9cebdeb800800000000000000
+      internalID: 630182807155253393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_15
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 303
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088f7a103497574a0800000000000000
+      internalID: -6596232750516668288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_16
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 290
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aab4652bc16682f0800000000000000
+      internalID: -970981144518149470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_17
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 290
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f4aaf969fdd1250800000000000000
+      internalID: 5917131323451526929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 6
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde68c3f51d57a4f0800000000000000
+      internalID: -817582458478760228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_19
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1
+        width: 11
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edbd1e9663fdd3900800000000000000
+      internalID: 665933744718339038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_20
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 7
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5dc3bdce56493550800000000000000
+      internalID: 6141016939888364891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_21
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 12
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e7ce58e6d7657b0800000000000000
+      internalID: -5235859603124879823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_22
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d9260401d5732c0800000000000000
+      internalID: -4451987382251381482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_23
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 0
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5f6706242c0ca80800000000000000
+      internalID: -8448539310605011525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_24
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 13
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf11ee5bddfdcd70800000000000000
+      internalID: 9065180743598153663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f64445047577770800000000000000
+      internalID: 8608445146545287011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_26
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 12
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78b418458c0061f0800000000000000
+      internalID: -1053828546225194885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_27
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5f33704d2b1ab50800000000000000
+      internalID: 6602755152425514412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Ability_28
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d3ffef9ec846150800000000000000
+      internalID: 5864967551376637299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Socia Ability_0: -3307845639411673755
+      Socia Ability_1: 5455040528555967051
+      Socia Ability_10: -535340017436621483
+      Socia Ability_11: 3081002446965533957
+      Socia Ability_12: 7974043768649353602
+      Socia Ability_13: -6933450956926295818
+      Socia Ability_14: 630182807155253393
+      Socia Ability_15: -6596232750516668288
+      Socia Ability_16: -970981144518149470
+      Socia Ability_17: 5917131323451526929
+      Socia Ability_18: -817582458478760228
+      Socia Ability_19: 665933744718339038
+      Socia Ability_2: -1837818241518334701
+      Socia Ability_20: 6141016939888364891
+      Socia Ability_21: -5235859603124879823
+      Socia Ability_22: -4451987382251381482
+      Socia Ability_23: -8448539310605011525
+      Socia Ability_24: 9065180743598153663
+      Socia Ability_25: 8608445146545287011
+      Socia Ability_26: -1053828546225194885
+      Socia Ability_27: 6602755152425514412
+      Socia Ability_28: 5864967551376637299
+      Socia Ability_3: -3593076218620962943
+      Socia Ability_4: 3783978214846982976
+      Socia Ability_5: 1455527494348556993
+      Socia Ability_6: 5404739459626268294
+      Socia Ability_7: 4247301463661600474
+      Socia Ability_8: -478422917732198732
+      Socia Ability_9: -7820764230965616066
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

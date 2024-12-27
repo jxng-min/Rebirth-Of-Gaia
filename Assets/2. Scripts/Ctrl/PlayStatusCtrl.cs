@@ -37,7 +37,21 @@ public class PlayStatusCtrl : MonoBehaviour
                 m_character_portrait[i].SetActive(false);
             }
         }
-        m_character_name_text.text = GameManager.Instance.CharacterType.ToString();
+
+        switch(GameManager.Instance.CharacterType)
+        {
+            case Character.SOCIA:
+                m_character_name_text.text = "소셔";
+                break;
+            
+            case Character.GOV:
+                m_character_name_text.text = "거브";
+                break;
+
+            case Character.ENVA:
+                m_character_name_text.text = "엔바";
+                break;
+        }
     }
 
     void Update()
