@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -29,6 +30,8 @@ namespace Jongmin
             set => m_bgm_source.volume = Mathf.Clamp01(value);
         }
 
+        private float m_origin_bgm_volume;
+
         public float EffectVolume { get; set; } = 0.5f;
 
         private void Start()
@@ -42,6 +45,8 @@ namespace Jongmin
 
             LoadVolume();
             Initialize();
+
+            m_origin_bgm_volume = BgmVolume;
         }
 
         private void LoadVolume()
@@ -186,6 +191,34 @@ namespace Jongmin
             if(m_repeat_effect_source.isPlaying)
             {
                 m_repeat_effect_source.Stop();
+            }
+        }
+
+        public IEnumerator FadeBackground(string bgm_name)
+        {
+            float target_time = 1f;
+            float elapsed_time = 0f;
+
+            while(elapsed_time < target_time)
+            {
+                elapsed_time += Time.deltaTime;
+
+                BgmVolume = Mathf.Lerp(m_origin_bgm_volume, 0f, elapsed_time / target_time);
+
+                yield return null;
+            }
+
+            elapsed_time = 0;
+
+            PlayBGM(bgm_name);
+
+            while(elapsed_time < target_time)
+            {
+                elapsed_time += Time.deltaTime;
+                
+                BgmVolume = Mathf.Lerp(0f, m_origin_bgm_volume, elapsed_time / target_time);
+
+                yield return null;
             }
         }
     }
