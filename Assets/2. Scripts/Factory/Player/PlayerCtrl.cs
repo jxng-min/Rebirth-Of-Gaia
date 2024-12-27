@@ -190,6 +190,7 @@ namespace Junyoung
             {
                 if(col.gameObject.tag == "Spot")
                 {
+                    GameEventBus.Publish(GameEventType.TALKING);
                     DropSeed = true;
                 }
             }
