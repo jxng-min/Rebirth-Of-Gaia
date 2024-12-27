@@ -60,6 +60,8 @@ namespace Jongmin
                 return;
             }
 
+            SoundManager.Instance.PlayEffect("ui_ability");
+
             SaveManager.Instance.Player.m_player_status.m_stat_token--;
             SaveManager.Instance.Player.m_player_status.m_ap_enforce++;
 
@@ -77,6 +79,8 @@ namespace Jongmin
                 return;
             }
 
+            SoundManager.Instance.PlayEffect("ui_ability");
+
             SaveManager.Instance.Player.m_player_status.m_stat_token--;
             SaveManager.Instance.Player.m_player_status.m_mp_enforce++;
 
@@ -93,6 +97,8 @@ namespace Jongmin
                 Debug.Log("토큰이 없어서 사회성을 업그레이드할 수 없습니다.");
                 return;
             }
+
+            SoundManager.Instance.PlayEffect("ui_ability");
 
             SaveManager.Instance.Player.m_player_status.m_stat_token--;
             SaveManager.Instance.Player.m_player_status.m_si_enforce++;
