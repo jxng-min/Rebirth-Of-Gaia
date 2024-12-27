@@ -196,7 +196,7 @@ namespace Jongmin
 
         public IEnumerator FadeBackground(string bgm_name)
         {
-            float target_time = 1f;
+            float target_time = 0.5f;
             float elapsed_time = 0f;
 
             while(elapsed_time < target_time)
@@ -210,16 +210,8 @@ namespace Jongmin
 
             elapsed_time = 0;
 
+            BgmVolume = m_origin_bgm_volume;
             PlayBGM(bgm_name);
-
-            while(elapsed_time < target_time)
-            {
-                elapsed_time += Time.deltaTime;
-                
-                BgmVolume = Mathf.Lerp(0f, m_origin_bgm_volume, elapsed_time / target_time);
-
-                yield return null;
-            }
         }
     }
 }
