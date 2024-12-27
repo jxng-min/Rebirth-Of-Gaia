@@ -219,8 +219,7 @@ namespace Junyoung
                                                         m_player.transform.position.z
                                                      );
 
-            m_camera_move_ctrl.CameraLimitCenter = stage_data.m_camera_limit_center;
-            m_camera_move_ctrl.CameraLimitSize = stage_data.m_camera_limit_size;
+            
 
             GameEventBus.Publish(GameEventType.TALKING);
         }
@@ -280,9 +279,11 @@ namespace Junyoung
 
             SaveManager.Instance.Player.m_stage_id = m_current_index;
             SaveManager.Instance.Player.m_stage_state = 0;
-
+            StageData stage_data = m_stages_data[SaveManager.Instance.Player.m_stage_id];
             //SoundManager.Instance.PlayBGM("bgm_talk");
             StartCoroutine(SoundManager.Instance.FadeBackground("bgm_talk"));
+            m_camera_move_ctrl.CameraLimitCenter = stage_data.m_camera_limit_center;
+            m_camera_move_ctrl.CameraLimitSize = stage_data.m_camera_limit_size;
             GameEventBus.Publish(GameEventType.TALKING);
         }
 
