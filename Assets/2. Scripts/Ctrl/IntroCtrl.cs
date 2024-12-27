@@ -111,7 +111,8 @@ namespace Jongmin
 
         private IEnumerator PrintSeedImage()
         {
-            float target_time = 4f;
+            yield return new WaitForSeconds(2.5f);
+            float target_time = 2f;
             float elapsed_time = 0f;
 
             while(elapsed_time < target_time)
@@ -124,7 +125,7 @@ namespace Jongmin
             }
             m_seed_image.color = new Color(1f, 1f, 1f, 0.7f);
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             elapsed_time = 0f;
 
             while(elapsed_time < target_time)

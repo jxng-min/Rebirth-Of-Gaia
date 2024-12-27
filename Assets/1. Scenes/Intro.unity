@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf7449fb23b68847a54c0a20785cadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intro_speed: 1
+  m_intro_speed: 0.5
   m_intro_scroll_time: 21
   m_intro_object: {fileID: 1648326364}
   m_intro_text: {fileID: 750984899}
@@ -511,10 +511,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\uC18C\uC154"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ff60f4b3bd210694baf46e1007420295, type: 2}
-  m_sharedMaterial: {fileID: -907819451598374203, guid: ff60f4b3bd210694baf46e1007420295, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 43aabf67abf9ed94ab38ee01448bf42c, type: 2}
+  m_sharedMaterial: {fileID: -2342706955059318057, guid: 43aabf67abf9ed94ab38ee01448bf42c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
