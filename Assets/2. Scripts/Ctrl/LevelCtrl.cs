@@ -21,12 +21,25 @@ namespace Jongmin
 
         public void UpdateLevel()
         {
-            float current_exp = (float)SaveManager.Instance.Player.m_player_status.m_current_exp;
-            float max_exp = (float)ExpData.m_exps[SaveManager.Instance.Player.m_player_status.m_current_level - 1];
+            float current_exp = 0f;
+            float max_exp = 0f;
+            
+            if(SaveManager.Instance.Player.m_player_status.m_current_level >= 10)
+            {
+                current_exp = (float)SaveManager.Instance.Player.m_player_status.m_current_exp;
+                max_exp = (float)ExpData.m_exps[8];
+
+                m_exp_text.text = $"({SaveManager.Instance.Player.m_player_status.m_current_exp} / {ExpData.m_exps[8]})"; 
+            }
+            else
+            {
+                current_exp = (float)SaveManager.Instance.Player.m_player_status.m_current_exp;
+                max_exp = (float)ExpData.m_exps[SaveManager.Instance.Player.m_player_status.m_current_level - 1];
+
+                m_exp_text.text = $"({SaveManager.Instance.Player.m_player_status.m_current_exp} / {ExpData.m_exps[SaveManager.Instance.Player.m_player_status.m_current_level - 1]})"; 
+            }
 
             m_level_text.text = $"Lv.{SaveManager.Instance.Player.m_player_status.m_current_level.ToString()}";
-            m_exp_text.text = $"({SaveManager.Instance.Player.m_player_status.m_current_exp} / {ExpData.m_exps[SaveManager.Instance.Player.m_player_status.m_current_level - 1]})"; 
-
             m_exp_bar.value =  current_exp / max_exp;
         }
     }

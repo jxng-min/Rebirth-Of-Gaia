@@ -3105,7 +3105,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152828912}
-  - component: {fileID: 152828913}
   m_Layer: 5
   m_Name: Background Toggle
   m_TagString: Untagged
@@ -3135,21 +3134,6 @@ RectTransform:
   m_AnchoredPosition: {x: 250, y: -75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &152828913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152828911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a21b0f36e1b2b740989654ea86b69ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_toggle: {fileID: 1263798487}
-  m_background: {fileID: 2032425540}
-  m_checkmark: {fileID: 1269048247}
 --- !u!1 &155585720
 GameObject:
   m_ObjectHideFlags: 0
@@ -10629,6 +10613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510384414}
   - component: {fileID: 510384415}
+  - component: {fileID: 510384416}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -10677,7 +10662,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -10709,6 +10694,28 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &510384416
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510384413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d8587d1b8b69774ca7e44e48a8a41ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &513960796
 GameObject:
   m_ObjectHideFlags: 0
@@ -11916,6 +11923,7 @@ GameObject:
   - component: {fileID: 578533582}
   - component: {fileID: 578533581}
   - component: {fileID: 578533583}
+  - component: {fileID: 578533584}
   m_Layer: 5
   m_Name: Sound Panel
   m_TagString: Untagged
@@ -11996,6 +12004,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fae239cde4d2ff40abec18704f4d092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bgm_slider: {fileID: 2126191859}
+  m_effect_slider: {fileID: 735500018}
+--- !u!114 &578533584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578533579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a21b0f36e1b2b740989654ea86b69ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bgm_toggle_animator: {fileID: 580638043}
+  m_effect_toggle_animator: {fileID: 1221021653}
   m_bgm_slider: {fileID: 2126191859}
   m_effect_slider: {fileID: 735500018}
 --- !u!1 &580638040
@@ -12087,6 +12111,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578533584}
+        m_TargetAssemblyTypeName: OptionToggleCtrl, Assembly-CSharp
+        m_MethodName: BgmToggle
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12202,7 +12238,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588909317}
-  - component: {fileID: 588909318}
   m_Layer: 5
   m_Name: Effect Toggle
   m_TagString: Untagged
@@ -12232,21 +12267,6 @@ RectTransform:
   m_AnchoredPosition: {x: 250, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &588909318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588909316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a21b0f36e1b2b740989654ea86b69ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_toggle: {fileID: 1971567293}
-  m_background: {fileID: 182192766}
-  m_checkmark: {fileID: 32477611}
 --- !u!1 &589405225
 GameObject:
   m_ObjectHideFlags: 0
@@ -14307,6 +14327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735500017}
   - component: {fileID: 735500018}
+  - component: {fileID: 735500019}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -14355,7 +14376,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -14387,6 +14408,28 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &735500019
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735500016}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d8587d1b8b69774ca7e44e48a8a41ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &738250523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14538,7 +14581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2663509397032310175, guid: 488b62dbbc14a8f4d84e5911290bc643, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.3
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 2663509397032310175, guid: 488b62dbbc14a8f4d84e5911290bc643, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23945,6 +23988,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 578533584}
+        m_TargetAssemblyTypeName: OptionToggleCtrl, Assembly-CSharp
+        m_MethodName: EffectToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!95 &1221021653
 Animator:
@@ -25167,6 +25222,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1658994869}
+        m_TargetAssemblyTypeName: OptionToggleCtrl, Assembly-CSharp
+        m_MethodName: BgmToggle
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -27446,6 +27513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339235628}
   - component: {fileID: 1339235629}
+  - component: {fileID: 1339235630}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -27494,7 +27562,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -27526,6 +27594,28 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &1339235630
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339235627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d8587d1b8b69774ca7e44e48a8a41ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1341062653
 GameObject:
   m_ObjectHideFlags: 0
@@ -33627,6 +33717,7 @@ GameObject:
   - component: {fileID: 1658994868}
   - component: {fileID: 1658994867}
   - component: {fileID: 1658994866}
+  - component: {fileID: 1658994869}
   m_Layer: 5
   m_Name: Sound Panel
   m_TagString: Untagged
@@ -33709,6 +33800,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658994864}
   m_CullTransparentMesh: 1
+--- !u!114 &1658994869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658994864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a21b0f36e1b2b740989654ea86b69ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bgm_toggle_animator: {fileID: 0}
+  m_effect_toggle_animator: {fileID: 0}
+  m_bgm_slider: {fileID: 1339235629}
+  m_effect_slider: {fileID: 510384415}
 --- !u!1 &1660483482
 GameObject:
   m_ObjectHideFlags: 0
@@ -37442,6 +37549,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1181585560}
+        m_TargetAssemblyTypeName: Jongmin.SaveManager, Assembly-CSharp
+        m_MethodName: SaveData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1837682961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40200,6 +40319,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1658994869}
+        m_TargetAssemblyTypeName: OptionToggleCtrl, Assembly-CSharp
+        m_MethodName: EffectToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1971570984
 GameObject:
@@ -40780,6 +40911,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1181585560}
+        m_TargetAssemblyTypeName: Jongmin.SaveManager, Assembly-CSharp
+        m_MethodName: SaveData
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -43527,6 +43670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2126191858}
   - component: {fileID: 2126191859}
+  - component: {fileID: 2126191860}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -43575,7 +43719,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -43607,6 +43751,28 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &2126191860
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126191857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d8587d1b8b69774ca7e44e48a8a41ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2130425478
 GameObject:
   m_ObjectHideFlags: 0
