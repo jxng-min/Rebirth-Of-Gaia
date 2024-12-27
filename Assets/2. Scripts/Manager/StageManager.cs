@@ -281,7 +281,8 @@ namespace Junyoung
             SaveManager.Instance.Player.m_stage_id = m_current_index;
             SaveManager.Instance.Player.m_stage_state = 0;
 
-            SoundManager.Instance.PlayBGM("bgm_talk");
+            //SoundManager.Instance.PlayBGM("bgm_talk");
+            StartCoroutine(SoundManager.Instance.FadeBackground("bgm_talk"));
             GameEventBus.Publish(GameEventType.TALKING);
         }
 

@@ -35,6 +35,7 @@ namespace Jongmin
         {
             GameStatus = "None";
             SoundManager.Instance.PlayBGM("bgm_main");
+            //SoundManager.Instance.FadeBackground("bgm_main");
         }
 
         public void Loading()
@@ -53,7 +54,8 @@ namespace Jongmin
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 1f;
 
-            SoundManager.Instance.PlayBGM("bgm_battle");
+            //SoundManager.Instance.PlayBGM("bgm_battle");
+            StartCoroutine(SoundManager.Instance.FadeBackground("bgm_battle"));
 
             AbleUI();
 
@@ -70,7 +72,8 @@ namespace Jongmin
         {
             GameStatus = "Setting";
 
-            SoundManager.Instance.PlayBGM("bgm_lobby");
+            //SoundManager.Instance.PlayBGM("bgm_lobby");
+            StartCoroutine(SoundManager.Instance.FadeBackground("bgm_lobby"));
             Recover();
 
             Destroy(GameObject.FindGameObjectWithTag("Seed"));
