@@ -43,6 +43,7 @@ namespace Jongmin
         private void Start()
         {
             StartCoroutine(IntroStart());
+            StartCoroutine(FadeOutBackground());
             StartCoroutine(IntroTextStart(0));
         }
 
@@ -64,17 +65,17 @@ namespace Jongmin
             {
                 yield return new WaitForSeconds(1f);
             }
+
+            if(index == 2)
+            {
+                StartCoroutine(PrintSeedImage());
+            }
             
             float target_time = 2f;
             float elapsed_time = 0f;
 
             Color text_color = m_intro_text.color;
             m_intro_text.text = m_intro_strings[index];
-
-            if(index == 3)
-            {
-                StartCoroutine(FadeOutBackground());
-            }
 
             while(elapsed_time < target_time)
             {
@@ -104,55 +105,68 @@ namespace Jongmin
             }
             else
             {
-                StartCoroutine(PrintSeedImage());
                 yield break;
             }
         }
 
         private IEnumerator PrintSeedImage()
         {
-            float target_time = 2f;
+            float target_time = 4f;
             float elapsed_time = 0f;
 
             while(elapsed_time < target_time)
             {
                 elapsed_time += Time.deltaTime;
 
-                m_seed_image.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 1f, elapsed_time / target_time));
+                m_seed_image.color = new Color(1f, 1f, 1f, Mathf.Lerp(0f, 0.7f, elapsed_time / target_time));
 
                 yield return null;
             }
-            m_seed_image.color = new Color(1f, 1f, 1f, 1f);
+            m_seed_image.color = new Color(1f, 1f, 1f, 0.7f);
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             elapsed_time = 0f;
 
             while(elapsed_time < target_time)
             {
                 elapsed_time += Time.deltaTime;
 
-                m_seed_image.color = new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, elapsed_time / target_time));
+                m_seed_image.color = new Color(1f, 1f, 1f, Mathf.Lerp(0.7f, 0f, elapsed_time / target_time));
 
                 yield return null;
             }
             m_seed_image.color = new Color(1f, 1f, 1f, 0f);
-
-            SceneCtrl.ReplaceScene("PlayerSelect");
         }
 
         private IEnumerator FadeOutBackground()
         {
-            float target_time = 5f;
+            float target_time = (m_intro_scroll_time) / 2;
             float elapsed_time = 0f;
 
             while(elapsed_time < target_time)
             {
                 elapsed_time += Time.deltaTime;
 
-                m_intro_object.GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f, Mathf.Lerp(0.75f, 0.1f, elapsed_time / target_time));
+                m_intro_object.GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f, Mathf.Lerp(0f, 0.75f, elapsed_time / target_time));
 
                 yield return null;
             }
+            m_intro_object.GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f, 0.75f);
+
+            elapsed_time = 0;
+            yield return new WaitForSeconds(1f);
+
+            while(elapsed_time < target_time)
+            {
+                elapsed_time += Time.deltaTime;
+
+                m_intro_object.GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f, Mathf.Lerp(0.75f, 0f, elapsed_time / target_time));
+
+                yield return null;
+            }
+            m_intro_object.GetComponent<Image>().color = new Color(0.7f, 0.7f, 0.7f, 0f);
+
+            SceneCtrl.ReplaceScene("PlayerSelect");
         }
     }
 }

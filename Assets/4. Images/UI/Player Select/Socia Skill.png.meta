@@ -1,0 +1,2366 @@
+fileFormatVersion: 2
+guid: 1708f00f773816a488aebe9df528ad1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6204581446322558519
+    second: Socia Skill_0
+  - first:
+      213: -3586507580613282719
+    second: Socia Skill_1
+  - first:
+      213: -660331869151537031
+    second: Socia Skill_2
+  - first:
+      213: 5018194723329302689
+    second: Socia Skill_3
+  - first:
+      213: 7090693182354340286
+    second: Socia Skill_4
+  - first:
+      213: 2950511792316869285
+    second: Socia Skill_5
+  - first:
+      213: 4055523027667358256
+    second: Socia Skill_6
+  - first:
+      213: 7848457224586743113
+    second: Socia Skill_7
+  - first:
+      213: 4566181619916884714
+    second: Socia Skill_8
+  - first:
+      213: 8631242575656356992
+    second: Socia Skill_9
+  - first:
+      213: -2159752467537205405
+    second: Socia Skill_10
+  - first:
+      213: -5378013053997582777
+    second: Socia Skill_11
+  - first:
+      213: 2008405463452450451
+    second: Socia Skill_12
+  - first:
+      213: -512201336075656057
+    second: Socia Skill_13
+  - first:
+      213: -6843400171445044458
+    second: Socia Skill_14
+  - first:
+      213: -8207194484165883895
+    second: Socia Skill_15
+  - first:
+      213: 1794477259734398551
+    second: Socia Skill_16
+  - first:
+      213: -1669639204008657316
+    second: Socia Skill_17
+  - first:
+      213: -7694280753164128433
+    second: Socia Skill_18
+  - first:
+      213: 221882318880200824
+    second: Socia Skill_19
+  - first:
+      213: 1821162909790449857
+    second: Socia Skill_20
+  - first:
+      213: 2951413211922544584
+    second: Socia Skill_21
+  - first:
+      213: 2515577788992460623
+    second: Socia Skill_22
+  - first:
+      213: -667553687615480286
+    second: Socia Skill_23
+  - first:
+      213: 8916320101518704317
+    second: Socia Skill_24
+  - first:
+      213: -416220666741621011
+    second: Socia Skill_25
+  - first:
+      213: 4130199372766795959
+    second: Socia Skill_26
+  - first:
+      213: -2414768829207245827
+    second: Socia Skill_27
+  - first:
+      213: 2027339977546567114
+    second: Socia Skill_28
+  - first:
+      213: 4036899442597795143
+    second: Socia Skill_29
+  - first:
+      213: -5475236727803289576
+    second: Socia Skill_30
+  - first:
+      213: -1095023864264482354
+    second: Socia Skill_31
+  - first:
+      213: 1860369276381817942
+    second: Socia Skill_32
+  - first:
+      213: 6995057151263795455
+    second: Socia Skill_33
+  - first:
+      213: 329962672432620351
+    second: Socia Skill_34
+  - first:
+      213: 2746981751760383740
+    second: Socia Skill_35
+  - first:
+      213: -5049186243463837542
+    second: Socia Skill_36
+  - first:
+      213: 7167793551184024711
+    second: Socia Skill_37
+  - first:
+      213: -6537832703140404555
+    second: Socia Skill_38
+  - first:
+      213: -6720030228481989232
+    second: Socia Skill_39
+  - first:
+      213: -3735960997821781145
+    second: Socia Skill_40
+  - first:
+      213: -7293255872577155299
+    second: Socia Skill_41
+  - first:
+      213: 7949060939165926803
+    second: Socia Skill_42
+  - first:
+      213: 2664239605141499216
+    second: Socia Skill_43
+  - first:
+      213: -2930724456854914326
+    second: Socia Skill_44
+  - first:
+      213: -1222347285448846471
+    second: Socia Skill_45
+  - first:
+      213: 514971928577171680
+    second: Socia Skill_46
+  - first:
+      213: -3601015668318308506
+    second: Socia Skill_47
+  - first:
+      213: 6659847649591732719
+    second: Socia Skill_48
+  - first:
+      213: -674778831037016580
+    second: Socia Skill_49
+  - first:
+      213: -5230228873854489896
+    second: Socia Skill_50
+  - first:
+      213: 5683304266508266338
+    second: Socia Skill_51
+  - first:
+      213: -4571550476441389055
+    second: Socia Skill_52
+  - first:
+      213: 1157650025227442984
+    second: Socia Skill_53
+  - first:
+      213: 7561193837127936990
+    second: Socia Skill_54
+  - first:
+      213: -179451412554962476
+    second: Socia Skill_55
+  - first:
+      213: 8140135813577234857
+    second: Socia Skill_56
+  - first:
+      213: -2793713613163806881
+    second: Socia Skill_57
+  - first:
+      213: 8625159916222159710
+    second: Socia Skill_58
+  - first:
+      213: 971887741239488613
+    second: Socia Skill_59
+  - first:
+      213: -8278568829079727265
+    second: Socia Skill_60
+  - first:
+      213: -4533952680447897804
+    second: Socia Skill_61
+  - first:
+      213: -6901150809608633919
+    second: Socia Skill_62
+  - first:
+      213: 4624147480354515935
+    second: Socia Skill_63
+  - first:
+      213: 9186606845283095517
+    second: Socia Skill_64
+  - first:
+      213: -3413096475786586431
+    second: Socia Skill_65
+  - first:
+      213: 7457516464765566936
+    second: Socia Skill_66
+  - first:
+      213: 5655733386826386758
+    second: Socia Skill_67
+  - first:
+      213: -2812459798617093979
+    second: Socia Skill_68
+  - first:
+      213: 7577623239917758812
+    second: Socia Skill_69
+  - first:
+      213: -195090625867451403
+    second: Socia Skill_70
+  - first:
+      213: -2532842795199889566
+    second: Socia Skill_71
+  - first:
+      213: -735064041389643447
+    second: Socia Skill_72
+  - first:
+      213: 2983581904617558886
+    second: Socia Skill_73
+  - first:
+      213: -413097150243585816
+    second: Socia Skill_74
+  - first:
+      213: -8354118883217387514
+    second: Socia Skill_75
+  - first:
+      213: -7182026130099325382
+    second: Socia Skill_76
+  - first:
+      213: 4424656054960214137
+    second: Socia Skill_77
+  - first:
+      213: -5012631560686466084
+    second: Socia Skill_78
+  - first:
+      213: -6104251592497693014
+    second: Socia Skill_79
+  - first:
+      213: 4275688099226237253
+    second: Socia Skill_80
+  - first:
+      213: 7759021388902238597
+    second: Socia Skill_81
+  - first:
+      213: -1549004881596882212
+    second: Socia Skill_82
+  - first:
+      213: -768046882187102623
+    second: Socia Skill_83
+  - first:
+      213: 3802758526895778091
+    second: Socia Skill_84
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Socia Skill_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 336
+        width: 154
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9e6ff3c06e4e9a0800000000000000
+      internalID: -6204581446322558519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 439
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164bc498b5a2a3ec0800000000000000
+      internalID: -3586507580613282719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 418
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9785a51e9a706d6f0800000000000000
+      internalID: -660331869151537031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 434
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a068c9638534a540800000000000000
+      internalID: 5018194723329302689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_4
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 434
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9b38991e3376260800000000000000
+      internalID: 7090693182354340286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 434
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aae5a6b7d252f820800000000000000
+      internalID: 2950511792316869285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_6
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 434
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0329782e4bc184830800000000000000
+      internalID: 4055523027667358256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_7
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 396
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d475a43425bec60800000000000000
+      internalID: 7848457224586743113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 391
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea401b9df55e5f30800000000000000
+      internalID: 4566181619916884714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_9
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 391
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c893c646558c770800000000000000
+      internalID: 8631242575656356992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 390
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367eba9d2940702e0800000000000000
+      internalID: -2159752467537205405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 390
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7467f0f0f957d55b0800000000000000
+      internalID: -5378013053997582777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 390
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e7906c02a4fdb10800000000000000
+      internalID: 2008405463452450451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_13
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 390
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784eabd399b44e8f0800000000000000
+      internalID: -512201336075656057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_14
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 397
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61bbb2d4dcb5701a0800000000000000
+      internalID: -6843400171445044458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_15
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 390
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9084fb8a9103a1e80800000000000000
+      internalID: -8207194484165883895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 390
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7563cf76f8347e810800000000000000
+      internalID: 1794477259734398551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_17
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 390
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e7ff57dff34d8e0800000000000000
+      internalID: -1669639204008657316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_18
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 391
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fe689cb6c683590800000000000000
+      internalID: -7694280753164128433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_19
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 366
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8785bce1bc8441300800000000000000
+      internalID: 221882318880200824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_20
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 331
+        width: 10
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c03d2c7402164910800000000000000
+      internalID: 1821162909790449857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_21
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 366
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7b902dda685f820800000000000000
+      internalID: 2951413211922544584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_22
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 365
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4712c5cba029e220800000000000000
+      internalID: 2515577788992460623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_23
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 368
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e5d2d357f5cb6f0800000000000000
+      internalID: -667553687615480286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_24
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 368
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe72b244e12dbb70800000000000000
+      internalID: 8916320101518704317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_25
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 366
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee70b24289493af0800000000000000
+      internalID: -416220666741621011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_26
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 366
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b85e41627a615930800000000000000
+      internalID: 4130199372766795959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_27
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 366
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb8a683b840d7ed0800000000000000
+      internalID: -2414768829207245827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_28
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 370
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd8c90e7fe822c10800000000000000
+      internalID: 2027339977546567114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_29
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 365
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745930697a2f50830800000000000000
+      internalID: 4036899442597795143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_30
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 373
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 810ec12843d0404b0800000000000000
+      internalID: -5475236727803289576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_31
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 365
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1a0fdd891bdc0f0800000000000000
+      internalID: -1095023864264482354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_32
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 166
+        width: 154
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ce9cd000c51d910800000000000000
+      internalID: 1860369276381817942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_33
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 271
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff862acea6f631160800000000000000
+      internalID: 6995057151263795455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_34
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 271
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f332c776d43449400800000000000000
+      internalID: 329962672432620351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_35
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 282
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe682e595d3f1620800000000000000
+      internalID: 2746981751760383740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_36
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 271
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a988c810ddfade9b0800000000000000
+      internalID: -5049186243463837542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_37
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 271
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784d8a9124e197360800000000000000
+      internalID: 7167793551184024711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_38
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 227
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b26260abc3f445a0800000000000000
+      internalID: -6537832703140404555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_39
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 229
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 095a1778c18adb2a0800000000000000
+      internalID: -6720030228481989232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_40
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 228
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b6e163443372cc0800000000000000
+      internalID: -3735960997821781145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_41
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 228
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1fc10bdc6629ca90800000000000000
+      internalID: -7293255872577155299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_42
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 228
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3950be8eeccb05e60800000000000000
+      internalID: 7949060939165926803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_43
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 227
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d6cfc1ec749f420800000000000000
+      internalID: 2664239605141499216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_44
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 236
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeafc9652a9f357d0800000000000000
+      internalID: -2930724456854914326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_45
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 230
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97398a2ce99590fe0800000000000000
+      internalID: -1222347285448846471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_46
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 227
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0e3289d3c852700800000000000000
+      internalID: 514971928577171680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_47
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 228
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6677543245f960ec0800000000000000
+      internalID: -3601015668318308506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_48
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 227
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9a224e6288c6c50800000000000000
+      internalID: 6659847649591732719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_49
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 228
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5d5127a34b2a6f0800000000000000
+      internalID: -674778831037016580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_50
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 231
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da69e7dc8e7a67b0800000000000000
+      internalID: -5230228873854489896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_51
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 227
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26befa37e172fde40800000000000000
+      internalID: 5683304266508266338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_52
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 230
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10871f210179e80c0800000000000000
+      internalID: -4571550476441389055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_53
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 227
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b57ef709cc01010800000000000000
+      internalID: 1157650025227442984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_54
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 231
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb22e3ebb1cee860800000000000000
+      internalID: 7561193837127936990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_55
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 226
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9283c14e5728df0800000000000000
+      internalID: -179451412554962476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_56
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 228
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9d4b7e46297f070800000000000000
+      internalID: 8140135813577234857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_57
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 205
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5fb233454cba39d0800000000000000
+      internalID: -2793713613163806881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_58
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 202
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b1c59ee39b2b770800000000000000
+      internalID: 8625159916222159710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_59
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 203
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560f22a50c6dc7d00800000000000000
+      internalID: 971887741239488613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_60
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 203
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53d41ef28d9c1d80800000000000000
+      internalID: -8278568829079727265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_61
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 202
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f097d1f0a2411c0800000000000000
+      internalID: -4533952680447897804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_62
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 155
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1c0eb07ef2a30a0800000000000000
+      internalID: -6901150809608633919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_63
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 100
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb6c8332a54c2040800000000000000
+      internalID: 4624147480354515935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_64
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 109
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd35548c0426d7f70800000000000000
+      internalID: 9186606845283095517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_65
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 100
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c65a90b6de32a0d0800000000000000
+      internalID: -3413096475786586431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_66
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 100
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df7afc86bb6e7760800000000000000
+      internalID: 7457516464765566936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_67
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 100
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d8a1acc833d7e40800000000000000
+      internalID: 5655733386826386758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_68
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 108
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a88c56d6b228f8d0800000000000000
+      internalID: -2812459798617093979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_69
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 100
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59ea015030292960800000000000000
+      internalID: 7577623239917758812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_70
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 63
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f379220c16ea4df0800000000000000
+      internalID: -195090625867451403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_71
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 57
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ff338b5e889dcd0800000000000000
+      internalID: -2532842795199889566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_72
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 57
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949aecd16278cc5f0800000000000000
+      internalID: -735064041389643447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_73
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 57
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663530f3fefc76920800000000000000
+      internalID: 2983581904617558886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_74
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 57
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e0410e9452644af0800000000000000
+      internalID: -413097150243585816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_75
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 57
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600d1724325301c80800000000000000
+      internalID: -8354118883217387514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_76
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 57
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a363bd36941545c90800000000000000
+      internalID: -7182026130099325382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_77
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 63
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9705f293d39876d30800000000000000
+      internalID: 4424656054960214137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_78
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 57
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb0f53572e8f6ab0800000000000000
+      internalID: -5012631560686466084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_79
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 57
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaeff81b487594ba0800000000000000
+      internalID: -6104251592497693014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_80
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 32
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549beb43cab465b30800000000000000
+      internalID: 4275688099226237253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_81
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5890d2a18d49dab60800000000000000
+      internalID: 7759021388902238597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_82
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 32
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd262156444d08ae0800000000000000
+      internalID: -1549004881596882212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_83
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 31
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16634601e695755f0800000000000000
+      internalID: -768046882187102623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Skill_84
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 31
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29e53a7bbc16c430800000000000000
+      internalID: 3802758526895778091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Socia Skill_0: -6204581446322558519
+      Socia Skill_1: -3586507580613282719
+      Socia Skill_10: -2159752467537205405
+      Socia Skill_11: -5378013053997582777
+      Socia Skill_12: 2008405463452450451
+      Socia Skill_13: -512201336075656057
+      Socia Skill_14: -6843400171445044458
+      Socia Skill_15: -8207194484165883895
+      Socia Skill_16: 1794477259734398551
+      Socia Skill_17: -1669639204008657316
+      Socia Skill_18: -7694280753164128433
+      Socia Skill_19: 221882318880200824
+      Socia Skill_2: -660331869151537031
+      Socia Skill_20: 1821162909790449857
+      Socia Skill_21: 2951413211922544584
+      Socia Skill_22: 2515577788992460623
+      Socia Skill_23: -667553687615480286
+      Socia Skill_24: 8916320101518704317
+      Socia Skill_25: -416220666741621011
+      Socia Skill_26: 4130199372766795959
+      Socia Skill_27: -2414768829207245827
+      Socia Skill_28: 2027339977546567114
+      Socia Skill_29: 4036899442597795143
+      Socia Skill_3: 5018194723329302689
+      Socia Skill_30: -5475236727803289576
+      Socia Skill_31: -1095023864264482354
+      Socia Skill_32: 1860369276381817942
+      Socia Skill_33: 6995057151263795455
+      Socia Skill_34: 329962672432620351
+      Socia Skill_35: 2746981751760383740
+      Socia Skill_36: -5049186243463837542
+      Socia Skill_37: 7167793551184024711
+      Socia Skill_38: -6537832703140404555
+      Socia Skill_39: -6720030228481989232
+      Socia Skill_4: 7090693182354340286
+      Socia Skill_40: -3735960997821781145
+      Socia Skill_41: -7293255872577155299
+      Socia Skill_42: 7949060939165926803
+      Socia Skill_43: 2664239605141499216
+      Socia Skill_44: -2930724456854914326
+      Socia Skill_45: -1222347285448846471
+      Socia Skill_46: 514971928577171680
+      Socia Skill_47: -3601015668318308506
+      Socia Skill_48: 6659847649591732719
+      Socia Skill_49: -674778831037016580
+      Socia Skill_5: 2950511792316869285
+      Socia Skill_50: -5230228873854489896
+      Socia Skill_51: 5683304266508266338
+      Socia Skill_52: -4571550476441389055
+      Socia Skill_53: 1157650025227442984
+      Socia Skill_54: 7561193837127936990
+      Socia Skill_55: -179451412554962476
+      Socia Skill_56: 8140135813577234857
+      Socia Skill_57: -2793713613163806881
+      Socia Skill_58: 8625159916222159710
+      Socia Skill_59: 971887741239488613
+      Socia Skill_6: 4055523027667358256
+      Socia Skill_60: -8278568829079727265
+      Socia Skill_61: -4533952680447897804
+      Socia Skill_62: -6901150809608633919
+      Socia Skill_63: 4624147480354515935
+      Socia Skill_64: 9186606845283095517
+      Socia Skill_65: -3413096475786586431
+      Socia Skill_66: 7457516464765566936
+      Socia Skill_67: 5655733386826386758
+      Socia Skill_68: -2812459798617093979
+      Socia Skill_69: 7577623239917758812
+      Socia Skill_7: 7848457224586743113
+      Socia Skill_70: -195090625867451403
+      Socia Skill_71: -2532842795199889566
+      Socia Skill_72: -735064041389643447
+      Socia Skill_73: 2983581904617558886
+      Socia Skill_74: -413097150243585816
+      Socia Skill_75: -8354118883217387514
+      Socia Skill_76: -7182026130099325382
+      Socia Skill_77: 4424656054960214137
+      Socia Skill_78: -5012631560686466084
+      Socia Skill_79: -6104251592497693014
+      Socia Skill_8: 4566181619916884714
+      Socia Skill_80: 4275688099226237253
+      Socia Skill_81: 7759021388902238597
+      Socia Skill_82: -1549004881596882212
+      Socia Skill_83: -768046882187102623
+      Socia Skill_84: 3802758526895778091
+      Socia Skill_9: 8631242575656356992
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
