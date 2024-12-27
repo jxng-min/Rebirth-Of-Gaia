@@ -29,6 +29,7 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
         {
             Debug.Log($"마지막 적 처치");
             m_seed_short_cut_ctrl.SpawnSeed(m_enemy_ctrl.transform.position);
+            GameEventBus.Publish(GameEventType.TALKING);
         }
 
 
