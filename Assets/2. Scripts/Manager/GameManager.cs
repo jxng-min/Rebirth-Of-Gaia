@@ -119,8 +119,9 @@ namespace Jongmin
             SaveManager m_save_manager = FindAnyObjectByType<SaveManager>();
             StageManager m_stage_manager = FindAnyObjectByType<StageManager>();
 
-            StartCoroutine(SoundManager.Instance.FadeOutBGM());
             SoundManager.Instance.PlayEffect("stage_clear");
+            StartCoroutine(SoundManager.Instance.FadeOutBGM());
+            
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
