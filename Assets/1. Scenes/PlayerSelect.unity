@@ -4577,6 +4577,8 @@ MonoBehaviour:
   m_attack_button: {fileID: 0}
   m_seed_button: {fileID: 0}
   m_jump_button: {fileID: 0}
+  m_seed_button_effect: {fileID: 0}
+  m_effect_speed: 0
   m_stage_manager: {fileID: 0}
 --- !u!1 &813720106
 GameObject:
