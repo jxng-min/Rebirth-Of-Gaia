@@ -86,7 +86,7 @@ namespace Jongmin
                 {
                     m_effect_renderer = m_seed_button_effect.GetComponent<SpriteRenderer>();
                 }
-                StartCoroutine( SeedButtonEffect());
+                StartCoroutine(SeedButtonEffect());
             }
             else
             {
@@ -146,7 +146,6 @@ namespace Jongmin
 
         public void PlayClick()
         {
-            SoundManager.Instance.PlayEffect("ui_start");
             SceneCtrl.ReplaceScene("Game");
         }
 
@@ -329,6 +328,13 @@ namespace Jongmin
 
         public void PlayButtonSound()
         {
+            Debug.Log($"Button clicked: {this.gameObject.name}");
+            SoundManager.Instance.PlayEffect("ui_click_basic");
+        }
+
+        public void PlayButtonSound(string name)
+        {
+            Debug.Log($"Button clicked: {name}");
             SoundManager.Instance.PlayEffect("ui_click_basic");
         }
 

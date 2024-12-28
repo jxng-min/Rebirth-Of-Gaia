@@ -72,7 +72,6 @@ namespace Jongmin
         {
             GameStatus = "Setting";
 
-            //SoundManager.Instance.PlayBGM("bgm_lobby");
             StartCoroutine(SoundManager.Instance.FadeBackground("bgm_lobby"));
             Recover();
 
@@ -97,7 +96,13 @@ namespace Jongmin
 
             m_player_ctrl.PlayerDead();
 
-            ReturnEnemy();
+            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
+            foreach(var enemy in m_enemies)
+            {
+                enemy.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+                enemy.GetComponent<Animator>().speed = 0f;
+                enemy.IsSetting = true;
+            }
 
             m_player_ctrl.MoveVector = Vector2.zero;
             m_player_ctrl.GetComponent<Animator>().speed = 0f;
@@ -139,7 +144,6 @@ namespace Jongmin
             }
 
             m_save_manager.SaveData();
-            
         }
 
         public void Recover()

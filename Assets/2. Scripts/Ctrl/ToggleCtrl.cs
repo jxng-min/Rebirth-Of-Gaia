@@ -1,3 +1,4 @@
+using Jongmin;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -64,6 +65,14 @@ public class ToggleCtrl : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger(triggerName);
+        }
+    }
+
+    public void ToggleClick(Toggle toggle)
+    {
+        if(toggle.isOn)
+        {
+            SoundManager.Instance.PlayEffect("ui_click_basic");
         }
     }
 }

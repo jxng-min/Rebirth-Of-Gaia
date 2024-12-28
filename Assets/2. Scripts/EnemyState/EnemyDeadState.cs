@@ -28,7 +28,6 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
         if(m_stage_manager.m_killed_enemy_num == m_stage_manager.m_total_enemy_num)
         {
             Debug.Log($"마지막 적 처치");
-            StartCoroutine(SoundManager.Instance.FadeBackground("bgm_battle_amb"));
             m_seed_short_cut_ctrl.SpawnSeed(m_enemy_ctrl.transform.position);
             GameEventBus.Publish(GameEventType.TALKING);
         }
@@ -42,5 +41,4 @@ public class EnemyDeadState : MonoBehaviour , IEnemyState
     {
         m_enemy_ctrl.ReturnToPool();
     }
-
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 using Junyoung;
 using System.Collections;
 using Unity.VisualScripting;
+using Jongmin;
 
 public class SeedShortcutCtrl : MonoBehaviour
 {
@@ -66,6 +67,7 @@ public class SeedShortcutCtrl : MonoBehaviour
     {
         m_seed = Instantiate(m_seed_prefab, spawn_pos + Vector3.up * 2f, Quaternion.identity);
         m_seed.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 4f, ForceMode2D.Impulse);
+        StartCoroutine(SoundManager.Instance.FadeBackground("bgm_battle_amb"));
         StartCoroutine(DisableSeedCollider());
         m_seed.layer = 11;
     }

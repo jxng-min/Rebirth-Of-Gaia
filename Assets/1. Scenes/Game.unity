@@ -2682,13 +2682,13 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521983598}
-        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
+      - m_Target: {fileID: 1682422989}
+        m_TargetAssemblyTypeName: ToggleCtrl, Assembly-CSharp
+        m_MethodName: ToggleClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 115037232}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9985,34 +9985,22 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521983598}
-        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
+      - m_Target: {fileID: 36978216}
+        m_TargetAssemblyTypeName: ToggleCtrl, Assembly-CSharp
+        m_MethodName: ToggleClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 488277259}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Jongmin.SoundManager, Assembly-CSharp
-        m_MethodName: PlayEffect
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ui_click_basic
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Jongmin.SoundManager, Assembly-CSharp
-        m_MethodName: PlayEffect
-        m_Mode: 5
+      - m_Target: {fileID: 578533579}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14528,25 +14516,13 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521983598}
-        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
+      - m_Target: {fileID: 1682422989}
+        m_TargetAssemblyTypeName: ToggleCtrl, Assembly-CSharp
+        m_MethodName: ToggleClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1658994864}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 754234965}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23052,28 +23028,16 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521983598}
-        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
+      - m_Target: {fileID: 36978216}
+        m_TargetAssemblyTypeName: ToggleCtrl, Assembly-CSharp
+        m_MethodName: ToggleClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1193202613}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Jongmin.SoundManager, Assembly-CSharp
-        m_MethodName: PlayEffect
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ui_click_basic
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
@@ -24754,25 +24718,13 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521983598}
-        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
+      - m_Target: {fileID: 1682422989}
+        m_TargetAssemblyTypeName: ToggleCtrl, Assembly-CSharp
+        m_MethodName: ToggleClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 43473565}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1263277600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27211,28 +27163,16 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521983598}
-        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
+      - m_Target: {fileID: 36978216}
+        m_TargetAssemblyTypeName: ToggleCtrl, Assembly-CSharp
+        m_MethodName: ToggleClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1338438844}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Jongmin.SoundManager, Assembly-CSharp
-        m_MethodName: PlayEffect
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ui_click_basic
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
@@ -36215,28 +36155,16 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521983598}
-        m_TargetAssemblyTypeName: Jongmin.ButtonCtrl, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
+      - m_Target: {fileID: 36978216}
+        m_TargetAssemblyTypeName: ToggleCtrl, Assembly-CSharp
+        m_MethodName: ToggleClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1784623855}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Jongmin.SoundManager, Assembly-CSharp
-        m_MethodName: PlayEffect
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ui_click_basic
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
@@ -42399,6 +42327,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ui_click_basic
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410502931}
+        m_TargetAssemblyTypeName: Junyoung.EnemyFactory, Assembly-CSharp
+        m_MethodName: ReturnEnemy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2069109917
