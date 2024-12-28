@@ -175,6 +175,7 @@ namespace Junyoung
                     }
                     else
                     {
+                        SoundManager.Instance.PlayEffect("seed_get");
                         GetSeed = true;
                         //m_inventory_manager.AcquireItem(col.gameObject.GetComponent<SeedCtrl>().m_seed_data);
                         Destroy(col.gameObject);
@@ -190,6 +191,7 @@ namespace Junyoung
             {
                 if(col.gameObject.tag == "Spot")
                 {
+                    GameEventBus.Publish(GameEventType.TALKING);
                     DropSeed = true;
                 }
             }

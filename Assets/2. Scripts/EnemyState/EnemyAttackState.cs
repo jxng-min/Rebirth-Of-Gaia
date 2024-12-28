@@ -20,6 +20,8 @@ namespace Junyoung
             {
                 m_player_ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
             }
+            
+            SoundManager.Instance.PlayEffect("workers_attack_01");
             m_enemy_ctrl.GetComponent<Animator>().SetTrigger("Attack");
             m_player_ctrl.GetComponent<PlayerCtrl>().PlayerGetDamage(m_enemy_ctrl.EnemyStatus.EnemyDamage, m_enemy_ctrl.transform.position);
         }

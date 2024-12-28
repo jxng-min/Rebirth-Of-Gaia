@@ -104,7 +104,7 @@ namespace Jongmin
             m_player_ctrl.GetSeed = false;
             m_player_ctrl.DropSeed = false;
 
-            SoundManager.Instance.StopBGM();
+            StartCoroutine(SoundManager.Instance.FadeOutBGM());
             SoundManager.Instance.PlayEffect("stage_fail");
 
             DisableUI();
@@ -119,7 +119,7 @@ namespace Jongmin
             SaveManager m_save_manager = FindAnyObjectByType<SaveManager>();
             StageManager m_stage_manager = FindAnyObjectByType<StageManager>();
 
-            SoundManager.Instance.StopBGM();
+            StartCoroutine(SoundManager.Instance.FadeOutBGM());
             SoundManager.Instance.PlayEffect("stage_clear");
 
             m_player_ctrl.MoveVector = Vector2.zero;

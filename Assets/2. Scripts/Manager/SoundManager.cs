@@ -213,6 +213,26 @@ namespace Jongmin
             BgmVolume = m_origin_bgm_volume;
             PlayBGM(bgm_name);
         }
+
+        public IEnumerator FadeOutBGM()
+        {
+            float target_time = 0.5f;
+            float elapsed_time = 0f;
+
+            while(elapsed_time < target_time)
+            {
+                elapsed_time += Time.deltaTime;
+
+                BgmVolume = Mathf.Lerp(m_origin_bgm_volume, 0f, elapsed_time / target_time);
+
+                yield return null;
+            }
+
+            elapsed_time = 0;
+
+            StopBGM();
+            BgmVolume = m_origin_bgm_volume; 
+        }
     }
 }
 

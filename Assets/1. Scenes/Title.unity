@@ -149,10 +149,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bgm_clips:
-  - {fileID: 8300000, guid: 0f7a9893b8ca50d49a95050480a04bfa, type: 3}
-  - {fileID: 8300000, guid: f9eb90be3904c924299ef7ffc46173b2, type: 3}
-  - {fileID: 8300000, guid: 425d79ff894947b4e8cff8ab7a52ad84, type: 3}
   - {fileID: 8300000, guid: 551aa35f5cde8804ca2f567ebf390fe5, type: 3}
+  - {fileID: 8300000, guid: 425d79ff894947b4e8cff8ab7a52ad84, type: 3}
+  - {fileID: 8300000, guid: f9eb90be3904c924299ef7ffc46173b2, type: 3}
+  - {fileID: 8300000, guid: 0e6cccef52d7853448e4f78023f145de, type: 3}
+  - {fileID: 8300000, guid: b788d5eaf711ada4a8e27cc98420c0f2, type: 3}
   m_effect_clips:
   - {fileID: 8300000, guid: 65d6154700c68d042b887e907b8dce51, type: 3}
   - {fileID: 8300000, guid: 7d497e90c909906439fa5070912e7394, type: 3}
@@ -162,18 +163,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d8092821af3e56744b530d1452a7cd0d, type: 3}
   - {fileID: 8300000, guid: 910ae6afcb9525e4cbc51dd4e7e596ab, type: 3}
   - {fileID: 8300000, guid: ffd0ee473acdcaa449b26235ba171ee5, type: 3}
+  - {fileID: 8300000, guid: 1d1e3300e7c9703449dcccbf542c78d8, type: 3}
+  - {fileID: 8300000, guid: 745235bc0573b544b9bcc89c1043a00b, type: 3}
   - {fileID: 8300000, guid: 163f84abe953a2544812a2ba62b3cec0, type: 3}
   - {fileID: 8300000, guid: 19e19bb180cd61844b110fdbdc477b79, type: 3}
   - {fileID: 8300000, guid: e87b2081f9fad854f9ebd5703b356b3a, type: 3}
   - {fileID: 8300000, guid: 2a7f638305af41b42b575111362341eb, type: 3}
-  - {fileID: 8300000, guid: b6193b52d5d222543ad839804089f213, type: 3}
-  - {fileID: 8300000, guid: 34c44084c0a54d841b13258f3e9b4b1e, type: 3}
+  - {fileID: 8300000, guid: 4f9eaf99df194ed4c8993948bcf6ad88, type: 3}
+  - {fileID: 8300000, guid: 6c17474f15bb94f47bd4170d12302528, type: 3}
   - {fileID: 8300000, guid: 2fd6a56b154637f4fbf4f002b7f3072e, type: 3}
   - {fileID: 8300000, guid: 5566c409a27f4e34d835421845178cb5, type: 3}
   - {fileID: 8300000, guid: 3390a7b0d3ae90347aa9f94ed9b16c36, type: 3}
   - {fileID: 8300000, guid: 4ff8a1020e283a54ab65e49d53ddbe0b, type: 3}
-  - {fileID: 8300000, guid: 44cbfacd49955594ba2b7c386e771d7c, type: 3}
-  - {fileID: 8300000, guid: 987a91577600a154ebac15165ea523b3, type: 3}
+  - {fileID: 8300000, guid: de21e43938c8fe844bdc0f454c8897f8, type: 3}
+  - {fileID: 8300000, guid: 8dfa368c24f1797408ebf08306b76fa3, type: 3}
+  - {fileID: 8300000, guid: 46bb2338f7ca7f5489451cf940bd6e75, type: 3}
   - {fileID: 8300000, guid: 5a7604f426ad10e4a897edd7565411d7, type: 3}
   - {fileID: 8300000, guid: 0b15e0154cd828447b9aca834c0796db, type: 3}
   - {fileID: 8300000, guid: d1e1fa1ef7275d24fb6059b5b6c6f832, type: 3}
@@ -725,6 +729,7 @@ MonoBehaviour:
   m_attack_button: {fileID: 0}
   m_seed_button: {fileID: 0}
   m_jump_button: {fileID: 0}
+  m_stage_manager: {fileID: 0}
 --- !u!95 &1059172616
 Animator:
   serializedVersion: 7
