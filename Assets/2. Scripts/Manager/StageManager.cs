@@ -252,8 +252,9 @@ namespace Junyoung
 
         public void StageSelect(int stage_index)
         {
+            SoundManager.Instance.PlayEffect("ui_map_click");
             if (!m_is_icon_moving)
-            {
+            {          
                 m_current_index = stage_index;
                 m_stage_select_check_UI.GetComponentInChildren<TMP_Text>().text = $"스테이지 {m_current_index + 1}";
                 if(stage_index == 9)
@@ -318,9 +319,7 @@ namespace Junyoung
         }
 
         public void ClickedButtonPath(int button_index) //클릭된 버튼의 index값을 불러와서 지금 위치와 가려는 위치를 비교하여 정방향/역방향 경로를 리스트에 추가
-        {
-            SoundManager.Instance.PlayEffect("ui_map_click");
-                                
+        {                                         
             Debug.Log($"ClickedButtonPosiotion 호출됨: button_index={button_index}, m_now_button_index={m_now_button_index}");
             if (button_index < 0 || button_index >= m_icon_path.Length)
             {
