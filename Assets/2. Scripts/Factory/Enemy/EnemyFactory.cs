@@ -77,5 +77,15 @@ namespace Junyoung
             Destroy(enemy.gameObject);
         }
 
+        public void ReturnEnemy()
+        {
+            EnemyFactory enemy_factory = FindAnyObjectByType<EnemyFactory>();
+            EnemyCtrl[] m_enemies = FindObjectsByType<EnemyCtrl>(FindObjectsSortMode.None);
+
+            foreach(var enemy in m_enemies)
+            {
+                enemy_factory.OnReturnEnemy(enemy);
+            }
+        }
     }
 }
