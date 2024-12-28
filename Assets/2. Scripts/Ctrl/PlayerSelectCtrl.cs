@@ -66,6 +66,7 @@ namespace Jongmin
 
         public void SociaStartButtonPressed()
         {
+            SoundManager.Instance.PlayEffect("ui_start");
             GameManager.Instance.CharacterType = Character.SOCIA;
             SceneCtrl.ReplaceScene("Game");
         }

@@ -175,8 +175,8 @@ namespace Junyoung
                     }
                     else
                     {
+                        //StartCoroutine(SoundManager.Instance.FadeBackground("bgm_battle_amb"));
                         SoundManager.Instance.PlayEffect("seed_get");
-                        StartCoroutine(SoundManager.Instance.FadeBackground("bgm_battle_amb"));
                         GetSeed = true;
                         Destroy(col.gameObject);
                     }
@@ -192,6 +192,7 @@ namespace Junyoung
                 if(col.gameObject.tag == "Spot")
                 {
                     GameEventBus.Publish(GameEventType.TALKING);
+                    SoundManager.Instance.PlayEffect("seed_active");
                     DropSeed = true;
                 }
             }
