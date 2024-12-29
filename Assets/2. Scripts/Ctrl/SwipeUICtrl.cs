@@ -115,7 +115,7 @@ public class SwipeUICtrl : MonoBehaviour
             return;
         }
 
-        #if UNITY_ANDROID
+        #if UNITY_ANDROID || UNITY_IOS
         if(Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);

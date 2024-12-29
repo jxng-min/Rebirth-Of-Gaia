@@ -170,9 +170,13 @@ namespace Junyoung
             }
 
             m_stages_data = new List<StageData>(wrapper.StageData);
-#elif UNITY_ANDROID
-            string json_path = $"jar:file://{Application.dataPath}!/assets/{file_name}";
-
+#elif UNITY_ANDROID || UNITY_IOS
+            string json_path;
+    #if UNITY_ANDROID
+            json_path = $"jar:file://{Application.dataPath}!/assets/{file_name}";
+    #else
+            json_path = Path.Combine(Application.streamingAssetsPath, file_name);
+    #endif
             UnityWebRequest request = UnityWebRequest.Get(json_path);
             request.SendWebRequest();
 

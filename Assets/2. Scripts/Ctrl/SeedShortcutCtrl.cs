@@ -22,6 +22,7 @@ public class SeedShortcutCtrl : MonoBehaviour
             m_player_ctrl = FindAnyObjectByType<PlayerCtrl>();
         }
 
+        SoundManager.Instance.PlayEffect("seed_01");
         SpawnSeed(m_player_ctrl.transform.position);
         m_seed.layer = 14;
         m_player_ctrl.GetSeed = false;

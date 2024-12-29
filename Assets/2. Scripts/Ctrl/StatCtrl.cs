@@ -60,7 +60,7 @@ namespace Jongmin
                 return;
             }
 
-            //SoundManager.Instance.PlayEffect("ui_ability");
+            SoundManager.Instance.PlayEffect("ui_ability");
 
             SaveManager.Instance.Player.m_player_status.m_stat_token--;
             SaveManager.Instance.Player.m_player_status.m_ap_enforce++;
@@ -79,7 +79,7 @@ namespace Jongmin
                 return;
             }
 
-            //SoundManager.Instance.PlayEffect("ui_ability");
+            SoundManager.Instance.PlayEffect("ui_ability");
 
             SaveManager.Instance.Player.m_player_status.m_stat_token--;
             SaveManager.Instance.Player.m_player_status.m_mp_enforce++;
@@ -98,7 +98,7 @@ namespace Jongmin
                 return;
             }
 
-            //SoundManager.Instance.PlayEffect("ui_ability");
+            SoundManager.Instance.PlayEffect("ui_ability");
 
             SaveManager.Instance.Player.m_player_status.m_stat_token--;
             SaveManager.Instance.Player.m_player_status.m_si_enforce++;
@@ -106,11 +106,6 @@ namespace Jongmin
             SaveManager.Instance.Player.m_player_status.m_sociality += 1;
             SaveManager.Instance.Player.m_player_status.m_strength += (SaveManager.Instance.Player.m_player_status.m_strength * 0.02f);
             SaveManager.Instance.Player.m_player_status.m_intellect += (SaveManager.Instance.Player.m_player_status.m_intellect * 0.02f);
-        }
-
-        public void ButtonSound()
-        {
-            SoundManager.Instance.PlayEffect("ui_ability");
         }
     }
 }

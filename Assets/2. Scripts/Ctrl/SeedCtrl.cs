@@ -46,8 +46,6 @@ public class SeedCtrl : MonoBehaviour
 
     private IEnumerator Germination()
     {
-        SoundManager.Instance.PlayEffect("seed_01");
-        
         SpriteRenderer sprite_renderer = GetComponent<SpriteRenderer>();
         Color color = sprite_renderer.color;
 

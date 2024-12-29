@@ -99,9 +99,12 @@ namespace Taekyung
 
                 m_talk_data[data.m_stage_data] = data.m_talk_data;
             }
-#elif UNITY_ANDROID
+#elif UNITY_ANDROID || UNITY_IOS
+    #if UNITY_ANDROID
             json_path = "jar:file://" + Application.dataPath + "!/assets/TalkData.json";
-
+    #else
+            json_path = Path.Combine(Application.streamingAssetsPath, "TalkData.json");
+    #endif
             UnityWebRequest request = UnityWebRequest.Get(json_path);
             request.SendWebRequest();
 
