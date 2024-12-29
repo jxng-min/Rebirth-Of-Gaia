@@ -68,59 +68,8 @@ namespace Taekyung
         // JSON 파일에서 NPC 정보와 대사를 불러오는 메소드
         public void BringTalkLineDataFromJson()
         {
-            string json_path;
-#if UNITY_EDITOR
-            json_path = m_save_path + "/TalkData.json";
-
-            if (!System.IO.File.Exists(json_path))
-            {
-                Debug.Log($"{m_save_path}에 일치하는 TalkData.json이 없습니다.");
-                return;
-            }
-
-            string json_string = System.IO.File.ReadAllText(json_path);
-            TalkDataWrapper talk_data_wrapper = JsonUtility.FromJson<TalkDataWrapper>(json_string);
-
-            if (talk_data_wrapper == null || talk_data_wrapper.m_talk_datas == null)
-            {
-                Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 실패하였습니다.");
-                return;
-            }
-            else
-            {
-                Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 성공하였습니다.");
-            }
-
-            m_talk_data = new Dictionary<string, string[]>();
-            foreach (var data in talk_data_wrapper.m_talk_datas)
-            {
-                if (data.m_stage_data == null)
-                    continue;
-
-                m_talk_data[data.m_stage_data] = data.m_talk_data;
-            }
-#elif UNITY_ANDROID || UNITY_IOS
-    #if UNITY_ANDROID
-            json_path = "jar:file://" + Application.dataPath + "!/assets/TalkData.json";
-    #else
-            json_path = Path.Combine(Application.streamingAssetsPath, "TalkData.json");
-    #endif
-            UnityWebRequest request = UnityWebRequest.Get(json_path);
-            request.SendWebRequest();
-
-            while(!request.isDone) {}
-            if(request.result != UnityWebRequest.Result.Success)
-            {
-                Debug.LogError($"파일 다운로드 실패: {request.error}");
-                return;
-            }
-
-            var file_path = $"{Application.persistentDataPath}/TalkData.json";
-            File.WriteAllBytes(file_path, request.downloadHandler.data);
-
-            StreamReader reader = new StreamReader(file_path);
-            string json_content = reader.ReadToEnd();
-            reader.Close();
+            TextAsset textAsset = Resources.Load<TextAsset>("TalkData");
+            string json_content = textAsset.text;
 
             TalkDataWrapper _and_talk_data_wrapper = JsonUtility.FromJson<TalkDataWrapper>(json_content);
 
@@ -142,7 +91,6 @@ namespace Taekyung
 
                 m_talk_data[data.m_stage_data] = data.m_talk_data;
             }
-#endif
         }
         
         // scene_name과 일치하는 scene의 대사를 state에 맞게 리턴하는 메소드
