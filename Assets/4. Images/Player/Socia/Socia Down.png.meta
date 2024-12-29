@@ -1,0 +1,448 @@
+fileFormatVersion: 2
+guid: ab2fc203def86bd4d8fa9f3c305834fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4108883125598517231
+    second: Socia Down_0
+  - first:
+      213: -8498215845177964093
+    second: Socia Down_1
+  - first:
+      213: 5573235507106978008
+    second: Socia Down_2
+  - first:
+      213: 1984261925808963401
+    second: Socia Down_3
+  - first:
+      213: -9174768005505561593
+    second: Socia Down_4
+  - first:
+      213: 5340088306577178383
+    second: Socia Down_5
+  - first:
+      213: 3002448739060451489
+    second: Socia Down_6
+  - first:
+      213: 5714016155763777102
+    second: Socia Down_7
+  - first:
+      213: -6148675075657327317
+    second: Socia Down_8
+  - first:
+      213: 4001660801212647081
+    second: Socia Down_9
+  - first:
+      213: -6615574904370276233
+    second: Socia Down_10
+  - first:
+      213: -2438729098435696161
+    second: Socia Down_11
+  - first:
+      213: -182769747328652488
+    second: Socia Down_12
+  - first:
+      213: -1824697349784332842
+    second: Socia Down_13
+  - first:
+      213: 796809704409033372
+    second: Socia Down_14
+  - first:
+      213: -4029361724398478001
+    second: Socia Down_15
+  - first:
+      213: -2677244527997271066
+    second: Socia Down_16
+  - first:
+      213: 3106702676846210255
+    second: Socia Down_17
+  - first:
+      213: -915775826823789299
+    second: Socia Down_18
+  - first:
+      213: -4956502377839812205
+    second: Socia Down_19
+  - first:
+      213: -7806383150017435531
+    second: Socia Down_20
+  - first:
+      213: -5196272641284457431
+    second: Socia Down_21
+  - first:
+      213: -7452076952392581792
+    second: Socia Down_22
+  - first:
+      213: -5486607025007123752
+    second: Socia Down_23
+  - first:
+      213: -6251107737379214503
+    second: Socia Down_24
+  - first:
+      213: -2850694283712090890
+    second: Socia Down_25
+  - first:
+      213: 1174901245192347132
+    second: Socia Down_26
+  - first:
+      213: 6255623486546467248
+    second: Socia Down_27
+  - first:
+      213: -1033494807811721651
+    second: Socia Down_28
+  - first:
+      213: 1596778963224125724
+    second: Socia Down_29
+  - first:
+      213: -2706374859181384174
+    second: Socia Down_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Socia Down_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 98
+        width: 252
+        height: 620
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe775e4de6fa50930800000000000000
+      internalID: 4108883125598517231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_6
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 102
+        width: 357
+        height: 767
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a884047837daa920800000000000000
+      internalID: 3002448739060451489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_7
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 102
+        width: 355
+        height: 784
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e94256b634c4f40800000000000000
+      internalID: 5714016155763777102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_8
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 102
+        width: 338
+        height: 784
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d952488948baaa0800000000000000
+      internalID: -6148675075657327317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_9
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 98
+        width: 252
+        height: 620
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a682e70c41c88730800000000000000
+      internalID: 4001660801212647081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_23
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 94
+        width: 414
+        height: 521
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2a944eaf7abd3b0800000000000000
+      internalID: -5486607025007123752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_24
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 97
+        width: 413
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95be0d4f1aa9f39a0800000000000000
+      internalID: -6251107737379214503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_28
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 90
+        width: 292
+        height: 453
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46fb2fa2f948a1f0800000000000000
+      internalID: -1033494807811721651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Down_29
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 94
+        width: 377
+        height: 428
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c116ac7c106e82610800000000000000
+      internalID: 1596778963224125724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d392b206ce37cdd4bb8dd02a282e86ff
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Socia Down_31: -242664948
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
