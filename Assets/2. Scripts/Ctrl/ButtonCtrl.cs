@@ -2,6 +2,7 @@ using Junyoung;
 using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
@@ -26,6 +27,9 @@ namespace Jongmin
         private Button m_attack_button;
         [SerializeField]
         private Button m_seed_button;
+
+        [SerializeField]
+        private EventTrigger m_seed_button_event_trigger;
         [SerializeField]
         private Button m_jump_button;
         [SerializeField]
@@ -64,11 +68,13 @@ namespace Jongmin
                 {
                     m_seed_button.interactable = true;
                     m_seed_button_effect.SetActive(true);
+                    m_seed_button_event_trigger.enabled = true;
                 }
                 else
                 {
                     m_seed_button.interactable = false;
                     m_seed_button_effect.SetActive(false);
+                    m_seed_button_event_trigger.enabled = false;
                 }
             }
             else
