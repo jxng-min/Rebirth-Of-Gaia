@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: 57189d4d086e05f44b2c38c3301804bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8712880919089709679
+    second: Socia Jump_0
+  - first:
+      213: 1439961754228290317
+    second: Socia Jump_1
+  - first:
+      213: 3811717443889962470
+    second: Socia Jump_2
+  - first:
+      213: 8128592021983232271
+    second: Socia Jump_3
+  - first:
+      213: -1995704282486712927
+    second: Socia Jump_4
+  - first:
+      213: 1978777561855575833
+    second: Socia Jump_5
+  - first:
+      213: 2425967462199807858
+    second: Socia Jump_6
+  - first:
+      213: -346357870404452719
+    second: Socia Jump_7
+  - first:
+      213: -4783035720609331070
+    second: Socia Jump_8
+  - first:
+      213: -8389817065349179224
+    second: Socia Jump_9
+  - first:
+      213: 490038261476268220
+    second: Socia Jump_10
+  - first:
+      213: 6872087067288978521
+    second: Socia Jump_11
+  - first:
+      213: 3064769503412941322
+    second: Socia Jump_12
+  - first:
+      213: -5766776589075706817
+    second: Socia Jump_13
+  - first:
+      213: 4986039841724949889
+    second: Socia Jump_14
+  - first:
+      213: 7791419034670958158
+    second: Socia Jump_15
+  - first:
+      213: -7839073967579586872
+    second: Socia Jump_16
+  - first:
+      213: 8270934878741589944
+    second: Socia Jump_17
+  - first:
+      213: -2997346383148099444
+    second: Socia Jump_18
+  - first:
+      213: -8605933344960590184
+    second: Socia Jump_19
+  - first:
+      213: 8283739349178604387
+    second: Socia Jump_20
+  - first:
+      213: 4327705914777052391
+    second: Socia Jump_21
+  - first:
+      213: 8500599007757539733
+    second: Socia Jump_22
+  - first:
+      213: -3577157565173082441
+    second: Socia Jump_23
+  - first:
+      213: 2967038319626553995
+    second: Socia Jump_24
+  - first:
+      213: -7547927660283185019
+    second: Socia Jump_25
+  - first:
+      213: 1714416239508834976
+    second: Socia Jump_26
+  - first:
+      213: -7651642995756973436
+    second: Socia Jump_27
+  - first:
+      213: 2008708920425427882
+    second: Socia Jump_28
+  - first:
+      213: -5100240945000568856
+    second: Socia Jump_29
+  - first:
+      213: 3862303717547007625
+    second: Socia Jump_30
+  - first:
+      213: -6537793814557469067
+    second: Socia Jump_31
+  - first:
+      213: 1102920452971671738
+    second: Socia Jump_32
+  - first:
+      213: 7086520249956457921
+    second: Socia Jump_33
+  - first:
+      213: -8641862930888723510
+    second: Socia Jump_34
+  - first:
+      213: 1895227182840287547
+    second: Socia Jump_35
+  - first:
+      213: 6505510783178599818
+    second: Socia Jump_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Socia Jump_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 98
+        width: 252
+        height: 620
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19df06787f0a51780800000000000000
+      internalID: -8712880919089709679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_6
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 102
+        width: 343
+        height: 785
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f4315bd84caa120800000000000000
+      internalID: 2425967462199807858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_8
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 102
+        width: 340
+        height: 740
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288831d8a5e3f9db0800000000000000
+      internalID: -4783035720609331070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_9
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 101
+        width: 356
+        height: 654
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a81a5984d1619b80800000000000000
+      internalID: -8389817065349179224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_10
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 102
+        width: 380
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb894a5d337fcc600800000000000000
+      internalID: 490038261476268220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_11
+      rect:
+        serializedVersion: 2
+        x: 3588
+        y: 96
+        width: 252
+        height: 620
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 954c05f17ce8e5f50800000000000000
+      internalID: 6872087067288978521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_26
+      rect:
+        serializedVersion: 2
+        x: 2770
+        y: 95
+        width: 414
+        height: 521
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aac5198c74dac710800000000000000
+      internalID: 1714416239508834976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_27
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 98
+        width: 413
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482ccc94c37efc590800000000000000
+      internalID: -7651642995756973436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_31
+      rect:
+        serializedVersion: 2
+        x: 3218
+        y: 91
+        width: 292
+        height: 469
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5765e841a271545a0800000000000000
+      internalID: -6537793814557469067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socia Jump_32
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 97
+        width: 377
+        height: 431
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0b3e6fe4c5e4f00800000000000000
+      internalID: 1102920452971671738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6d230132033d24748a8be75141c3b7b6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Socia Jump_0: -8712880919089709679
+      Socia Jump_10: 490038261476268220
+      Socia Jump_11: 6872087067288978521
+      Socia Jump_26: 1714416239508834976
+      Socia Jump_27: -7651642995756973436
+      Socia Jump_31: -6537793814557469067
+      Socia Jump_32: 1102920452971671738
+      Socia Jump_6: 2425967462199807858
+      Socia Jump_8: -4783035720609331070
+      Socia Jump_9: -8389817065349179224
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
