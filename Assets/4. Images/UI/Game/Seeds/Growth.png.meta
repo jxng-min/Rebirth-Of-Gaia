@@ -1,28 +1,37 @@
 fileFormatVersion: 2
-guid: 1ba39942b3d69a14d9291bf26dfffa00
+guid: 3646e67cdc32acf44b61096a12f2bb76
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6333612373790385967
-    second: Group 1970_0
+      213: 828102533935162448
+    second: Group 2562_0
   - first:
-      213: -5827241867237379963
-    second: Group 1970_1
+      213: 2638079955547521143
+    second: Group 2562_1
   - first:
-      213: 4332074093908893258
-    second: Group 1970_2
+      213: -5480635277131715950
+    second: Group 2562_2
   - first:
-      213: 4762124717805843916
-    second: Group 1970_3
+      213: 7862790939220553620
+    second: Group 2562_3
   - first:
-      213: 2115677038956650570
-    second: Group 1970_4
+      213: 4964315810519475317
+    second: Group 2562_4
   - first:
-      213: -2255795371596074137
-    second: Group 1970_5
+      213: -7530951501610146450
+    second: Group 2562_5
   - first:
-      213: 5933341515523007755
-    second: Group 1970_6
+      213: -3137597477659933675
+    second: Group 2562_6
+  - first:
+      213: 1569252055397014473
+    second: Group 2562_7
+  - first:
+      213: -3503544859020681545
+    second: Group 2562_8
+  - first:
+      213: -208156302754902032
+    second: Group 2562_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,10 +138,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,10 +151,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -157,155 +166,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Growth_1
+      name: Group 2562_0
       rect:
         serializedVersion: 2
-        x: 561
+        x: 5240
         y: 0
-        width: 228
-        height: 287
+        width: 3654
+        height: 4230
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 757a004a9af249842ab1559ca49d5283
-      internalID: 1218192082
+      spriteID: 0546eccfdd20e7b00800000000000000
+      internalID: 828102533935162448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Growth_2
+      name: Group 2562_3
       rect:
         serializedVersion: 2
-        x: 836
+        x: 9399
         y: 0
-        width: 396
-        height: 487
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 6465
+        height: 6791
+      alignment: 9
+      pivot: {x: 0.5015282, y: 0.06983736}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 77d7beed21f360e4a8ccc86aa417053a
-      internalID: -1673923255
+      spriteID: 49fa66b43be3e1d60800000000000000
+      internalID: 7862790939220553620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Growth_3
+      name: Group 2562_5
       rect:
         serializedVersion: 2
-        x: 4
-        y: 0
-        width: 21
-        height: 26
+        x: 58
+        y: 1
+        width: 280
+        height: 351
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 940a431b32acd2240a0baadd16ea23e4
-      internalID: 228871623
+      spriteID: e6525dd828fac7790800000000000000
+      internalID: -7530951501610146450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Growth_4
+      name: Group 2562_6
       rect:
         serializedVersion: 2
-        x: 87
+        x: 530
         y: 0
-        width: 28
-        height: 45
+        width: 456
+        height: 753
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9f67891d59daa6945a6cb50576de81b1
-      internalID: 495942582
+      spriteID: 5140befb7b30574d0800000000000000
+      internalID: -3137597477659933675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Growth_5
+      name: Group 2562_7
       rect:
         serializedVersion: 2
-        x: 162
+        x: 1138
         y: 0
-        width: 70
-        height: 66
+        width: 939
+        height: 899
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6977e79623eb480439f9fe33d8d571e2
-      internalID: -1670997650
+      spriteID: 9cb9dfc1e6a17c510800000000000000
+      internalID: 1569252055397014473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Growth_6
+      name: Group 2562_8
       rect:
         serializedVersion: 2
-        x: 268
+        x: 2183
         y: 0
-        width: 77
-        height: 139
+        width: 1040
+        height: 1984
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 10256dcb4b57c584192efa5bb283348b
-      internalID: -180650417
+      spriteID: 7be1d676388e06fc0800000000000000
+      internalID: -3503544859020681545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Growth_7
+      name: Group 2562_9
       rect:
         serializedVersion: 2
-        x: 409
+        x: 3331
         y: 0
-        width: 110
-        height: 169
+        width: 1484
+        height: 2285
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 794f8d930c620fd4d979f2b39d7df7fa
-      internalID: 1939499411
+      spriteID: 0ff098c02fa7c1df0800000000000000
+      internalID: -208156302754902032
       vertices: []
       indices: 
       edges: []
@@ -314,7 +323,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 23ed27d464ee86840989c69a86a149ba
+    spriteID: 7d49c16069f8adc42a3b255891a5467b
     internalID: 0
     vertices: []
     indices: 
@@ -324,14 +333,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Growth_0: -34958163
-      Growth_1: 1218192082
-      Growth_2: -1673923255
-      Growth_3: 228871623
-      Growth_4: 495942582
-      Growth_5: -1670997650
-      Growth_6: -180650417
-      Growth_7: 1939499411
+      Group 2562_0: 828102533935162448
+      Group 2562_1: 2638079955547521143
+      Group 2562_2: -5480635277131715950
+      Group 2562_3: 7862790939220553620
+      Group 2562_4: 4964315810519475317
+      Group 2562_5: -7530951501610146450
+      Group 2562_6: -3137597477659933675
+      Group 2562_7: 1569252055397014473
+      Group 2562_8: -3503544859020681545
+      Group 2562_9: -208156302754902032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

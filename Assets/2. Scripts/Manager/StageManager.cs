@@ -152,49 +152,10 @@ namespace Junyoung
 
         private void LoadStagesData(string file_name)
         {
-#if UNITY_EDITOR
-            string file_path = Path.Combine(Application.streamingAssetsPath, file_name);
+            TextAsset textAsset = Resources.Load<TextAsset>("StageData");
+            string json_content_mob = textAsset.text;
 
-            if (!File.Exists(file_path))
-            {
-                return;
-            }
-
-            string json_data = File.ReadAllText(file_path);
-
-            StageDataWrapper wrapper = JsonUtility.FromJson<StageDataWrapper>(json_data);
-
-            if (wrapper == null || wrapper.StageData == null)
-            {
-                return;
-            }
-
-            m_stages_data = new List<StageData>(wrapper.StageData);
-#elif UNITY_ANDROID || UNITY_IOS
-            string json_path;
-    #if UNITY_ANDROID
-            json_path = $"jar:file://{Application.dataPath}!/assets/{file_name}";
-    #else
-            json_path = Path.Combine(Application.streamingAssetsPath, file_name);
-    #endif
-            UnityWebRequest request = UnityWebRequest.Get(json_path);
-            request.SendWebRequest();
-
-            while(!request.isDone) {}
-            if(request.result != UnityWebRequest.Result.Success)
-            {
-                Debug.LogError($"파일 다운로드 실패: {request.error}");
-                return;
-            }
-
-            var save_path = $"{Application.persistentDataPath}/TalkData.json";
-            File.WriteAllBytes(save_path, request.downloadHandler.data);
-
-            StreamReader reader = new StreamReader(save_path);
-            string json_content = reader.ReadToEnd();
-            reader.Close();
-
-            StageDataWrapper and_wrapper = JsonUtility.FromJson<StageDataWrapper>(json_content);
+            StageDataWrapper and_wrapper = JsonUtility.FromJson<StageDataWrapper>(json_content_mob);
 
             if (and_wrapper == null || and_wrapper.StageData == null)
             {
@@ -202,7 +163,6 @@ namespace Junyoung
             }
 
             m_stages_data = new List<StageData>(and_wrapper.StageData);
-#endif
         }
         
         public void LoadStage(int stage_index)
