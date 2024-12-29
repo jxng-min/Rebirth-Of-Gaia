@@ -40,9 +40,13 @@ public class RewardCtrl : MonoBehaviour
             }
 
             m_reward_data = new List<RewardData>(wrapper.RewardData);
-#elif UNITY_ANDROID
-            string json_path = $"jar:file://{Application.dataPath}!/assets/{file_name}";
-
+#elif UNITY_ANDROID || UNITY_IOS
+            string json_path;
+    #if UNITY_ANDROID
+            json_path = $"jar:file://{Application.dataPath}!/assets/{file_name}";
+    #elif UNITY_IOS
+            json_path = Path.Combine(Application.streamingAssetsPath, file_name);
+    #endif
             UnityWebRequest request = UnityWebRequest.Get(json_path);
             request.SendWebRequest();
 

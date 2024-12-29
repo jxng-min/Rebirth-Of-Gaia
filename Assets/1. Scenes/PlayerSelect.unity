@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: 0}
-  m_SizeDelta: {x: 326, y: 380}
+  m_AnchoredPosition: {x: 220, y: 0}
+  m_SizeDelta: {x: 440, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3509908
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1708f00f773816a488aebe9df528ad1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5749670a740b80b448e3aea99fe08c16, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBC30   \uACBD"
+  m_text: SOCIA STORY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 039bb404943232d49b6342b436369918, type: 2}
   m_sharedMaterial: {fileID: 8600597531156799797, guid: 039bb404943232d49b6342b436369918, type: 2}
@@ -2472,23 +2472,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC18C\uC154\uB294 \uD669\uD3D0\uD654\uB41C \uC138\uC0C1 \uC18D\uC5D0\uC11C\uB3C4
-    \uD76C\uB9DD\uC744 \uC783\uC9C0 \uC54A\uB294 \uC18C\uB144\uC774\uB2E4. \n\n\uC9C0\uC5ED\uC758
-    \uC8FC\uBBFC\uB4E4\uACFC \uCE5C\uAD6C\uB4E4\uC774 \uC0DD\uC874\uC744 \uC704\uD574
-    \uAC1C\uC778\uC8FC\uC758\uC801 \uC0AC\uACE0\uBC29\uC2DD\uACFC \uD3ED\uB825\uC801
-    \uBAA8\uC2B5\uC744 \uBCF4\uC77C \uB54C \uC18C\uC154\uB294 \uC791\uC740 \uACF5\uB3D9\uCCB4\uB97C
-    \uB9CC\uB4E4\uC5B4 \uC774 \uC0C1\uD669\uC744 \uC774\uACA8 \uB098\uAC08 \uC218
-    \uC788\uB2E4\uACE0 \uBBFF\uACE0 \uC788\uB2E4."
+  m_text: "\r\uC18C\uC154\uB294 \uD669\uD3D0\uD654\uB41C \uC138\uC0C1 \uC18D\uC5D0\uC11C\uB3C4
+    \uD76C\uB9DD\uC744 \uC783\uC9C0 \uC54A\uB294 \uC18C\uB144\uC774\uB2E4. \n\n\uB204\uAD70\uAC00
+    \uC0DD\uC874\uC744 \uC704\uD574 \uAC1C\uC778\uC8FC\uC758\uC801 \uC0AC\uACE0\uBC29\uC2DD\uACFC
+    \uD3ED\uB825\uC801 \uBAA8\uC2B5\uC744 \uBCF4\uC77C \uB54C, \uC774\uB4E4\uC744
+    \uACF5\uB3D9\uCCB4\uC758 \uC77C\uBD80\uB85C\uC368 \uB04C\uC5B4\uB4E4\uC774\uB294
+    \uB2A5\uB825\uC774 \uC788\uB2E4.\n\n\uC18C\uC154\uB294 \uC791\uC740 \uACF5\uB3D9\uCCB4\uB97C
+    \uD655\uC7A5\uD558\uBA74\uC11C \uC774 \uC0C1\uD669\uC744 \uC774\uACA8\uB0BC \uAC83\uC774\uB77C
+    \uBBFF\uACE0 \uC788\uB2E4."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ff60f4b3bd210694baf46e1007420295, type: 2}
-  m_sharedMaterial: {fileID: -907819451598374203, guid: ff60f4b3bd210694baf46e1007420295, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 039bb404943232d49b6342b436369918, type: 2}
+  m_sharedMaterial: {fileID: 8600597531156799797, guid: 039bb404943232d49b6342b436369918, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282468692
-  m_fontColor: {r: 0.32941177, g: 0.28627452, b: 0.25490198, a: 1}
+    rgba: 4283982962
+  m_fontColor: {r: 0.44705886, g: 0.3921569, b: 0.34509805, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2505,8 +2506,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

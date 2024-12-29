@@ -210,8 +210,8 @@ namespace Jongmin
 
             elapsed_time = 0;
 
-            BgmVolume = m_origin_bgm_volume;
             PlayBGM(bgm_name);
+            BgmVolume = m_origin_bgm_volume;
         }
 
         public IEnumerator FadeOutBGM()
