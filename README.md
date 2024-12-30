@@ -26,10 +26,10 @@ Unity 6을 활용하여 2D 플랫포머 액션 게임을 제작하는 것이 목
 
 ## 프로젝트 빌드
 
-[Google Drive]()
+[Google Drive](https://drive.google.com/drive/folders/1tfnY8obo7gRRZUnY-J-_eZ58KSuMA60o)
 
 <br></br>
 
 ## 사용 에셋
 
-* [Sour Gummy Fonts](https://github.com/eifetx/Sour-Gummy-Fonts)
+* [Pretendard](https://github.com/orioncactus/pretendard/blob/main/LICENSE)
