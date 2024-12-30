@@ -66,7 +66,7 @@ namespace Junyoung
             m_camera_move_ctrl = Camera.main.GetComponent<CameraMoveCtrl>();
             m_player_icon_animator = m_player_icon.GetComponent<Animator>();
 
-            LoadStagesData("StageData.json");
+            LoadStagesData();
         }
 
         private void Update()
@@ -150,7 +150,7 @@ namespace Junyoung
             }
         }
 
-        private void LoadStagesData(string file_name)
+        private void LoadStagesData()
         {
             TextAsset textAsset = Resources.Load<TextAsset>("StageData");
             string json_content_mob = textAsset.text;
