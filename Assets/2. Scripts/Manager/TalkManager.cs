@@ -75,12 +75,7 @@ namespace Taekyung
 
             if (_and_talk_data_wrapper == null || _and_talk_data_wrapper.m_talk_datas == null)
             {
-                Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 실패하였습니다.");
                 return;
-            }
-            else
-            {
-                Debug.Log($"{m_save_path}/TalkData.json에서 NPC 정보와 대사를 불러오는 데 성공하였습니다.");
             }
 
             m_talk_data = new Dictionary<string, string[]>();

@@ -16,10 +16,10 @@ public class RewardCtrl : MonoBehaviour
 
     private void Start()
     {
-        LoadRewardData("RewardData.json");
+        LoadRewardData();
     }
 
-    private void LoadRewardData(string file_name)
+    private void LoadRewardData()
     {
             TextAsset textAsset = Resources.Load<TextAsset>("RewardData");
             string json_content = textAsset.text;
